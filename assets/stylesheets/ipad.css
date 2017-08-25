@@ -54,7 +54,7 @@ input.email::placeholder { color: #fff; }
 
 
 
-div#name_tag_logo > img { position: absolute; left: 87px; top: 106px; }
+div#name_tag_logo > img { width: 352px; position: absolute; left: 87px; top: 106px; }
 
 
 
@@ -63,5 +63,5 @@ div#name_tag_logo > img { position: absolute; left: 87px; top: 106px; }
   div#name_tag_logo > img { position: absolute; top: 56px; }
   #sorry_verbiage_container { position: absolute; left: 130px; top: 255px; font-size: 11pt; color: #fff; }
   #mailchimp_form_container { position: absolute;  left: 130px; bottom: 10px; }
-  #social_btns_container { position: absolute; top: 350px; left: 130px; }
+  #social_btns_container { width: 352px; position: absolute; top: 350px; left: 130px; }
 }

@@ -1,6 +1,6 @@
 .bg { 
     /* The image used */
-    background-image: url("../images/iphone_bg.jpg");
+    background-image: url("../images/ipad_vert_bg.jpg");
 
     /* Full height */
     height: 100%; 
@@ -42,15 +42,15 @@
     #mc_embed_signup .button {width: 100%; margin:0; }
 }
 
-#mc_embed_signup{ clear:left; font:14px Helvetica,Arial,sans-serif; }
+#mc_embed_signup{ clear:left; font:14px Helvetica,Arial,sans-serif;  }
 
 input.email::placeholder { color: #fff; }
 
 
 
 
-#sorry_verbiage_container { position: absolute; left: 338px; top: 363px; border: 3px solid green; }
-.sorry-verbiage { line-height: 17.5px; font-family: 'Roboto', sans-serif; font-size: 11pt; color: #fff; }
+#sorry_verbiage_container { position: absolute; left: 338px; top: 363px; font-family: 'Roboto', sans-serif; font-size: 11pt; color: #fff; background-color: green; }
+.sorry-verbiage { line-height: 17.5px; }
 
 
 

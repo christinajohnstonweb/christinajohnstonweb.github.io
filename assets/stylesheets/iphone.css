@@ -1,6 +1,6 @@
 .bg { 
     /* The image used */
-    background-image: url("../images/desktop_bg_retina.jpg");
+    background-image: url("../images/iphone_bg.jpg");
 
     /* Full height */
     height: 100%; 
@@ -13,7 +13,7 @@
 
 .social-icons { color: #D1AA67; }
 .social-link { text-decoration: none; padding-right: 25px; }
-#social_btns_container { position: absolute; top: 455px; left: 338px; }
+#social_btns_container { position: absolute; top: 250px; left: 120px; }
 
 
 
@@ -42,17 +42,17 @@
     #mc_embed_signup .button {width: 100%; margin:0; }
 }
 
-#mc_embed_signup{ clear:left; font:14px Helvetica,Arial,sans-serif;  }
+#mc_embed_signup{ clear:left; font:14px Helvetica,Arial,sans-serif; }
 
 input.email::placeholder { color: #fff; }
 
 
 
 
-#sorry_verbiage_container { position: absolute; left: 338px; top: 363px; font-family: 'Roboto', sans-serif; font-size: 11pt; color: #fff; }
-.sorry-verbiage { line-height: 17.5px; }
+#sorry_verbiage_container { position: absolute; left: 120px; top: 180px; font-family: 'Roboto', sans-serif; font-size: 11pt; color: #fff; border: 1px dashed green; }
+.sorry-verbiage { line-height: 17.5px; font-family: 'Roboto', sans-serif; font-size: 11pt; color: #fff; }
 
 
 
 
-div#name_tag_logo > img { width: 352px; position: absolute; left: 297px; top: 146px; }
+div#name_tag_logo > img { width: 252px; position: absolute; left: 97px; top: 46px; }
