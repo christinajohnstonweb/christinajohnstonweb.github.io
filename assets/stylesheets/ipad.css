@@ -49,7 +49,7 @@ input.email::placeholder { color: #fff; }
 
 
 
-#sorry_verbiage_container { position: absolute; left: 138px; top: 304px; font-family: 'Roboto', sans-serif; font-size: 11pt; color: #fff; }
+#sorry_verbiage_container { position: absolute; left: 138px; top: 304px; font-family: 'Roboto', sans-serif; font-size: 11pt; color: #fff; background-color: lightblue; }
 .sorry-verbiage { line-height: 17.5px; }
 
 
