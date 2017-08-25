@@ -1,6 +1,6 @@
 .bg { 
     /* The image used */
-    background-image: url("../images/iphone_bg.jpg");
+    background-image: url("../images/ipad_bg.jpg");
 
     /* Full height */
     height: 100%; 
@@ -49,7 +49,7 @@ input.email::placeholder { color: #fff; }
 
 
 
-#sorry_verbiage_container { position: absolute; left: 120px; top: 180px; font-family: 'Roboto', sans-serif; font-size: 11pt; color: #fff; border: 1px dashed green; }
+#sorry_verbiage_container { position: absolute; left: 120px; top: 180px; font-family: 'Roboto', sans-serif; font-size: 11pt; color: #fff; border: 3px dashed green; }
 .sorry-verbiage { line-height: 17.5px; font-family: 'Roboto', sans-serif; font-size: 11pt; color: #fff; }
 
 

@@ -1,6 +1,6 @@
 .bg { 
     /* The image used */
-    background-image: url("../images/ipad_vert_bg.jpg");
+    background-image: url("../images/ipad_bg.jpg");
 
     /* Full height */
     height: 100%; 
@@ -17,9 +17,7 @@
 
 
 
-#mailchimp_form_container { position: absolute;  left: 338px; bottom: 50px;
-  /*   top: 630px; */
-}
+#mailchimp_form_container { position: absolute;  left: 338px; bottom: 50px; }
 
 
 
@@ -49,7 +47,7 @@ input.email::placeholder { color: #fff; }
 
 
 
-#sorry_verbiage_container { position: absolute; left: 338px; top: 363px; font-family: 'Roboto', sans-serif; font-size: 11pt; color: #fff; background-color: green; }
+#sorry_verbiage_container { position: absolute; left: 338px; top: 363px; font-family: 'Roboto', sans-serif; font-size: 11pt; color: #fff; border: 2px dotted red; }
 .sorry-verbiage { line-height: 17.5px; }
 
 
