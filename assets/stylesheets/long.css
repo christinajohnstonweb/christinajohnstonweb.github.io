@@ -1,0 +1,16 @@
+@media (max-height: 720px) {
+  /* Logo positioning */
+  div#name_tag_logo > img { max-width: 27%; padding: 6% 0 0 22.5%; }
+
+  /* Mailchimp signup form */
+  #mailchimp_form_container { position: absolute; bottom: 0; left: 25%; right: 0; padding: 70px 0 2% 0; }
+}
+
+/* Smaller screens */
+@media (max-height: 460px) {
+  /* Logo positioning */
+  div#name_tag_logo > img { max-width: 27%; padding: 3% 0 0 22.5%; }
+  
+  /* Mailchimp signup form */
+  #mailchimp_form_container { position: absolute; bottom: 0; left: 25%; right: 0; padding: 70px 0 1% 0; }
+}

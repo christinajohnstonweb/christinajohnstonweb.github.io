@@ -14,7 +14,7 @@
 
 .social-icons { color: #D1AA67; }
 .social-link { text-decoration: none; padding-right: 25px; }
-#social_btns_container { position: absolute; top: 415px; left: 338px; }
+#social_btns_container { position: absolute; top: 455px; left: 338px; }
 
 
 
@@ -47,10 +47,10 @@ input.email::placeholder { color: #fff; }
 
 
 
-#sorry_verbiage_container { position: absolute; left: 338px; top: 323px; font-family: 'Roboto', sans-serif; font-size: 11pt; color: #fff; }
+#sorry_verbiage_container { position: absolute; left: 338px; top: 363px; font-family: 'Roboto', sans-serif; font-size: 11pt; color: #fff; }
 .sorry-verbiage { line-height: 17.5px; }
 
 
 
 
-div#name_tag_logo > img { width: 352px; position: absolute; left: 297px; top: 106px; }
+div#name_tag_logo > img { width: 352px; position: absolute; left: 297px; top: 146px; }

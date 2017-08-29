@@ -1,0 +1,15 @@
+/* Portrait orientation style rules  */
+
+/* Logo size  */
+div#name_tag_logo > img { max-width: 45%; padding: 11% 0 0 12.5%; }
+
+/* Sorry text */
+#sorry_verbiage_container { padding-left: 15%; padding-top: 2.8%; font-family: 'Roboto', sans-serif; font-size: 2.2rem; color: #fff; }
+.sorry-verbiage { line-height: 3.2rem; }
+
+/* Social icons */
+.social-link { text-decoration: none; padding-right: 3.5%; font-size: 7.0rem; }
+#social_btns_container { padding: 3% 0 100px 15%; }
+
+/* Mailchimp signup form */
+#mailchimp_form_container { position: absolute; bottom: 0; left: 15%; right: 0; padding: 70px 0 1% 0; }
