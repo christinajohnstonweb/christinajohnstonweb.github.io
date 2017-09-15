@@ -1,0 +1,272 @@
+/* Set up easy REM font sizing. */
+
+html {
+  font-size: 62.5%;
+}
+
+
+/* =10px */
+
+
+/* Set the site font(s). */
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+nav.topbar {
+  margin-top: 50px;
+  position: sticky;
+  top: 0px;
+  z-index: 9;
+}
+
+.nav-link { color: #fff; }
+.nav-link:hover { color: #777; }
+.navbar-toggler { color: #fff; }
+
+/* Background colors */
+.white-bg {
+  background-color: #ffffff;
+}
+
+.off-white-bg {
+  background-color: #fafafa;
+}
+
+.black-bg {
+  background-color: #000000;
+}
+
+
+/* Sticky social sharing */
+.social-container {
+  position: fixed;
+  top: 282px;
+}
+
+.social-el {
+  width: 27px;
+  margin: 0 auto 0.8rem auto;
+}
+
+.social-el>a {
+  color: #000;
+}
+
+
+/* Section styles */
+.section-header {
+  text-decoration: none;
+  border-bottom: 2px solid #000;
+  font-size: 1.9rem;
+  font-weight: bolder;
+  padding: 0 2px 0.6rem 4px;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.08rem;
+  font-stretch: ultra-expanded;
+}
+
+.content-section {
+  margin-bottom: 3.91rem;
+  font-size: 1.5rem;
+}
+
+.text-section {
+  padding: 7.5% 6% 8% 6%;
+}
+
+.btn-black {
+  background-color: #000;
+  border: 1px solid #000;
+  color: #fff;
+  padding: 0.6rem 3.9rem;
+  font-size: 1.2rem;
+  margin-top: 3.8rem;
+}
+
+
+/* Media section */
+.media-container {
+  text-align: center;
+  padding: 3.0rem 0 2.0rem 0;
+  margin-bottom: 3.5rem;
+}
+
+.media-header {
+  color: #E9008D;
+  font-size: 5.0rem;
+  font-weight: 900;
+  vertical-align: middle;
+}
+
+.btn-media {
+  background-color: #000;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 0.6rem 1.4rem;
+  font-size: 1.2rem;
+}
+
+#navbarSupportedContent {
+  padding: 0 10% 0 10%;
+}
+
+a.navbar-brand {
+  padding: 0 0 0 10%;
+}
+
+
+/* Discography section */
+
+.discography-text {
+  margin: 3.3rem 0 3.35rem 0;
+  line-height: 1.75rem;
+  font-size: 1.45rem;
+}
+
+.discography-more-btn {}
+
+
+/* Footer */
+footer {
+  height: 16rem;
+  color: #fff;
+  padding: 2.5rem 0 0 4.8rem;
+  font-size: 0.9rem;
+}
+
+.footer-header-row {margin-bottom: 2.0rem;}
+.footer-col-title { margin: 2.0rem 0 1.0rem 0; }
+.footer-col-no-title { margin-top: 4.25rem; }
+.footer-sub-col-title { margin-bottom: 1.25rem; }
+
+.bottom-column {
+    float: none;
+    display: table-cell;
+    vertical-align: bottom;
+}
+
+/* Brand tag. */
+#brand_tag { height: 2.13rem; padding: 0 0 2.0rem 0; }
+
+/* Bootstrap style overrides */
+
+.bg-light {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.remove-padding {
+  padding: 0;
+  margin: 0;
+}
+
+
+/* Ken Burns effect */
+
+.imageWrapper {
+  background-color: #EEE;
+  border-bottom: 2px solid #DDD;
+  /*   padding: 50px 0; */
+}
+
+.image {
+  width: 1480px;
+  height: 425px;
+  /*   height:630px; */
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.image img {
+  animation: move 9s ease infinite;
+  /* Change this to alternate to stop the loop. */
+  -ms-animation: move 9s ease infinite;
+  -webkit-animation: move 9s ease infinite;
+  -0-animation: move 9s ease infinite;
+  -moz-animation: move 9s ease infinite;
+  position: absolute;
+  left: -150px;
+  top: -150px;
+}
+
+@-webkit-keyframes move {
+  from {
+    transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    /* IE 9 */
+    -webkit-transform: scale(0.9);
+    /* Safari and Chrome */
+    -o-transform: scale(0.9);
+    /* Opera */
+    -moz-transform: scale(0.9);
+    /* Firefox */
+  }
+  to {
+    transform: scale(1.0);
+    -ms-transform: scale(1.0);
+    /* IE 9 */
+    -webkit-transform: scale(1.0);
+    /* Safari and Chrome */
+    -o-transform: scale(1.0);
+    /* Opera */
+    -moz-transform: scale(1.0);
+    /* Firefox */
+  }
+}
+
+/* Mailchimp signup form */
+#mailchimp_form_container {  }
+
+#mc_embed_signup form {padding: 0 0 10px 0;}
+.mc-field-group { display: inline-block; } /* positions input field horizontally */
+#mc_embed_signup input.email {font-family: 'Roboto', sans-serif; font-size: 1.1rem; border: 1px solid #fff; color: #343434; background-color: #fff; box-sizing:border-box; height:28px; padding: 0px 0.4em; display: inline-block; margin: 0 0 1.5rem 0; width: 15.45rem; vertical-align:top;}
+#mc_embed_signup label {font-family: 'Roboto', sans-serif; display:block; font-size:1.0rem; color: #fff;}
+#mc_embed_signup .clear {display: inline-block;} /* positions button horizontally in line with input */
+#mc_embed_signup .button {font-size: 1.0rem; border: none; letter-spacing: .03em; color: #fff; background-color: #aaa; box-sizing:border-box; height:28px; padding:0 16px; display: inline-block; margin: 0; transition: all 0.23s ease-in-out 0s;}
+#mc_embed_signup .button:hover {background-color:#777; cursor:pointer;}
+#mc_embed_signup div#mce-responses {float:left; top:-1.4em; padding:0em .5em 0em .5em; overflow:hidden; width:90%;margin: 0 5%; clear: both;}
+#mc_embed_signup div.response {margin:1em 0; padding:1em .5em .5em 0; font-weight:bold; float:left; top:-1.5em; z-index:1; width:80%;}
+#mc_embed_signup #mce-error-response {display:none;}
+#mc_embed_signup #mce-success-response {color:#529214; display:none;}
+#mc_embed_signup label.error {display:block; float:none; width:auto; margin-left:1.05em; text-align:left; padding:.5em 0;}
+@media (max-width: 768px) {
+    #mc_embed_signup input.email {width:100%; margin-bottom:5px;}
+    #mc_embed_signup .clear {display: block; width: 100% }
+    #mc_embed_signup .button {width: 100%; margin:0; }
+}
+
+/* Correct the goofy iOS default button style. */
+#mc_embed_signup .button { -webkit-appearance: none; }
+
+/* Social icons */
+.social-icons { font-size: 2.0rem; color: #fff; }
+#social_btns_container { margin-bottom: 5.5rem; }
+.social-link { text-decoration: none; padding-right: 2.5rem; }
+
+
+/* Concerts section */
+.concert-venue-date { margin: 0 0 0 0; padding: 0.3rem 0 0 1.65rem; font-size: 1.6rem; }
+.concert-details { font-size: 1.2rem; line-height: 0.75rem; }
+.buy-tickets-td { text-align: center; }
+.buy-tickets-btn { margin: 0 0 0 8.0rem; }
+.concert-info-a { text-align: right; padding-right: 2.0rem; color: #212529; }
+
+/* News section */
+.news-text { padding: 4.5rem 5.56rem 0 5.56rem; }
+.news-date { color: #212529; font-size: 1.1rem; font-style: italic; padding: 0 0 0.5rem 0; }
+.news-title { font-size: 1.3rem; font-weight: 900; line-height: 1.4rem; padding: 0 0 0.4rem 0; letter-spacing: 0.05rem; }
+.news-details { font-size: 1.1rem; padding: 0 0 1.75rem 0; }
+.news-more-details { font-size: 1.1rem; color: #EE2D9F; }
+.news-item-section { margin-bottom: 3.7rem; }
+#more_news_btn { padding: 0.6rem 3.5rem; margin: 1.0rem 0 0 0; }
+
+/******************************************/
+/* Editor styles */
+/******************************************/
+img[src=""] {
+  background: white;
+  content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100" fill="%23666"><circle cx="50" cy="40" r="22" /><circle cx="50" cy="110" r="50" /></svg>');
+}
