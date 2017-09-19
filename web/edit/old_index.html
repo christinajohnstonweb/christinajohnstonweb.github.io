@@ -5,14 +5,14 @@
     <title>Christina Johnston - Coloratura Soprano</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-<!--     <link rel="stylesheet" href="assets/stylesheets/Supernice.min.css" /> -->
+<!--     <link rel="stylesheet" href="../assets/stylesheets/Supernice.min.css" /> -->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://get.mavo.io/mavo.css">
-    <link rel="stylesheet" href="assets/stylesheets/styles.css" />
+    <link rel="stylesheet" href="../assets/stylesheets/styles.css" />
   </head>
   <body>
-    <main mv-app="homepage" mv-storage="https://github.com/christinajohnstonweb/christinajohnstonweb.github.io/data" mv-bar="none">
-      <div class="container-fluid">
+    <main mv-app="homepage" mv-storage="https://github.com/christinajohnstonweb/christinajohnstonweb.github.io/data" mv-plugins="tinymce">
+      <div class="container">
         <div class="row">
           <div class="w-75">
             <div class="social-container">
@@ -24,12 +24,10 @@
           </div>
           <div class="col">
 
-        <nav class="navbar navbar-expand-md topbar" style="background-color: #000;">
-  <!--         <nav class="navbar navbar-expand-lg navbar-light bg-light topbar"> -->
-          <a class="navbar-brand" href="#" style="color: #fff;">CHRISTINA JOHNSTON</a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light topbar">
+          <a class="navbar-brand" href="#">CHRISTINA JOHNSTON</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="fa fa-bars"></span>
-  <!--           <span class="navbar-toggler-icon" style="color: #777;"></span> -->
+            <span class="navbar-toggler-icon"></span>
           </button>
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -58,7 +56,7 @@
         </nav>
 
         <section class="content-section" id="carousel">
-          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-pause="false">
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
               <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
               <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -66,13 +64,13 @@
             </ol>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <div class="imageWrapper"><div class="image"><img src="assets/images/home_slider_image_1.jpg" alt="" class="d-block w-100 img-fluid" /></div></div>
+                <div class="imageWrapper"><div class="image"><img src="../assets/images/home_slider_image_1.jpg" alt="" class="d-block w-100" /></div></div>
               </div>
               <div class="carousel-item">
-                <div class="imageWrapper"><div class="image"><img src="assets/images/home_slider_image_2.jpg" alt="" class="d-block w-100 img-fluid" /></div></div>
+                <div class="imageWrapper"><div class="image"><img src="../assets/images/home_slider_image_2.jpg" alt="" class="d-block w-100" /></div></div>
               </div>
               <div class="carousel-item">
-                <div class="imageWrapper"><div class="image"><img src="assets/images/home_slider_image_3.jpg" alt="" class="d-block w-100 img-fluid" /></div></div>
+                <div class="imageWrapper"><div class="image"><img src="../assets/images/home_slider_image_3.jpg" alt="" class="d-block w-100" /></div></div>
               </div>
             </div>
           </div>
@@ -82,12 +80,12 @@
 
         <section class="content-section" id="about">
           <div class="row justify-content-center">
-            <h1 class="section-header" property="about_header">ABOUT</h1>
+            <h1 property="about_title" class="section-header">ABOUT</h1>
           </div>
 
-          <div class="container-fluid">
+          <div class="container">
             <div class="row">
-              <div class="col-6 off-white-bg text-section" style="color: #000000; text-align: center; overflow-y: auto; h-100" property="about_content">
+              <div class="col off-white-bg text-section tinymce" style="color: #000000; text-align: center;" property="about_text">
                 <div>The Guildhall School of Music<br/>and Drama in London.</div>
                 <div>The State Opera, Prague as <strong>The Queen</strong></div>
                 <div><strong>of the Night in</strong></div>
@@ -106,8 +104,7 @@
                 <div>Tour in Asia</div>
                 <button style="button" class="btn-black">MORE</button>
               </div>
-              <div class="col-6 black-bg remove-padding"><img src="assets/images/about_image.jpg" alt="About Christina Johnston, Coloratura Soprano" class="img-fluid section-img" property="about_image" /></div>
-  <!--             <div class="col black-bg remove-padding"><img src="assets/images/about_image.jpg" alt="About Christina Johnston, Coloratura Soprano" style="width: 570px; height: 570px;" /></div> -->
+              <div class="col black-bg remove-padding"><img src="../assets/images/about_image.jpg" alt="" style="width: 570px; height: 570px;" /></div>
             </div>
           </div>
         </section>
@@ -115,13 +112,13 @@
 
         <section class="content-section" id="discography">
           <div class="row justify-content-center">
-            <h1 class="section-header" property="discography_header">DISCOGRAPHY</h1>
+            <h1 class="section-header">DISCOGRAPHY</h1>
           </div>
 
           <section class="off-white-bg">
             <div class="row">
               <div class="col">
-                <section class="discography-text" property="discography_text" style="width: 100%; text-align: center;" class="">
+                <section class="discography-text" style="width: 100%; text-align: center;" class="">
                   <div><strong>Blessing NEW ALBUM</strong></div>
                   <div>The State Opera, Prague as The Queen of the Night</div>
                   <div>Mozart’s Die Zauberflöte and Adelein Strauss’s Die Fledermaus.</div>
@@ -132,7 +129,7 @@
               <div class="col mx-auto text-center"><img src="https://lorempixel.com/260/260/fashion/6" alt=""></div>
               <div class="col mx-auto text-center">
                 <img src="https://lorempixel.com/260/260/fashion/7" alt="">
-                <button style="position: relative; top: -50%; margin: 0;" type="button" class="btn-black">MORE</button>
+                <button style="button" class="btn-black">MORE</button>
               </div>
               <div class="col mx-auto text-center"><img src="https://lorempixel.com/260/260/fashion/8" alt=""></div>
             </div>
@@ -145,97 +142,73 @@
         </section>
 
         <section class="content-section" id="concerts">
-          <div class="container-fluid">
+          <div class="container">
             <div class="row justify-content-center">
-              <h1 class="section-header" property="concerts_header">CONCERTS</h1>
+              <h1 class="section-header">CONCERTS</h1>
             </div>
           </div>
 
-          <div class="container-fluid">
+          <div class="container">
             <div class="row justify-content-center"><strong>Christina Johnston Concerts</strong></div>
             <div class="row justify-content-center" style="margin: -0.5rem 0 3.25rem 0;">Discover all information about Chrisitna’s concerts.</div>
-            <div class="row" style="margin: 0 0 1% 10%;">
-              <table class="off-white-bg" style="border-collapse: collapse; width: 90%;">
+            <div class="row off-white-bg" style="margin: 0 0 1% 10%;">
+              <table style="border-collapse: collapse; width: 100%;">
                 <tr>
-                  <td style="width: 14.5rem;"><img src="assets/images/concert_thumbnail_1.jpg" alt="" style="margin: 1.4rem; width: 10.5rem;"></td>
+                  <td style="width: 14.5rem;"><img src="../assets/images/concert_thumbnail_1.jpg" alt="" style="margin: 1.4rem; width: 10.5rem;"></td>
                   <td class="concert-venue-date">
-                    <p><strong style="font-weight: bolder;">June 10 / 2017</strong></p>
+                    <p><strong style="font-weight: bolder;">Sept 23 / 2017</strong></p>
                     <p class="concert-details" style="font-weight: bold;">THE MIRACAL OF THE VOICE</p>
                     <p class="concert-details">Church of St Michael the Archangel</p>
                     <p class="concert-details">Framlingham</p>
                   </td>
                   <td></td>
-                  <td class="buy-tickets-td"><button type="button" class="btn-media buy-tickets-btn">BUY TICKETS</button></td>
-                  <td class="concert-info-td"><a href="#" class="concert-info-a"><em style="white-space: nowrap;">Info ></em></a></td>
+                  <td><button type="button" class="btn-media">BUY TICKETS</button></td>
+                  <td style="text-align: right; padding-right: 0.5rem;">Info ></td>
                 </tr>
               </table>
+  <!--             <div class="col-2"><img src="../assets/images/concert_thumbnail_1.jpg" alt="" style="margin: 10px; width: 100px;"></div>
+              <div class="col-2" style="margin-top: 1.5rem;">Sept 23 / 2017</div>
+              <div class="col-4">3</div>
+              <div class="col-2">4</div>
+              <div class="col-2">5</div> -->
             </div>
 
-            <div class="row" style="margin: 0 0 1% 10%;">
-              <table class="off-white-bg" style="border-collapse: collapse; width: 90%;">
-                <tr>
-                  <td style="width: 14.5rem;"><img src="assets/images/concert_thumbnail_2.jpg" alt="" style="margin: 1.4rem; width: 10.5rem;"></td>
-                  <td class="concert-venue-date">
-                    <p><strong style="font-weight: bolder;">July 28 / 2017</strong></p>
-                    <p class="concert-details" style="font-weight: bold;">THE MIRACAL OF THE VOICE</p>
-                    <p class="concert-details">Church of St Michael the Archangel</p>
-                    <p class="concert-details">Framlingham</p>
-                  </td>
-                  <td></td>
-                  <td class="buy-tickets-td"><button type="button" class="btn-media buy-tickets-btn">BUY TICKETS</button></td>
-                  <td class="concert-info-td"><a href="#" class="concert-info-a"><em style="white-space: nowrap;">Info ></em></a></td>
-                </tr>
-              </table>
+            <div class="row off-white-bg" style="margin: 0 10% 1% 10%;">
+              <div class="col-sm"><img src="../assets/images/concert_thumbnail_2.jpg" alt="" style="margin: 10px; width: 100px;"></div>
+              <div class="col" style="margin-top: 1.5rem;">Oct 15 / 2017</div>
+              <div class="col">3</div>
+              <div class="col">4</div>
+              <div class="col">5</div>
             </div>
           </div>
         </section>
 
         <section class="content-section" id="news">
-          <div class="container-fluid">
+          <div class="container">
             <div class="row justify-content-center">
               <h1 class="section-header">NEWS</h1>
             </div>
 
             <div class="row off-white-bg">
-              <div class="col-6 news-text" style="color: #000000; overflow-y: auto; h-100">
-                <section class="news-item-section" mv-multiple>
-                  <div class="news-date" property="news-date">Jun 23, 2017</div>
-                  <div class="news-title" property="news-title">CHRISTINA JOHNSTON, POPULAR BRITISH COLORATURA SOPRANO WITH A VOICE THAT SOARS ABOVE THE CLOUDS.</div>
-                  <div class="news-details" property="news-details">Her new album "Blessing" is released on 22nd September 17</div>
-                  <a href="#" property="news-more-details" class="news-more-details">More ></a>
-                </section>
-
-                <section class="news-item-section">
-                  <div class="news-date" property="news-date">Jun 10, 2017</div>
-                  <div class="news-title" property="news-title">CHRISTINA WILL BE RETURNING TO HER HOME TOWN OF FRAMLINGHAM, SUFFOLK ON THE 10TH OF JUNE FOR ONE NIGHT ONLY!</div>
-                  <div class="news-details" property="news-details">Her new album "Blessing" is released on 22nd September 17</div>
-                  <a href="#" property="news-more-details" class="news-more-details">More ></a>
-                </section>
-
-                <section class="">
-                  <div class="news-date" property="news-date">Jun 05, 2017</div>
-                  <div class="news-title" property="news-title">CHRISTINA JOHNSTON, POPULAR BRITISH COLORATURA SOPRANO<br/>WITH A VOICE THAT SOARS ABOVE THE CLOUDS.</div>
-                  <div class="news-details" property="news-details">Her new album "Blessing" is released on 22nd September 17</div>
-                  <a href="#" property="news-more-details" class="news-more-details">More ></a>
-                </section>
-
-                <button style="button" class="btn-black" id="more_news_btn">MORE NEWS</button>
-              </div>
-              <div class="remove-padding col-6"><img src="assets/images/news_image.jpg" class="img-fluid section-img" alt="News about Christina Johnston - Coloratura Soprano" property="news_image" /></div>
+              <div class="col">Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</div>
+              <div class="col"><img src="../assets/images/news_image.jpg" alt="" style="width: 550px; height: 550px;"></div>
             </div>
           </div>
         </section>
 
         <section class="content-section" id="instagram">
           <div class="row justify-content-center">
-            <h1 class="section-header" property="instagram_header">INSTAGRAM</h1>
+            <h1 class="section-header">INSTAGRAM</h1>
           </div>
 
           <div class="row">
-            <div class="col justify-content-center" id="instafeed">
-               <button id="btn-instafeed-load" class="btn-black" style="position: relative; z-index: 5; margin: 0; top: 152px; left: 94px;">MORE</button>
-            </div>
+            <div class="col" id="instafeed"></div>
+  <!--           <div class="col"><img src="https://lorempixel.com/255/275/people/1" alt=""></div>
+            <div class="col"><img src="https://lorempixel.com/255/275/people/2" alt=""></div>
+            <div class="col"><img src="https://lorempixel.com/255/275/people/3" alt=""></div>
+            <div class="col"><img src="https://lorempixel.com/255/275/people/4" alt=""></div> -->
           </div>
+          <button id="btn-instafeed-load" class="btn">Load more</button>
         </section>
 
         <footer class="black-bg">
@@ -302,6 +275,31 @@
                 </div>
               </div>
             </div>
+  <!--           <div class="row">
+              <div class="col-md-7">
+                <div class="row">
+                  <div class="col">
+                    <div class="footer-col-title">Opera Agent:</div>
+                    <div>Mark Kendall Artists Management Ltd</div>
+                    <div>Call: +44 1903 693 344</div>
+                    <div>markkendallartists@mac.com</div>
+                    <div>www.markkendallartists.com</div>
+                  </div>
+                  <div class="col footer-col-no-title">
+                    <div>Manager:</div>
+                    <div>Vicky Corley-Smith / VCS Management</div>
+                    <div>vicky@vcsmanagement.com</div>
+                  </div>
+                  <div class="col footer-col-no-title">
+                    <div>All Crossover Bookings:</div>
+                    <div>management@christinajohnston.co.uk</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-5 pull-right">
+
+              </div>
+            </div> -->
         </footer>
           <section id="brand_tag">
             ©2017 Christina Johnston / All Rights Reserved / designed by likelike
@@ -316,7 +314,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js"></script>
     <script src="https://get.mavo.io/mavo.es5.min.js"></script>
-    <script src="assets/javascripts/main.js"></script>
     <script type="text/javascript">
 //       UID = 293336116
         var feed = new Instafeed({

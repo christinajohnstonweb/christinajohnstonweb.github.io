@@ -3,15 +3,13 @@
 html {
   font-size: 62.5%;
 }
-
-
 /* =10px */
 
 
 /* Set the site font(s). */
-
 body {
   font-family: 'Roboto', sans-serif;
+  padding: 0 2.0rem;
 }
 
 nav.topbar {
@@ -263,10 +261,27 @@ footer {
 .news-item-section { margin-bottom: 3.7rem; }
 #more_news_btn { padding: 0.6rem 3.5rem; margin: 1.0rem 0 0 0; }
 
+
 /******************************************/
-/* Editor styles */
+/* Mavo editor styles */
 /******************************************/
 img[src=""] {
   background: white;
   content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100" fill="%23666"><circle cx="50" cy="40" r="22" /><circle cx="50" cy="110" r="50" /></svg>');
 }
+/******************************************/
+/* End Mavo editor styles */
+/******************************************/
+
+
+/******************************************/
+/* Media queries */
+/******************************************/
+@media (min-width: 1200px) { 
+
+}
+/******************************************/
+/* End media queries */
+/******************************************/
+
+.section-extra-bottom-padding { padding-bottom: 5.5rem; }
