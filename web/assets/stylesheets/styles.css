@@ -12,6 +12,8 @@ body {
   padding: 0 2.0rem;
 }
 
+main { display: none; }
+
 nav.topbar {
   margin-top: 50px;
   position: sticky;
@@ -36,6 +38,8 @@ nav.topbar {
   background-color: #000000;
 }
 
+/* Initial values */
+#concert_cards { display: none; }
 
 /* Sticky social sharing */
 .social-container {
@@ -84,6 +88,10 @@ nav.topbar {
 }
 
 
+/* About section */
+[property="about_content"] { color: #000000; text-align: center; overflow-y: auto; }
+
+
 /* Media section */
 .media-container {
   text-align: center;
@@ -106,6 +114,14 @@ nav.topbar {
   font-size: 1.2rem;
 }
 
+.btn-more-info {
+  background-color: #555;
+  border: 1px solid #ddd;
+  color: #fff;
+  padding: 0.6rem 1.4rem;
+  font-size: 1.2rem;
+}
+
 #navbarSupportedContent {
   padding: 0 10% 0 10%;
 }
@@ -116,19 +132,18 @@ a.navbar-brand {
 
 
 /* Discography section */
-
 .discography-text {
   margin: 3.3rem 0 3.35rem 0;
   line-height: 1.75rem;
   font-size: 1.45rem;
 }
 
-.discography-more-btn {}
-
+.discography-more-btn { position: relative; top: -18.5rem; left: 14.0rem; margin: 0; }
+.discography-image { height: 35.0rem; width: 35.0rem; }
 
 /* Footer */
 footer {
-  height: 16rem;
+/*   height: 16rem; */
   color: #fff;
   padding: 2.5rem 0 0 4.8rem;
   font-size: 0.9rem;
@@ -146,10 +161,9 @@ footer {
 }
 
 /* Brand tag. */
-#brand_tag { height: 2.13rem; padding: 0 0 2.0rem 0; }
+#brand_tag { height: 2.13rem; padding: 0 0 1.0rem 0; }
 
 /* Bootstrap style overrides */
-
 .bg-light {
   background-color: #000000;
   color: #ffffff;
@@ -160,9 +174,9 @@ footer {
   margin: 0;
 }
 
+.card { border-radius: 0; border: 0; }
 
 /* Ken Burns effect */
-
 .imageWrapper {
   background-color: #EEE;
   border-bottom: 2px solid #DDD;
@@ -170,8 +184,10 @@ footer {
 }
 
 .image {
-  width: 1480px;
-  height: 425px;
+/*   width: 1480px; */
+  width: 148.0rem;
+  height: 42.5rem;
+/*   height: 425px; */
   /*   height:630px; */
   margin: 0 auto;
   overflow: hidden;
@@ -247,9 +263,10 @@ footer {
 
 /* Concerts section */
 .concert-venue-date { margin: 0 0 0 0; padding: 0.3rem 0 0 1.65rem; font-size: 1.6rem; }
-.concert-details { font-size: 1.2rem; line-height: 0.75rem; }
+.concert-details { font-size: 1.2rem; }
+/* .concert-details { font-size: 1.2rem; line-height: 0.75rem; } */
 .buy-tickets-td { text-align: center; }
-.buy-tickets-btn { margin: 0 0 0 8.0rem; }
+/* .buy-tickets-btn { margin: 0 0 0 8.0rem; } */
 .concert-info-a { text-align: right; padding-right: 2.0rem; color: #212529; }
 
 /* News section */
@@ -261,6 +278,12 @@ footer {
 .news-item-section { margin-bottom: 3.7rem; }
 #more_news_btn { padding: 0.6rem 3.5rem; margin: 1.0rem 0 0 0; }
 
+
+/* Brand tagging */
+.section-extra-bottom-padding { padding-bottom: 5.5rem; }
+
+/* Instagram section */
+.instagram-images { max-height: 28.0rem; max-width: 28.0rem; }
 
 /******************************************/
 /* Mavo editor styles */
@@ -277,11 +300,114 @@ img[src=""] {
 /******************************************/
 /* Media queries */
 /******************************************/
-@media (min-width: 1200px) { 
 
+@media all and (min-width: 2500px) {
+  html { font-size: 125.5%; }
+  footer { font-size: 125.5%; }
 }
+
+@media all and (min-width: 1400px) {
+  html { font-size: 102.5%; }
+}
+
+@media all and (min-width: 1400px) {
+  html { font-size: 72.5%; }
+}
+
+@media all and (max-width: 1199px) {
+/*   html { font-size: 62.5%; } */
+}
+
+@media all and (max-width: 991px) {
+  html { font-size: 66.5%; }
+  /*  Homepage slider size  */
+  .image { width: 99.1rem; height: 26.5rem; }
+  
+  /*  Concerts  */
+  .td-concert-spacer { display: none; }
+  #concert_cards { display: inline; }
+  #concerts_table { display: none; }
+} 
+
+@media all and (max-width: 768px) {
+  html { font-size: 71.5%; }
+  .footer-newsletter-container{ text-align: center; width: 50%; }
+  footer { padding: 1.0rem 2.5rem; }
+  
+  /*  Homepage slider size  */
+  .image { width: 76.8rem; height: 19.5rem; }
+  
+  /*  Discography image size  */
+  .discography-image { width: 20.0rem; height: 20.0rem; }
+  .discography-more-btn { top: -11.0rem; left: 5.5rem; }
+  
+  /*  Instagram image size  */
+  .instagram-images { max-height: 15.0rem; max-width: 15.0rem; }
+} 
+
+@media all and (max-width: 575px) {
+  /*  Homepage slider size  */
+  .image { width: 57.5rem; height: 12.5rem; }
+  
+  /*  Discography image size  */
+/*   .discography-image { width: 15.0rem; height: 15.0rem; }
+  .discography-more-btn { top: -8.0rem; left: 3.5rem; padding: 1.0rem 1.0rem; } */
+  
+  /*  News section  */
+  .news-text { padding: 2.0rem 3.0rem; }
+}
+
+@media all and (max-width: 414px) {
+  /*  Homepage slider size  */
+  .image { width: 41.4rem; height: 9.5rem; }
+  
+  /*  Discography image size  */
+/*   .discography-image { width: 12.0rem; height: 12.0rem; } */
+}
+
 /******************************************/
 /* End media queries */
 /******************************************/
 
-.section-extra-bottom-padding { padding-bottom: 5.5rem; }
+
+/******************************************/
+/* Loading spinner */
+/******************************************/
+.spinner {
+  width: 40px;
+  height: 40px;
+  background-color: #E9008D;
+
+  margin: 100px auto;
+  -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+  animation: sk-rotateplane 1.2s infinite ease-in-out;
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -20px;
+  margin-top: -20px;
+  background-size: 100%;
+}
+
+@-webkit-keyframes sk-rotateplane {
+  0% { -webkit-transform: perspective(120px) }
+  50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+  100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+}
+
+@keyframes sk-rotateplane {
+  0% { 
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
+  } 50% { 
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
+  } 100% { 
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+/******************************************/
+/* End loading spinner */
+/******************************************/

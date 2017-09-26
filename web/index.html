@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Christina Johnston - Coloratura Soprano</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -11,10 +12,11 @@
     <link rel="stylesheet" href="assets/stylesheets/styles.css" />
   </head>
   <body>
+    <div class="spinner"></div>
     <main mv-app="homepage" mv-storage="https://github.com/christinajohnstonweb/christinajohnstonweb.github.io/data" mv-bar="none">
       <div class="container-fluid">
         <div class="row">
-          <div class="w-75">
+          <div class="" style="width: 0.75rem;">
             <div class="social-container">
               <div class="social-el"><a href="https://www.facebook.com/TheChristinaJohnston/" title="Facebook" target="_BLANK"><span class="fa fa-facebook"></span></a></div>
               <div class="social-el"><a href="#"><span class="fa fa-youtube"></span></a></div>
@@ -87,7 +89,7 @@
 
           <div class="container-fluid">
             <div class="row">
-              <div class="col-6 off-white-bg text-section" style="color: #000000; text-align: center; overflow-y: auto; h-100" property="about_content">
+              <div class="col-6 off-white-bg text-section" property="about_content">
                 <div>The Guildhall School of Music<br/>and Drama in London.</div>
                 <div>The State Opera, Prague as <strong>The Queen</strong></div>
                 <div><strong>of the Night in</strong></div>
@@ -106,7 +108,7 @@
                 <div>Tour in Asia</div>
                 <button style="button" class="btn-black">MORE</button>
               </div>
-              <div class="col-6 black-bg remove-padding"><img src="assets/images/about_image.jpg" alt="About Christina Johnston, Coloratura Soprano" class="img-fluid section-img" property="about_image" /></div>
+              <div class="col-6 black-bg remove-padding"><img src="assets/images/about_image_1340.jpg" alt="About Christina Johnston, Coloratura Soprano" class="img-fluid section-img" property="about_image" /></div>
   <!--             <div class="col black-bg remove-padding"><img src="assets/images/about_image.jpg" alt="About Christina Johnston, Coloratura Soprano" style="width: 570px; height: 570px;" /></div> -->
             </div>
           </div>
@@ -128,13 +130,19 @@
                 </section>
               </div>
             </div>
-            <div class="row" style="padding: 0 9.5rem;">
-              <div class="col mx-auto text-center"><img src="https://lorempixel.com/260/260/fashion/6" alt=""></div>
-              <div class="col mx-auto text-center">
-                <img src="https://lorempixel.com/260/260/fashion/7" alt="">
-                <button style="position: relative; top: -50%; margin: 0;" type="button" class="btn-black">MORE</button>
+            <div class="d-flex flex-wrap"><!--  style="padding: 0 9.5rem;" -->
+              <div class="mx-auto" style="margin: 2.0rem;">
+                <img src="assets/images/album_cover_image.jpg" alt="" class="mx-auto d-flex discography-image"/>
+                <a href="#" class="mx-auto btn-black discography-more-btn">MORE</a>
               </div>
-              <div class="col mx-auto text-center"><img src="https://lorempixel.com/260/260/fashion/8" alt=""></div>
+              <div class="mx-auto" style="margin: 2.0rem;">
+                <img src="assets/images/album_cover_image.jpg" alt="" class="mx-auto d-flex discography-image"/>
+                <a href="#" class="mx-auto btn-black discography-more-btn">MORE</a>
+              </div>
+              <div class="mx-auto" style="margin: 2.0rem;">
+                <img src="assets/images/album_cover_image.jpg" alt="" class="mx-auto d-flex discography-image"/>
+                <a href="#" class="mx-auto btn-black discography-more-btn">MORE</a>
+              </div>
             </div>
           </section>
         </section>
@@ -151,7 +159,7 @@
             </div>
           </div>
 
-          <div class="container-fluid">
+          <div class="container-fluid" id="concerts_table">
             <div class="row justify-content-center"><strong>Christina Johnston Concerts</strong></div>
             <div class="row justify-content-center" style="margin: -0.5rem 0 3.25rem 0;">Discover all information about Chrisitna’s concerts.</div>
             <div class="row" style="margin: 0 0 1% 10%;">
@@ -164,8 +172,8 @@
                     <p class="concert-details">Church of St Michael the Archangel</p>
                     <p class="concert-details">Framlingham</p>
                   </td>
-                  <td></td>
-                  <td class="buy-tickets-td"><button type="button" class="btn-media buy-tickets-btn">BUY TICKETS</button></td>
+                  <td class="td-concert-spacer"></td>
+                  <td class="buy-tickets-td"><a href="#" class="btn-media buy-tickets-btn">BUY TICKETS</button></a>
                   <td class="concert-info-td"><a href="#" class="concert-info-a"><em style="white-space: nowrap;">Info ></em></a></td>
                 </tr>
               </table>
@@ -181,11 +189,42 @@
                     <p class="concert-details">Church of St Michael the Archangel</p>
                     <p class="concert-details">Framlingham</p>
                   </td>
-                  <td></td>
-                  <td class="buy-tickets-td"><button type="button" class="btn-media buy-tickets-btn">BUY TICKETS</button></td>
+                  <td class="td-concert-spacer"></td>
+                  <td class="buy-tickets-td"><a href="#" class="btn-media buy-tickets-btn">BUY TICKETS</button></a>
                   <td class="concert-info-td"><a href="#" class="concert-info-a"><em style="white-space: nowrap;">Info ></em></a></td>
                 </tr>
               </table>
+            </div>
+          </div>
+        
+          <div id="concert_cards">
+            <div class="row justify-content-center"><strong>Christina Johnston Concerts</strong></div>
+            <div class="row justify-content-center" style="margin: -0.5rem 0 3.25rem 0;">Discover all information about Chrisitna’s concerts.</div>
+            
+            <div id="cards_concert_content" class="d-flex flex-wrap">
+              <div class="card mx-auto off-white-bg" style="width: 20rem; margin: 1.0rem;">
+                <img class="card-img-top mx-auto d-block rounded-circle" style="margin: 10px; width: 120px; border: 3px solid #ccc;" src="assets/images/concert_thumbnail_1.jpg" alt="Card image cap" />
+
+                <div class="card-body">
+                  <h3 style="font-weight: bolder;">July 28 / 2017</h3>
+                  <h4 class="card-title">THE MIRACLE OF THE VOICE</h4>
+                  <p class="card-text">Church of St Michael the Archangel</p>
+
+                  <a href="#" class="btn-media buy-tickets-btn">BUY TICKETS</a><a href="#" class="btn btn-more-info">Info ></a>
+                </div>
+              </div>
+
+              <div class="card mx-auto off-white-bg" style="width: 20rem; margin: 1.0rem;">
+                <img class="card-img-top mx-auto d-block rounded-circle" style="margin: 10px; width: 120px; border: 3px solid #ccc;" src="assets/images/concert_thumbnail_2.jpg" alt="Card image cap" />
+
+                <div class="card-body">
+                  <h3 style="font-weight: bolder;">July 28 / 2017</h3>
+                  <h4 class="card-title">THE MIRACLE OF THE VOICE</h4>
+                  <p class="card-text">Church of St Michael the Archangel</p>
+
+                  <a href="#" class="btn-media buy-tickets-btn">BUY TICKETS</a><a href="#" class="btn btn-more-info">Info ></a>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -197,7 +236,7 @@
             </div>
 
             <div class="row off-white-bg">
-              <div class="col-6 news-text" style="color: #000000; overflow-y: auto; h-100">
+              <div class="col-6 news-text" style="color: #000000; overflow-y: auto;">
                 <section class="news-item-section" mv-multiple>
                   <div class="news-date" property="news-date">Jun 23, 2017</div>
                   <div class="news-title" property="news-title">CHRISTINA JOHNSTON, POPULAR BRITISH COLORATURA SOPRANO WITH A VOICE THAT SOARS ABOVE THE CLOUDS.</div>
@@ -221,7 +260,7 @@
 
                 <button style="button" class="btn-black" id="more_news_btn">MORE NEWS</button>
               </div>
-              <div class="remove-padding col-6"><img src="assets/images/news_image.jpg" class="img-fluid section-img" alt="News about Christina Johnston - Coloratura Soprano" property="news_image" /></div>
+              <div class="remove-padding col-6"><img src="assets/images/news_image_1340.jpg" class="img-fluid section-img" alt="News about Christina Johnston - Coloratura Soprano" property="news_image" /></div>
             </div>
           </div>
         </section>
@@ -232,8 +271,8 @@
           </div>
 
           <div class="row">
-            <div class="col justify-content-center" id="instafeed">
-               <button id="btn-instafeed-load" class="btn-black" style="position: relative; z-index: 5; margin: 0; top: 152px; left: 94px;">MORE</button>
+            <div class="d-flex flex-wrap" id="instafeed">
+          <button id="btn-instafeed-load" class="btn-black" style="position: relative; top: -50%; left: -50%; height: 2.5rem;">MORE</button>
             </div>
           </div>
         </section>
@@ -266,7 +305,7 @@
 
 
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 footer-newsletter-container">
                 <div id="mailchimp_form_container" class="pull-right">
                   <div id="mc_embed_signup">
                     <form action="//christinajohnston.us12.list-manage.com/subscribe/post?u=6d6e543624b813a228d488deb&amp;id=89b757eded" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -326,7 +365,7 @@
             resolution: "standard_resolution",
             useHttp: "true",
             limit: 3,
-            template: '<div class="col-xs-12 col-sm-6 col-md-4"><a href="{{image}}"><div class="img-featured-container"><div class="img-backdrop"></div><img src="{{image}}" class="img-responsive" style="max-height: 280px; max-width: 280px;"></div></a></div>',
+            template: '<div class="mx-auto"><a href="{{image}}"><div class="img-featured-container d-flex flex-wrap"><div class="img-backdrop"></div><img src="{{image}}" class="img-responsive instagram-images"/></div></a></div>',
             target: "instafeed",
             after: function() {
               // disable button if no more results to load
