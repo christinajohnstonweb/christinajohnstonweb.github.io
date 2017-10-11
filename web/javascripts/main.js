@@ -73,6 +73,16 @@ $(function(){
     // Resize info blocks, based on width.
     setTimeout(function(){ responsiveTest() }, 300);
     
+    // Zoom logo on "About" page in.
+    if( $(".about-logo") ) {
+      $(".about-logo").animate({
+        width: "320px",
+        height: "67px"
+  //       width: "385px",
+  //       height: "81px"
+      }, 2000);
+    }
+    
     $(".spinner").hide();
     $("main").fadeIn("slow");
 //     $(".section-img").parent().parent().css( "height", $(".section-img").width() );

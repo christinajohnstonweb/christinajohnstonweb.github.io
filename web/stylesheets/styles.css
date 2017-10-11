@@ -9,7 +9,7 @@ html {
 /* Set the site font(s). */
 body {
   font-family: 'Roboto', sans-serif;
-  padding: 0 2.0rem;
+  padding: 0 5.5rem;
 }
 
 main { display: none; }
@@ -38,6 +38,10 @@ nav.topbar {
   background-color: #000000;
 }
 
+.transparent-bg {
+  background-color: transparent;
+}
+
 /* Initial values */
 #concert_cards { display: none; }
 
@@ -48,14 +52,14 @@ nav.topbar {
 }
 
 .social-el {
-  width: 27px;
+  width: 47px;
   margin: 0 auto 0.8rem auto;
 }
 
 .social-el>a {
   color: #000;
+  font-size: 1.5rem;
 }
-
 
 /* Section styles */
 .section-header {
@@ -67,6 +71,23 @@ nav.topbar {
   margin-bottom: 1.2rem;
   letter-spacing: 0.08rem;
   font-stretch: ultra-expanded;
+}
+
+.section-header-link {
+  text-decoration: none;
+/*   border-bottom: none; */
+/*   border-bottom: 2px solid #000; */
+  font-size: 1.9rem;
+  font-weight: bolder;
+  padding: 0 2px 0.6rem 4px;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.08rem;
+  font-stretch: ultra-expanded;
+}
+
+.section-header-link:hover {
+  border-bottom: 2px solid #000;
+  transition: border-bottom 0.25s;
 }
 
 .content-section {
@@ -91,6 +112,10 @@ nav.topbar {
 /* About section */
 [property="about_content"] { color: #000000; text-align: center; overflow-y: auto; }
 
+/* About banner zoom */
+.about-logo {
+  margin: 1.8rem;
+}
 
 /* Media section */
 .media-container {
@@ -104,6 +129,17 @@ nav.topbar {
   font-size: 5.0rem;
   font-weight: 900;
   vertical-align: middle;
+}
+
+.reveal-fixed-bg {
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.reveal-container {
+  background-color: transparent;
 }
 
 .btn-media {
@@ -122,6 +158,26 @@ nav.topbar {
   font-size: 1.2rem;
 }
 
+/* MEDIA - Photos section */
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.masonry-img {
+  width: 32.0rem;
+}
+
+.grid-item {
+  margin: 8px;
+}
+
+.img-caption { font-size: 1.5rem; width: 32.0rem; }
+
+
+/* Navbar overrides */
 #navbarSupportedContent {
   padding: 0 10% 0 10%;
 }
@@ -327,12 +383,14 @@ img[src=""] {
   .td-concert-spacer { display: none; }
   #concert_cards { display: inline; }
   #concerts_table { display: none; }
+  
+  footer { font-size: 125% }
 } 
 
 @media all and (max-width: 768px) {
   html { font-size: 71.5%; }
   .footer-newsletter-container{ text-align: center; width: 50%; }
-  footer { padding: 1.0rem 2.5rem; }
+  footer { padding: 1.0rem 2.5rem; font-size: 150% }
   
   /*  Homepage slider size  */
   .image { width: 76.8rem; height: 19.5rem; }
@@ -349,6 +407,7 @@ img[src=""] {
   /*  Homepage slider size  */
   .image { width: 57.5rem; height: 12.5rem; }
   
+/*   .social-el>a { font-size: 2.0rem; } */
   /*  Discography image size  */
 /*   .discography-image { width: 15.0rem; height: 15.0rem; }
   .discography-more-btn { top: -8.0rem; left: 3.5rem; padding: 1.0rem 1.0rem; } */
