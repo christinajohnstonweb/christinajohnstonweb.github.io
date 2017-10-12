@@ -9,7 +9,12 @@
 			"news-date": "Jun 23, 2017",
 			"news-title": "CHRISTINA JOHNSTON, POPULAR BRITISH COLORATURA SOPRANO WITH A VOICE THAT SOARS ABOVE THE CLOUDS.",
 			"news-details": "Her new album \"Blessing\" is released on 22nd September 17",
-			"news-more-details": "#"
+			"news-more-details": "#",
+			"discCoverImg": "http://www.christinajohnston.co.uk/data/images/album_cover_image.jpg",
+			"discReleaseDate": "12/09/2017",
+			"discName": "Blessings",
+			"discDistributor": "Sony",
+			"discIsSolo": false
 		}
 	],
 	"news-date": [
