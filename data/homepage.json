@@ -15,6 +15,13 @@
 			"discName": "Blessings",
 			"discDistributor": "Sony",
 			"discIsSolo": true
+		},
+		{
+			"discCoverImg": "http://www.christinajohnston.co.uk/data/images/news_embedded.jpg",
+			"discReleaseDate": "22/10/2017",
+			"discName": "News",
+			"discDistributor": "Sony Music",
+			"discIsSolo": false
 		}
 	],
 	"news-date": [
