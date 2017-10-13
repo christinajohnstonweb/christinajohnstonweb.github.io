@@ -3,10 +3,40 @@
 	"aboutImage": "/christinajohnstonweb/_site/images/about_image_1340.jpg",
 	"discographyHeader": "DISCOGRAPHY",
 	"collection": [
+		{
+			"discCoverImg": "/christinajohnstonweb/_site/images/album_cover_image.jpg",
+			"discReleaseDate": "10/10/2017",
+			"discName": "BLESSINGS",
+			"discDistributor": "Sony Music, Ltd.",
+			"discIsSolo": true
+		},
+		{
+			"discCoverImg": "http://www.christinajohnston.co.uk/data/images/news_embedded.jpg",
+			"discReleaseDate": "09/09/2017",
+			"discName": "NEWS",
+			"discDistributor": "Sony Music, Ltd.",
+			"discIsSolo": true
+		}
 	],
 	"concerts_header": "CONCERTS",
 	"concerts_subtitle": "Discover all information about Chrisitna’s concerts.",
 	"news_image": "/christinajohnstonweb/_site/images/news_image_1340.jpg",
 	"instagram_header": "INSTAGRAM",
-	"aboutContent": "<strong>Nothin' But A Good Time</strong><br /><br />Now Listen<br />Not a dime, I can't pay my rent<br />I can barely make it through the week<br />Saturday night I'd like to make my girl<br />But right now I can't make ends meet<br /><br />I'm always working slaving every day<br />Gotta get away from that same old same old<br />I need a chance just to get away<br />If you could hear me think this is what I'd say"
+	"aboutContent": "<strong>Nothin' But A Good Time</strong><br /><br />Now Listen<br />Not a dime, I can't pay my rent<br />I can barely make it through the week<br />Saturday night I'd like to make my girl<br />But right now I can't make ends meet<br /><br />I'm always working slaving every day<br />Gotta get away from that same old same old<br />I need a chance just to get away<br />If you could hear me think this is what I'd say",
+	"album": [
+		{
+			"discCoverImg": "/christinajohnstonweb/_site/images/album_cover_image.jpg",
+			"discReleaseDate": "09/09/2017",
+			"discName": "BLESSING",
+			"discDistributor": "Sony Music, Ltd.",
+			"discIsSolo": true
+		},
+		{
+			"discCoverImg": "http://www.christinajohnston.co.uk/data/images/news_embedded.jpg",
+			"discReleaseDate": "10/10/2017",
+			"discName": "NEWS",
+			"discDistributor": "Sony Music, Ltd.",
+			"discIsSolo": true
+		}
+	]
 }
