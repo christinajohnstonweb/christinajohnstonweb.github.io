@@ -1,1 +1,18 @@
-
+{
+	"about_header": "ABOUT",
+	"about_image": "/christinajohnstonweb/_site/images/about_image_1340.jpg",
+	"discographyHeader": "DISCOGRAPHY",
+	"collection": [
+		{
+			"discCoverImg": "/christinajohnstonweb/_site/images/album_cover_image.jpg",
+			"discReleaseDate": "12/13/2017",
+			"discName": "BLESSING",
+			"discDistributor": "Sony Music",
+			"discIsSolo": false
+		}
+	],
+	"concerts_header": "CONCERTS",
+	"concerts_subtitle": "Discover all information about Chrisitna’s concerts.",
+	"news_image": "/christinajohnstonweb/_site/images/news_image_1340.jpg",
+	"instagram_header": "INSTAGRAM"
+}
