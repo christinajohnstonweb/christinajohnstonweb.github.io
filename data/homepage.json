@@ -1,5 +1,5 @@
 {
-	"about_header": "ABOUT",
+	"about_header": "ABOOT",
 	"about_image": "/christinajohnstonweb/_site/images/about_image_1340.jpg",
 	"discographyHeader": "DISCOGRAPHY",
 	"collection": [
@@ -14,5 +14,6 @@
 	"concerts_header": "CONCERTS",
 	"concerts_subtitle": "Discover all information about Chrisitna’s concerts.",
 	"news_image": "/christinajohnstonweb/_site/images/news_image_1340.jpg",
-	"instagram_header": "INSTAGRAM"
+	"instagram_header": "INSTAGRAM",
+	"aboutContent": "<strong>Nothin' But A Good Time</strong><br />Now ListenNot a dime, I can't pay my rentI can barely make it through the weekSaturday night I'd like to make my girlBut right now I can't make ends meet<br />I'm always working slaving every dayGotta get away from that same old same oldI need a chance just to get awayIf you could hear me think this is what I'd say"
 }
