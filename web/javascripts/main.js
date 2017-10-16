@@ -63,6 +63,17 @@ function responsiveTest(){
   }
 }
 
+// Parse querystrings.
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
 $(function(){
   // JS media queries.
   $(window).on("resize", function(){
@@ -87,5 +98,14 @@ $(function(){
     $("main").fadeIn("slow");
 //     $(".section-img").parent().parent().css( "height", $(".section-img").width() );
     $(".section-img").parent().prev().css( "height", $(".section-img").width() );
+  });
+  
+  // Handle album clicks.
+  $(document).on("click", ".discography-more-btn", function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    
+    var loc = $(this).attr("href") + "/?name=" + $(this).data("album");
+    window.location.href = loc;
   });
 });

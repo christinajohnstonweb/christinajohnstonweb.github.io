@@ -52,14 +52,13 @@
         <a class="nav-link" href=/web/concerts>CONCERTS</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <strong style="font-weight: 900;">MEDIA</strong>
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          MEDIA
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href=/web/media/photos>PHOTOS</a>
           <a class="dropdown-item" href=/web/media/videos>VIDEOS</a>
         </div>
-<!--         <a href="media" class="nav-link">MEDIA</a> -->
       </li>
       <li class="nav-item">
         <a href=/web/news class="nav-link">NEWS</a>
@@ -72,45 +71,8 @@
   </div>
 </nav>
 
-<section class="content-section" id="carousel">
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-pause="false">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="imageWrapper"><div class="image"><img src=/web/images/home_slider_image_1.jpg alt="" class="d-block w-100 img-fluid" /></div></div>
-      </div>
-      <div class="carousel-item">
-        <div class="imageWrapper"><div class="image"><img src=/web/images/home_slider_image_2.jpg alt="" class="d-block w-100 img-fluid" /></div></div>
-      </div>
-      <div class="carousel-item">
-        <div class="imageWrapper"><div class="image"><img src=/web/images/home_slider_image_3.jpg alt="" class="d-block w-100 img-fluid" /></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="container-fluid">
-    <div class="row justify-content-center">
-      <h1 class="section-header-link" property="photos_header"><a href=/web/media/photos style="color: black; text-decoration: none;">PHOTOS</a></h1>&nbsp;&nbsp;&nbsp;<h1 class="section-header">VIDEOS</h1>
-    </div>
-  </div>
-
-<div class="d-flex flex-wrap">
-  <iframe style="padding: 10px;" width="375" height="211" src="https://www.youtube.com/embed/YtVHyn_jL4E" frameborder="0" allowfullscreen></iframe>
-  <iframe style="padding: 10px;" width="375" height="211" src="https://www.youtube.com/embed/YtVHyn_jL4E" frameborder="0" allowfullscreen></iframe>
-  <iframe style="padding: 10px;" width="375" height="211" src="https://www.youtube.com/embed/YtVHyn_jL4E" frameborder="0" allowfullscreen></iframe>
-  <iframe style="padding: 10px;" width="375" height="211" src="https://www.youtube.com/embed/YtVHyn_jL4E" frameborder="0" allowfullscreen></iframe>
-  <iframe style="padding: 10px;" width="375" height="211" src="https://www.youtube.com/embed/YtVHyn_jL4E" frameborder="0" allowfullscreen></iframe>
-  <iframe style="padding: 10px;" width="375" height="211" src="https://www.youtube.com/embed/YtVHyn_jL4E" frameborder="0" allowfullscreen></iframe>
-  <iframe style="padding: 10px;" width="375" height="211" src="https://www.youtube.com/embed/YtVHyn_jL4E" frameborder="0" allowfullscreen></iframe>
-  <iframe style="padding: 10px;" width="375" height="211" src="https://www.youtube.com/embed/YtVHyn_jL4E" frameborder="0" allowfullscreen></iframe>
-  <iframe style="padding: 10px;" width="375" height="211" src="https://www.youtube.com/embed/YtVHyn_jL4E" frameborder="0" allowfullscreen></iframe>
-  <iframe style="padding: 10px;" width="375" height="211" src="https://www.youtube.com/embed/YtVHyn_jL4E" frameborder="0" allowfullscreen></iframe>
-  <iframe style="padding: 10px;" width="375" height="211" src="https://www.youtube.com/embed/YtVHyn_jL4E" frameborder="0" allowfullscreen></iframe>
+<div class="solo-album-container">
+  
 </div>
 
 <section id="media" class="reveal-fixed-bg media-container" style='background-image: url(/web/images/roses_parallax.png);'>
@@ -232,6 +194,54 @@
       </div>
     </div>
 </footer>
+
+<script>
+  $(function(){
+    var album_name = getParameterByName("name");
+    
+    $.ajax({
+      type: "GET",
+      url: "https://cdn.rawgit.com/christinajohnstonweb/christinajohnstonweb.github.io/5054c4e4/data/homepage.json",
+      datatype: "json",
+      success: function(data){
+        $.each(data.album, function(key, val){
+          var name = val.discName.toLowerCase().replace(/\s/, '-').replace(/[^\w-]/gi, '');
+          
+          if(name === album_name){
+            var code = $("#solo_album_tmpl").prop("innerHTML");
+            
+            code = code.replace("!!album_name!!", val.discName);
+            code = code.replace("!!album_release_date!!", val.discReleaseDate);
+            code = code.replace("!!disc_cover_img!!", val.discCoverImg);
+            code = code.replace("!!album_distributor!!", val.discDistributor);
+            
+            $(".solo-album-container").html(code);
+          }
+        });
+      },
+      error: function(data){
+        
+      }
+    });
+  });
+</script>
+
+<script type="text/template" id="solo_album_tmpl">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 off-white-bg" style="text-align: center;">
+        <h1 style="text-align: center;">!!album_name!!</h1>
+        <div><small style="text-align: center; width: 100%;">!!album_release_date!!</small></div>
+        <div><small style="">!!album_distributor!!</small></div>
+        <div><img src="!!disc_cover_img!!" style="width: 230px; margin: 0 auto;" /></div>
+        <p>BUY ON:</p>
+        <p>Test</p>
+        <p>STREAM ON:</p>
+        <p>Test</p>
+      </div>
+    </div>
+</div>
+</script>
         
             <section id="brand_tag">
               ©2017 Christina Johnston / All Rights Reserved / designed by likelike

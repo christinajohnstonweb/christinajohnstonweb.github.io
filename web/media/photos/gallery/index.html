@@ -10,12 +10,11 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://get.mavo.io/mavo.css">
     <link rel="stylesheet" href=/web/stylesheets/styles.css />
-
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<!--     <link rel="stylesheet" href="stylesheets/styles.css" /> -->
   </head>
   <body>
-    <main mv-app="homepage" mv-storage="https://github.com/christinajohnstonweb/christinajohnstonweb.github.io/data" mv-plugins="tinymce" mv-bar="none">
-      <div class="spinner"></div>
+    <div class="spinner"></div>
+    <main mv-app="homepage" mv-storage="https://github.com/christinajohnstonweb/christinajohnstonweb.github.io/data" mv-bar="none">
       <div class="container-fluid">
         <div class="row">
           <div class="" style="width: 0.85rem;">
@@ -26,7 +25,7 @@
               <div class="social-el"><a href="https://twitter.com/christinajvoice" title="Twitter" target="_BLANK"><span class="fa fa-twitter"></span></a></div>
             </div>
           </div>
-          <div class="col main-content">
+          <div class="col">
 
             <nav class="navbar navbar-expand-md topbar" style="background-color: #000;">
   <a class="navbar-brand" href=/web/ style="color: #fff;">CHRISTINA JOHNSTON</a>
@@ -59,7 +58,6 @@
           <a class="dropdown-item" href=/web/media/photos>PHOTOS</a>
           <a class="dropdown-item" href=/web/media/videos>VIDEOS</a>
         </div>
-<!--         <a href="media" class="nav-link">MEDIA</a> -->
       </li>
       <li class="nav-item">
         <a href=/web/news class="nav-link">NEWS</a>
@@ -93,25 +91,14 @@
   </div>
 </section>
 
-<div class="container-fluid">
+<section class="content-section" id="photos">
+  <div class="container-fluid">
     <div class="row justify-content-center">
-      <h1 class="section-header-link" property="photos_header"><a href=/web/media/photos style="color: black; text-decoration: none;">PHOTOS</a></h1>&nbsp;&nbsp;&nbsp;<h1 class="section-header">VIDEOS</h1>
+      <h1 class="section-header" property="photos_header">PHOTOS</h1>&nbsp;&nbsp;&nbsp;<h1 class="section-header-link"><a href=/web/media/videos style="color: black; text-decoration: none;">VIDEOS</a></h1>
     </div>
   </div>
-
-<div class="d-flex flex-wrap">
-  <iframe style="padding: 10px;" width="375" height="211" src="https://www.youtube.com/embed/YtVHyn_jL4E" frameborder="0" allowfullscreen></iframe>
-  <iframe style="padding: 10px;" width="375" height="211" src="https://www.youtube.com/embed/YtVHyn_jL4E" frameborder="0" allowfullscreen></iframe>
-  <iframe style="padding: 10px;" width="375" height="211" src="https://www.youtube.com/embed/YtVHyn_jL4E" frameborder="0" allowfullscreen></iframe>
-  <iframe style="padding: 10px;" width="375" height="211" src="https://www.youtube.com/embed/YtVHyn_jL4E" frameborder="0" allowfullscreen></iframe>
-  <iframe style="padding: 10px;" width="375" height="211" src="https://www.youtube.com/embed/YtVHyn_jL4E" frameborder="0" allowfullscreen></iframe>
-  <iframe style="padding: 10px;" width="375" height="211" src="https://www.youtube.com/embed/YtVHyn_jL4E" frameborder="0" allowfullscreen></iframe>
-  <iframe style="padding: 10px;" width="375" height="211" src="https://www.youtube.com/embed/YtVHyn_jL4E" frameborder="0" allowfullscreen></iframe>
-  <iframe style="padding: 10px;" width="375" height="211" src="https://www.youtube.com/embed/YtVHyn_jL4E" frameborder="0" allowfullscreen></iframe>
-  <iframe style="padding: 10px;" width="375" height="211" src="https://www.youtube.com/embed/YtVHyn_jL4E" frameborder="0" allowfullscreen></iframe>
-  <iframe style="padding: 10px;" width="375" height="211" src="https://www.youtube.com/embed/YtVHyn_jL4E" frameborder="0" allowfullscreen></iframe>
-  <iframe style="padding: 10px;" width="375" height="211" src="https://www.youtube.com/embed/YtVHyn_jL4E" frameborder="0" allowfullscreen></iframe>
-</div>
+  
+  <h1>PHOTO GALLERY</h1>
 
 <section id="media" class="reveal-fixed-bg media-container" style='background-image: url(/web/images/roses_parallax.png);'>
   <div class="reveal-container">
@@ -240,11 +227,15 @@
         </div>
       </div>
     </main>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src=/web/javascripts/jquery.socialfeed.js></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js"></script>
     <script src="https://get.mavo.io/mavo.es5.min.js"></script>
     <script src=/web/javascripts/main.js></script>
+    
     <script type="text/javascript">
 //       UID = 293336116
         var feed = new Instafeed({
@@ -270,6 +261,34 @@
 //             feed.next();
 //           });
       
+      // Masonry init.
+      $('.grid').masonry({
+      // set itemSelector so .grid-sizer is not used in layout
+      itemSelector: '.grid-item',
+      // use element for option
+      columnWidth: 180,
+      percentPosition: true,
+      horizontalOrder: true,
+      fitWidth: true,
+      resize: true,
+      gutter: 5
+    });
+      
+    $(function(){
+      $(window).on("resize", function(){
+        $(".grid").masonry();  
+      });
+
+      $(window).on("load", function(){
+        $(".grid").masonry();
+        
+        console.log("Building masonry...");
+      });
+      
+      setInterval(function(){
+        $(".grid").masonry();
+      }, 500);
+    });
     </script>
 
   </body>

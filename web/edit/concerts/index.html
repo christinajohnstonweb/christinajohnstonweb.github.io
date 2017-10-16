@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christina Johnston - Coloratura Soprano</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<!--     <link rel="stylesheet" href="assets/stylesheets/Supernice.min.css" /> -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://get.mavo.io/mavo.css">
+    <link rel="stylesheet" href=/web/stylesheets/styles.css />
+<!--     <link rel="stylesheet" href="stylesheets/styles.css" /> -->
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md topbar" style="background-color: #000;">
+  <a class="navbar-brand" href=/web/edit style="color: #fff;">CHRISTINA JOHNSTON CMS</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="fa fa-bars"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link"  href=/web/edit/albums>
+          EDIT DISCOGRAPHY
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href=/web/edit/concerts>EDIT CONCERTS</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href=/web/edit/media>
+          EDIT MEDIA
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href=/web/edit/news class="nav-link">EDIT NEWS</a>
+      </li>
+      <li class="nav-item">
+        <a href=/web/edit/carousel class="nav-link">EDIT SECTION CAROUSELS</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    <main mv-app="homepage" mv-storage="https://github.com/christinajohnstonweb/christinajohnstonweb.github.io/data" mv-plugins="tinymce">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col main-content">
+
+            <h1>Concerts Editor</h1>
+
+<section id="concerts_tables_section">
+  <div class="container-fluid" id="concerts_table">
+    <div class="row justify-content-center"><strong property="concertsTitle">Christina Johnston Concerts</strong></div>
+    <div class="row justify-content-center" property="concertsSubtitle" style="margin: -0.5rem 0 3.25rem 0;">Discover all information about Chrisitna’s concerts.</div>
+    <div class="row" style="margin: 0 0 1% 10%; background-color: #FAFAFA; padding: 20px;" property="concerts" mv-multiple>
+      <table class="off-white-bg" style="border-collapse: collapse; width: 90%;">
+        <tr>
+          <td style="width: 14.5rem;"><img src=/web/images/concert_thumbnail_1.jpg alt="" property="concertLocImg" style="margin: 1.4rem; width: 10.5rem;"></td>
+          <td class="concert-venue-date">
+            <p><strong style="font-weight: bolder;" property="concertDatetime">June 10 / 2017</strong></p>
+            <p class="concert-details" style="font-weight: bold;" property="concertName">THE MIRACAL OF THE VOICE</p>
+            <p class="concert-details" property="concertVenue">Church of St Michael the Archangel</p>
+            <p class="concert-details" property="concertLocation">Framlingham</p>
+          </td>
+          <td class="td-concert-spacer"></td>
+          <td class="buy-tickets-td">
+            <div><a href="#" class="btn-media buy-tickets-btn">BUY TICKETS</button></a></div>
+            <div style="margin-top: 20px; text-align: left;">Ticket purchase link:&nbsp;<input type="text" placeholder="https://www.example.com/store/url" property="concertTicketsURL" class="form-control" /></div>
+        </td>
+        </tr>
+         <tr>
+           <td colspan="4">Concert Details:&nbsp;<textarea cols="6" rows="10" style="width: 100%;" property="concertDetails" class="form-control tinymce"></textarea></td>
+         </tr>
+         <tr>
+           <td colspan="4"><input type="checkbox" property="featuredConcert" />&nbsp;Feature concert on the home page?</td>
+         </tr>
+      </table>
+    </div>
+  </div>
+</section>
+        
+            <section id="brand_tag">
+              ©2017 Christina Johnston / All Rights Reserved / designed by likelike
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js"></script>
+    <script src="https://get.mavo.io/mavo.es5.min.js"></script>
+    <script src=/web/javascripts/main.js></script>
+    <script type="text/javascript">
+//       UID = 293336116
+        var feed = new Instafeed({
+            get: 'user',
+            userId: '1593628250',
+            accessToken: '1593628250.1677ed0.02eb61b5a3104a83a39d83495e534ed9',
+            resolution: "standard_resolution",
+            useHttp: "true",
+            limit: 3,
+            template: '<div class="mx-auto"><a href=""><div class="img-featured-container d-flex flex-wrap"><div class="img-backdrop"></div><img src="" class="img-responsive instagram-images"/></div></a></div>',
+            target: "instafeed",
+            after: function() {
+              // disable button if no more results to load
+              if (!this.hasNext()) {
+                // btnInstafeedLoad.setAttribute('disabled', 'disabled');
+              }
+            },
+          });
+          feed.run();
+
+//           var btnInstafeedLoad = document.getElementById("btn-instafeed-load");
+//           btnInstafeedLoad.addEventListener("click", function() {
+//             feed.next();
+//           });
+      
+    </script>
+
+  </body>
+</html>

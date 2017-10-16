@@ -110,7 +110,7 @@ nav.topbar {
 
 
 /* About section */
-[property="about_content"] { color: #000000; text-align: center; overflow-y: auto; }
+.about-content { color: #000000; text-align: center; overflow-y: auto; }
 
 /* About banner zoom */
 .about-logo {
