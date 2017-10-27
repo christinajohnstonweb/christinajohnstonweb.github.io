@@ -69,15 +69,5 @@
 		{
 			"video": "8za2_4T00jM"
 		}
-	],
-	"homeCarouselImage": [],
-	"aboutCarouselImage": [
-		"http://www.christinajohnston.co.uk/data/images/about_slider_image_1.jpg",
-		"http://www.christinajohnston.co.uk/data/images/concerts_slider_image_1.jpg"
-	],
-	"concertCarouselImage": [],
-	"discographyCarouselImage": [],
-	"mediaCarouselImage": [],
-	"newsCarouselImage": [],
-	"contactCarouselImage": []
+	]
 }
