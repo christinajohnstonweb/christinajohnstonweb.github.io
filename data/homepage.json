@@ -107,8 +107,21 @@
 		{
 			"contactTitle": "Opera Agent",
 			"contactDetail": [
-				"<p><span style=\"color: #ffffff; font-size: xx-small;\"><span style=\"background-color: #000000;\">Mark Kendall Artists Management Ltd</span></span></p>",
+				"<p>Mark Kendall Artists Management Ltd</p>",
 				"<p>Call: +44 1903 693 344</p>"
+			]
+		},
+		{
+			"contactTitle": "Manager",
+			"contactDetail": [
+				"<p>Vicky Corley-Smith / VCS Management</p>",
+				"<p>vicky@vcsmanagement.com</p>"
+			]
+		},
+		{
+			"contactTitle": "All Crossover Bookings",
+			"contactDetail": [
+				"<p>management@christinajohnston.co.uk</p>"
 			]
 		}
 	]
