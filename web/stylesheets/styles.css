@@ -108,6 +108,63 @@ nav.topbar {
   margin-top: 3.8rem;
 }
 
+/* Collection details styles */
+.coll-detail-header {
+  text-decoration: none;
+/*   border-bottom: 2px solid #000; */
+  font-size: 1.9rem;
+  font-weight: bolder;
+  padding: 0 2px 0 4px;
+  margin-top: 3.2rem;
+  letter-spacing: 0.08rem;
+  font-stretch: ultra-expanded;
+}
+
+/* Collection details date */
+.coll-detail-date {
+  color: #EB008B;
+  font-size: 1.6rem;
+  text-align: center;
+  width: 100%;
+}
+
+/* Collection details distribution */
+.coll-detail-distribution {
+  font-size: 1.25rem;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 1.0rem;
+}
+
+/* Collection details image */
+.coll-detail-img {
+  width: 28.0rem;
+  margin: 0 auto 2.2rem auto;
+}
+
+/* Collection details buy labels */
+.coll-detail-buy-label {
+  font-weight: bolder;
+}
+
+/* Collection details buy options */
+.coll-detail-buy-option {
+  list-style-type: none;
+}
+
+.coll-detail-buy-option > li {
+  display: inline;
+}
+
+/* Collection details buy image */
+.coll-detail-buy-img {
+  height: 1.8rem;
+  margin: 0 1.0rem 1.0rem 1.0rem;
+}
+
+/* .amazon-img {
+  padding-top: 2.0rem;
+} */
 
 /* About section */
 .about-content { color: #000000; text-align: center; overflow-y: auto; }
@@ -175,6 +232,8 @@ nav.topbar {
 }
 
 .img-caption { font-size: 1.5rem; width: 32.0rem; }
+
+.gallery-btn { position: absolute; top: 50%; left: 50%; width: 12.0rem; height: 3.0rem; transform: translate(-50%,-95%); }
 
 
 /* Navbar overrides */

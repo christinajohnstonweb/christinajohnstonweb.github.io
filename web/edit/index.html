@@ -10,7 +10,9 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://get.mavo.io/mavo.css">
     <link rel="stylesheet" href=/web/stylesheets/styles.css />
-<!--     <link rel="stylesheet" href="stylesheets/styles.css" /> -->
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="//widget.cloudinary.com/global/all.js" type="text/javascript"></script>
   </head>
   <body>
     <nav class="navbar navbar-expand-md topbar" style="background-color: #000;">
@@ -29,10 +31,12 @@
       <li class="nav-item">
         <a class="nav-link" href=/web/edit/concerts>EDIT CONCERTS</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href=/web/edit/media>
-          EDIT MEDIA
-        </a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">EDIT MEDIA</a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href=/web/edit/media/photos>PHOTOS</a>
+            <a class="dropdown-item" href=/web/edit/media/videos>VIDEOS</a>
+          </div>
       </li>
       <li class="nav-item">
         <a href=/web/edit/news class="nav-link">EDIT NEWS</a>
@@ -140,6 +144,7 @@
   <section class="content-section" id="concerts">
   <div class="container-fluid">
     <div class="row justify-content-center">
+      <span class="pull-right mv-logged-in"><a href=/web/edit/concerts role="button" class="btn btn-default">Edit Concerts</a></span>
       <h1 class="section-header" property="concertsHeader">CONCERTS</h1>
     </div>
   </div>
@@ -148,21 +153,23 @@
   <div class="container-fluid" id="concerts_table">
     <div class="row justify-content-center"><strong property="concertsTitle">Christina Johnston Concerts</strong></div>
     <div class="row justify-content-center" property="concertsSubtitle" style="margin: -0.5rem 0 3.25rem 0;">Discover all information about Chrisitna’s concerts.</div>
-    <div class="row" style="margin: 0 0 1% 10%;" property="concerts" mv-multiple>
-      <table class="off-white-bg" style="border-collapse: collapse; width: 90%;">
-        <tr>
-          <td style="width: 14.5rem;"><img src=/web/images/concert_thumbnail_1.jpg alt="" property="concertLocImg" style="margin: 1.4rem; width: 10.5rem;"></td>
-          <td class="concert-venue-date">
-            <p><strong style="font-weight: bolder;" property="concertDatetime">June 10 / 2017</strong></p>
-            <p class="concert-details" style="font-weight: bold;" property="concertName">THE MIRACAL OF THE VOICE</p>
-            <p class="concert-details" property="concertVenue">Church of St Michael the Archangel</p>
-            <p class="concert-details" property="concertLocation">Framlingham</p>
-          </td>
-          <td class="td-concert-spacer"></td>
-          <td class="buy-tickets-td"><a href="#" class="btn-media buy-tickets-btn">BUY TICKETS</button></a><span class="mv-logged-in">&nbsp;Ticket purchase link:&nbsp;<input type="text" placeholder="https://www.example.com/store/url" property="concertTicketsURL" class="form-control" /></span></td>
-          <td class="concert-info-td"><a href="#" class="concert-info-a"><em style="white-space: nowrap;">Info ></em></a><span class="mv-logged-in">&nbsp;Concert Details:&nbsp;<textarea cols="6" rows="10" property="concertDetails" class="form-control tinymce"></textarea></span></td>
-        </tr>
-      </table>
+    <div id="concert_tables_content">
+      <div class="row" style="margin: 0 0 1% 10%;" property="concerts" mv-multiple>
+        <table class="off-white-bg" style="border-collapse: collapse; width: 90%;">
+          <tr>
+            <td style="width: 14.5rem;"><img src=/web/images/concert_thumbnail_1.jpg alt="" property="concertLocImg" style="margin: 1.4rem; width: 10.5rem;"></td>
+            <td class="concert-venue-date">
+              <p><strong style="font-weight: bolder;" property="concertDatetime">June 10 / 2017</strong></p>
+              <p class="concert-details" style="font-weight: bold;" property="concertName">THE MIRACAL OF THE VOICE</p>
+              <p class="concert-details" property="concertVenue">Church of St Michael the Archangel</p>
+              <p class="concert-details" property="concertLocation">Framlingham</p>
+            </td>
+            <td class="td-concert-spacer"></td>
+            <td class="buy-tickets-td"><a href="#" class="btn-media buy-tickets-btn">BUY TICKETS</button></a><span class="mv-logged-in">&nbsp;Ticket purchase link:&nbsp;<input type="text" placeholder="https://www.example.com/store/url" property="concertTicketsURL" class="form-control" /></span></td>
+            <td class="concert-info-td"><a href="#" class="concert-info-a"><em style="white-space: nowrap;">Info ></em></a><span class="mv-logged-in">&nbsp;Concert Details:&nbsp;<textarea cols="6" rows="10" property="concertDetails" class="form-control tinymce"></textarea></span></td>
+          </tr>
+        </table>
+      </div>
     </div>
   </div>
   </section>
@@ -178,7 +185,7 @@
 
         <div class="card-body">
           <h3 style="font-weight: bolder;" property="concertDatetime">July 28 / 2017</h3>
-          <h4 class="card-title" property="concertName">THE MIRACLE OF THE VOICE</h4>
+          <h4 class="card-title" property="concertName">HTE MIRACLE OF THE VOICE</h4>
           <p class="card-text" property="concertVenue">Church of St Michael the Archangel</p>
 
           <a href="#" class="btn-media buy-tickets-btn">BUY TICKETS</a><a href="#" class="btn btn-more-info">Info ></a>
@@ -189,8 +196,39 @@
     </section>
 </section>
 
-<script>
-  // https://cdn.rawgit.com/christinajohnstonweb/christinajohnstonweb.github.io/5054c4e4/data/homepage.json
+<script id="concerts_table_tmpl" type="text/template">
+  <div class="row" style="margin: 0 0 1% 10%;">
+      <table class="off-white-bg" style="border-collapse: collapse; width: 90%;">
+        <tr>
+          <td style="width: 14.5rem;"><img src=!!concert_img!! alt="" style="margin: 1.4rem; width: 10.5rem;"></td>
+          <td class="concert-venue-date">
+            <p><strong style="font-weight: bolder;">!!concert_date!!</strong></p>
+            <p class="concert-details" style="font-weight: bold;">!!concert_name!!</p>
+            <p class="concert-details">!!concert_venue!!</p>
+            <p class="concert-details">!!concert_location!!</p>
+          </td>
+          <td class="td-concert-spacer"></td>
+          <td class="buy-tickets-td"><a href="!!concert_ticket_url!!" target="_BLANK" class="btn-media buy-tickets-btn">BUY TICKETS</button></a></td>
+          <td class="concert-info-td"><a href=/web/concerts/event/ data-event="!!concert_event!!" class="concert-info-a concert-more-btn"><em style="white-space: nowrap;">Info ></em></a></td>
+          <!-- td class="concert-info-td"><a href="!!concert_more_info!!" class="concert-info-a concert-more-btn"><em style="white-space: nowrap;">Info ></em></a></td -->
+        </tr>
+      </table>
+    </div>
+</script>
+
+<script id="concerts_card_tmpl" type="text/template">
+   <div class="card mx-auto off-white-bg" style="width: 20rem; margin: 1.0rem;">
+      <img class="card-img-top mx-auto d-block rounded-circle" style="margin: 10px; width: 120px; border: 3px solid #ccc;" src=!!concert_img!! alt="Card image cap" property="concertLocImg" />
+
+      <div class="card-body">
+        <h3 style="font-weight: bolder;" property="concertDatetime">!!concert_date!!</h3>
+        <h4 class="card-title" property="concertName">!!concert_name!!</h4>
+        <p class="card-text" property="concertVenue">!!concert_venue!!</p>
+        <p class="card-text" property="concertLocation">!!concert_location!!</p>
+
+        <a href="!!concert_ticket_url!!" target="_BLANK" class="btn-media buy-tickets-btn">BUY TICKETS</a><a href="!!concert_more_info!!" target="_BLANK" class="btn btn-more-info concert-more-btn">Info ></a>
+      </div>
+    </div>
 </script>
   <section class="content-section" id="news">
   <div class="container-fluid">
@@ -313,7 +351,6 @@
         </div>
       </div>
     </main>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js"></script>

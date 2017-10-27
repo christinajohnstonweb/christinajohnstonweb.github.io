@@ -42,7 +42,9 @@
           </div>
           <div class="col">
 
-            <nav class="navbar navbar-expand-md topbar" style="background-color: #000;">
+            <link rel="stylesheet" href=/web/stylesheets/masonry.css />
+
+<nav class="navbar navbar-expand-md topbar" style="background-color: #000;">
   <a class="navbar-brand" href=/web/ style="color: #fff;">CHRISTINA JOHNSTON</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="fa fa-bars"></span>
@@ -113,7 +115,78 @@
     </div>
   </div>
   
-  <h1>PHOTO GALLERY</h1>
+  
+  <div style="display: flex; justify-content: center;">
+  <div class="dw">
+    <div class="dw-panel">
+      <div class="dw-panel__content" mv-multiple="true" property="photoGallery">
+        <span property="photo" mv-if="coverImage=true" mv-multiple style="position: relative;">
+          <img property="picture" class="masonry-img" alt="[caption]" /><br/>
+          <a href=/web/ data-gallery="[idify(galleryTitle)]" class="mx-auto btn-black" style="position: absolute; top: 50%; left: 50%; width: 12.0rem; height: 3.0rem; transform: translate(-50%,-95%);">MORE</a>
+        </span>
+        <div class="img-caption"><strong>[galleryTitle]</strong></div>
+      </div>
+     </div>
+    
+    <div class="dw-panel">
+      <div class="dw-panel__content">
+        <a href="#">
+          <img src=/web/images/media_photo_2-r50.jpg class="masonry-img" alt="" /><br/>
+          <div class="img-caption"><strong>I am the caption, and sometimes I might be a bit long...</strong></div>
+        </a>
+      </div>
+    </div>
+    <div class="dw-panel">
+      <div class="dw-panel__content">
+        <a href="#">
+          <img src=/web/images/media_photo_3-r50.jpg class="masonry-img" alt="" /><br/>
+          <div class="img-caption"><strong>I am the caption, and sometimes I might be a bit long...</strong></div>
+        </a>
+      </div>
+    </div>
+    <div class="dw-panel">
+      <div class="dw-panel__content">
+        <a href="#">
+          <img src=/web/images/media_photo_4-r50.jpg class="masonry-img" alt="" /><br/>
+          <div class="img-caption"><strong>I am the caption, and sometimes I might be a bit long...</strong></div>
+        </a>
+      </div>
+    </div>
+    <div class="dw-panel">
+      <div class="dw-panel__content">
+        <a href="#">
+          <img src=/web/images/media_photo_4-r50.jpg class="masonry-img" alt="" /><br/>
+          <div class="img-caption"><strong>I am the caption, and sometimes I might be a bit long...</strong></div>
+        </a>
+      </div>
+    </div>
+    <div class="dw-panel">
+      <div class="dw-panel__content">
+        <a href="#">
+          <img src=/web/images/media_photo_3-r50.jpg class="masonry-img" alt="" /><br/>
+          <div class="img-caption"><strong>I am the caption, and sometimes I might be a bit long...</strong></div>
+        </a>
+      </div>
+    </div>
+    <div class="dw-panel">
+      <div class="dw-panel__content">
+        <a href="#">
+          <img src=/web/images/media_photo_2-r50.jpg class="masonry-img" alt="" /><br/>
+          <div class="img-caption"><strong>I am the caption, and sometimes I might be a bit long...</strong></div>
+        </a>
+      </div>
+    </div>
+    <div class="dw-panel">
+      <div class="dw-panel__content">
+        <a href="#">
+          <img src=/web/images/media_photo_1-r50.jpg class="masonry-img" alt="" /><br/>
+          <div class="img-caption"><strong>I am the caption, and sometimes I might be a bit long...</strong></div>
+        </a>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
 
 <section id="media" class="reveal-fixed-bg media-container" style='background-image: url(/web/images/roses_parallax.png);'>
   <div class="reveal-container">

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" integrity="sha256-PZLhE6wwMbg4AB3d35ZdBF9HD/dI/y4RazA3iRDurss=" crossorigin="anonymous" />
+</head>
+<body>
+  
+  <!-- The Gallery as lightbox dialog, should be a child element of the document body -->
+<a href="#" id="gallery_name">I am a test</a>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js" integrity="sha256-P93G0oq6PBPWTP1IR8Mz/0jHHUpaWL0aBJTKauisG7Q=" crossorigin="anonymous"></script>
+<script mv-expressions="none">
+$(document).ready(function() {
+  $.ajax({
+      type: "GET",
+      url: "https://raw.githubusercontent.com/christinajohnstonweb/christinajohnstonweb.github.io/master/data/homepage.json",
+      datatype: "json",
+      success: function(data){
+        data = JSON.parse(data);
+        var pic_items = [];
+
+        $.each(data.photoGallery[0].photo, function(key, val){
+          pic_items.push({src: val.picture});
+        });
+
+        $('#gallery_name').magnificPopup({
+          items: pic_items,
+          gallery: { enabled: true },
+          type: "image"
+        });
+      },
+      error: function(data){}
+  });
+});
+</script>
+</body>
+</html>

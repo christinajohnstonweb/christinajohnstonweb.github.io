@@ -78,7 +78,10 @@
       <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
       <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
     </ol>
-    <div class="carousel-inner">
+<!--     <div class="carousel-inner">
+      <div class="carousel-item[if($index = 0, ' active', '')]" property="homeCarouselImage" mv-multiple>
+        <div class="imageWrapper"><div class="image"><img property="homeCarouselImage" alt="" class="d-block w-100 img-fluid" /></div></div>
+      </div> -->
       <div class="carousel-item active">
         <div class="imageWrapper"><div class="image"><img src=/web/images/home_slider_image_1.jpg alt="" class="d-block w-100 img-fluid" /></div></div>
       </div>
@@ -163,6 +166,7 @@
 <section class="content-section" id="concerts">
   <div class="container-fluid">
     <div class="row justify-content-center">
+      <span class="pull-right mv-logged-in"><a href=/web/edit/concerts role="button" class="btn btn-default">Edit Concerts</a></span>
       <h1 class="section-header" property="concertsHeader">CONCERTS</h1>
     </div>
   </div>
@@ -171,21 +175,23 @@
   <div class="container-fluid" id="concerts_table">
     <div class="row justify-content-center"><strong property="concertsTitle">Christina Johnston Concerts</strong></div>
     <div class="row justify-content-center" property="concertsSubtitle" style="margin: -0.5rem 0 3.25rem 0;">Discover all information about Chrisitna’s concerts.</div>
-    <div class="row" style="margin: 0 0 1% 10%;" property="concerts" mv-multiple>
-      <table class="off-white-bg" style="border-collapse: collapse; width: 90%;">
-        <tr>
-          <td style="width: 14.5rem;"><img src=/web/images/concert_thumbnail_1.jpg alt="" property="concertLocImg" style="margin: 1.4rem; width: 10.5rem;"></td>
-          <td class="concert-venue-date">
-            <p><strong style="font-weight: bolder;" property="concertDatetime">June 10 / 2017</strong></p>
-            <p class="concert-details" style="font-weight: bold;" property="concertName">THE MIRACAL OF THE VOICE</p>
-            <p class="concert-details" property="concertVenue">Church of St Michael the Archangel</p>
-            <p class="concert-details" property="concertLocation">Framlingham</p>
-          </td>
-          <td class="td-concert-spacer"></td>
-          <td class="buy-tickets-td"><a href="#" class="btn-media buy-tickets-btn">BUY TICKETS</button></a><span class="mv-logged-in">&nbsp;Ticket purchase link:&nbsp;<input type="text" placeholder="https://www.example.com/store/url" property="concertTicketsURL" class="form-control" /></span></td>
-          <td class="concert-info-td"><a href="#" class="concert-info-a"><em style="white-space: nowrap;">Info ></em></a><span class="mv-logged-in">&nbsp;Concert Details:&nbsp;<textarea cols="6" rows="10" property="concertDetails" class="form-control tinymce"></textarea></span></td>
-        </tr>
-      </table>
+    <div id="concert_tables_content">
+      <div class="row" style="margin: 0 0 1% 10%;" property="concerts" mv-multiple>
+        <table class="off-white-bg" style="border-collapse: collapse; width: 90%;">
+          <tr>
+            <td style="width: 14.5rem;"><img src=/web/images/concert_thumbnail_1.jpg alt="" property="concertLocImg" style="margin: 1.4rem; width: 10.5rem;"></td>
+            <td class="concert-venue-date">
+              <p><strong style="font-weight: bolder;" property="concertDatetime">June 10 / 2017</strong></p>
+              <p class="concert-details" style="font-weight: bold;" property="concertName">THE MIRACAL OF THE VOICE</p>
+              <p class="concert-details" property="concertVenue">Church of St Michael the Archangel</p>
+              <p class="concert-details" property="concertLocation">Framlingham</p>
+            </td>
+            <td class="td-concert-spacer"></td>
+            <td class="buy-tickets-td"><a href="#" class="btn-media buy-tickets-btn">BUY TICKETS</button></a><span class="mv-logged-in">&nbsp;Ticket purchase link:&nbsp;<input type="text" placeholder="https://www.example.com/store/url" property="concertTicketsURL" class="form-control" /></span></td>
+            <td class="concert-info-td"><a href="#" class="concert-info-a"><em style="white-space: nowrap;">Info ></em></a><span class="mv-logged-in">&nbsp;Concert Details:&nbsp;<textarea cols="6" rows="10" property="concertDetails" class="form-control tinymce"></textarea></span></td>
+          </tr>
+        </table>
+      </div>
     </div>
   </div>
   </section>
@@ -201,7 +207,7 @@
 
         <div class="card-body">
           <h3 style="font-weight: bolder;" property="concertDatetime">July 28 / 2017</h3>
-          <h4 class="card-title" property="concertName">THE MIRACLE OF THE VOICE</h4>
+          <h4 class="card-title" property="concertName">HTE MIRACLE OF THE VOICE</h4>
           <p class="card-text" property="concertVenue">Church of St Michael the Archangel</p>
 
           <a href="#" class="btn-media buy-tickets-btn">BUY TICKETS</a><a href="#" class="btn btn-more-info">Info ></a>
@@ -212,8 +218,39 @@
     </section>
 </section>
 
-<script>
-  // https://cdn.rawgit.com/christinajohnstonweb/christinajohnstonweb.github.io/5054c4e4/data/homepage.json
+<script id="concerts_table_tmpl" type="text/template">
+  <div class="row" style="margin: 0 0 1% 10%;">
+      <table class="off-white-bg" style="border-collapse: collapse; width: 90%;">
+        <tr>
+          <td style="width: 14.5rem;"><img src=!!concert_img!! alt="" style="margin: 1.4rem; width: 10.5rem;"></td>
+          <td class="concert-venue-date">
+            <p><strong style="font-weight: bolder;">!!concert_date!!</strong></p>
+            <p class="concert-details" style="font-weight: bold;">!!concert_name!!</p>
+            <p class="concert-details">!!concert_venue!!</p>
+            <p class="concert-details">!!concert_location!!</p>
+          </td>
+          <td class="td-concert-spacer"></td>
+          <td class="buy-tickets-td"><a href="!!concert_ticket_url!!" target="_BLANK" class="btn-media buy-tickets-btn">BUY TICKETS</button></a></td>
+          <td class="concert-info-td"><a href=/web/concerts/event/ data-event="!!concert_event!!" class="concert-info-a concert-more-btn"><em style="white-space: nowrap;">Info ></em></a></td>
+          <!-- td class="concert-info-td"><a href="!!concert_more_info!!" class="concert-info-a concert-more-btn"><em style="white-space: nowrap;">Info ></em></a></td -->
+        </tr>
+      </table>
+    </div>
+</script>
+
+<script id="concerts_card_tmpl" type="text/template">
+   <div class="card mx-auto off-white-bg" style="width: 20rem; margin: 1.0rem;">
+      <img class="card-img-top mx-auto d-block rounded-circle" style="margin: 10px; width: 120px; border: 3px solid #ccc;" src=!!concert_img!! alt="Card image cap" property="concertLocImg" />
+
+      <div class="card-body">
+        <h3 style="font-weight: bolder;" property="concertDatetime">!!concert_date!!</h3>
+        <h4 class="card-title" property="concertName">!!concert_name!!</h4>
+        <p class="card-text" property="concertVenue">!!concert_venue!!</p>
+        <p class="card-text" property="concertLocation">!!concert_location!!</p>
+
+        <a href="!!concert_ticket_url!!" target="_BLANK" class="btn-media buy-tickets-btn">BUY TICKETS</a><a href="!!concert_more_info!!" target="_BLANK" class="btn btn-more-info concert-more-btn">Info ></a>
+      </div>
+    </div>
 </script>
 <section class="content-section" id="news">
   <div class="container-fluid">
@@ -341,32 +378,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js"></script>
     <script src="https://get.mavo.io/mavo.es5.min.js"></script>
     <script src=/web/javascripts/main.js></script>
-    <script type="text/javascript">
-//       UID = 293336116
-        var feed = new Instafeed({
-            get: 'user',
-            userId: '1593628250',
-            accessToken: '1593628250.1677ed0.02eb61b5a3104a83a39d83495e534ed9',
-            resolution: "standard_resolution",
-            useHttp: "true",
-            limit: 3,
-            template: '<div class="mx-auto"><a href=""><div class="img-featured-container d-flex flex-wrap"><div class="img-backdrop"></div><img src="" class="img-responsive instagram-images"/></div></a></div>',
-            target: "instafeed",
-            after: function() {
-              // disable button if no more results to load
-              if (!this.hasNext()) {
-                // btnInstafeedLoad.setAttribute('disabled', 'disabled');
-              }
-            },
-          });
-          feed.run();
-
-//           var btnInstafeedLoad = document.getElementById("btn-instafeed-load");
-//           btnInstafeedLoad.addEventListener("click", function() {
-//             feed.next();
-//           });
-      
-    </script>
-
   </body>
 </html>

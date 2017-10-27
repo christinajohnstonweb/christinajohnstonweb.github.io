@@ -9,10 +9,25 @@
 <!--     <link rel="stylesheet" href="assets/stylesheets/Supernice.min.css" /> -->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://get.mavo.io/mavo.css">
+    <link rel="stylesheet" href=/web/stylesheets/masonry.css />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" integrity="sha256-PZLhE6wwMbg4AB3d35ZdBF9HD/dI/y4RazA3iRDurss=" crossorigin="anonymous" />
+<!--     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/blueimp-gallery/2.27.1/css/blueimp-gallery.min.css" integrity="sha256-9kOHyyKFGFuuUWD13/v/7vwN55Vm7PaHpt7P8mUNlJk=" crossorigin="anonymous" /> -->
     <link rel="stylesheet" href=/web/stylesheets/styles.css />
 <!--     <link rel="stylesheet" href="stylesheets/styles.css" /> -->
   </head>
   <body>
+    <!--  Image gallery init.  -->
+    <div id="blueimp-gallery" class="blueimp-gallery">
+      <div class="slides"></div>
+        <h3 class="title"></h3>
+        <a class="prev">‹</a>
+        <a class="next">›</a>
+        <a class="close">×</a>
+        <a class="play-pause"></a>
+        <ol class="indicator"></ol>
+    </div>
+    <!-- End image gallery init. -->
+    
     <div class="spinner"></div>
     <main mv-app="homepage" mv-storage="https://github.com/christinajohnstonweb/christinajohnstonweb.github.io/data" mv-bar="none">
       <div class="container-fluid">
@@ -48,7 +63,7 @@
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href= /web/concerts>CONCERTS</a>
+        <a class="nav-link" href={ { "concerts" | relative_url }}>CONCERTS</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -79,13 +94,19 @@
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <div class="imageWrapper"><div class="image"><img src=/web/images/home_slider_image_1.jpg alt="" class="d-block w-100 img-fluid" /></div></div>
+        <div class="imageWrapper">
+          <div class="image"><img src=/web/images/home_slider_image_1.jpg alt="" class="d-block w-100 img-fluid" /></div>
+        </div>
       </div>
       <div class="carousel-item">
-        <div class="imageWrapper"><div class="image"><img src=/web/images/home_slider_image_2.jpg alt="" class="d-block w-100 img-fluid" /></div></div>
+        <div class="imageWrapper">
+          <div class="image"><img src=/web/images/home_slider_image_2.jpg alt="" class="d-block w-100 img-fluid" /></div>
+        </div>
       </div>
       <div class="carousel-item">
-        <div class="imageWrapper"><div class="image"><img src=/web/images/home_slider_image_3.jpg alt="" class="d-block w-100 img-fluid" /></div></div>
+        <div class="imageWrapper">
+          <div class="image"><img src=/web/images/home_slider_image_3.jpg alt="" class="d-block w-100 img-fluid" /></div>
+        </div>
       </div>
     </div>
   </div>
@@ -97,79 +118,94 @@
       <h1 class="section-header" property="news_header">NEWS</h1>
     </div>
   </div>
-  
+
   <div style="display: flex; justify-content: center;">
-  <div class="grid">
-    <div class="mason-size"></div>
-      <div class="grid-item">
-        <img src=/web/images/media_photo_1-r50.jpg class="masonry-img" alt="" /><br/>
-        <div class="img-caption">
-          <small style="font-style: italic; color: lightgray;">October 4, 2017</small><br/>
-          <strong><span class="fa fa-twitter" style="color: #EE2D9F;"></span>&nbsp;I am the caption, and sometimes I might be a bit long...</strong>
-        </div><br/>
-        <a href="#" class="news-more-details">More ></a>
-      </div>
-      <div class="grid-item">
-        <img src=/web/images/media_photo_2-r50.jpg class="masonry-img" alt="" /><br/>
-        <div class="img-caption">
-          <small style="font-style: italic; color: lightgray;">October 4, 2017</small><br/>
-          <strong><span class="fa fa-facebook" style="color: #EE2D9F;"></span>&nbsp;I am the caption, and sometimes I might be a bit long...</strong><br/>
-          <small>I am some additional info.</small><br/>
+    <div class="dw">
+      <div class="dw-panel">
+        <div class="dw-panel__content">
+          <img src=/web/images/media_photo_1-r50.jpg class="masonry-img" alt="" /><br/>
+          <div class="img-caption">
+            <small style="font-style: italic; color: lightgray;">October 4, 2017</small><br/>
+            <strong><span class="fa fa-twitter" style="color: #EE2D9F;"></span>&nbsp;I am the caption, and sometimes I might be a bit long...</strong>
+          </div><br/>
           <a href="#" class="news-more-details">More ></a>
         </div>
-      </div>
-      <div class="grid-item">
-        <img src=/web/images/media_photo_3-r50.jpg class="masonry-img" alt="" /><br/>
-        <div class="img-caption">
-          <small style="font-style: italic; color: lightgray;">October 4, 2017</small><br/>
-          <strong><span class="fa fa-instagram" style="color: #EE2D9F;"></span>&nbsp;I am the caption, and sometimes I might be a bit long...</strong><br/>
-          <small>I am some additional info.</small><br/>
-          <a href="#" class="news-more-details">More ></a>
+        <div class="dw-panel">
+        </div>
+        <div class="dw-panel__content">
+          <img src=/web/images/media_photo_2-r50.jpg class="masonry-img" alt="" /><br/>
+          <div class="img-caption">
+            <small style="font-style: italic; color: lightgray;">October 4, 2017</small><br/>
+            <strong><span class="fa fa-facebook" style="color: #EE2D9F;"></span>&nbsp;I am the caption, and sometimes I might be a bit long...</strong><br/>
+            <small>I am some additional info.</small><br/>
+            <a href="#" class="news-more-details">More ></a>
+          </div>
         </div>
       </div>
-      <div class="grid-item">
-        <img src=/web/images/media_photo_4-r50.jpg class="masonry-img" alt="" /><br/>
-        <div class="img-caption">
-          <small style="font-style: italic; color: lightgray;">October 4, 2017</small><br/>
-          <strong><span class="fa fa-facebook" style="color: #EE2D9F;"></span>&nbsp;I am the caption, and sometimes I might be a bit long...</strong><br/>
-          <small>I am some additional info.</small><br/>
-          <a href="#" class="news-more-details">More ></a>
+      <div class="dw-panel">
+        <div class="dw-panel__content">
+          <img src=/web/images/media_photo_3-r50.jpg class="masonry-img" alt="" /><br/>
+          <div class="img-caption">
+            <small style="font-style: italic; color: lightgray;">October 4, 2017</small><br/>
+            <strong><span class="fa fa-instagram" style="color: #EE2D9F;"></span>&nbsp;I am the caption, and sometimes I might be a bit long...</strong><br/>
+            <small>I am some additional info.</small><br/>
+            <a href="#" class="news-more-details">More ></a>
+          </div>
         </div>
       </div>
-      <div class="grid-item">
-        <img src=/web/images/media_photo_4-r50.jpg class="masonry-img" alt="" /><br/>
-        <div class="img-caption">
-          <small style="font-style: italic; color: lightgray;">October 4, 2017</small><br/>
-          <strong><span class="fa fa-google" style="color: #EE2D9F;"></span>&nbsp;I am the caption, and sometimes I might be a bit long...</strong><br/>
-          <small>I am some additional info.</small><br/>
-          <a href="#" class="news-more-details">More ></a>
+      <div class="dw-panel">
+        <div class="dw-panel__content">
+          <img src=/web/images/media_photo_4-r50.jpg class="masonry-img" alt="" /><br/>
+          <div class="img-caption">
+            <small style="font-style: italic; color: lightgray;">October 4, 2017</small><br/>
+            <strong><span class="fa fa-facebook" style="color: #EE2D9F;"></span>&nbsp;I am the caption, and sometimes I might be a bit long...</strong><br/>
+            <small>I am some additional info.</small><br/>
+            <a href="#" class="news-more-details">More ></a>
+          </div>
         </div>
       </div>
-      <div class="grid-item">
-        <img src=/web/images/media_photo_3-r50.jpg class="masonry-img" alt="" /><br/>
-        <div class="img-caption">
-          <small style="font-style: italic; color: lightgray;">October 4, 2017</small><br/>
-          <strong><span class="fa fa-twitter" style="color: #EE2D9F;"></span>&nbsp;I am the caption, and sometimes I might be a bit long...</strong><br/>
-          <small>I am some additional info.</small><br/>
-          <a href="#" class="news-more-details">More ></a>
+      <div class="dw-panel">
+        <div class="dw-panel__content">
+          <img src=/web/images/media_photo_4-r50.jpg class="masonry-img" alt="" /><br/>
+          <div class="img-caption">
+            <small style="font-style: italic; color: lightgray;">October 4, 2017</small><br/>
+            <strong><span class="fa fa-google" style="color: #EE2D9F;"></span>&nbsp;I am the caption, and sometimes I might be a bit long...</strong><br/>
+            <small>I am some additional info.</small><br/>
+            <a href="#" class="news-more-details">More ></a>
+          </div>
         </div>
       </div>
-      <div class="grid-item">
-        <img src=/web/images/media_photo_2-r50.jpg class="masonry-img" alt="" /><br/>
-        <div class="img-caption">
-          <small style="font-style: italic; color: lightgray;">October 4, 2017</small><br/>
-          <strong><span class="fa fa-instagram" style="color: #EE2D9F;"></span>&nbsp;I am the caption, and sometimes I might be a bit long...</strong><br/>
-          <small>I am some additional info.</small><br/>
-          <a href="#" class="news-more-details">More ></a>
+      <div class="dw-panel">
+        <div class="dw-panel__content">
+          <img src=/web/images/media_photo_3-r50.jpg class="masonry-img" alt="" /><br/>
+          <div class="img-caption">
+            <small style="font-style: italic; color: lightgray;">October 4, 2017</small><br/>
+            <strong><span class="fa fa-twitter" style="color: #EE2D9F;"></span>&nbsp;I am the caption, and sometimes I might be a bit long...</strong><br/>
+            <small>I am some additional info.</small><br/>
+            <a href="#" class="news-more-details">More ></a>
+          </div>
         </div>
       </div>
-      <div class="grid-item">
-        <img src=/web/images/media_photo_1-r50.jpg class="masonry-img" alt="" /><br/>
-        <div class="img-caption">
-          <small style="font-style: italic; color: lightgray;">October 4, 2017</small><br/>
-          <strong><span class="fa fa-google" style="color: #EE2D9F;"></span>&nbsp;I am the caption, and sometimes I might be a bit long...</strong><br/>
-          <small>I am some additional info.</small><br/>
-          <a href="#" class="news-more-details">More ></a>
+      <div class="dw-panel">
+        <div class="dw-panel__content">
+          <img src=/web/images/media_photo_2-r50.jpg class="masonry-img" alt="" /><br/>
+          <div class="img-caption">
+            <small style="font-style: italic; color: lightgray;">October 4, 2017</small><br/>
+            <strong><span class="fa fa-instagram" style="color: #EE2D9F;"></span>&nbsp;I am the caption, and sometimes I might be a bit long...</strong><br/>
+            <small>I am some additional info.</small><br/>
+            <a href="#" class="news-more-details">More ></a>
+          </div>
+        </div>
+      </div>
+      <div class="dw-panel">
+        <div class="dw-panel__content">
+          <img src=/web/images/media_photo_1-r50.jpg class="masonry-img" alt="" /><br/>
+          <div class="img-caption">
+            <small style="font-style: italic; color: lightgray;">October 4, 2017</small><br/>
+            <strong><span class="fa fa-google" style="color: #EE2D9F;"></span>&nbsp;I am the caption, and sometimes I might be a bit long...</strong><br/>
+            <small>I am some additional info.</small><br/>
+            <a href="#" class="news-more-details">More ></a>
+          </div>
         </div>
       </div>
     </div>
@@ -181,8 +217,7 @@
     <h1 class="media-header">MEDIA</h1>
     <button style="button" class="btn-media">MORE</button>
   </div>
-</section>
-<section class="content-section" id="news">
+</section> <section class="content-section" id="news">
   <div class="container-fluid">
     <div class="row justify-content-center">
       <h1 class="section-header">NEWS</h1>
@@ -216,8 +251,7 @@
       <div class="remove-padding col-6"><img src=/web/images/news_image_1340.jpg class="img-fluid section-img" alt="News about Christina Johnston - Coloratura Soprano" property="news_image" /></div>
     </div>
   </div>
-</section>
-<section class="content-section" id="instagram">
+</section> <section class="content-section" id="instagram">
   <div class="row justify-content-center">
     <h1 class="section-header" property="instagram_header">INSTAGRAM</h1>
   </div>
@@ -229,8 +263,7 @@
       <a href="#" class="btn-black">FOLLOW ME</a>
     </div>
   </div>
-</section>
-<footer class="black-bg">
+</section> <footer class="black-bg">
     <div class="row">
       <div class="col-md-8 footer-header-row">
         <div>ALL OPERA AND CLASSICAL MUSIC LIVE BOOKING ENQUIRIES:</div>
@@ -306,66 +339,17 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<!--     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script> -->
     <script src=/web/javascripts/jquery.socialfeed.js></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js"></script>
     <script src="https://get.mavo.io/mavo.es5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js" integrity="sha256-P93G0oq6PBPWTP1IR8Mz/0jHHUpaWL0aBJTKauisG7Q=" crossorigin="anonymous"></script>
+<!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-gallery/2.27.1/js/jquery.blueimp-gallery.min.js" integrity="sha256-FivaG+Y6JaLCcJ8kVx5zqwQawDTKWlKZGFqJSPNzy4g=" crossorigin="anonymous"></script> -->
     <script src=/web/javascripts/main.js></script>
-    
-    <script type="text/javascript">
-//       UID = 293336116
-        var feed = new Instafeed({
-            get: 'user',
-            userId: '1593628250',
-            accessToken: '1593628250.1677ed0.02eb61b5a3104a83a39d83495e534ed9',
-            resolution: "standard_resolution",
-            useHttp: "true",
-            limit: 3,
-            template: '<div class="mx-auto"><a href=""><div class="img-featured-container d-flex flex-wrap"><div class="img-backdrop"></div><img src="" class="img-responsive instagram-images"/></div></a></div>',
-            target: "instafeed",
-            after: function() {
-              // disable button if no more results to load
-              if (!this.hasNext()) {
-                // btnInstafeedLoad.setAttribute('disabled', 'disabled');
-              }
-            },
-          });
-          feed.run();
-
-//           var btnInstafeedLoad = document.getElementById("btn-instafeed-load");
-//           btnInstafeedLoad.addEventListener("click", function() {
-//             feed.next();
-//           });
-      
-      // Masonry init.
-      $('.grid').masonry({
-      // set itemSelector so .grid-sizer is not used in layout
-      itemSelector: '.grid-item',
-      // use element for option
-      columnWidth: 180,
-      percentPosition: true,
-      horizontalOrder: true,
-      fitWidth: true,
-      resize: true,
-      gutter: 5
-    });
-      
-    $(function(){
-      $(window).on("resize", function(){
-        $(".grid").masonry();  
+    <script>
+      $(function(){
+        var gallery = $('#blueimp-gallery').data('gallery');
       });
-
-      $(window).on("load", function(){
-        $(".grid").masonry();
-        
-        console.log("Building masonry...");
-      });
-      
-      setInterval(function(){
-        $(".grid").masonry();
-      }, 500);
-    });
     </script>
-
   </body>
 </html>

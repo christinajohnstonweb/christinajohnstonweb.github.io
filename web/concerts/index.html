@@ -92,7 +92,7 @@
   </div>
 </section>
 
-
+<!-- <td class="concert-info-td"><a href=/web/concerts/events data-event="[idify(concertName)]" data-location="[idify(concertLocation)]" class="concert-info-a"><em style="white-space: nowrap;">Info ></em></a></td> -->
 <section class="content-section" id="concerts">
   <div class="container-fluid">
     <div class="row justify-content-center">
@@ -114,8 +114,8 @@
             <p class="concert-details">Framlingham</p>
           </td>
           <td class="td-concert-spacer"></td>
-          <td class="buy-tickets-td"><a href="#" class="btn-media buy-tickets-btn">BUY TICKETS</button></a>
-          <td class="concert-info-td"><a href="#" class="concert-info-a"><em style="white-space: nowrap;">Info ></em></a></td>
+          <td class="buy-tickets-td"><a href="#" class="btn-media buy-tickets-btn">BUY TICKETS</button></a></td>
+          <td class="concert-info-td"><a href=/web/concerts/events data-event="[idify(concertName)]" data-location="[idify(concertLocation)]" class="concert-info-a"><em style="white-space: nowrap;">Info ></em></a></td>
         </tr>
       </table>
     </div>
@@ -132,6 +132,7 @@
           </td>
           <td class="td-concert-spacer"></td>
           <td class="buy-tickets-td"><a href="#" class="btn-media buy-tickets-btn">BUY TICKETS</button></a>
+<!--           <a href=/web/discography/solo/album data-album="[idify(discName)]" class="mx-auto btn-black discography-more-btn">MORE</a> -->
           <td class="concert-info-td"><a href="#" class="concert-info-a"><em style="white-space: nowrap;">Info ></em></a></td>
         </tr>
       </table>
@@ -406,6 +407,40 @@
       </div>
     </div>
 </footer>
+
+<script id="concerts_table_tmpl" type="text/template">
+  <div class="row" style="margin: 0 0 1% 10%;">
+      <table class="off-white-bg" style="border-collapse: collapse; width: 90%;">
+        <tr>
+          <td style="width: 14.5rem;"><img src=!!concert_img!! alt="" style="margin: 1.4rem; width: 10.5rem;"></td>
+          <td class="concert-venue-date">
+            <p><strong style="font-weight: bolder;">!!concert_date!!</strong></p>
+            <p class="concert-details" style="font-weight: bold;">!!concert_name!!</p>
+            <p class="concert-details">!!concert_venue!!</p>
+            <p class="concert-details">!!concert_location!!</p>
+          </td>
+          <td class="td-concert-spacer"></td>
+          <td class="buy-tickets-td"><a href="!!concert_ticket_url!!" target="_BLANK" class="btn-media buy-tickets-btn">BUY TICKETS</button></a></td>
+          <td class="concert-info-td"><a href="!!concert_more_info!!" class="concert-info-a"><em style="white-space: nowrap;">Info ></em></a></td>
+        </tr>
+      </table>
+    </div>
+</script>
+
+<script id="concerts_card_tmpl" type="text/template">
+   <div class="card mx-auto off-white-bg" style="width: 20rem; margin: 1.0rem;">
+      <img class="card-img-top mx-auto d-block rounded-circle" style="margin: 10px; width: 120px; border: 3px solid #ccc;" src=!!concert_img!! alt="Card image cap" property="concertLocImg" />
+
+      <div class="card-body">
+        <h3 style="font-weight: bolder;" property="concertDatetime">!!concert_date!!</h3>
+        <h4 class="card-title" property="concertName">!!concert_name!!</h4>
+        <p class="card-text" property="concertVenue">!!concert_venue!!</p>
+        <p class="card-text" property="concertLocation">!!concert_location!!</p>
+
+        <a href="!!concert_ticket_url!!" target="_BLANK" class="btn-media buy-tickets-btn">BUY TICKETS</a><a href="!!concert_more_info!!" target="_BLANK" class="btn btn-more-info">Info ></a>
+      </div>
+    </div>
+</script>
         
             <section id="brand_tag">
               ©2017 Christina Johnston / All Rights Reserved / designed by likelike
@@ -419,32 +454,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js"></script>
     <script src="https://get.mavo.io/mavo.es5.min.js"></script>
     <script src=/web/javascripts/main.js></script>
-    <script type="text/javascript">
-//       UID = 293336116
-        var feed = new Instafeed({
-            get: 'user',
-            userId: '1593628250',
-            accessToken: '1593628250.1677ed0.02eb61b5a3104a83a39d83495e534ed9',
-            resolution: "standard_resolution",
-            useHttp: "true",
-            limit: 3,
-            template: '<div class="mx-auto"><a href=""><div class="img-featured-container d-flex flex-wrap"><div class="img-backdrop"></div><img src="" class="img-responsive instagram-images"/></div></a></div>',
-            target: "instafeed",
-            after: function() {
-              // disable button if no more results to load
-              if (!this.hasNext()) {
-                // btnInstafeedLoad.setAttribute('disabled', 'disabled');
-              }
-            },
-          });
-          feed.run();
-
-//           var btnInstafeedLoad = document.getElementById("btn-instafeed-load");
-//           btnInstafeedLoad.addEventListener("click", function() {
-//             feed.next();
-//           });
-      
-    </script>
-
   </body>
 </html>

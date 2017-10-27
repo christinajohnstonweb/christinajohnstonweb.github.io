@@ -332,32 +332,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js"></script>
     <script src="https://get.mavo.io/mavo.es5.min.js"></script>
     <script src=/web/javascripts/main.js></script>
-    <script type="text/javascript">
-//       UID = 293336116
-        var feed = new Instafeed({
-            get: 'user',
-            userId: '1593628250',
-            accessToken: '1593628250.1677ed0.02eb61b5a3104a83a39d83495e534ed9',
-            resolution: "standard_resolution",
-            useHttp: "true",
-            limit: 3,
-            template: '<div class="mx-auto"><a href=""><div class="img-featured-container d-flex flex-wrap"><div class="img-backdrop"></div><img src="" class="img-responsive instagram-images"/></div></a></div>',
-            target: "instafeed",
-            after: function() {
-              // disable button if no more results to load
-              if (!this.hasNext()) {
-                // btnInstafeedLoad.setAttribute('disabled', 'disabled');
-              }
-            },
-          });
-          feed.run();
-
-//           var btnInstafeedLoad = document.getElementById("btn-instafeed-load");
-//           btnInstafeedLoad.addEventListener("click", function() {
-//             feed.next();
-//           });
-      
-    </script>
-
   </body>
 </html>

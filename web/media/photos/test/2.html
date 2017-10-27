@@ -113,7 +113,80 @@
     </div>
   </div>
   
-  <h1>PHOTO GALLERY</h1>
+  <div style="display: flex; justify-content: center;">
+  <div class="dw">
+    <div class="dw-panel">
+      <div class="dw-panel__content" mv-multiple="true" property="photoGallery">
+        <span property="photo" mv-multiple style="position: relative;" mv-if="coverImage=true">
+          <img property="picture" class="masonry-img" alt="[caption]" />
+        </span>
+        <span id="[idify(galleryTitle)]" property="photo">
+          <a property="picture" mv-multiple mv-if="coverImage=true" class="mx-auto btn-black" style="position: absolute; top: 50%; left: 50%; width: 12.0rem; height: 3.0rem; transform: translate(-50%,-95%);" data-gallery>MORE</a>
+          <a property="picture" mv-multiple mv-if="coverImage=false" data-gallery></a>
+        </span>
+        <div class="img-caption"><strong>[galleryTitle]</strong></div>
+      </div>
+     </div>
+      
+    <div class="dw-panel">
+      <div class="dw-panel__content">
+        <a href="#">
+          <img src=/web/images/media_photo_2-r50.jpg class="masonry-img" alt="" /><br/>
+          <div class="img-caption"><strong>I am the caption, and sometimes I might be a bit long...</strong></div>
+        </a>
+      </div>
+    </div>
+    <div class="dw-panel">
+      <div class="dw-panel__content">
+        <a href="#">
+          <img src=/web/images/media_photo_3-r50.jpg class="masonry-img" alt="" /><br/>
+          <div class="img-caption"><strong>I am the caption, and sometimes I might be a bit long...</strong></div>
+        </a>
+      </div>
+    </div>
+    <div class="dw-panel">
+      <div class="dw-panel__content">
+        <a href="#">
+          <img src=/web/images/media_photo_4-r50.jpg class="masonry-img" alt="" /><br/>
+          <div class="img-caption"><strong>I am the caption, and sometimes I might be a bit long...</strong></div>
+        </a>
+      </div>
+    </div>
+    <div class="dw-panel">
+      <div class="dw-panel__content">
+        <a href="#">
+          <img src=/web/images/media_photo_4-r50.jpg class="masonry-img" alt="" /><br/>
+          <div class="img-caption"><strong>I am the caption, and sometimes I might be a bit long...</strong></div>
+        </a>
+      </div>
+    </div>
+    <div class="dw-panel">
+      <div class="dw-panel__content">
+        <a href="#">
+          <img src=/web/images/media_photo_3-r50.jpg class="masonry-img" alt="" /><br/>
+          <div class="img-caption"><strong>I am the caption, and sometimes I might be a bit long...</strong></div>
+        </a>
+      </div>
+    </div>
+    <div class="dw-panel">
+      <div class="dw-panel__content">
+        <a href="#">
+          <img src=/web/images/media_photo_2-r50.jpg class="masonry-img" alt="" /><br/>
+          <div class="img-caption"><strong>I am the caption, and sometimes I might be a bit long...</strong></div>
+        </a>
+      </div>
+    </div>
+    <div class="dw-panel">
+      <div class="dw-panel__content">
+        <a href="#">
+          <img src=/web/images/media_photo_1-r50.jpg class="masonry-img" alt="" /><br/>
+          <div class="img-caption"><strong>I am the caption, and sometimes I might be a bit long...</strong></div>
+        </a>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
 
 <section id="media" class="reveal-fixed-bg media-container" style='background-image: url(/web/images/roses_parallax.png);'>
   <div class="reveal-container">

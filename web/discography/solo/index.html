@@ -111,6 +111,34 @@
       </div>
     </div>
     <div class="d-flex flex-wrap"><!--  style="padding: 0 9.5rem;" -->
+      <div class="mx-auto" style="margin: 2.0rem;" mv-multiple property="album" mv-if="discIsSolo = true">
+        <img property="discCoverImg" src=/web/images/album_cover_image.jpg alt="" class="mx-auto d-flex discography-image"/>
+        <a href=/web/discography/solo/album data-album="[idify(discName)]" class="mx-auto btn-black discography-more-btn">MORE</a>
+        <section class="album-details" style="line-height: 0.75rem; text-align: center;">
+          <small property="discReleaseDate" style="color: #EE2D9F;">12/13/2017</small>
+          <h2 property="discName" class="album-name" style="font-weight: bolder;">BLESSING</h2>
+          <small property="discDistributor" class="album-distributor" style="color: #5d5d5d;">Sony Music</small>
+        </section>
+      </div>
+<!--       <div class="mx-auto" style="margin: 2.0rem;">
+        <img src=/web/images/album_cover_image.jpg alt="" class="mx-auto d-flex discography-image"/>
+        <a href=/web/discography/solo/album?n=test class="mx-auto btn-black discography-more-btn">MORE</a>
+        <section class="album-details" style="line-height: 0.75rem; text-align: center;">
+          <small style="color: #EE2D9F;">12/13/2017</small>
+          <h2 class="album-name" style="font-weight: bolder;">BLESSING</h2>
+          <small class="album-distributor" style="color: #5d5d5d;">Sony Music</small>
+        </section>
+      </div>
+      <div class="mx-auto" style="margin: 2.0rem;">
+        <img src=/web/images/album_cover_image.jpg alt="" class="mx-auto d-flex discography-image"/>
+        <a href=/web/discography/solo/album?n=test class="mx-auto btn-black discography-more-btn">MORE</a>
+        <section class="album-details" style="line-height: 0.75rem; text-align: center;">
+          <small style="color: #EE2D9F;">12/13/2017</small>
+          <h2 class="album-name" style="font-weight: bolder;">BLESSING</h2>
+          <small class="album-distributor" style="color: #5d5d5d;">Sony Music</small>
+        </section>
+      </div>
+      
       <div class="mx-auto" style="margin: 2.0rem;">
         <img src=/web/images/album_cover_image.jpg alt="" class="mx-auto d-flex discography-image"/>
         <a href=/web/discography/solo/album?n=test class="mx-auto btn-black discography-more-btn">MORE</a>
@@ -165,35 +193,7 @@
           <h2 class="album-name" style="font-weight: bolder;">BLESSING</h2>
           <small class="album-distributor" style="color: #5d5d5d;">Sony Music</small>
         </section>
-      </div>
-      
-      <div class="mx-auto" style="margin: 2.0rem;">
-        <img src=/web/images/album_cover_image.jpg alt="" class="mx-auto d-flex discography-image"/>
-        <a href=/web/discography/solo/album?n=test class="mx-auto btn-black discography-more-btn">MORE</a>
-        <section class="album-details" style="line-height: 0.75rem; text-align: center;">
-          <small style="color: #EE2D9F;">12/13/2017</small>
-          <h2 class="album-name" style="font-weight: bolder;">BLESSING</h2>
-          <small class="album-distributor" style="color: #5d5d5d;">Sony Music</small>
-        </section>
-      </div>
-      <div class="mx-auto" style="margin: 2.0rem;">
-        <img src=/web/images/album_cover_image.jpg alt="" class="mx-auto d-flex discography-image"/>
-        <a href=/web/discography/solo/album?n=test class="mx-auto btn-black discography-more-btn">MORE</a>
-        <section class="album-details" style="line-height: 0.75rem; text-align: center;">
-          <small style="color: #EE2D9F;">12/13/2017</small>
-          <h2 class="album-name" style="font-weight: bolder;">BLESSING</h2>
-          <small class="album-distributor" style="color: #5d5d5d;">Sony Music</small>
-        </section>
-      </div>
-      <div class="mx-auto" style="margin: 2.0rem;">
-        <img src=/web/images/album_cover_image.jpg alt="" class="mx-auto d-flex discography-image"/>
-        <a href=/web/discography/solo/album?n=test class="mx-auto btn-black discography-more-btn">MORE</a>
-        <section class="album-details" style="line-height: 0.75rem; text-align: center;">
-          <small style="color: #EE2D9F;">12/13/2017</small>
-          <h2 class="album-name" style="font-weight: bolder;">BLESSING</h2>
-          <small class="album-distributor" style="color: #5d5d5d;">Sony Music</small>
-        </section>
-      </div>
+      </div> -->
     </div>
   </section>
 </section>
@@ -332,32 +332,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js"></script>
     <script src="https://get.mavo.io/mavo.es5.min.js"></script>
     <script src=/web/javascripts/main.js></script>
-    <script type="text/javascript">
-//       UID = 293336116
-        var feed = new Instafeed({
-            get: 'user',
-            userId: '1593628250',
-            accessToken: '1593628250.1677ed0.02eb61b5a3104a83a39d83495e534ed9',
-            resolution: "standard_resolution",
-            useHttp: "true",
-            limit: 3,
-            template: '<div class="mx-auto"><a href=""><div class="img-featured-container d-flex flex-wrap"><div class="img-backdrop"></div><img src="" class="img-responsive instagram-images"/></div></a></div>',
-            target: "instafeed",
-            after: function() {
-              // disable button if no more results to load
-              if (!this.hasNext()) {
-                // btnInstafeedLoad.setAttribute('disabled', 'disabled');
-              }
-            },
-          });
-          feed.run();
-
-//           var btnInstafeedLoad = document.getElementById("btn-instafeed-load");
-//           btnInstafeedLoad.addEventListener("click", function() {
-//             feed.next();
-//           });
-      
-    </script>
-
   </body>
 </html>
