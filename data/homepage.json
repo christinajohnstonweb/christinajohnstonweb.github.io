@@ -52,11 +52,14 @@
 			"concertDatetime": "June 10 / 2017",
 			"concertName": "THE MIRACAL OF THE VOICE",
 			"concertVenue": "Church of St Michael the Archangel",
-			"concertLocation": "Framlingham"
+			"concertLocation": "Framlingham",
+			"concertDetails": "<p>Detail</p>",
+			"featuredConcert": false
 		},
 		{
 			"concertDatetime": "July 28 / 2017",
-			"concertName": "HTE MIRACLE OF THE VOICE"
+			"concertName": "HTE MIRACLE OF THE VOICE",
+			"featuredConcert": false
 		}
 	],
 	"galleryVideos": [
