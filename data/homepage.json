@@ -127,5 +127,24 @@
 				"<p>management@christinajohnston.co.uk</p>"
 			]
 		}
+	],
+	"photoGallery": [
+		{
+			"galleryTitle": "Anything",
+			"photo": [
+				{
+					"picture": "http://www.christinajohnston.co.uk/data/images/Screen%20Shot%202014-12-11%20at%2016.15.10.png",
+					"coverImage": true
+				}
+			]
+		},
+		{
+			"photo": [
+				{
+					"picture": "http://www.christinajohnston.co.uk/data/images/Screen%20Shot%202014-12-11%20at%2016.14.54.png",
+					"coverImage": true
+				}
+			]
+		}
 	]
 }
