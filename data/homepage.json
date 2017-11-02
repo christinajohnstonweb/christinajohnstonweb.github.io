@@ -128,13 +128,5 @@
 			]
 		}
 	],
-	"photoGallery": [
-		{
-			"galleryTitle": "Anything",
-			"photo": []
-		},
-		{
-			"photo": []
-		}
-	]
+	"photoGallery": []
 }
