@@ -140,5 +140,12 @@
 			"news-details": "<h3>Her <strong>new album </strong>\"Blessing\" is released on 22nd September 17<strong><span style=\"font-size: 12.76px;\">Her&nbsp;</span><span style=\"font-size: 12.76px;\">new album&nbsp;</span></strong><span style=\"font-size: 12.76px;\"><strong>\"Blessing\" is released on 22nd September 17</strong><br /></span><span style=\"font-size: 12.76px;\">Her&nbsp;</span><span style=\"font-weight: bolder; font-size: 12.76px;\">new album&nbsp;</span><span style=\"font-size: 12.76px;\">\"Blessing\" is released on 22nd September 17</span><span style=\"font-size: 12.76px;\"><br /></span></h3>",
 			"newsMoreDetails": "#"
 		}
-	]
+	],
+	"footerTag": "ALL OPERA AND CLASSICAL MUSIC LIVE BOOKING ENQUIRIES:",
+	"footerFirstColTitle": "Opera Agent:",
+	"footerFirstColumn": "\n  <div>Mark Kendall Artists Management Ltd</div>\n  <div>Call: +44 1903 693 344</div>\n  <div>markkendallartists@mac.com</div>\n  <div>www.markkendallartists.com</div>\n",
+	"footerSecondColTitle": "Manager:",
+	"footerSecondColumn": "\n  <div>Vicky Corley-Smith / VCS Management</div>\n  <div>vicky@vcsmanagement.com</div>\n",
+	"footerThirdColTitle": "All Crossover Bookings:",
+	"footerThirdColumn": "\n  <div>management@christinajohnston.co.uk</div>\n"
 }
