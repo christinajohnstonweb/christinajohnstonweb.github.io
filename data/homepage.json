@@ -60,7 +60,9 @@
 			"concertDatetime": "July 28 / 2017",
 			"concertName": "HTE MIRACLE OF THE VOICE",
 			"featuredConcert": true,
-			"concertLocImg": "http://www.christinajohnston.co.uk/data/images/concert_thumbnail_2.jpg"
+			"concertLocImg": "http://www.christinajohnston.co.uk/data/images/concert_thumbnail_2.jpg",
+			"concertVenue": "The Great Hall at Testingham Cathedral",
+			"concertLocation": "Testlingbourough"
 		}
 	],
 	"galleryVideos": [
