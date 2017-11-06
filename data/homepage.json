@@ -71,7 +71,8 @@
 			"concertName": "Concert",
 			"concertLocation": "To be determined.",
 			"concertDetails": "To be determined.",
-			"featuredConcert": false
+			"featuredConcert": true,
+			"concertVenue": "To be determined."
 		}
 	],
 	"galleryVideos": [
