@@ -64,12 +64,6 @@
 			"concertVenue": "The Great Hall at Testingham Cathedral",
 			"concertLocation": "Testlingbourough",
 			"concertDetails": "<p>These are more concert details. More, more, more, more, more.</p>"
-		},
-		{
-			"concertLocImg": "http://www.christinajohnston.co.uk/data/images/album_cover_image.jpg",
-			"concertDatetime": "Dec 13, 2017",
-			"concertName": "This is a concert",
-			"featuredConcert": false
 		}
 	],
 	"galleryVideos": [
