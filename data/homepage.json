@@ -132,7 +132,39 @@
 			]
 		}
 	],
-	"photoGallery": [],
+	"photoGallery": [
+		{
+			"galleryTitle": "Autumn Snow",
+			"galleryDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vehicula erat vel odio varius pellentesque. Suspendisse at volutpat nunc. Suspendisse tincidunt cursus metus. Nunc rutrum ultrices nibh in interdum. Integer diam tellus, placerat ultrices varius at, mollis sed velit. Quisque scelerisque, libero sit amet ultrices blandit, sapien est venenatis nunc, et accumsan tellus nibh nec augue. Mauris ut aliquam leo. Nullam luctus ex in sollicitudin tristique. Maecenas porta sapien id neque tincidunt, nec auctor turpis mattis.",
+			"photo": [
+				{
+					"picture": "https://images.fineartamerica.com/images-medium-large/16-autumn-snow-monongahela-national-forest-thomas-r-fletcher.jpg",
+					"caption": "A snowy road",
+					"coverImage": false
+				},
+				{
+					"picture": "https://thomaskinkade.com/wp-content/uploads/2014/09/autsno6.jpg",
+					"caption": "Some painting",
+					"coverImage": false
+				},
+				{
+					"picture": "https://images.fineartamerica.com/images-medium-large-5/39-autumn-snow-monongahela-national-forest-thomas-r-fletcher.jpg",
+					"caption": "Almost frozen",
+					"coverImage": false
+				},
+				{
+					"picture": "http://pixdaus.com/files/items/pics/5/58/265558_01adcbf36bb168834034486367b8b6bc_large.jpg",
+					"caption": "Crimson & white",
+					"coverImage": false
+				},
+				{
+					"picture": "http://www.lovethispic.com/uploaded_images/49592-Autumn-Snow-Around-Lake.jpg",
+					"caption": "Ice & fire",
+					"coverImage": true
+				}
+			]
+		}
+	],
 	"news": [
 		{
 			"news-date": "Jun 23, 2017",
