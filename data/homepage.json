@@ -217,7 +217,7 @@
 				{
 					"picture": "https://upload.wikimedia.org/wikipedia/commons/a/af/Anton_Chekhov_and_Olga_Knipper%2C_1901.jpg",
 					"caption": "Me and the missus",
-					"coverImage": true
+					"coverImage": false
 				}
 			]
 		}
