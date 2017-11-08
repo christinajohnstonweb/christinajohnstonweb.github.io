@@ -121,7 +121,9 @@ $(function(){
         // Transform data from text to JS object.
         data = JSON.parse(data);
 
+        //********************************************
         // Album drilldown building.
+        //********************************************
         if( $("#solo_album_tmpl").length ){
           var album_name = getParameterByName("name");
           
@@ -142,9 +144,14 @@ $(function(){
             }
           });
         }
+        //********************************************
         // End album drilldown building.
+        //********************************************
         
+        
+        //********************************************
         // CONCERT LIST BUILDING.
+        //********************************************
         if( $("#concerts_table_tmpl").length ) {
           // Concerts layout, since Mavo.io won't support 2 references to the same collection on a page.
           // NOTE: Referenced templates are embedded in includes/concerts.html 
@@ -185,9 +192,14 @@ $(function(){
           $("#concert_tables_content").html(tbls);
           $("#cards_concert_content").html(cards);
         }
+        //********************************************
         // END CONCERT LIST BUILDING.
+        //********************************************
         
+        
+        //********************************************
         // BUILD CONCERT DETAILS
+        //********************************************
         if( $("#concert_tmpl").length ) {
           var concert_name = getParameterByName("name");
           
@@ -209,69 +221,53 @@ $(function(){
             }
           });
         }
+        //********************************************
         // END BUILDING CONCERT DETAILS
+        //********************************************
         
-        // BlueImp gallery building.
-//         if( $(".blueimp-images").length ) {
-//           var gallery_pics = [];
-//           $.each(data.photoGallery, function(idx, gallery){
-//             var gallery_name = "#" + gallery.galleryTitle.replace(/\s/gi, '-').replace(/[^\w-]/gi, '').toLowerCase();
-//             var pics = {gallery: gallery_name, pics: []};
-            
-//             $.each(gallery.photo, function(key, val){
-// //               console.log( '$(' + gallery_name + ').html(\'<a href="' + val.picture + '"></a>\');' );
-//               if( val.coverImage === true ){
-//                 pics.pics.push('<a href="' + val.picture + '" class="mx-auto btn-black gallery-btn" data-gallery>MORE</a>');
-//               } else {
-//                 pics.pics.push('<a href="' + val.picture + '" data-gallery></a>');
-//               }
-//             });
-            
-//             gallery_pics.push(pics);          
-//           });
-
-//           setTimeout(function(){
-//             $.each(gallery_pics, function(key, val){
-//               // var curr_val = $(val.gallery).html();
-//               $(val.gallery).html( val.pics.join("\n") );
-//               // $(val.gallery).html( curr_val + val.pics.join("\n") );
-//             });
-//           }, 1500);
-//         }
-        // End BlueImp gallery building.
         
+        //********************************************
         // Photo gallery building.
-        if( $('.photo-gallery').length ) {
-//         if( $('[property="photoGallery"]').length ) {
-          var pic_items = [];
-          var itms = [];
-          var counter = 0;
-
-          $.each(data.photoGallery, function(idx, gallery){
-            // name.replace(/\s/gi, '-').replace(/[^\w-]/gi, '');
+        //********************************************
+        console.log("Glass Cannon podcast...");
+        if( $(".gallery-images").length ){
+          // Find the currently selected gallery.
+          // Get the gallery name from the URL querystring.
+          var gallery_id = getParameterByName("name", window.location.href);
+        
+          // Get the specific gallery.
+          var gallery = $.grep(data.photoGallery, function(arr){ return arr.galleryTitle.toLowerCase().replace(/\s/gi, '-').replace(/[^\w-]/gi, '') === gallery_id });
           
-            $.each(gallery.photo, function(key, val){
-              pic_items.push({src: val.picture});
-            });
+          var photos = gallery[0]["photo"];
+          // Instantiate an array for the image tags.
+          var photo_tags = [];
+          
+          $.each(photos, function(idx, photo){
+            var display_css;
             
-            itms.push(pic_items);
+            // If this is the first picture, set it visible, but otherwise hide it.
+            if(idx === 0) {
+              display_css = "display: inline;";
+            } else {
+              display_css = "display: none;";
+            }
 
-            var gallery_name = "#" + gallery.galleryTitle.replace(/\s/gi, '-').replace(/[^\w-]/gi, '').toLowerCase();
-            console.log( '$("' + gallery_name + '").magnificPopup({ items: ' + JSON.stringify(itms[counter]) + ', gallery: { enabled: true }, type: "image" });' );
-            console.log(gallery_name);
-            setTimeout(function(){
-              $( gallery_name ).magnificPopup({
-                items: itms[counter],
-                gallery: { enabled: true },
-                type: "image"
-              }); 
-              console.log("In the setTimeout");
-            }, 1000);
-
-            counter = counter++;
+            var tag = '<img src=' + photo["picture"] + ' alt="" data-idx="' + idx + '" style="max-width: 35.0rem; max-height: 35.0rem; ' + display_css + '" class="gallery-image w-100 img-fluid" />';
+            
+            photo_tags.push(tag);
           });
-        }
+          
+          $("#photos").html(photo_tags.join("\n"));
+          
+          $("#photo_gallery_image_idx").text("1");
+          
+          $("#photo_gallery_image_count").text( photos.length );
+          
+          $("#photo_gallery_description").html(gallery[0]["galleryDescription"]);
+         }
+        //********************************************
         // END PHOTO GALLERY BUILDING.
+        //********************************************
         
       },
       error: function(data){

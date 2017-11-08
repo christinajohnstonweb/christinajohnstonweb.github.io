@@ -74,3 +74,11 @@ Animate the "About" logo.
   transform: scale(1.2);
   transition: all 0.75s;
 }
+
+/*****************************
+Photo gallery chevron links.
+*****************************/
+#photo_gallery_left_chevron_link { transition: all 0.3s; }
+#photo_gallery_right_chevron_link { transition: all 0.3s; }
+#photo_gallery_left_chevron_link:hover { color: #555; }
+#photo_gallery_right_chevron_link:hover { color: #555; }
