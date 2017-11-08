@@ -25,14 +25,16 @@
 			"discReleaseDate": "09/09/2017",
 			"discName": "BLESSING",
 			"discDistributor": "Sony Music, Ltd.",
-			"discIsSolo": true
+			"discIsSolo": false,
+			"discDescr": "<p>We don't have to be committed. We are just playing here. Trees grow in all kinds of ways. They're not all perfectly straight. Not every limb is perfect. Don't fiddle with it all day. Put light against light - you have nothing. Put dark against dark - you have nothing. It's the contrast of light and dark that each give the other one meaning. You can spend all day playing with mountains. This is the time to get out all your flustrations, much better than kicking the dog around the house or taking it out on your spouse.</p>"
 		},
 		{
 			"discCoverImg": "http://www.christinajohnston.co.uk/data/images/news_embedded.jpg",
 			"discReleaseDate": "10/10/2017",
 			"discName": "NEWS",
 			"discDistributor": "Sony Music, Ltd.",
-			"discIsSolo": true
+			"discIsSolo": true,
+			"discDescr": "<p>Just let this happen. We just let this flow right out of our minds. Get away from those little Christmas tree things we used to make in school. It's a good way of getting rid of all your anxieties and hostilities. Don't be bashful drop me a line. Work that paint. I really recommend you use odorless thinner or your spouse is gonna run you right out into the yard and you'll be working by yourself.</p>"
 		}
 	],
 	"concertsHeader": "CONCERTS",
@@ -50,11 +52,18 @@
 			"concertDatetime": "June 10 / 2017",
 			"concertName": "THE MIRACAL OF THE VOICE",
 			"concertVenue": "Church of St Michael the Archangel",
-			"concertLocation": "Framlingham"
+			"concertLocation": "Framlingham",
+			"concertDetails": "<p>Detail</p>",
+			"featuredConcert": true
 		},
 		{
 			"concertDatetime": "July 28 / 2017",
-			"concertName": "HTE MIRACLE OF THE VOICE"
+			"concertName": "HTE MIRACLE OF THE VOICE",
+			"featuredConcert": true,
+			"concertLocImg": "http://www.christinajohnston.co.uk/data/images/concert_thumbnail_2.jpg",
+			"concertVenue": "The Great Hall at Testingham Cathedral",
+			"concertLocation": "Testlingbourough",
+			"concertDetails": "<p>These are more concert details. More, more, more, more, more.</p>"
 		}
 	],
 	"galleryVideos": [
@@ -62,10 +71,113 @@
 			"video": "8B0hSeeDPDw"
 		},
 		{
-			"video": "https://youtu.be/YtVHyn_jL4E"
+			"video": "1oZUgCEn9oE"
 		},
 		{
 			"video": "8za2_4T00jM"
 		}
-	]
+	],
+	"homeCarousel": [
+		{}
+	],
+	"aboutCarousel": [
+		{
+			"image": "http://www.christinajohnston.co.uk/data/images/about_slider_image_1.jpg"
+		},
+		{
+			"image": "http://www.christinajohnston.co.uk/data/images/concerts_slider_image_1.jpg"
+		},
+		{
+			"image": "http://www.christinajohnston.co.uk/data/images/home_slider_image_2%20-%20big.jpg"
+		},
+		{
+			"image": "http://www.christinajohnston.co.uk/data/images/media_video_slider_image_1.jpg"
+		}
+	],
+	"concertCarousel": [
+		{}
+	],
+	"discographyCarousel": [
+		{}
+	],
+	"mediaCarousel": [
+		{}
+	],
+	"newsCarousel": [
+		{}
+	],
+	"contactCarousel": [
+		{}
+	],
+	"contactHeader": "Contact",
+	"contacts": [
+		{
+			"contactTitle": "Opera Agent",
+			"contactDetail": [
+				"<p>Mark Kendall Artists Management Ltd</p>",
+				"<p>Call: +44 1903 693 344</p>"
+			]
+		},
+		{
+			"contactTitle": "Manager",
+			"contactDetail": [
+				"<p>Vicky Corley-Smith / VCS Management</p>",
+				"<p>vicky@vcsmanagement.com</p>"
+			]
+		},
+		{
+			"contactTitle": "All Crossover Bookings",
+			"contactDetail": [
+				"<p>management@christinajohnston.co.uk</p>"
+			]
+		}
+	],
+	"photoGallery": [
+		{
+			"galleryTitle": "Autumn Snow",
+			"galleryDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vehicula erat vel odio varius pellentesque. Suspendisse at volutpat nunc. Suspendisse tincidunt cursus metus. Nunc rutrum ultrices nibh in interdum. Integer diam tellus, placerat ultrices varius at, mollis sed velit. Quisque scelerisque, libero sit amet ultrices blandit, sapien est venenatis nunc, et accumsan tellus nibh nec augue. Mauris ut aliquam leo. Nullam luctus ex in sollicitudin tristique. Maecenas porta sapien id neque tincidunt, nec auctor turpis mattis.",
+			"photo": [
+				{
+					"picture": "https://images.fineartamerica.com/images-medium-large/16-autumn-snow-monongahela-national-forest-thomas-r-fletcher.jpg",
+					"caption": "A snowy road",
+					"coverImage": false
+				},
+				{
+					"picture": "https://thomaskinkade.com/wp-content/uploads/2014/09/autsno6.jpg",
+					"caption": "Some painting",
+					"coverImage": false
+				},
+				{
+					"picture": "https://images.fineartamerica.com/images-medium-large-5/39-autumn-snow-monongahela-national-forest-thomas-r-fletcher.jpg",
+					"caption": "Almost frozen",
+					"coverImage": false
+				},
+				{
+					"picture": "http://pixdaus.com/files/items/pics/5/58/265558_01adcbf36bb168834034486367b8b6bc_large.jpg",
+					"caption": "Crimson & white",
+					"coverImage": false
+				},
+				{
+					"picture": "http://www.lovethispic.com/uploaded_images/49592-Autumn-Snow-Around-Lake.jpg",
+					"caption": "Ice & fire",
+					"coverImage": true
+				}
+			]
+		}
+	],
+	"news": [
+		{
+			"news-date": "Jun 23, 2017",
+			"news-title": "CHRISTINA JOHNSTON, POPULAR BRITISH COLORATURA SOPRANO WITH A VOICE THAT SOARS ABOVE THE CLOUDS.",
+			"news-details": "<h3>Her <strong>new album </strong>\"Blessing\" is released on 22nd September 17<strong><span style=\"font-size: 12.76px;\">Her&nbsp;</span><span style=\"font-size: 12.76px;\">new album&nbsp;</span></strong><span style=\"font-size: 12.76px;\"><strong>\"Blessing\" is released on 22nd September 17</strong><br /></span><span style=\"font-size: 12.76px;\">Her&nbsp;</span><span style=\"font-weight: bolder; font-size: 12.76px;\">new album&nbsp;</span><span style=\"font-size: 12.76px;\">\"Blessing\" is released on 22nd September 17</span><span style=\"font-size: 12.76px;\"><br /></span></h3>",
+			"newsMoreDetails": "#"
+		}
+	],
+	"footerTag": "ALL OPERA AND CLASSICAL MUSIC LIVE BOOKING ENQUIRIES:",
+	"footerFirstColTitle": "Opera Agent:",
+	"footerFirstColumn": "\n  Mark Kendall Artists Management Ltd\n  Call: +44 1903 693 344\n  markkendallartists@mac.com\n  www.markkendallartists.com\n",
+	"footerSecondColTitle": "Manager:",
+	"footerSecondColumn": "\n  Vicky Corley-Smith / VCS Management\n  vicky@vcsmanagement.com\n",
+	"footerThirdColTitle": "All Crossover Bookings:",
+	"footerThirdColumn": "\n  management@christinajohnston.co.uk\n"
 }
