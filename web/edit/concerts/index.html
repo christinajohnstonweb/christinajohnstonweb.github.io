@@ -9,14 +9,17 @@
 <!--     <link rel="stylesheet" href="assets/stylesheets/Supernice.min.css" /> -->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://get.mavo.io/mavo.css">
-    <link rel="stylesheet" href=/web/stylesheets/styles.css />
+    <link rel="stylesheet" href=/christinajohnstonweb.github.io/web/stylesheets/styles.css />
+    <style>
+      .nav-link { font-size: 1.0rem; }
+    </style>
     
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="//widget.cloudinary.com/global/all.js" type="text/javascript"></script>
   </head>
   <body>
     <nav class="navbar navbar-expand-md topbar" style="background-color: #000;">
-  <a class="navbar-brand" href=/web/edit style="color: #fff;">CHRISTINA JOHNSTON CMS</a>
+  <a class="navbar-brand" href=/christinajohnstonweb.github.io/web/edit style="color: #fff;">CHRISTINA JOHNSTON CMS</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="fa fa-bars"></span>
   </button>
@@ -24,26 +27,28 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link"  href=/web/edit/albums>
+        <a class="nav-link"  href=/christinajohnstonweb.github.io/web/edit/albums>
           EDIT DISCOGRAPHY
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href=/web/edit/concerts>EDIT CONCERTS</a>
+        <a class="nav-link" href=/christinajohnstonweb.github.io/web/edit/concerts>EDIT CONCERTS</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">EDIT MEDIA</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href=/web/edit/media/photos>PHOTOS</a>
-            <a class="dropdown-item" href=/web/edit/media/videos>VIDEOS</a>
+            <a class="dropdown-item" href=/christinajohnstonweb.github.io/web/edit/media/photos>PHOTOS</a>
+            <a class="dropdown-item" href=/christinajohnstonweb.github.io/web/edit/media/videos>VIDEOS</a>
           </div>
       </li>
       <li class="nav-item">
-        <a href=/web/edit/news class="nav-link">EDIT NEWS</a>
+        <a href=/christinajohnstonweb.github.io/web/edit/news class="nav-link">EDIT NEWS</a>
       </li>
       <li class="nav-item">
-        <a href=/web/edit/carousel class="nav-link">EDIT SECTION CAROUSELS</a>
+        <a href=/christinajohnstonweb.github.io/web/edit/carousel class="nav-link">EDIT SECTION CAROUSELS</a>
       </li>
+      <li class="nav-item"><a href=/christinajohnstonweb.github.io/web/edit/contacts class="nav-link">EDIT CONTACTS</a></li>
+      <li class="nav-item"><a href=/christinajohnstonweb.github.io/web/edit/footer class="nav-link">EDIT FOOTER</a></li>
     </ul>
   </div>
 </nav>
@@ -61,12 +66,12 @@
     <div class="row" style="margin: 0 0 1% 10%; background-color: #FAFAFA; padding: 20px;" property="concerts" mv-multiple>
       <table class="off-white-bg" style="border-collapse: collapse; width: 90%;">
         <tr>
-          <td style="width: 14.5rem;"><img src=/web/images/concert_thumbnail_1.jpg alt="" property="concertLocImg" style="margin: 1.4rem; width: 10.5rem;"></td>
+          <td style="width: 14.5rem;"><img src=/christinajohnstonweb.github.io/web/images/concert_thumbnail_1.jpg alt="" property="concertLocImg" style="margin: 1.4rem; width: 10.5rem;"></td>
           <td class="concert-venue-date">
             <p><strong style="font-weight: bolder;" property="concertDatetime">June 10 / 2017</strong></p>
-            <p class="concert-details" style="font-weight: bold;" property="concertName">THE MIRACAL OF THE VOICE</p>
-            <p class="concert-details" property="concertVenue">Church of St Michael the Archangel</p>
-            <p class="concert-details" property="concertLocation">Framlingham</p>
+            <p class="concert-details" style="font-weight: bold;" property="concertName" mv-default="Concert" required>THE MIRACAL OF THE VOICE</p>
+            <p class="concert-details" property="concertVenue" mv-default="To be determined." required>Church of St Michael the Archangel</p>
+            <p class="concert-details" property="concertLocation" mv-default="To be determined." required>Framlingham</p>
           </td>
           <td class="td-concert-spacer"></td>
           <td class="buy-tickets-td">
@@ -75,7 +80,7 @@
         </td>
         </tr>
          <tr>
-           <td colspan="4">Concert Details:&nbsp;<div style="width: 100%;" property="concertDetails" class="tinymce"></div></td>
+           <td colspan="4">Concert Details:&nbsp;<div style="width: 100%;" property="concertDetails" class="tinymce" mv-default="To be determined." required></div></td>
          </tr>
          <tr>
            <td colspan="4"><input type="checkbox" property="featuredConcert" />&nbsp;Feature concert on the home page?</td>
@@ -96,7 +101,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js"></script>
     <script src="https://get.mavo.io/mavo.es5.min.js"></script>
-    <script src=/web/javascripts/main.js></script>
+    <script src=/christinajohnstonweb.github.io/web/javascripts/main.js></script>
     <script type="text/javascript">
 //       UID = 293336116
         var feed = new Instafeed({

@@ -9,14 +9,17 @@
 <!--     <link rel="stylesheet" href="assets/stylesheets/Supernice.min.css" /> -->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://get.mavo.io/mavo.css">
-    <link rel="stylesheet" href=/web/stylesheets/styles.css />
+    <link rel="stylesheet" href=/christinajohnstonweb.github.io/web/stylesheets/styles.css />
+    <style>
+      .nav-link { font-size: 1.0rem; }
+    </style>
     
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="//widget.cloudinary.com/global/all.js" type="text/javascript"></script>
   </head>
   <body>
     <nav class="navbar navbar-expand-md topbar" style="background-color: #000;">
-  <a class="navbar-brand" href=/web/edit style="color: #fff;">CHRISTINA JOHNSTON CMS</a>
+  <a class="navbar-brand" href=/christinajohnstonweb.github.io/web/edit style="color: #fff;">CHRISTINA JOHNSTON CMS</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="fa fa-bars"></span>
   </button>
@@ -24,26 +27,28 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link"  href=/web/edit/albums>
+        <a class="nav-link"  href=/christinajohnstonweb.github.io/web/edit/albums>
           EDIT DISCOGRAPHY
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href=/web/edit/concerts>EDIT CONCERTS</a>
+        <a class="nav-link" href=/christinajohnstonweb.github.io/web/edit/concerts>EDIT CONCERTS</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">EDIT MEDIA</a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href=/web/edit/media/photos>PHOTOS</a>
-            <a class="dropdown-item" href=/web/edit/media/videos>VIDEOS</a>
+            <a class="dropdown-item" href=/christinajohnstonweb.github.io/web/edit/media/photos>PHOTOS</a>
+            <a class="dropdown-item" href=/christinajohnstonweb.github.io/web/edit/media/videos>VIDEOS</a>
           </div>
       </li>
       <li class="nav-item">
-        <a href=/web/edit/news class="nav-link">EDIT NEWS</a>
+        <a href=/christinajohnstonweb.github.io/web/edit/news class="nav-link">EDIT NEWS</a>
       </li>
       <li class="nav-item">
-        <a href=/web/edit/carousel class="nav-link">EDIT SECTION CAROUSELS</a>
+        <a href=/christinajohnstonweb.github.io/web/edit/carousel class="nav-link">EDIT SECTION CAROUSELS</a>
       </li>
+      <li class="nav-item"><a href=/christinajohnstonweb.github.io/web/edit/contacts class="nav-link">EDIT CONTACTS</a></li>
+      <li class="nav-item"><a href=/christinajohnstonweb.github.io/web/edit/footer class="nav-link">EDIT FOOTER</a></li>
     </ul>
   </div>
 </nav>
@@ -61,13 +66,13 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <div class="imageWrapper"><div class="image"><img src=/web/images/home_slider_image_1.jpg alt="" class="d-block w-100 img-fluid" /></div></div>
+          <div class="imageWrapper"><div class="image"><img src=/christinajohnstonweb.github.io/web/images/home_slider_image_1.jpg alt="" class="d-block w-100 img-fluid" /></div></div>
         </div>
         <div class="carousel-item">
-          <div class="imageWrapper"><div class="image"><img src=/web/images/home_slider_image_2.jpg alt="" class="d-block w-100 img-fluid" /></div></div>
+          <div class="imageWrapper"><div class="image"><img src=/christinajohnstonweb.github.io/web/images/home_slider_image_2.jpg alt="" class="d-block w-100 img-fluid" /></div></div>
         </div>
         <div class="carousel-item">
-          <div class="imageWrapper"><div class="image"><img src=/web/images/home_slider_image_3.jpg alt="" class="d-block w-100 img-fluid" /></div></div>
+          <div class="imageWrapper"><div class="image"><img src=/christinajohnstonweb.github.io/web/images/home_slider_image_3.jpg alt="" class="d-block w-100 img-fluid" /></div></div>
         </div>
       </div>
     </div>
@@ -84,7 +89,7 @@
         <p class="tinymce" property="aboutContent"></p>
         <button style="button" class="btn-black">MORE</button>
       </div>
-      <div class="col-6 black-bg remove-padding"><img src=/web/images/about_image_1340.jpg alt="About Christina Johnston, Coloratura Soprano" class="img-fluid section-img" property="aboutImage" /></div>
+      <div class="col-6 black-bg remove-padding"><img src=/christinajohnstonweb.github.io/web/images/about_image_1340.jpg alt="About Christina Johnston, Coloratura Soprano" class="img-fluid section-img" property="aboutImage" /></div>
     </div>
   </div>
 </section>
@@ -103,39 +108,21 @@
         </section>
       </div>
     </div>
-    <div class="d-flex flex-wrap"><!--  style="padding: 0 9.5rem;" -->
+    <div class="d-flex flex-wrap flex-center-align"><!--  style="padding: 0 9.5rem;" -->
       <div class="mx-auto" style="margin: 2.0rem;" mv-multiple property="album">
-        <img property="discCoverImg" src=/web/images/album_cover_image.jpg alt="" class="mx-auto d-flex discography-image"/>
-        <a href=/web/discography/solo/album data-album="[idify(discName)]" class="mx-auto btn-black discography-more-btn">MORE</a>
-        <section class="album-details" style="line-height: 0.75rem; text-align: center;">
-          <small property="discReleaseDate" style="color: #EE2D9F;">12/13/2017</small>
-          <h2 property="discName" class="album-name" style="font-weight: bolder;">BLESSING</h2>
-          <small property="discDistributor" class="album-distributor" style="color: #5d5d5d;">Sony Music</small>
+        <img property="discCoverImg" alt="" class="mx-auto d-flex discography-image"/>
+        <a href=/christinajohnstonweb.github.io/web/discography/album data-album="[idify(discName)]" class="mx-auto d-flex btn-black btn-centered discography-more-btn">MORE</a>
+        <section class="album-details">
+          <small class="album-release-date">[discReleaseDate]</small>
+          <h2 class="album-name">[discName]</h2>
+          <small class="album-distributor">[discDistributor]</small>
         </section>
-        <span class="mv-logged-in"><input type="checkbox" property="discIsSolo" />&nbsp;<strong>Solo</strong> album? (Instead of <em>featured</em>)</span>
+<!--         <span class="mv-logged-in"><input type="checkbox" property="discIsSolo" />&nbsp;<strong>Solo</strong> album? (Instead of <em>featured</em>)</span> -->
       </div>
-<!--       <div class="mx-auto" style="margin: 2.0rem;">
-        <img src=/web/images/album_cover_image.jpg alt="" class="mx-auto d-flex discography-image"/>
-        <a href="#" class="mx-auto btn-black discography-more-btn">MORE</a>
-        <section class="album-details" style="line-height: 0.75rem; text-align: center;">
-          <small style="color: #EE2D9F;">12/13/2017</small>
-          <h2 class="album-name" style="font-weight: bolder;">BLESSING</h2>
-          <small class="album-distributor" style="color: #5d5d5d;">Sony Music</small>
-        </section>
-      </div>
-      <div class="mx-auto" style="margin: 2.0rem;">
-        <img src=/web/images/album_cover_image.jpg alt="" class="mx-auto d-flex discography-image"/>
-        <a href="#" class="mx-auto btn-black discography-more-btn">MORE</a>
-        <section class="album-details" style="line-height: 0.75rem; text-align: center;">
-          <small style="color: #EE2D9F;">12/13/2017</small>
-          <h2 class="album-name" style="font-weight: bolder;">BLESSING</h2>
-          <small class="album-distributor" style="color: #5d5d5d;">Sony Music</small>
-        </section>
-      </div> -->
     </div>
   </section>
 </section>
-  <section id="media" class="reveal-fixed-bg media-container" style='background-image: url(/web/images/roses_parallax.png);'>
+  <section id="media" class="reveal-fixed-bg media-container" style='background-image: url(/christinajohnstonweb.github.io/web/images/roses_parallax.png);'>
   <div class="reveal-container">
     <h1 class="media-header">MEDIA</h1>
     <button style="button" class="btn-media">MORE</button>
@@ -144,7 +131,7 @@
   <section class="content-section" id="concerts">
   <div class="container-fluid">
     <div class="row justify-content-center">
-      <span class="pull-right mv-logged-in"><a href=/web/edit/concerts role="button" class="btn btn-default">Edit Concerts</a></span>
+<!--       <span class="pull-right mv-logged-in"><a href=/christinajohnstonweb.github.io/web/edit/concerts role="button" class="btn btn-default">Edit Concerts</a></span> -->
       <h1 class="section-header" property="concertsHeader">CONCERTS</h1>
     </div>
   </div>
@@ -157,7 +144,7 @@
       <div class="row" style="margin: 0 0 1% 10%;" property="concerts" mv-multiple>
         <table class="off-white-bg" style="border-collapse: collapse; width: 90%;">
           <tr>
-            <td style="width: 14.5rem;"><img src=/web/images/concert_thumbnail_1.jpg alt="" property="concertLocImg" style="margin: 1.4rem; width: 10.5rem;"></td>
+            <td style="width: 14.5rem;"><img src=/christinajohnstonweb.github.io/web/images/concert_thumbnail_1.jpg alt="" property="concertLocImg" style="margin: 1.4rem; width: 10.5rem;"></td>
             <td class="concert-venue-date">
               <p><strong style="font-weight: bolder;" property="concertDatetime">June 10 / 2017</strong></p>
               <p class="concert-details" style="font-weight: bold;" property="concertName">THE MIRACAL OF THE VOICE</p>
@@ -181,7 +168,7 @@
 
     <div id="cards_concert_content" class="d-flex flex-wrap">
       <div class="card mx-auto off-white-bg" style="width: 20rem; margin: 1.0rem;" property="concerts" mv-multiple>
-        <img class="card-img-top mx-auto d-block rounded-circle" style="margin: 10px; width: 120px; border: 3px solid #ccc;" src=/web/images/concert_thumbnail_1.jpg alt="Card image cap" property="concertLocImg" />
+        <img class="card-img-top mx-auto d-block rounded-circle" style="margin: 10px; width: 120px; border: 3px solid #ccc;" src=/christinajohnstonweb.github.io/web/images/concert_thumbnail_1.jpg alt="Card image cap" property="concertLocImg" />
 
         <div class="card-body">
           <h3 style="font-weight: bolder;" property="concertDatetime">July 28 / 2017</h3>
@@ -209,7 +196,7 @@
           </td>
           <td class="td-concert-spacer"></td>
           <td class="buy-tickets-td"><a href="!!concert_ticket_url!!" target="_BLANK" class="btn-media buy-tickets-btn">BUY TICKETS</button></a></td>
-          <td class="concert-info-td"><a href=/web/concerts/event/ data-event="!!concert_event!!" class="concert-info-a concert-more-btn"><em style="white-space: nowrap;">Info ></em></a></td>
+          <td class="concert-info-td"><a href=/christinajohnstonweb.github.io/web/concerts/event/ data-event="!!concert_event!!" class="concert-info-a concert-more-btn"><em style="white-space: nowrap;">Info ></em></a></td>
           <!-- td class="concert-info-td"><a href="!!concert_more_info!!" class="concert-info-a concert-more-btn"><em style="white-space: nowrap;">Info ></em></a></td -->
         </tr>
       </table>
@@ -261,7 +248,7 @@
 
         <button style="button" class="btn-black" id="more_news_btn">MORE NEWS</button>
       </div>
-      <div class="remove-padding col-6"><img src=/web/images/news_image_1340.jpg class="img-fluid section-img" alt="News about Christina Johnston - Coloratura Soprano" property="news_image" /></div>
+      <div class="remove-padding col-6"><img src=/christinajohnstonweb.github.io/web/images/news_image_1340.jpg class="img-fluid section-img" alt="News about Christina Johnston - Coloratura Soprano" property="news_image" /></div>
     </div>
   </div>
 </section>
@@ -287,20 +274,16 @@
 
         <div class="row">
           <div class="col align-self-end">
-            <div class="footer-col-title">Opera Agent:</div>
-            <div>Mark Kendall Artists Management Ltd</div>
-            <div>Call: +44 1903 693 344</div>
-            <div>markkendallartists@mac.com</div>
-            <div>www.markkendallartists.com</div>
+            <div class="footer-col-title">[footerFirstColTitle]</div>
+            [footerFirstColumn]
           </div>
           <div class="col footer-col-no-title align-self-end">
-            <div class="footer-sub-col-title">Manager:</div>
-            <div>Vicky Corley-Smith / VCS Management</div>
-            <div>vicky@vcsmanagement.com</div>
+            <div class="footer-sub-col-title">[footerSecondColTitle]</div>
+            [footerSecondColumn]
           </div>
           <div class="col footer-col-no-title align-self-end">
-            <div class="footer-sub-col-title">All Crossover Bookings:</div>
-            <div>management@christinajohnston.co.uk</div>
+            <div class="footer-sub-col-title">[footerThirdColTitle]</div>
+            [footerThirdColumn]
           </div>
         </div>
 
@@ -355,7 +338,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js"></script>
     <script src="https://get.mavo.io/mavo.es5.min.js"></script>
-    <script src=/web/javascripts/main.js></script>
+    <script src=/christinajohnstonweb.github.io/web/javascripts/main.js></script>
     <script type="text/javascript">
 //       UID = 293336116
         var feed = new Instafeed({

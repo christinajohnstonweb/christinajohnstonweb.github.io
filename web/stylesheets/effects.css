@@ -1,0 +1,76 @@
+/* Ken Burns effect */
+.imageWrapper {
+  background-color: #EEE;
+  border-bottom: 2px solid #DDD;
+  /*   padding: 50px 0; */
+}
+
+.image {
+/*   width: 1480px; */
+  width: 148.0rem;
+  height: 42.5rem;
+/*   height: 425px; */
+  /*   height:630px; */
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Slider on "About" page. */
+.about_slider_img {
+  height: 35.45rem;
+}
+
+.image img {
+  animation: move 9s ease infinite;
+  /* Change this to alternate to stop the loop. */
+  -ms-animation: move 9s ease infinite;
+  -webkit-animation: move 9s ease infinite;
+  -0-animation: move 9s ease infinite;
+  -moz-animation: move 9s ease infinite;
+  position: absolute;
+  left: -150px;
+  top: -150px;
+}
+
+@-webkit-keyframes move {
+  from {
+    transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    /* IE 9 */
+    -webkit-transform: scale(0.9);
+    /* Safari and Chrome */
+    -o-transform: scale(0.9);
+    /* Opera */
+    -moz-transform: scale(0.9);
+    /* Firefox */
+  }
+  to {
+    transform: scale(1.0);
+    -ms-transform: scale(1.0);
+    /* IE 9 */
+    -webkit-transform: scale(1.0);
+    /* Safari and Chrome */
+    -o-transform: scale(1.0);
+    /* Opera */
+    -moz-transform: scale(1.0);
+    /* Firefox */
+  }
+}
+
+/*****************************
+Animate the "About" logo.
+*****************************/
+.about-logo {
+  transform: scale(0);
+  transition: all 4s;
+}
+
+.about-logo-scale {
+  transform: scale(1);
+}
+
+.about-logo:hover {
+  transform: scale(1.2);
+  transition: all 0.75s;
+}

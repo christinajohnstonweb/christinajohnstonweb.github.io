@@ -57,35 +57,42 @@
         <div class="row">
           <div class="col main-content">
 
-            <h1>Photo Gallery Editor</h1>
-
-<div class="row" property="photoGallery" mv-multiple style="margin-bottom: 45px;">
-  <div class="col-12">
-    <h2 property="galleryTitle"></h2>
-    <div property="galleryDescription"></div>
+            <section class="content-section" id="carousel">
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-pause="false">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="imageWrapper"><div class="image"><img src=/christinajohnstonweb.github.io/web/images/home_slider_image_1.jpg alt="" class="d-block w-100 img-fluid" /></div></div>
+      </div>
+      <div class="carousel-item">
+        <div class="imageWrapper"><div class="image"><img src=/christinajohnstonweb.github.io/web/images/home_slider_image_2.jpg alt="" class="d-block w-100 img-fluid" /></div></div>
+      </div>
+      <div class="carousel-item">
+        <div class="imageWrapper"><div class="image"><img src=/christinajohnstonweb.github.io/web/images/home_slider_image_3.jpg alt="" class="d-block w-100 img-fluid" /></div></div>
+      </div>
+    </div>
   </div>
-  
-  <div class="col" property="photo" mv-multiple style="margin-bottom: 25px;">
-    <img property="picture" style="max-width: 25.0rem;" />
-    <h3 property="caption" style="max-width: 25.0rem;"></h3>
+</section>
 
-    <span class="mv-logged-in"><input type="checkbox" name="" id="" property="coverImage" />&nbsp;Set as cover for gallery</span>
+<section class="content-section" id="contact">
+  <div class="row justify-content-center">
+    <h1 class="section-header" property="contactHeader">Contact</h1>
   </div>
-</div>
 
-<!-- <div id="img_uploader"></div> -->
+  <div class="container-fluid">
+    <div class="row" property="contacts" mv-multiple style="margin-bottom: 45px;">
+      <div class="col-12"><h2 property="contactTitle"></h2></div>
 
-<script>
-  cloudinary.setCloudName('tradewind-cmms');
-
-  // $("#img_uploader").cloudinary_upload_widget({ upload_preset: 'tpgabczr' });
-  
-  // Upload success.
-  $(document).on('cloudinarywidgetsuccess', function(e, data) {
-    console.log("Global success", e, data);
-  });
-
-</script>
+      <div class="col-12 tinymce" property="contactDetail" mv-multiple style="margin-bottom: 25px;">
+      </div>
+    </div>
+    
+  </div>
+</section>
         
             <section id="brand_tag">
               ©2017 Christina Johnston / All Rights Reserved / designed by likelike

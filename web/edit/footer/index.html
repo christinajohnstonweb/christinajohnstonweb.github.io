@@ -57,35 +57,35 @@
         <div class="row">
           <div class="col main-content">
 
-            <h1>Photo Gallery Editor</h1>
+            <h1>Footer Editor</h1>
 
-<div class="row" property="photoGallery" mv-multiple style="margin-bottom: 45px;">
-  <div class="col-12">
-    <h2 property="galleryTitle"></h2>
-    <div property="galleryDescription"></div>
-  </div>
-  
-  <div class="col" property="photo" mv-multiple style="margin-bottom: 25px;">
-    <img property="picture" style="max-width: 25.0rem;" />
-    <h3 property="caption" style="max-width: 25.0rem;"></h3>
+<h2>Tag</h2>
+<div property="footerTag" class="tinymce" style="font-size: 1.5rem;">ALL OPERA AND CLASSICAL MUSIC LIVE BOOKING ENQUIRIES:</div>
 
-    <span class="mv-logged-in"><input type="checkbox" name="" id="" property="coverImage" />&nbsp;Set as cover for gallery</span>
-  </div>
+<h2 style="margin-top: 25px;">1st Column</h2>
+<div style="font-size: 1.7rem;" class="tinymce" property="footerFirstColTitle">Opera Agent:</div>
+<h3 style="margin-top: 15px;">Column Details:</h3>
+<div property="footerFirstColumn" class="tinymce" style="font-size: 1.5rem;">
+  <div>Mark Kendall Artists Management Ltd</div>
+  <div>Call: +44 1903 693 344</div>
+  <div>markkendallartists@mac.com</div>
+  <div>www.markkendallartists.com</div>
 </div>
 
-<!-- <div id="img_uploader"></div> -->
+<h2 style="margin-top: 25px;">2nd Column</h2>
+<div style="font-size: 1.7rem;" class="tinymce" property="footerSecondColTitle">Manager:</div>
+<h3 style="margin-top: 15px;">Column Details:</h3>
+<div property="footerSecondColumn" class="tinymce" style="font-size: 1.5rem;">
+  <div>Vicky Corley-Smith / VCS Management</div>
+  <div>vicky@vcsmanagement.com</div>
+</div>
 
-<script>
-  cloudinary.setCloudName('tradewind-cmms');
-
-  // $("#img_uploader").cloudinary_upload_widget({ upload_preset: 'tpgabczr' });
-  
-  // Upload success.
-  $(document).on('cloudinarywidgetsuccess', function(e, data) {
-    console.log("Global success", e, data);
-  });
-
-</script>
+<h2 style="margin-top: 25px;">3rd Column</h2>
+<div style="font-size: 1.7rem;" class="tinymce" property="footerThirdColTitle">All Crossover Bookings:</div>
+<h3 style="margin-top: 15px;">Column Details:</h3>
+<div property="footerThirdColumn" class="tinymce" style="font-size: 1.5rem;">
+  <div>management@christinajohnston.co.uk</div>
+</div>
         
             <section id="brand_tag">
               ©2017 Christina Johnston / All Rights Reserved / designed by likelike

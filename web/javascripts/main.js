@@ -82,7 +82,15 @@ $(function(){
   
   $( window ).on( "load", function() {
     // Resize info blocks, based on width.
-    setTimeout(function(){ responsiveTest() }, 300);
+    setTimeout(function(){
+      responsiveTest();
+    }, 3000);
+
+    
+    setTimeout(function(){
+      $(".spinner").hide();
+      $("main").fadeIn("slow");
+    }, 1500);
     
     // Zoom logo on "About" page in.
     if( $(".about-logo") ) {
@@ -94,29 +102,11 @@ $(function(){
       }, 2000);
     }
     
-    $(".spinner").hide();
-    $("main").fadeIn("slow");
+//     $(".spinner").hide();
+//     $("main").fadeIn("slow");
+    
 //     $(".section-img").parent().parent().css( "height", $(".section-img").width() );
     $(".section-img").parent().prev().css( "height", $(".section-img").width() );
-  });
-  
-  // Handle album clicks.
-  $(document).on("click", ".discography-more-btn", function(e){
-    e.preventDefault();
-    e.stopPropagation();
-    
-    var loc = $(this).attr("href") + "/?name=" + $(this).data("album");
-    window.location.href = loc;
-  });
-  
-  // Handle concert clicks.
-  $(document).on("click", ".concert-more-btn", function(e){
-
-    e.preventDefault();
-    e.stopPropagation();
-    
-    var loc = $(this).attr("href") + "?name=" + $(this).data("event");
-    window.location.href = loc;
   });
   
   /*********************************************
@@ -126,10 +116,34 @@ $(function(){
       type: "GET",
       url: "https://raw.githubusercontent.com/christinajohnstonweb/christinajohnstonweb.github.io/master/data/homepage.json",
       datatype: "json",
+      cache: false,
       success: function(data){
         // Transform data from text to JS object.
         data = JSON.parse(data);
 
+        // Album drilldown building.
+        if( $("#solo_album_tmpl").length ){
+          var album_name = getParameterByName("name");
+          
+          $.each(data.album, function(key, val){
+            /* Solo/featured albums. */
+            var name = val.discName.toLowerCase().replace(/\s/gi, '-').replace(/[^\w-]/gi, '');
+
+            if(name === album_name){
+              var code = $("#solo_album_tmpl").prop("innerHTML");
+
+              code = code.replace("!!album_name!!", val.discName);
+              code = code.replace("!!album_release_date!!", val.discReleaseDate);
+              code = code.replace("!!disc_cover_img!!", val.discCoverImg);
+              code = code.replace("!!album_distributor!!", val.discDistributor);
+              code = code.replace("!!album_descr!!", val.discDescr);
+              console.log("Disc name: " + val.discName + "\nRelease: " + val.discReleaseDate + "\nCover: " + val.discCoverImg);
+              $(".album-container").html(code);
+            }
+          });
+        }
+        // End album drilldown building.
+        
         // CONCERT LIST BUILDING.
         if( $("#concerts_table_tmpl").length ) {
           // Concerts layout, since Mavo.io won't support 2 references to the same collection on a page.
