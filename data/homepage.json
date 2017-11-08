@@ -174,6 +174,52 @@
 				}
 			],
 			"galleryDescription": "Sed rhoncus arcu arcu, vel volutpat ex iaculis in. Nullam efficitur molestie pulvinar. Cras tortor nulla, consequat id cursus ut, consequat accumsan ipsum. Integer a eros lobortis, consequat mi non, interdum diam. Praesent felis risus, interdum sed libero nec, scelerisque blandit ipsum. Proin aliquet odio at laoreet sodales. Aenean semper est at dolor mattis, ut vulputate purus ultricies. Duis aliquet tincidunt velit sit amet sagittis."
+		},
+		{
+			"galleryTitle": "Selfies",
+			"galleryDescription": "Nullam a diam sed risus interdum maximus eget at mi. Donec cursus ante nec sapien fermentum cursus. Nunc in nisi placerat, auctor velit non, pulvinar mauris. Nam dictum diam sit amet dolor imperdiet, vel maximus magna dictum. Ut lacus felis, semper id enim eget, posuere euismod nulla. Nulla facilisi. Nam auctor nulla ut augue mollis, vitae hendrerit nibh sagittis.",
+			"photo": [
+				{
+					"picture": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Anton_Chekhov_with_bow-tie_sepia_image.jpg",
+					"caption": "Heading out to a party",
+					"coverImage": true
+				},
+				{
+					"picture": "https://www.biography.com/.image/t_share/MTE5NTU2MzE2MTgxNjYxMTk1/anton-chekhov-9245947-1-402.jpg",
+					"caption": "After a long day at the office",
+					"coverImage": false
+				},
+				{
+					"picture": "https://media1.britannica.com/eb-media/02/13002-004-A0982741.jpg",
+					"caption": "Thinking about a book I just finished",
+					"coverImage": false
+				},
+				{
+					"picture": "https://www.thefamouspeople.com/profiles/images/anton-chekhov-4.jpg",
+					"caption": "Deciding on lunch",
+					"coverImage": false
+				},
+				{
+					"picture": "http://radioopensource.org/wp-content/uploads/2014/02/Anton_Chekhov_18891.jpg",
+					"caption": "Moustache",
+					"coverImage": false
+				},
+				{
+					"picture": "http://radioopensource.org/wp-content/uploads/2014/01/Anton_Chekhov_1897_in_Melihovo-1024x602.jpg",
+					"caption": "Me and the dog",
+					"coverImage": false
+				},
+				{
+					"picture": "http://2.bp.blogspot.com/-pb-E1Y4Gh7E/TvQLsBpgP1I/AAAAAAAAAb4/X2WKrnKDIgg/s1600/Chekhov+Biography.JPG",
+					"caption": "Party with the gang",
+					"coverImage": false
+				},
+				{
+					"picture": "https://upload.wikimedia.org/wikipedia/commons/a/af/Anton_Chekhov_and_Olga_Knipper%2C_1901.jpg",
+					"caption": "Me and the missus",
+					"coverImage": false
+				}
+			]
 		}
 	],
 	"news": [
