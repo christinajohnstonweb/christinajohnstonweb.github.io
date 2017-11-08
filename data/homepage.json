@@ -170,7 +170,7 @@
 				{
 					"picture": "http://www.getsready.com/wp-content/uploads/2016/09/Kyoto-the-Best-Destination-in-Japan.jpg",
 					"caption": "Kyoto in Autumn",
-					"coverImage": false
+					"coverImage": true
 				}
 			]
 		}
