@@ -26,7 +26,21 @@
 			"discName": "BLESSING",
 			"discDistributor": "Sony Music, Ltd.",
 			"discIsSolo": false,
-			"discDescr": "<p>We don't have to be committed. We are just playing here. Trees grow in all kinds of ways. They're not all perfectly straight. Not every limb is perfect. Don't fiddle with it all day. Put light against light - you have nothing. Put dark against dark - you have nothing. It's the contrast of light and dark that each give the other one meaning. You can spend all day playing with mountains. This is the time to get out all your flustrations, much better than kicking the dog around the house or taking it out on your spouse.</p>"
+			"discDescr": "<p>We don't have to be committed. We are just playing here. Trees grow in all kinds of ways. They're not all perfectly straight. Not every limb is perfect. Don't fiddle with it all day. Put light against light - you have nothing. Put dark against dark - you have nothing. It's the contrast of light and dark that each give the other one meaning. You can spend all day playing with mountains. This is the time to get out all your flustrations, much better than kicking the dog around the house or taking it out on your spouse.</p>",
+			"albumStreaming": [
+				{
+					"serviceLogo": "http://www.christinajohnston.co.uk/data/images/itunes_logo_black.png",
+					"serviceLink": "https://www.apple.com"
+				},
+				{
+					"serviceLogo": "http://www.christinajohnston.co.uk/data/images/amazon_logo_black.png",
+					"serviceLink": "http://www.jonlaplante.com"
+				},
+				{
+					"serviceLogo": "http://www.christinajohnston.co.uk/data/images/spotify_logo_black.png",
+					"serviceLink": "https://spotify.com"
+				}
+			]
 		},
 		{
 			"discCoverImg": "http://www.christinajohnston.co.uk/data/images/news_embedded.jpg",
@@ -34,7 +48,10 @@
 			"discName": "NEWS",
 			"discDistributor": "Sony Music, Ltd.",
 			"discIsSolo": true,
-			"discDescr": "<p>Just let this happen. We just let this flow right out of our minds. Get away from those little Christmas tree things we used to make in school. It's a good way of getting rid of all your anxieties and hostilities. Don't be bashful drop me a line. Work that paint. I really recommend you use odorless thinner or your spouse is gonna run you right out into the yard and you'll be working by yourself.</p>"
+			"discDescr": "<p>Just let this happen. We just let this flow right out of our minds. Get away from those little Christmas tree things we used to make in school. It's a good way of getting rid of all your anxieties and hostilities. Don't be bashful drop me a line. Work that paint. I really recommend you use odorless thinner or your spouse is gonna run you right out into the yard and you'll be working by yourself.</p>",
+			"albumStreaming": [
+				{}
+			]
 		}
 	],
 	"concertsHeader": "CONCERTS",
