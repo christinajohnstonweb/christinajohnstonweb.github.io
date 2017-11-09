@@ -40,6 +40,20 @@
 					"serviceLogo": "http://www.christinajohnston.co.uk/data/images/amazon_logo_black.png",
 					"serviceLink": "http://www.jonlaplante.com"
 				}
+			],
+			"albumPurchase": [
+				{
+					"serviceLogo": "http://www.christinajohnston.co.uk/data/images/amazon_logo_black.png",
+					"serviceLink": "https://www.pixxly.net"
+				},
+				{
+					"serviceLogo": "http://www.christinajohnston.co.uk/data/images/itunes_logo_black.png",
+					"serviceLink": "https://www.kindletrend.com"
+				},
+				{
+					"serviceLogo": "http://www.christinajohnston.co.uk/data/images/spotify_logo_black.png",
+					"serviceLink": "https://www.gitlab.com"
+				}
 			]
 		},
 		{
@@ -50,6 +64,9 @@
 			"discIsSolo": true,
 			"discDescr": "<p>Just let this happen. We just let this flow right out of our minds. Get away from those little Christmas tree things we used to make in school. It's a good way of getting rid of all your anxieties and hostilities. Don't be bashful drop me a line. Work that paint. I really recommend you use odorless thinner or your spouse is gonna run you right out into the yard and you'll be working by yourself.</p>",
 			"albumStreaming": [
+				{}
+			],
+			"albumPurchase": [
 				{}
 			]
 		}
