@@ -216,7 +216,7 @@
 				{
 					"picture": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Anton_Chekhov_with_bow-tie_sepia_image.jpg",
 					"caption": "Heading out to a party",
-					"coverImage": true
+					"coverImage": false
 				},
 				{
 					"picture": "https://www.biography.com/.image/t_share/MTE5NTU2MzE2MTgxNjYxMTk1/anton-chekhov-9245947-1-402.jpg",
@@ -246,7 +246,7 @@
 				{
 					"picture": "http://2.bp.blogspot.com/-pb-E1Y4Gh7E/TvQLsBpgP1I/AAAAAAAAAb4/X2WKrnKDIgg/s1600/Chekhov+Biography.JPG",
 					"caption": "Party with the gang",
-					"coverImage": false
+					"coverImage": true
 				},
 				{
 					"picture": "https://upload.wikimedia.org/wikipedia/commons/a/af/Anton_Chekhov_and_Olga_Knipper%2C_1901.jpg",
