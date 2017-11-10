@@ -26,7 +26,35 @@
 			"discName": "BLESSING",
 			"discDistributor": "Sony Music, Ltd.",
 			"discIsSolo": false,
-			"discDescr": "<p>We don't have to be committed. We are just playing here. Trees grow in all kinds of ways. They're not all perfectly straight. Not every limb is perfect. Don't fiddle with it all day. Put light against light - you have nothing. Put dark against dark - you have nothing. It's the contrast of light and dark that each give the other one meaning. You can spend all day playing with mountains. This is the time to get out all your flustrations, much better than kicking the dog around the house or taking it out on your spouse.</p>"
+			"discDescr": "<p>We don't have to be committed. We are just playing here. Trees grow in all kinds of ways. They're not all perfectly straight. Not every limb is perfect. Don't fiddle with it all day. Put light against light - you have nothing. Put dark against dark - you have nothing. It's the contrast of light and dark that each give the other one meaning. You can spend all day playing with mountains. This is the time to get out all your flustrations, much better than kicking the dog around the house or taking it out on your spouse.</p>",
+			"albumStreaming": [
+				{
+					"serviceLogo": "http://www.christinajohnston.co.uk/data/images/itunes_logo_black.png",
+					"serviceLink": "https://www.apple.com"
+				},
+				{
+					"serviceLogo": "http://www.christinajohnston.co.uk/data/images/spotify_logo_black.png",
+					"serviceLink": "https://spotify.com"
+				},
+				{
+					"serviceLogo": "http://www.christinajohnston.co.uk/data/images/amazon_logo_black.png",
+					"serviceLink": "http://www.jonlaplante.com"
+				}
+			],
+			"albumPurchase": [
+				{
+					"serviceLogo": "http://www.christinajohnston.co.uk/data/images/itunes_logo_black.png",
+					"serviceLink": "https://www.kindletrend.com"
+				},
+				{
+					"serviceLogo": "http://www.christinajohnston.co.uk/data/images/amazon_logo_black.png",
+					"serviceLink": "https://www.pixxly.net"
+				},
+				{
+					"serviceLogo": "http://www.christinajohnston.co.uk/data/images/spotify_logo_black.png",
+					"serviceLink": "https://www.gitlab.com"
+				}
+			]
 		},
 		{
 			"discCoverImg": "http://www.christinajohnston.co.uk/data/images/news_embedded.jpg",
@@ -34,7 +62,13 @@
 			"discName": "NEWS",
 			"discDistributor": "Sony Music, Ltd.",
 			"discIsSolo": true,
-			"discDescr": "<p>Just let this happen. We just let this flow right out of our minds. Get away from those little Christmas tree things we used to make in school. It's a good way of getting rid of all your anxieties and hostilities. Don't be bashful drop me a line. Work that paint. I really recommend you use odorless thinner or your spouse is gonna run you right out into the yard and you'll be working by yourself.</p>"
+			"discDescr": "<p>Just let this happen. We just let this flow right out of our minds. Get away from those little Christmas tree things we used to make in school. It's a good way of getting rid of all your anxieties and hostilities. Don't be bashful drop me a line. Work that paint. I really recommend you use odorless thinner or your spouse is gonna run you right out into the yard and you'll be working by yourself.</p>",
+			"albumStreaming": [
+				{}
+			],
+			"albumPurchase": [
+				{}
+			]
 		}
 	],
 	"concertsHeader": "CONCERTS",
@@ -161,6 +195,63 @@
 					"picture": "http://www.lovethispic.com/uploaded_images/49592-Autumn-Snow-Around-Lake.jpg",
 					"caption": "Ice & fire",
 					"coverImage": true
+				}
+			]
+		},
+		{
+			"galleryTitle": "A one pic gallery",
+			"photo": [
+				{
+					"picture": "http://www.getsready.com/wp-content/uploads/2016/09/Kyoto-the-Best-Destination-in-Japan.jpg",
+					"caption": "Kyoto in Autumn",
+					"coverImage": true
+				}
+			],
+			"galleryDescription": "Sed rhoncus arcu arcu, vel volutpat ex iaculis in. Nullam efficitur molestie pulvinar. Cras tortor nulla, consequat id cursus ut, consequat accumsan ipsum. Integer a eros lobortis, consequat mi non, interdum diam. Praesent felis risus, interdum sed libero nec, scelerisque blandit ipsum. Proin aliquet odio at laoreet sodales. Aenean semper est at dolor mattis, ut vulputate purus ultricies. Duis aliquet tincidunt velit sit amet sagittis."
+		},
+		{
+			"galleryTitle": "Selfies",
+			"galleryDescription": "Nullam a diam sed risus interdum maximus eget at mi. Donec cursus ante nec sapien fermentum cursus. Nunc in nisi placerat, auctor velit non, pulvinar mauris. Nam dictum diam sit amet dolor imperdiet, vel maximus magna dictum. Ut lacus felis, semper id enim eget, posuere euismod nulla. Nulla facilisi. Nam auctor nulla ut augue mollis, vitae hendrerit nibh sagittis.",
+			"photo": [
+				{
+					"picture": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Anton_Chekhov_with_bow-tie_sepia_image.jpg",
+					"caption": "Heading out to a party",
+					"coverImage": false
+				},
+				{
+					"picture": "https://www.biography.com/.image/t_share/MTE5NTU2MzE2MTgxNjYxMTk1/anton-chekhov-9245947-1-402.jpg",
+					"caption": "After a long day at the office",
+					"coverImage": false
+				},
+				{
+					"picture": "https://media1.britannica.com/eb-media/02/13002-004-A0982741.jpg",
+					"caption": "Thinking about a book I just finished",
+					"coverImage": false
+				},
+				{
+					"picture": "https://www.thefamouspeople.com/profiles/images/anton-chekhov-4.jpg",
+					"caption": "Deciding on lunch",
+					"coverImage": false
+				},
+				{
+					"picture": "http://radioopensource.org/wp-content/uploads/2014/02/Anton_Chekhov_18891.jpg",
+					"caption": "Moustache",
+					"coverImage": false
+				},
+				{
+					"picture": "http://radioopensource.org/wp-content/uploads/2014/01/Anton_Chekhov_1897_in_Melihovo-1024x602.jpg",
+					"caption": "Me and the dog",
+					"coverImage": false
+				},
+				{
+					"picture": "http://2.bp.blogspot.com/-pb-E1Y4Gh7E/TvQLsBpgP1I/AAAAAAAAAb4/X2WKrnKDIgg/s1600/Chekhov+Biography.JPG",
+					"caption": "Party with the gang",
+					"coverImage": true
+				},
+				{
+					"picture": "https://upload.wikimedia.org/wikipedia/commons/a/af/Anton_Chekhov_and_Olga_Knipper%2C_1901.jpg",
+					"caption": "Me and the missus",
+					"coverImage": false
 				}
 			]
 		}
