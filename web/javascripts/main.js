@@ -127,22 +127,41 @@ $(function(){
         if( $("#solo_album_tmpl").length ){
           var album_name = getParameterByName("name");
           
-          $.each(data.album, function(key, val){
-            /* Solo/featured albums. */
-            var name = val.discName.toLowerCase().replace(/\s/gi, '-').replace(/[^\w-]/gi, '');
+          // Get the specific album.
+          var album = $.grep(data.album, function(arr){ return arr.discName.toLowerCase().replace(/\s/gi, '-').replace(/[^\w-]/gi, '') === album_name });
+          album = album[0];
+          
+          var purchase_options = album["albumPurchase"];
+          var streaming_options = album["albumStreaming"];
+          
+          var code = $("#solo_album_tmpl").prop("innerHTML");
 
-            if(name === album_name){
-              var code = $("#solo_album_tmpl").prop("innerHTML");
-
-              code = code.replace("!!album_name!!", val.discName);
-              code = code.replace("!!album_release_date!!", val.discReleaseDate);
-              code = code.replace("!!disc_cover_img!!", val.discCoverImg);
-              code = code.replace("!!album_distributor!!", val.discDistributor);
-              code = code.replace("!!album_descr!!", val.discDescr);
-              console.log("Disc name: " + val.discName + "\nRelease: " + val.discReleaseDate + "\nCover: " + val.discCoverImg);
-              $(".album-container").html(code);
-            }
+          code = code.replace("!!album_name!!", album.discName);
+          code = code.replace("!!album_release_date!!", album.discReleaseDate);
+          code = code.replace("!!disc_cover_img!!", album.discCoverImg);
+          code = code.replace("!!album_distributor!!", album.discDistributor);
+          code = code.replace("!!album_descr!!", album.discDescr);
+          
+          var purchase_arr = [];
+          var streaming_arr = [];
+          
+          $.each(album.albumPurchase, function(key, val){
+            var li = '<li class="purchase_links"><a href="' + val.serviceLink + '" target="_BLANK"><img src="' + val.serviceLogo + '" class="coll-detail-buy-img" /></a></li>';
+            
+            purchase_arr.push(li);
           });
+          
+          code = code.replace("!!purchase_links!!", purchase_arr.join("\n"));
+          
+          $.each(album.albumStreaming, function(key, val){
+            var li = '<li><a href="' + val.serviceLink + '" target="_BLANK"><img src="' + val.serviceLogo + '" class="coll-detail-buy-img" /></a></li>';
+            
+            streaming_arr.push(li);
+          });
+          
+          code = code.replace("!!streaming_links!!", streaming_arr.join("\n"));
+
+          $(".album-container").html(code);
         }
         //********************************************
         // End album drilldown building.
@@ -264,6 +283,10 @@ $(function(){
           $("#photo_gallery_image_count").text( photos.length );
           
           $("#photo_gallery_description").html(gallery[0]["galleryDescription"]);
+          
+          if ( photos.length > 1 ) {
+            $("#photo_gallery_right_chevron").html('<a href="javascript:void(0);" id="photo_gallery_right_chevron_link"><span class="fa fa-3x fa-chevron-right"></span></a>');
+          }
          }
         //********************************************
         // END PHOTO GALLERY BUILDING.

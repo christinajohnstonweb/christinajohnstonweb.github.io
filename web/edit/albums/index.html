@@ -79,8 +79,23 @@
           <small property="discDistributor" class="album-distributor" style="color: #5d5d5d;">Sony Music</small>
         </section>
         
-        <span class="mv-logged-in"><input type="checkbox" property="discIsSolo" />&nbsp;<strong>Solo</strong> album? (Instead of <em>featured</em>)</span>
-        <div class="tinymce" property="discDescr" style="width: 100%;"></div>
+        <span class="mv-logged-in" style="font-size: 1.5rem;"><input type="checkbox" property="discIsSolo" />&nbsp;<strong>Solo</strong> album? (Instead of <em>featured</em>)</span>
+        <div class="tinymce" property="discDescr" style="text-align: center; padding: 1.0rem 20.0rem; font-size: 1.5rem;"></div>
+        <h2>Streaming Options</h2>
+        <div property="albumStreaming" style="margin: 20px 0; padding: 10px; display: flex; flex-wrap: row; justify-content: center;" mv-multiple>
+          <div style="padding: 10px; width: 200px; height: 70px; position: relative; display: flex; flex-wrap: row; justify-content: center; align-items: center;"><small style="position: absolute; top: 3px; left: 3px;">Service logo image</small><img property="serviceLogo" style="max-width:150px; max-height: 100px;" src="http://www.christinajohnston.co.uk/data/images/itunes_logo_black.png" class="" aria-label="Service logo"></div>
+          <div style=" position: relative; height: 70px; padding: 10px; background-color: #ddd;; display: flex; flex-wrap: row; justify-content: center; align-items: center;"><small style="position: absolute; top: 3px; left: 3px;">Song link</small><input placeholder="i.e. https://www.songsale.com/christinajohnston/song" type="text" style="width: 200px;" class="form-control" property="serviceLink" mv-mode="edit" aria-label="Service link"></div>
+          <div style="padding: 10px; width: 180px; position: relative; display: flex; flex-wrap: row; justify-content: center; align-items: center;"><small style="position: absolute; top: 3px; left: 3px;">Test link</small><a target="_BLANK" href="[serviceLink]"><img src="[serviceLogo]" style="max-width: 100px; max-height: 70px;"></a></div>
+        </div>
+        
+        <h2>Purchase Options</h2>
+        <div property="albumPurchase" style="margin: 20px 0; padding: 10px; display: flex; flex-wrap: row; justify-content: center;" mv-multiple>
+          <div style="padding: 10px; width: 200px; height: 70px; position: relative; display: flex; flex-wrap: row; justify-content: center; align-items: center;"><small style="position: absolute; top: 3px; left: 3px;">Service logo image</small><img property="serviceLogo" style="max-width:150px; max-height: 100px;" aria-label="Service logo"></div>
+          <div style=" position: relative; height: 70px; padding: 10px; background-color: #ddd;; display: flex; flex-wrap: row; justify-content: center; align-items: center;"><small style="position: absolute; top: 3px; left: 3px;">Song link</small><input placeholder="i.e. https://www.songsale.com/christinajohnston/song" type="text" style="width: 200px;" class="form-control" property="serviceLink" mv-mode="edit" aria-label="Service link"></div>
+          <div style="padding: 10px; width: 180px; position: relative; display: flex; flex-wrap: row; justify-content: center; align-items: center;"><small style="position: absolute; top: 3px; left: 3px;">Test link</small><a target="_BLANK" href="[serviceLink]"><img src="[serviceLogo]" style="max-width: 100px; max-height: 70px;"></a></div>
+        </div>
+        
+
       </div>
     </div>
   </section>

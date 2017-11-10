@@ -8,13 +8,16 @@
 }
 
 @media all and (min-width: 1400px) {
-  html { font-size: 109.5%; }
+/*   html { font-size: 109.5%; } */
 }
 
 @media all and (min-width: 1400px) {
   html { font-size: 72.5%; }
   
-  
+  .grid-sizer,
+  .grid-item { width: 33%; }
+  /* 2 columns */
+  .grid-item--width2 { width: 66%; }
 }
 
 @media all and (min-width: 1200px) {

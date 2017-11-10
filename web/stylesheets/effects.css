@@ -78,7 +78,7 @@ Animate the "About" logo.
 /*****************************
 Photo gallery chevron links.
 *****************************/
-#photo_gallery_left_chevron_link { transition: all 0.3s; }
-#photo_gallery_right_chevron_link { transition: all 0.3s; }
-#photo_gallery_left_chevron_link:hover { color: #555; }
-#photo_gallery_right_chevron_link:hover { color: #555; }
+#photo_gallery_left_chevron_link { color: #ddd; transition: all 0.3s; }
+#photo_gallery_right_chevron_link { color: #ddd; transition: all 0.3s; }
+#photo_gallery_left_chevron_link:hover { color: #aaa; }
+#photo_gallery_right_chevron_link:hover { color: #aaa; }
