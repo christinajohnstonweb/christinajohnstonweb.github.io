@@ -20,11 +20,19 @@ $(function(){
   
   // Handle photo clicks
   $(document).on("click", ".photo-more-btn", function(e){
-    console.log("Test");
     e.preventDefault();
     e.stopPropagation();
     
     var loc = $(this).attr("href") + "/?name=" + $(this).data("gallery");
+    window.location.href = loc;
+  });
+  
+  // Handle news clicks
+  $(document).on("click", ".news-more-btn", function(e){
+    e.preventDefault();
+    e.stopPropagation();
+    
+    var loc = $(this).attr("href") + "/?name=" + $(this).data("article");
     window.location.href = loc;
   });
   

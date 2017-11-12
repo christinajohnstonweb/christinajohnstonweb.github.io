@@ -12,6 +12,7 @@ $(function(){
       percentPosition: true,
       horizontalOrder: true,
       fitWidth: true,
+      isFitWidth: true,
       resize: true,
       gutter: 5
     });

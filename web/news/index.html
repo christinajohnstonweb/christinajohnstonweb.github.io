@@ -109,7 +109,25 @@
   </div>
 
   <div style="display: flex; justify-content: center;">
-    <div class="dw">
+    <div class="grid">
+      <div class="mason-size"></div>
+      <div class="grid-item" mv-multiple property="news">
+        <section style="position: relative;">
+          <img property="newsImage" class="masonry-img" alt="[caption]" />
+        </section>
+        <a href=/christinajohnstonweb.github.io/web/news/article data-article="[idify(newsTitle)]" class="mx-auto d-flex btn-black btn-centered news-more-btn">MORE</a>
+        <small>[newsDate]</small>
+        <div class="img-caption"><strong>[newsTitle]</strong></div>
+        <div style="max-width: 320px;">[newsDetailsPreview]</div>
+      </div>
+
+      <!-- For some reason, Masonry.js needs a non-dynamic image when used with Mavo.io -->
+      <div class="grid-item" property="testTestTest" style="visibility: hidden;">
+        <img src=/christinajohnstonweb.github.io/web/images/media_photo_1-r50.jpg class="masonry-img" alt="" style="max-width: 30px;" />
+      </div>
+      <!-- End corrective (invisible) div. -->
+    </div>
+<!--     <div class="dw">
       <div class="dw-panel">
         <div class="dw-panel__content">
           <img src=/christinajohnstonweb.github.io/web/images/media_photo_1-r50.jpg class="masonry-img" alt="" /><br/>
@@ -197,7 +215,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </section>
 

@@ -14,17 +14,17 @@
 @media all and (min-width: 1400px) {
   html { font-size: 72.5%; }
   
-  .grid-sizer,
-  .grid-item { width: 33%; }
-  /* 2 columns */
-  .grid-item--width2 { width: 66%; }
+  
 }
 
 @media all and (min-width: 1200px) {
   .btn-centered { opacity: 0; position: absolute; top: 40%; left: 50%; width: 12.0rem; height: 3.0rem; transform: translate(-50%,-95%); transition: opacity 0.4s; }
   
+  .news-more-btn { top: 30%; }
+  
   div[property="album"]:hover a.btn-centered { opacity: 1.0; }
-   div[property="photoGallery"]:hover a.btn-centered { opacity: 1.0; }
+  div[property="photoGallery"]:hover a.btn-centered { opacity: 1.0; }
+  div[property="news"]:hover a.btn-centered { opacity: 1.0; }
 }
 
 @media all and (max-width: 1199px) {
@@ -33,6 +33,7 @@
   
   div[property="album"]:hover a.btn-centered { opacity: 1.0; }
   div[property="photoGallery"]:hover a.btn-centered { opacity: 1.0; }
+  div[property="news"]:hover a.btn-centered { opacity: 1.0; }
 }
 
 @media all and (max-width: 991px) {
