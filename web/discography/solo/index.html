@@ -23,7 +23,7 @@
 <!--       <div class="spinner"></div> -->
       <div class="container-fluid">
         <div class="row">
-          <div class="" style="width: 0.85rem;">
+          <div class="pg-social-col">
             <div class="social-container">
               <div class="social-el"><a href="https://www.facebook.com/TheChristinaJohnston/" title="Facebook" target="_BLANK"><span class="fa fa-facebook"></span></a></div>
               <div class="social-el"><a href="#"><span class="fa fa-youtube"></span></a></div>
@@ -45,7 +45,7 @@
         <a class="nav-link" href=/christinajohnstonweb.github.io/web/about>ABOUT</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           DISCOGRAPHY
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -57,7 +57,7 @@
         <a class="nav-link" href=/christinajohnstonweb.github.io/web/concerts>CONCERTS</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           MEDIA
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -118,7 +118,8 @@
     <div class="d-flex flex-wrap"><!--  style="padding: 0 9.5rem;" -->
       <div class="mx-auto" style="margin: 2.0rem;" mv-multiple property="album" mv-if="discIsSolo=true">
         <img property="discCoverImg" src=/christinajohnstonweb.github.io/web/images/album_cover_image.jpg alt="" class="mx-auto d-flex discography-image"/>
-        <a href=/christinajohnstonweb.github.io/web/discography/album data-album="[idify(discName)]" class="mx-auto btn-black discography-more-btn">MORE</a>
+        <a href=/christinajohnstonweb.github.io/web/discography/album data-album="[idify(discName)]" class="mx-auto d-flex btn-black btn-centered discography-more-btn">MORE</a>
+<!--         <a href=/christinajohnstonweb.github.io/web/discography/album data-album="[idify(discName)]" class="mx-auto btn-black discography-more-btn">MORE</a> -->
         <section class="album-details" style="line-height: 0.75rem; text-align: center;">
           <small property="discReleaseDate" style="color: #EE2D9F;">12/13/2017</small>
           <h2 property="discName" class="album-name" style="font-weight: bolder;">BLESSING</h2>
@@ -134,7 +135,7 @@
 <section id="media" class="reveal-fixed-bg media-container" style='background-image: url(/christinajohnstonweb.github.io/web/images/roses_parallax.png);'>
   <div class="reveal-container">
     <h1 class="media-header">MEDIA</h1>
-    <button style="button" class="btn-media">MORE</button>
+    <a href=/christinajohnstonweb.github.io/web/media/photos class="btn-media">MORE</a>
   </div>
 </section>
 <section class="content-section" id="news">
@@ -181,7 +182,7 @@
     <div class="col" style="text-align: center;">
       <div class="d-flex flex-wrap" id="instafeed" style="margin-bottom: 2.0rem;">
       </div>
-      <a href="#" class="btn-black">FOLLOW ME</a>
+      <a href="javascript:void(0);" class="btn-black instagram-follow-btn">FOLLOW ME</a>
     </div>
   </div>
 </section>

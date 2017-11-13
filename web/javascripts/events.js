@@ -86,4 +86,11 @@ $(function(){
     // Make the left chevron link active.
     $("#photo_gallery_right_chevron").html('<a href="javascript:void(0);" id="photo_gallery_right_chevron_link" style="color: #ddd;"><span class="fa fa-3x fa-chevron-right"></span></a>');
   });
+  
+  // Show/hide dropdown menu on hover.
+  $("li.nav-item.dropdown").hover(function(){
+    $(this).find(".dropdown-menu").show();
+  }, function(){
+    $(this).find(".dropdown-menu").hide();
+  });
 });

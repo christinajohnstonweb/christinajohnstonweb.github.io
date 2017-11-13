@@ -1,7 +1,10 @@
 function responsiveTest(){
   // Resize info blocks, based on width.
-  $(".section-img").parent().parent().css( "height", $(".section-img").width() );
-  $(".section-img").parent().prev().css( "height", $(".section-img").width() );
+  $(".section-img").parent().parent().css( "height", parseInt( $(".content-section").width() )/2 );
+  $(".section-img").parent().prev().css( "height", parseInt( $(".content-section").width() )/2 );
+  
+//   $(".section-img").parent().parent().css( "height", $(".section-img").width() );
+//   $(".section-img").parent().prev().css( "height", $(".section-img").width() );
 
   if (window.matchMedia("(min-width: 1201px)").matches) {
   /* the viewport is at most 1200 pixels wide */

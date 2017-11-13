@@ -13,6 +13,7 @@ body {
 }
 
 /* main { display: none; } */
+.main-content { padding-left: 25px; }
 
 .flex-center-align { flex-direction: row; justify-content: center; }
 
@@ -48,6 +49,10 @@ nav.topbar {
 #concert_cards { display: none; }
 
 /* Sticky social sharing */
+.pg-social-col {
+  width: 0.90rem; z-index: 99;
+}
+
 .social-container {
   position: fixed;
   top: 282px;
@@ -61,6 +66,12 @@ nav.topbar {
 .social-el>a {
   color: #000;
   font-size: 1.5rem;
+  
+  transition: all 0.3s;
+}
+
+.social-el>a:hover {
+  color: #EE2D9F;
 }
 
 /* Section styles */
@@ -73,6 +84,10 @@ nav.topbar {
   margin-bottom: 1.2rem;
   letter-spacing: 0.08rem;
   font-stretch: ultra-expanded;
+  
+  text-shadow: 1px 0 #000;
+/*   letter-spacing:1px; */
+/*   font-weight:bold; */
 }
 
 .section-header-link {
@@ -108,6 +123,15 @@ nav.topbar {
   padding: 0.6rem 3.9rem;
   font-size: 1.2rem;
   margin-top: 3.8rem;
+  
+  transition: all 0.3s;
+}
+
+.btn-black:hover, .btn-media:hover {
+  background-color: #EE2D9F;
+  text-decoration: none;
+  color: #fff;
+  border-color: #EE2D9F;
 }
 
 /* Collection details styles */
@@ -207,6 +231,8 @@ nav.topbar {
   color: #fff;
   padding: 0.6rem 1.4rem;
   font-size: 1.2rem;
+  
+  transition: all 0.3s;
 }
 
 .btn-more-info {
@@ -303,7 +329,8 @@ footer {
 .card { border-radius: 0; border: 0; }
 
 /* Social icons */
-.social-icons { font-size: 2.0rem; color: #fff; }
+.social-icons { font-size: 2.0rem; color: #fff; transition: all 0.3s; }
+.social-icons:hover { color: #EE2D9F; text-decoration: none; }
 #social_btns_container { margin-bottom: 5.5rem; }
 .social-link { text-decoration: none; padding-right: 2.5rem; }
 
@@ -312,8 +339,9 @@ footer {
 .concert-venue-date { margin: 0 0 0 0; padding: 0.3rem 0 0 1.65rem; font-size: 1.6rem; }
 .concert-details { font-size: 1.2rem; }
 /* .concert-details { font-size: 1.2rem; line-height: 0.75rem; } */
-.buy-tickets-td { text-align: center; }
+.buy-tickets-td { text-align: center; width: 20%; }
 /* .buy-tickets-btn { margin: 0 0 0 8.0rem; } */
+.concert-info-td { width: 10%; }
 .concert-info-a { text-align: right; padding-right: 2.0rem; color: #212529; }
 
 /* News section */
@@ -331,6 +359,7 @@ footer {
 
 /* Instagram section */
 .instagram-images { max-height: 28.0rem; max-width: 28.0rem; }
+.instagram-follow-btn { padding: 0.6rem 1.9rem; font-size: 1.3rem; }
 
 /******************************************/
 /* Mavo editor styles */
