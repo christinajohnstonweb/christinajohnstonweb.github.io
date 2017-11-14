@@ -24,7 +24,7 @@ nav.topbar {
   z-index: 9;
 }
 
-.nav-link { color: #fff; font-size: 1.3rem; /* Updated by Jon La Plante */ }
+.nav-link { color: #fff; font-size: 1.45rem; }
 .nav-link:hover { color: #777; }
 .navbar-toggler { color: #fff; }
 
@@ -70,8 +70,16 @@ nav.topbar {
   transition: all 0.3s;
 }
 
-.social-el>a:hover {
+.social-el>a:hover, .social-share-icons:hover {
   color: #EE2D9F;
+}
+
+.social-share-icons {
+  color: #BBB;
+  font-size: 1.3rem;
+  margin: 0 0.5rem;
+  
+  transition: all 0.3s;
 }
 
 /* Section styles */
@@ -336,7 +344,7 @@ footer {
 
 
 /* Concerts section */
-.concert-venue-date { margin: 0 0 0 0; padding: 0.3rem 0 0 1.65rem; font-size: 1.6rem; }
+.concert-venue-date { vertical-align: top; margin: 0; padding: 3.3rem 0 0 2.1rem; font-size: 1.6rem; line-height: 0; }
 .concert-details { font-size: 1.2rem; }
 /* .concert-details { font-size: 1.2rem; line-height: 0.75rem; } */
 .buy-tickets-td { text-align: center; width: 20%; }
