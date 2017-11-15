@@ -4,7 +4,7 @@
 
 @media all and (min-width: 2500px) {
   html { font-size: 125.5%; }
-  footer { font-size: 135%; }
+  footer { font-size: 134%; }
 }
 
 @media all and (min-width: 1400px) {
@@ -14,7 +14,7 @@
 @media all and (min-width: 1400px) {
   html { font-size: 72.5%; }
   
-  footer { font-size: 120%; }
+  footer { font-size: 119%; }
 }
 
 @media all and (min-width: 1200px) {
@@ -48,13 +48,13 @@
   
   .btn-centered { opacity: 1.0; position: static; top: auto; left: auto; transform: none; margin-top: 1.0rem; margin-bottom: 1.0rem; }
   
-  footer { font-size: 125% }
+  footer { font-size: 124% }
 } 
 
 @media all and (max-width: 768px) {
   html { font-size: 71.5%; }
   .footer-newsletter-container{ text-align: center; width: 50%; }
-  footer { padding: 1.0rem 2.5rem; font-size: 150% }
+  footer { padding: 1.0rem 2.5rem; font-size: 149% }
   
   /*  Homepage slider size  */
   .image { width: 76.8rem; height: 19.5rem; }
