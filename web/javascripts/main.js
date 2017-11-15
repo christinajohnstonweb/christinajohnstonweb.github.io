@@ -25,7 +25,7 @@ function responsiveTest(){
     $(document).find(".footer-break").remove();
 
     $(".footer-newsletter-container").children().first().addClass("pull-right");
-    $(".footer-newsletter-container").addClass("col-md-3");
+    $(".footer-newsletter-container").addClass("col-md-4");
     $(".footer-newsletter-container").removeClass("col-11");
    }
 
@@ -57,7 +57,7 @@ function responsiveTest(){
       // Handle the footer, too.
       $(".footer-newsletter-container").before('<div class="w-100 footer-break"></div>');
       $(".footer-newsletter-container").children().first().removeClass("pull-right");
-      $(".footer-newsletter-container").removeClass("col-md-3");
+      $(".footer-newsletter-container").removeClass("col-md-4");
       $(".footer-newsletter-container").addClass("col-11");
 
       // Handle layout of the text section.
