@@ -3,7 +3,7 @@
 
 #mc_embed_signup form {padding: 0 0 10px 0;}
 .mc-field-group { display: inline-block; } /* positions input field horizontally */
-#mc_embed_signup input.email {font-family: 'Roboto', sans-serif; font-size: 1.1rem; border: 1px solid #fff; color: #343434; background-color: #fff; box-sizing:border-box; height:28px; padding: 0px 0.4em; display: inline-block; margin: 0 0 1.5rem 0; width: 15.45rem; vertical-align:top;}
+#mc_embed_signup input.email {font-family: 'Roboto', sans-serif; font-size: 1.1rem; border: 1px solid #fff; color: #343434; background-color: #fff; box-sizing:border-box; height:28px; padding: 0px 0.4em; display: inline-block; margin: 0 0 1.5rem 0; /* width: 15.45rem; */ vertical-align:top;}
 #mc_embed_signup label {font-family: 'Roboto', sans-serif; display:block; font-size:1.0rem; color: #fff;}
 #mc_embed_signup .clear {display: inline-block;} /* positions button horizontally in line with input */
 #mc_embed_signup .button {font-size: 1.0rem; border: none; letter-spacing: .03em; color: #fff; background-color: #aaa; box-sizing:border-box; height:28px; padding:0 16px; display: inline-block; margin: 0; transition: all 0.23s ease-in-out 0s;}
