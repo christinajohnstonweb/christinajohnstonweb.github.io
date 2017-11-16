@@ -114,7 +114,7 @@ nav.topbar {
 
 .content-section {
   margin-bottom: 3.91rem;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 
 .text-section {
@@ -198,7 +198,7 @@ nav.topbar {
 } */
 
 /* About section */
-.about-content { color: #000000; text-align: center; overflow-y: auto; line-height: 1.7rem; }
+.about-content { color: #000000; text-align: center; overflow-y: auto; line-height: 1.93rem; }
 
 /* About banner zoom */
 .about-logo {
