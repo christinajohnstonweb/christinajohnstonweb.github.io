@@ -157,6 +157,7 @@ nav.topbar {
   font-size: 1.6rem;
   text-align: center;
   width: 100%;
+  margin-bottom: -0.25rem;
 }
 
 /* Collection details distribution */
