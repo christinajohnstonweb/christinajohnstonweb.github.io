@@ -1,5 +1,5 @@
 {
-	"aboutHeader": "ABOOT",
+	"aboutHeader": "ABOUT",
 	"aboutImage": "http://www.christinajohnston.co.uk/web/images/about_image_1340.jpg",
 	"discographyHeader": "DISCOGRAPHY",
 	"collection": [
@@ -291,5 +291,25 @@
 	"footerSecondColTitle": "Manager:",
 	"footerSecondColumn": "\n  Vicky Corley-Smith / VCS Management\n  vicky@vcsmanagement.com\n",
 	"footerThirdColTitle": "All Crossover Bookings:",
-	"footerThirdColumn": "\n  management@christinajohnston.co.uk\n"
+	"footerThirdColumn": "\n  management@christinajohnston.co.uk\n",
+	"concertLocImg": [
+		"/web/images/concert_thumbnail_1.jpg",
+		"http://www.christinajohnston.co.uk/data/images/concert_thumbnail_2.jpg"
+	],
+	"concertDatetime": [
+		"June 10 / 2017",
+		"July 28 / 2017"
+	],
+	"concertName": [
+		"THE MIRACAL OF THE VOICE",
+		"HTE MIRACLE OF THE VOICE"
+	],
+	"concertVenue": [
+		"Church of St Michael the Archangel",
+		"The Great Hall at Testingham Cathedral"
+	],
+	"concertLocation": [
+		"Framlingham",
+		"Testlingbourough"
+	]
 }
