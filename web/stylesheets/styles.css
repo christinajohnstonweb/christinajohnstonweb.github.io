@@ -273,9 +273,9 @@ nav.topbar {
 .photo-gallery-img { max-width: 300px; }
 
 /* Navbar overrides */
-.navbar { font-weight: 300; }
+.navbar {  }
 
-.nav-link { color: #fff; font-size: 1.45rem; }
+.nav-link { color: #fff; font-size: 1.45rem; font-weight: 300; }
 .nav-link:hover { color: #777; }
 .navbar-toggler { color: #fff; }
 
