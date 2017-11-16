@@ -24,10 +24,6 @@ nav.topbar {
   z-index: 9;
 }
 
-.nav-link { color: #fff; font-size: 1.45rem; }
-.nav-link:hover { color: #777; }
-.navbar-toggler { color: #fff; }
-
 /* Background colors */
 .white-bg {
   background-color: #ffffff;
@@ -277,6 +273,12 @@ nav.topbar {
 .photo-gallery-img { max-width: 300px; }
 
 /* Navbar overrides */
+.navbar { font-weight: 300; }
+
+.nav-link { color: #fff; font-size: 1.45rem; }
+.nav-link:hover { color: #777; }
+.navbar-toggler { color: #fff; }
+
 #navbarSupportedContent {
   padding: 0 10% 0 10%;
 }
