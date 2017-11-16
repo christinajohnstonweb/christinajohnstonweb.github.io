@@ -198,7 +198,7 @@ nav.topbar {
 } */
 
 /* About section */
-.about-content { color: #000000; text-align: center; overflow-y: auto; line-height: 1.96rem; padding: 3.25% 6% 8% 6%; font-size: 1.8rem; margin-bottom: 3.0rem; }
+.about-content { color: #000000; text-align: center; overflow-y: auto; line-height: 1.96rem; padding: 3.25% 6% 8% 6%; font-size: 1.8rem; }
 
 /* About banner zoom */
 .about-logo {
