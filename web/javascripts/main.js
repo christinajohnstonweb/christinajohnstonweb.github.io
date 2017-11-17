@@ -149,7 +149,7 @@ $(function(){
           var streaming_arr = [];
           
           $.each(album.albumPurchase, function(key, val){
-            var li = '<li class="purchase_links"><a href="' + val.serviceLink + '" target="_BLANK"><img src="' + val.serviceLogo + '" class="coll-detail-buy-img" /></a></li>';
+            var li = '<div class="purchase_links"><a href="' + val.serviceLink + '" target="_BLANK"><img src="' + val.serviceLogo + '" class="coll-detail-buy-img" /></a></div>';
             
             purchase_arr.push(li);
           });
@@ -157,7 +157,7 @@ $(function(){
           code = code.replace("!!purchase_links!!", purchase_arr.join("\n"));
           
           $.each(album.albumStreaming, function(key, val){
-            var li = '<li><a href="' + val.serviceLink + '" target="_BLANK"><img src="' + val.serviceLogo + '" class="coll-detail-buy-img" /></a></li>';
+            var li = '<div><a href="' + val.serviceLink + '" target="_BLANK"><img src="' + val.serviceLogo + '" class="coll-detail-buy-img" /></a></div>';
             
             streaming_arr.push(li);
           });

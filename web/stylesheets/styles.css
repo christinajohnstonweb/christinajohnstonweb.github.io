@@ -181,22 +181,22 @@ nav.topbar {
 
 /* Collection details buy options */
 .coll-detail-buy-option {
-  list-style-type: none;
-}
-
-.coll-detail-buy-option > li {
-  display: inline;
+  display: flex; flex-direction: row; justify-content: center; align-items: center; align-content: center;
 }
 
 /* Collection details buy image */
 .coll-detail-buy-img {
-  height: 1.8rem;
+  height: 2.65rem;
   margin: 0 1.0rem 1.0rem 1.0rem;
+  opacity: 0.25;
+  
+  transition: all 0.3s;
 }
 
-/* .amazon-img {
-  padding-top: 2.0rem;
-} */
+.coll-detail-buy-img:hover {
+  opacity: 1.0;
+}
+
 
 /* About section */
 .about-content { color: #000000; text-align: center; overflow-y: auto; line-height: 1.96rem; padding: 3.25% 6% 8% 6%; font-size: 1.8rem; }
@@ -355,14 +355,16 @@ footer {
 .buy-tickets-td { text-align: center; width: 20%; }
 /* .buy-tickets-btn { margin: 0 0 0 8.0rem; } */
 .concert-info-td { width: 10%; }
-.concert-info-a { text-align: right; padding-right: 2.0rem; color: #212529; }
+.concert-info-a { text-align: right; padding-right: 2.0rem; color: #212529; transition: all 0.3s; }
+.concert-info-a:hover { color: #EE2D9F; text-decoration: none; }
 
 /* News section */
 .news-text { padding: 4.5rem 5.56rem 0 5.56rem; }
 .news-date { color: #212529; font-size: 1.1rem; font-style: italic; padding: 0 0 0.5rem 0; }
-.news-title { font-size: 1.3rem; font-weight: 900; line-height: 1.4rem; padding: 0 0 0.4rem 0; letter-spacing: 0.05rem; }
-.news-details { font-size: 1.1rem; padding: 0 0 1.75rem 0; }
-.news-more-details { font-size: 1.1rem; color: #EE2D9F; }
+.news-title { font-size: 1.5rem; font-weight: 900; line-height: 1.4rem; padding: 0 0 0.4rem 0; letter-spacing: 0.05rem; }
+.news-details { font-size: 1.3rem; padding: 0 0 1.75rem 0; line-height: 1.6rem; }
+.news-more-details { font-size: 1.3rem; color: #EE2D9F; font-style: italic; text-decoration: none; transition: all 0.3s; }
+.news-more-details:hover { font-weight: 900; color: #EE2D9F; text-decoration: none; }
 .news-item-section { margin-bottom: 3.7rem; }
 #more_news_btn { padding: 0.6rem 3.5rem; margin: 1.0rem 0 0 0; }
 

@@ -160,6 +160,7 @@
     $("main").fadeIn("slow");
   });
 </script>
+
 <script mv-expressions="none" type="text/template" id="solo_album_tmpl">
   <div class="container">
     <div class="row">
@@ -169,23 +170,18 @@
         <div class="coll-detail-distribution">!!album_distributor!!</div>
         <div><img src="!!disc_cover_img!!" class="coll-detail-img" /></div>
         <p class="coll-detail-buy-label">BUY ON:</p>
-        <ul class="coll-detail-buy-option">
+        <div class="coll-detail-buy-option">
           !!purchase_links!!
-          <!--li><a href="#" target="_BLANK"><img src=/christinajohnstonweb.github.io/web/images/itunes_logo_black.png alt="iTunes" class="coll-detail-buy-img" /></a></li>
-          <li><a href="#" target="_BLANK"><img src=/christinajohnstonweb.github.io/web/images/amazon_logo_black.png alt="Amazon" class="coll-detail-buy-img amazon-img" /></a></li>
-          <li><a href="#" target="_BLANK"><img src=/christinajohnstonweb.github.io/web/images/spotify_logo_black.png alt="Spotify" class="coll-detail-buy-img" /></a></li-->
-        </ul>
+        </div>
         <p class="coll-detail-buy-label">STREAM ON:</p>
-        <ul class="coll-detail-buy-option">
+        <div class="coll-detail-buy-option">
           !!streaming_links!!
-          <!-- li><a href="#" target="_BLANK"><img src=/christinajohnstonweb.github.io/web/images/itunes_logo_black.png alt="iTunes" class="coll-detail-buy-img" /></a></li>
-          <li><a href="#" target="_BLANK"><img src=/christinajohnstonweb.github.io/web/images/amazon_logo_black.png alt="Amazon" class="coll-detail-buy-img amazon-img" /></a></li>
-          <li><a href="#" target="_BLANK"><img src=/christinajohnstonweb.github.io/web/images/spotify_logo_black.png alt="Spotify" class="coll-detail-buy-img" /></a></li -->
-        </ul>
+        </div>
         
-        <div style="display: flex; content-align: center; justify-content: center; margin-top: 2.0rem;"><div style="width: 50%; font-size: 1.3rem;">!!album_descr!!</div></div>
+        <div style="display: flex; content-align: center; justify-content: center; margin: 3.5rem 0 0.75rem 0;"><div style="width: 52%; font-size: 1.5rem;">!!album_descr!!</div></div>
         
-        <div style="display: flex; content-align: center; justify-content: center;"><small><a href="#" style="margin: 0 1.0rem; font-size: 1.6rem;"><span class="fa fa-pinterest-p"></span></a><a href="#" style="margin: 0 1.0rem; font-size: 1.6rem;"><span class="fa fa-twitter"></span></a><a href="#" style="margin: 0 1.0rem; font-size: 1.6rem;"><span class="fa fa-facebook"></span></a></small></div>
+        <div style="display: flex; content-align: center; justify-content: center;">SHARE</div>
+        <div style="display: flex; content-align: center; justify-content: center;"><small><a href="#" style="margin: 0 0.5rem; font-size: 1.5rem;"><span class="fa fa-pinterest-p"></span></a><a href="#" style="margin: 0 0.5rem; font-size: 1.5rem;"><span class="fa fa-twitter"></span></a><a href="#" style="margin: 0 0.5rem; font-size: 1.5rem;"><span class="fa fa-facebook"></span></a></small></div>
         
         <div style="display: flex; content-align: center; justify-content: center; margin-bottom: 10.0rem;"><a href=/christinajohnstonweb.github.io/web/discography style="color: #EE2D9F;"><small><span class="fa fa-caret-left"></span>&nbsp;Back to discography</small></a></div>
       </div>
