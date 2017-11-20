@@ -251,7 +251,6 @@ $(function(){
         //********************************************
         // Photo gallery building.
         //********************************************
-        console.log("Glass Cannon podcast...");
         if( $(".gallery-images").length ){
           // Find the currently selected gallery.
           // Get the gallery name from the URL querystring.
@@ -295,6 +294,34 @@ $(function(){
         // END PHOTO GALLERY BUILDING.
         //********************************************
         
+        //********************************************
+        // PHOTO GALLERY MASONRY.
+        //********************************************
+        if( $("#photo_gallery_masonry_tmpl").length > 0 ){
+          var masonry_arr = [];
+
+          $.each(data.photoGallery, function(idx, obj){
+            var photo = $.grep(obj["photo"], function(arr){return arr["coverImage"] === true});
+           
+            console.log("Building gallery list...");
+            var code = $("#photo_gallery_masonry_tmpl").prop("innerHTML");
+
+            code = code.replace(RegExp("!!gallery_img_url!!", "g"), photo[0]["picture"]);
+            code = code.replace(RegExp("!!gallery_caption!!", "g"), photo[0]["caption"]);
+            code = code.replace(RegExp("!!gallery_title_link!!", "g"), obj.galleryTitle.replace(/\s/gi, '-').replace(/[^\w-]/gi, '') );
+            code = code.replace(RegExp("!!gallery_title!!", "g"), obj.galleryTitle);
+
+            masonry_arr.push(code);            
+          });
+
+//           $.when( $("#gallery_list").html(masonry_arr.join("\n")) ).done(function(){
+//             console.log("In done...");
+//             $(".grid").masonry();
+//           });
+        }
+        //********************************************
+        // END PHOTO GALLERY MASONRY.
+        //********************************************
       },
       error: function(data){
         

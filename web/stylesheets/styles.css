@@ -298,7 +298,7 @@ a.navbar-brand {
 
 .album-details { line-height: 0.75rem; text-align: center; margin-top: 2.4rem; }
 .album-release-date { color: #EE2D9F; font-size: 1.0rem; }
-.album-name { font-weight: bolder; font-size: 1.7rem; padding-top: 0.5rem; }
+.album-name { font-weight: 900; font-size: 1.7rem; padding-top: 0.5rem; margin-bottom: 0.1rem; }
 .album-distributor { color: #5d5d5d; font-size: 1.0rem; }
 
 /* .discography-more-btn { position: relative; top: -18.5rem; left: 14.0rem; margin: 0; } */
