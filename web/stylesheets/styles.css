@@ -371,7 +371,7 @@ footer {
 .concert-info-a:hover { color: #EE2D9F; text-decoration: none; }
 
 /* News section */
-.news-text { padding: 4.5rem 5.56rem 0 5.56rem; }
+.news-text { padding: 4.5rem 5.56rem 0 6.56rem; }
 .news-date { color: #5D5D5D; /* #212529; */ font-size: 1.1rem; font-style: italic; padding: 0 0 0.5rem 0; }
 .news-title { font-size: 1.5rem; font-weight: 900; line-height: 1.4rem; padding: 0 0 0.4rem 0; letter-spacing: 0.05rem; }
 .news-details { font-size: 1.3rem; padding: 0 0 1.75rem 0; line-height: 1.6rem; }
