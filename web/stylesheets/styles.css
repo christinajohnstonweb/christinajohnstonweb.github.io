@@ -78,6 +78,11 @@ nav.topbar {
   transition: all 0.3s;
 }
 
+/* jsSocial overrides */
+.jssocials-share-pinterest, .jssocials-share-twitter, .jssocials-share-facebook { color: #000; opacity: 0.25; transition: all 0.3s; }
+.jssocials-shares * { color: #000; transition: all 0.3s; }
+.jssocials-share-pinterest:hover, .jssocials-share-twitter:hover, .jssocials-share-facebook:hover { opacity: 1.0; }
+
 /* Section styles */
 .section-header {
   text-decoration: none;

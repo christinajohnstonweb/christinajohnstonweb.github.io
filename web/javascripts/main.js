@@ -113,6 +113,22 @@ $(function(){
   });
   
   /*********************************************
+  // Initialize social icons.
+  *********************************************/
+  setTimeout(function(){
+    console.log("Firing social...");
+    $("#sharing_icons").jsSocials({
+      showLabel: false,
+      showCount: false,
+      shares: ["pinterest", "twitter", "facebook"]
+    });
+    console.log("End social...");
+  }, 1500);
+  /*********************************************
+  // End Initializing social icons.
+  *********************************************/
+  
+  /*********************************************
   // Ajax handling.
   *********************************************/
   $.ajax({
