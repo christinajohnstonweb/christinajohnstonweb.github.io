@@ -102,14 +102,15 @@ nav.topbar {
   font-size: 2.0rem;
   font-weight: 700;
   padding: 0 2px 0.6rem 4px;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.8rem;
   letter-spacing: 0.08rem;
   font-stretch: ultra-expanded;
 }
 
 .section-header-link:hover {
   border-bottom: 2px solid #000;
-  transition: border-bottom 0.25s;
+  
+  transition: all 0.3s;
 }
 
 .content-section {
@@ -199,7 +200,18 @@ nav.topbar {
 
 
 /* About section */
-.about-content { color: #000000; text-align: center; overflow-y: auto; line-height: 1.96rem; padding: 3.25% 6% 8% 6%; font-size: 1.8rem; }
+.about-content { 
+  color: #000000;
+  text-align: center;
+  overflow-y: auto;
+  line-height: 1.96rem;
+  padding: 3.25% 6% 8% 6%;
+  font-size: 1.8rem;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 /* About banner zoom */
 .about-logo {
