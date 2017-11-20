@@ -102,13 +102,16 @@
 	],
 	"galleryVideos": [
 		{
-			"video": "8B0hSeeDPDw"
+			"video": "8B0hSeeDPDw",
+			"caption": "This is the first caption..."
 		},
 		{
-			"video": "1oZUgCEn9oE"
+			"video": "1oZUgCEn9oE",
+			"caption": "This is the second caption..."
 		},
 		{
-			"video": "8za2_4T00jM"
+			"video": "8za2_4T00jM",
+			"caption": "This is the third caption..."
 		}
 	],
 	"homeCarousel": [
