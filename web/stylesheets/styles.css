@@ -24,6 +24,9 @@ nav.topbar {
   z-index: 9;
 }
 
+/* Custom navbar bold. */
+a.nav-link.active { font-weight: 700; }
+
 /* Background colors */
 .white-bg {
   background-color: #ffffff;
