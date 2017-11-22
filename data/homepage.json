@@ -110,6 +110,19 @@
 			"albumPurchase": [
 				{}
 			]
+		},
+		{
+			"discCoverImg": "http://www.goldgold.com/wp-content/uploads/2012/01/golden-word11.jpg",
+			"discReleaseDate": "12/1/2017",
+			"discName": "Detectorist",
+			"discDistributor": "Mikey Likey, LLC.",
+			"discIsSolo": true,
+			"albumStreaming": [
+				{}
+			],
+			"albumPurchase": [
+				{}
+			]
 		}
 	],
 	"concertsHeader": "CONCERTS",
