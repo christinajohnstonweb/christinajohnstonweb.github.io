@@ -123,6 +123,32 @@
 			"albumPurchase": [
 				{}
 			]
+		},
+		{
+			"discCoverImg": "http://whatmetaldetector.com/wp-content/uploads/2013/05/Beach-Metal-Detecting-Treasure.jpg",
+			"discReleaseDate": "1/1/2018",
+			"discName": "Treasure",
+			"discDistributor": "Super Duper Distro, Inc.",
+			"discIsSolo": true,
+			"albumStreaming": [
+				{}
+			],
+			"albumPurchase": [
+				{}
+			]
+		},
+		{
+			"discCoverImg": "https://i.pinimg.com/564x/a7/50/bc/a750bc495d009632748c215a22007140--metal-detector-finds-ancient-artefacts.jpg",
+			"discReleaseDate": "2/1/2018",
+			"discName": "Coins",
+			"discDistributor": "Detectoring Fellas, a.s.",
+			"discIsSolo": true,
+			"albumStreaming": [
+				{}
+			],
+			"albumPurchase": [
+				{}
+			]
 		}
 	],
 	"concertsHeader": "CONCERTS",
