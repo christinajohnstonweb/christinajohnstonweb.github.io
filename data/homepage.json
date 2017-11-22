@@ -97,6 +97,19 @@
 			"albumPurchase": [
 				{}
 			]
+		},
+		{
+			"discCoverImg": "https://static.wixstatic.com/media/02f69d_67501e63a5cf458dbb92b667af94f552.jpg_srz_600_522_85_22_0.50_1.20_0.00_jpg_srz",
+			"discReleaseDate": "12/25/2017",
+			"discName": "Bitov",
+			"discDistributor": "CZ Music, s.r.o.",
+			"discIsSolo": true,
+			"albumStreaming": [
+				{}
+			],
+			"albumPurchase": [
+				{}
+			]
 		}
 	],
 	"concertsHeader": "CONCERTS",
