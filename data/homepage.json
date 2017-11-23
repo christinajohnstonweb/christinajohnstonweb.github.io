@@ -420,16 +420,12 @@
 			"newsMoreDetailsLink": "zdnet.com"
 		},
 		{
-			"news-image": "https://presspage-production-content.s3.amazonaws.com/uploads/1441/500_111715img-sfus-holiday-cooking-safety.jpg?10000",
-			"news-date": "December 2, 2017",
-			"news-title": "This Happens When Christina Sings A High Note!",
-			"news-details": "<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores...</p>",
-			"moreLink": "cnet.com",
-			"newsImage": "http://yourhomewizards.com/wp-content/uploads/2014/11/holiday-cooking-roast-beef-eric-stromer.jpg",
-			"newsDate": "November 22, 2017",
-			"newsTitle": "This is only a test",
-			"newsDetailsPreview": "<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas...</p>",
-			"newsMoreDetailsLink": "cnet.com"
+			"newsImage": "http://whatmetaldetector.com/wp-content/uploads/2013/05/Beach-Metal-Detecting-Treasure.jpg",
+			"newsDate": "November 23, 2017",
+			"newsTitle": "Treasure hunting!",
+			"newsDetails": "<p>Pellentesque mollis diam pellentesque lacus malesuada maximus. Nunc a sem bibendum, interdum nibh ac, euismod nisl. Sed molestie nunc sit amet ligula venenatis feugiat. Praesent malesuada vel neque consectetur fermentum. Vivamus eleifend, risus dapibus mollis mollis, ipsum ex hendrerit mi, a congue tortor diam vel augue. Nunc orci sapien, interdum in nisl vitae, lacinia accumsan neque. Phasellus euismod leo mauris, ac hendrerit lacus fermentum vel. Nunc a sapien orci. Pellentesque aliquam, felis et ultrices mattis, nunc leo lacinia massa, dignissim ultrices quam purus vel leo. Fusce non accumsan dolor. Aenean suscipit porttitor arcu, id tincidunt diam pulvinar ac. Maecenas suscipit nulla vitae elit ultrices, commodo viverra tellus faucibus. Quisque rutrum nisi suscipit, euismod lacus vitae, tristique est. Quisque egestas nibh ut ultricies finibus. Suspendisse eget tincidunt orci.</p>",
+			"newsDetailsPreview": "<p>Pellentesque mollis diam pellentesque lacus malesuada maximus. Nunc a sem bibendum, interdum nibh ac, euismod nisl. Sed molestie nunc sit amet ligula venenatis feugiat...</p>",
+			"newsMoreDetailsLink": "mavo.io"
 		}
 	],
 	"footerTag": "ALL OPERA AND CLASSICAL MUSIC LIVE BOOKING ENQUIRIES:",
