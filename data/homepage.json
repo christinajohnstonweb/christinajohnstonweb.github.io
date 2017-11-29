@@ -297,7 +297,9 @@
 		{}
 	],
 	"newsCarousel": [
-		{}
+		{
+			"image": "http://www.christinajohnston.co.uk/data/images/news_slider_image_1%20-%20big.jpg"
+		}
 	],
 	"contactCarousel": [
 		{
@@ -486,9 +488,13 @@
 		"Testlingbourough"
 	],
 	"photosCarousel": [
-		{}
+		{
+			"image": "http://www.christinajohnston.co.uk/data/images/photo_slider_image_1%20-%20big.jpg"
+		}
 	],
 	"videosCarousel": [
-		{}
+		{
+			"image": "http://www.christinajohnston.co.uk/data/images/media_video_slider_image_1%20-%20big.jpg"
+		}
 	]
 }
