@@ -284,7 +284,9 @@
 		}
 	],
 	"concertCarousel": [
-		{}
+		{
+			"image": "http://www.christinajohnston.co.uk/data/images/concerts_slider_image_1%20-%20big.jpg"
+		}
 	],
 	"discographyCarousel": [
 		{}
