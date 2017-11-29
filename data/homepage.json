@@ -298,7 +298,9 @@
 		{}
 	],
 	"contactCarousel": [
-		{}
+		{
+			"image": "http://www.christinajohnston.co.uk/data/images/contact_slider_image_1%20-%20big.jpg"
+		}
 	],
 	"contactHeader": "Contact",
 	"contacts": [
@@ -480,5 +482,11 @@
 	"concertLocation": [
 		"Framlingham",
 		"Testlingbourough"
+	],
+	"photosCarousel": [
+		{}
+	],
+	"videosCarousel": [
+		{}
 	]
 }
