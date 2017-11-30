@@ -39,6 +39,9 @@ function responsiveTest(){
 
     // We're wrapping the cols, so get rid of the row height.
     $(".section-img").parent().parent().css( "height", "" );
+    
+    // Make the 'Home' text sections match the window width.
+    $(".text-section", ".news-text").height( $(window).width() );
 
     if( $(".footer-break") ) {
       // Handle the footer, too.

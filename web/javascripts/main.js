@@ -17,17 +17,38 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
+// Set the carousel height.
+function setCarouselHeight() {
+  // Get the aspect ratio.
+  var ar = 2728/1161;
+  
+  // Calculate height based on width and aspect ratio.
+  $(".image-wrap").height( $(".carousel-inner").width() / ar );
+  
+  console.log("W: " + $(".carousel-inner").width() + " x H: " + $(".carousel-inner").width() / ar);
+}
+
 $(function(){
   // JS media queries.
   $(window).on("resize", function(){
     responsiveTest();
+    
+    // If there is a carousel, calculate the new height.
+    if( $(".image-wrap").length ) {
+      setCarouselHeight();
+    }
   });
   
   $( window ).on( "load", function() {
     // Resize info blocks, based on width.
     setTimeout(function(){
       responsiveTest();
-    }, 1500);
+      
+      // If there is a carousel, calculate the new height.
+      if( $(".image-wrap").length ) {
+        setCarouselHeight();
+      }
+    }, 1300);
 
     
     setTimeout(function(){
