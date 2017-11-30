@@ -28,6 +28,7 @@
     <link rel="stylesheet" href=/christinajohnstonweb.github.io/web/stylesheets/styles.css />
     <link rel="stylesheet" href=/christinajohnstonweb.github.io/web/stylesheets/media-queries.css />
     <link rel="stylesheet" href=/christinajohnstonweb.github.io/web/stylesheets/effects.css />
+    <link rel="stylesheet" href=/christinajohnstonweb.github.io/web/stylesheets/ken-burns.css />
     <link rel="stylesheet" href=/christinajohnstonweb.github.io/web/stylesheets/mailchimp-signup-form.css />
     <link rel="stylesheet" href=/christinajohnstonweb.github.io/web/stylesheets/loading-spinner.css />
   </head>
@@ -91,28 +92,8 @@
 
 <section class="content-section" id="carousel">
   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-pause="false">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="imageWrapper">
-          <div class="image"><img src=/christinajohnstonweb.github.io/web/images/home_slider_image_1.jpg alt="" class="d-block w-100 img-fluid" /></div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="imageWrapper">
-          <div class="image"><img src=/christinajohnstonweb.github.io/web/images/home_slider_image_2.jpg alt="" class="d-block w-100 img-fluid" /></div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="imageWrapper">
-          <div class="image"><img src=/christinajohnstonweb.github.io/web/images/home_slider_image_3.jpg alt="" class="d-block w-100 img-fluid" /></div>
-        </div>
-      </div>
-    </div>
+    <ol class="carousel-indicators"></ol>
+    <div class="carousel-inner"></div>
   </div>
 </section>
 
@@ -123,115 +104,26 @@
     </div>
   </div>
 
-  <div style="display: flex; justify-content: center;">
+<div style="display: flex; justify-content: center; flex-direction: row;">
     <div class="grid">
       <div class="mason-size"></div>
-      <div class="grid-item" mv-multiple property="news">
-        <section style="position: relative;">
-          <img property="newsImage" class="masonry-img" alt="[caption]" />
+      <div class="grid-item [if($index > 5, hiddenItem)]" mv-multiple property="news" style="margin-bottom: 50px;">
+        <section>
+          <img property="newsImage" class="masonry-img" alt="[caption]" style="margin-bottom: 1.95rem;" />
         </section>
-        <a href=/christinajohnstonweb.github.io/web/news/article data-article="[idify(newsTitle)]" class="mx-auto d-flex btn-black btn-centered news-more-btn">MORE</a>
-        <small>[newsDate]</small>
-        <div class="img-caption"><strong>[newsTitle]</strong></div>
-        <div style="max-width: 320px;">[newsDetailsPreview]</div>
+        
+        <em><small>[newsDate]</small></em>
+        <div style="width: 310px; line-height: 1.6rem;"><strong>[newsTitle]</strong></div>
+        <div style="width: 310px; font-size: 1.25rem; margin-top: 0.55rem;">[newsDetailsPreview]</div>
+        
+        <a href=/christinajohnstonweb.github.io/web/news/article data-article="[idify(newsTitle)]" class="news-more-btn news-more-details">More ></a>
       </div>
-
-      <!-- For some reason, Masonry.js needs a non-dynamic image when used with Mavo.io -->
-      <div class="grid-item" property="testTestTest" style="visibility: hidden;">
-        <img src=/christinajohnstonweb.github.io/web/images/media_photo_1-r50.jpg class="masonry-img" alt="" style="max-width: 30px;" />
-      </div>
-      <!-- End corrective (invisible) div. -->
     </div>
-<!--     <div class="dw">
-      <div class="dw-panel">
-        <div class="dw-panel__content">
-          <img src=/christinajohnstonweb.github.io/web/images/media_photo_1-r50.jpg class="masonry-img" alt="" /><br/>
-          <div class="img-caption">
-            <small style="font-style: italic; color: lightgray;">October 4, 2017</small><br/>
-            <strong><span class="fa fa-twitter" style="color: #EE2D9F;"></span>&nbsp;I am the caption, and sometimes I might be a bit long...</strong>
-          </div><br/>
-          <a href="#" class="news-more-details">More ></a>
-        </div>
-        <div class="dw-panel">
-        </div>
-        <div class="dw-panel__content">
-          <img src=/christinajohnstonweb.github.io/web/images/media_photo_2-r50.jpg class="masonry-img" alt="" /><br/>
-          <div class="img-caption">
-            <small style="font-style: italic; color: lightgray;">October 4, 2017</small><br/>
-            <strong><span class="fa fa-facebook" style="color: #EE2D9F;"></span>&nbsp;I am the caption, and sometimes I might be a bit long...</strong><br/>
-            <small>I am some additional info.</small><br/>
-            <a href="#" class="news-more-details">More ></a>
-          </div>
-        </div>
-      </div>
-      <div class="dw-panel">
-        <div class="dw-panel__content">
-          <img src=/christinajohnstonweb.github.io/web/images/media_photo_3-r50.jpg class="masonry-img" alt="" /><br/>
-          <div class="img-caption">
-            <small style="font-style: italic; color: lightgray;">October 4, 2017</small><br/>
-            <strong><span class="fa fa-instagram" style="color: #EE2D9F;"></span>&nbsp;I am the caption, and sometimes I might be a bit long...</strong><br/>
-            <small>I am some additional info.</small><br/>
-            <a href="#" class="news-more-details">More ></a>
-          </div>
-        </div>
-      </div>
-      <div class="dw-panel">
-        <div class="dw-panel__content">
-          <img src=/christinajohnstonweb.github.io/web/images/media_photo_4-r50.jpg class="masonry-img" alt="" /><br/>
-          <div class="img-caption">
-            <small style="font-style: italic; color: lightgray;">October 4, 2017</small><br/>
-            <strong><span class="fa fa-facebook" style="color: #EE2D9F;"></span>&nbsp;I am the caption, and sometimes I might be a bit long...</strong><br/>
-            <small>I am some additional info.</small><br/>
-            <a href="#" class="news-more-details">More ></a>
-          </div>
-        </div>
-      </div>
-      <div class="dw-panel">
-        <div class="dw-panel__content">
-          <img src=/christinajohnstonweb.github.io/web/images/media_photo_4-r50.jpg class="masonry-img" alt="" /><br/>
-          <div class="img-caption">
-            <small style="font-style: italic; color: lightgray;">October 4, 2017</small><br/>
-            <strong><span class="fa fa-google" style="color: #EE2D9F;"></span>&nbsp;I am the caption, and sometimes I might be a bit long...</strong><br/>
-            <small>I am some additional info.</small><br/>
-            <a href="#" class="news-more-details">More ></a>
-          </div>
-        </div>
-      </div>
-      <div class="dw-panel">
-        <div class="dw-panel__content">
-          <img src=/christinajohnstonweb.github.io/web/images/media_photo_3-r50.jpg class="masonry-img" alt="" /><br/>
-          <div class="img-caption">
-            <small style="font-style: italic; color: lightgray;">October 4, 2017</small><br/>
-            <strong><span class="fa fa-twitter" style="color: #EE2D9F;"></span>&nbsp;I am the caption, and sometimes I might be a bit long...</strong><br/>
-            <small>I am some additional info.</small><br/>
-            <a href="#" class="news-more-details">More ></a>
-          </div>
-        </div>
-      </div>
-      <div class="dw-panel">
-        <div class="dw-panel__content">
-          <img src=/christinajohnstonweb.github.io/web/images/media_photo_2-r50.jpg class="masonry-img" alt="" /><br/>
-          <div class="img-caption">
-            <small style="font-style: italic; color: lightgray;">October 4, 2017</small><br/>
-            <strong><span class="fa fa-instagram" style="color: #EE2D9F;"></span>&nbsp;I am the caption, and sometimes I might be a bit long...</strong><br/>
-            <small>I am some additional info.</small><br/>
-            <a href="#" class="news-more-details">More ></a>
-          </div>
-        </div>
-      </div>
-      <div class="dw-panel">
-        <div class="dw-panel__content">
-          <img src=/christinajohnstonweb.github.io/web/images/media_photo_1-r50.jpg class="masonry-img" alt="" /><br/>
-          <div class="img-caption">
-            <small style="font-style: italic; color: lightgray;">October 4, 2017</small><br/>
-            <strong><span class="fa fa-google" style="color: #EE2D9F;"></span>&nbsp;I am the caption, and sometimes I might be a bit long...</strong><br/>
-            <small>I am some additional info.</small><br/>
-            <a href="#" class="news-more-details">More ></a>
-          </div>
-        </div>
-      </div>
-    </div> -->
   </div>
+  
+  <div mv-if="count(news) > 6" class="justify-content-center" style="width: 100%; display: flex; padding-bottom: 4.0rem; margin-top: -2.0rem;">
+      <button class="btn-black" type="button" id="load_more_news_btn">LOAD MORE</button>
+    </div>
 </section>
 
 <section id="media" class="reveal-fixed-bg media-container" style='background-image: url(/christinajohnstonweb.github.io/web/images/roses_parallax.png);'>
@@ -239,41 +131,8 @@
     <h1 class="media-header">MEDIA</h1>
     <a href=/christinajohnstonweb.github.io/web/media/photos class="btn-media">MORE</a>
   </div>
-</section> <section class="content-section" id="news">
-  <div class="container-fluid">
-    <div class="row justify-content-center">
-      <h1 class="section-header">NEWS</h1>
-    </div>
-
-    <div class="row off-white-bg">
-      <div class="col-6 news-text" style="color: #000000; overflow-y: auto;">
-        <section class="news-item-section" property="news" mv-multiple>
-          <div class="news-date" property="newsDate">Jun 23, 2017</div>
-          <div class="news-title" property="newsTitle">CHRISTINA JOHNSTON, POPULAR BRITISH COLORATURA SOPRANO WITH A VOICE THAT SOARS ABOVE THE CLOUDS.</div>
-          <div class="news-details" property="newsDetails">Her new album "Blessing" is released on 22nd September 17</div>
-          <a href=/christinajohnstonweb.github.io/web/news/article data-article="[idify(newsTitle)]" class="news-more-btn news-more-details">More ></a>
-        </section>
-
-<!--         <section class="news-item-section">
-          <div class="news-date" property="news-date">Jun 10, 2017</div>
-          <div class="news-title" property="news-title">CHRISTINA WILL BE RETURNING TO HER HOME TOWN OF FRAMLINGHAM, SUFFOLK ON THE 10TH OF JUNE FOR ONE NIGHT ONLY!</div>
-          <div class="news-details" property="news-details">Her new album "Blessing" is released on 22nd September 17</div>
-          <a href="#" property="news-more-details" class="news-more-details">More ></a>
-        </section>
-
-        <section class="">
-          <div class="news-date" property="news-date">Jun 05, 2017</div>
-          <div class="news-title" property="news-title">CHRISTINA JOHNSTON, POPULAR BRITISH COLORATURA SOPRANO<br/>WITH A VOICE THAT SOARS ABOVE THE CLOUDS.</div>
-          <div class="news-details" property="news-details">Her new album "Blessing" is released on 22nd September 17</div>
-          <a href="#" property="news-more-details" class="news-more-details">More ></a>
-        </section> -->
-
-        <a href=/christinajohnstonweb.github.io/web/news class="btn-black" id="more_news_btn">MORE NEWS</a>
-      </div>
-      <div class="remove-padding col-6"><img src=/christinajohnstonweb.github.io/web/images/news_image_1340.jpg class="img-fluid section-img" alt="News about Christina Johnston - Coloratura Soprano" property="news_image" /></div>
-    </div>
-  </div>
-</section> <section class="content-section" id="instagram">
+</section>
+<section class="content-section" id="instagram">
   <div class="row justify-content-center">
     <h1 class="section-header" property="instagram_header">INSTAGRAM</h1>
   </div>
@@ -285,7 +144,8 @@
       <a href="javascript:void(0);" class="btn-black instagram-follow-btn">FOLLOW ME</a>
     </div>
   </div>
-</section> <footer class="black-bg">
+</section>
+<footer class="black-bg">
     <div class="row">
       <div class="col-7 footer-header-row">
         <div>ALL OPERA AND CLASSICAL MUSIC LIVE BOOKING ENQUIRIES:</div>

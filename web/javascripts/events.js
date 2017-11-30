@@ -93,4 +93,42 @@ $(function(){
   }, function(){
     $(this).find(".dropdown-menu").hide();
   });
+  
+  // Load more videos on the 'Video' page.
+  $("#load_more_videos_btn").click(function(){
+    for(var x = 0; x < 9; x++) {
+      // Get the current object.
+      var item = $(".hiddenItem").first();
+      
+      // Nicely fade in each video.
+      $(item).hide();
+      $(item).removeClass("hiddenItem");
+      $(item).fadeIn("slow");
+    }
+    
+    // If we don't have any more videos to load, disable the button.
+    if( $(".hiddenItem").length < 1 ){
+      $("#load_more_videos_btn").toggleClass("btn-black btn-gray");
+      $("#load_more_videos_btn").attr("disabled", "disabled");
+    }
+  });
+  
+  // Load more videos on the 'Video' page.
+  $("#load_more_albums_btn").click(function(){
+    for(var x = 0; x < 6; x++) {
+      // Get the current object.
+      var item = $(".hiddenItem").first();
+      
+      // Nicely fade in each video.
+      $(item).hide();
+      $(item).removeClass("hiddenItem");
+      $(item).fadeIn("slow");
+    }
+    
+    // If we don't have any more videos to load, disable the button.
+    if( $(".hiddenItem").length < 1 ){
+      $("#load_more_albums_btn").toggleClass("btn-black btn-gray");
+      $("#load_more_albums_btn").attr("disabled", "disabled");
+    }
+  });
 });

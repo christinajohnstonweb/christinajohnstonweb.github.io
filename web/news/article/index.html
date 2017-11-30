@@ -23,11 +23,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsSocials/1.5.0/jssocials.min.css" integrity="sha256-1tuEbDCHX3d1WHIyyRhG9D9zsoaQpu1tpd5lPqdqC8s=" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsSocials/1.5.0/jssocials-theme-minima.min.css" integrity="sha256-gdf8VUxJSQWUDIxhmCgSIVi8uBCaImRGWzMfKYlrUVE=" crossorigin="anonymous" />
     <link rel="stylesheet" href=/christinajohnstonweb.github.io/web/stylesheets/styles.css />
-    <link rel="stylesheet" href=/christinajohnstonweb.github.io/web/stylesheets/media-queries.css />
     <link rel="stylesheet" href=/christinajohnstonweb.github.io/web/stylesheets/effects.css />
+    <link rel="stylesheet" href=/christinajohnstonweb.github.io/web/stylesheets/ken-burns.css />
     <link rel="stylesheet" href=/christinajohnstonweb.github.io/web/stylesheets/mailchimp-signup-form.css />
     <link rel="stylesheet" href=/christinajohnstonweb.github.io/web/stylesheets/loading-spinner.css />
-
+    <link rel="stylesheet" href=/christinajohnstonweb.github.io/web/stylesheets/media-queries.css />
+    
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   </head>
   <body>
@@ -88,47 +89,7 @@
   </div>
 </nav>
 
-<section class="content-section" id="carousel">
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-pause="false">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="imageWrapper"><div class="image"><img src=/christinajohnstonweb.github.io/web/images/home_slider_image_1.jpg alt="" class="d-block w-100 img-fluid" /></div></div>
-      </div>
-      <div class="carousel-item">
-        <div class="imageWrapper"><div class="image"><img src=/christinajohnstonweb.github.io/web/images/home_slider_image_2.jpg alt="" class="d-block w-100 img-fluid" /></div></div>
-      </div>
-      <div class="carousel-item">
-        <div class="imageWrapper"><div class="image"><img src=/christinajohnstonweb.github.io/web/images/home_slider_image_3.jpg alt="" class="d-block w-100 img-fluid" /></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="container-fluid">
-  <div class="row off-white-bg">
-    <div class="col-12 d-flex" style="padding: 25px 0 15px 0; justify-content: center;">
-      <div class="gallery-images">
-        <span id="photo_gallery_left_chevron"><span class="fa fa-3x fa-chevron-left" style="color: #ddd;"></span></span>
-        <span id="photos"></span>
-        <span id="photo_gallery_right_chevron"><span class="fa fa-3x fa-chevron-right" style="color: #ddd;"></span></span>
-      </div>
-    </div>
-    <div class="col-12 d-flex" style="justify-content: center; margin-top: 10px; padding-top: 0;">
-      <span id="photo_gallery_image_idx"></span>&nbsp;of&nbsp;<span id="photo_gallery_image_count"></span>
-    </div>
-    <div class="col-12" style="text-align: center; padding: 1.0rem 20.0rem; font-size: 1.5rem;" id="photo_gallery_description"></div>
-    <div class="col-12" style="text-align: center;">
-      <div style="display: flex; content-align: center; justify-content: center;"><small id="sharing_icons" style="font-size: 1.0rem;"></small></div>
-<!--       <div style="display: flex; content-align: center; justify-content: center;"><small><a href="#" style="margin: 0 1.0rem; font-size: 1.6rem;"><span class="fa fa-pinterest-p"></span></a><a href="#" style="margin: 0 1.0rem; font-size: 1.6rem;"><span class="fa fa-twitter"></span></a><a href="#" style="margin: 0 1.0rem; font-size: 1.6rem;"><span class="fa fa-facebook"></span></a></small></div> -->
-      <div style="display: flex; content-align: center; justify-content: center; margin-bottom: 10.0rem;"><a href=/christinajohnstonweb.github.io/web/media/photos/ style="color: #EE2D9F;"><small><span class="fa fa-caret-left"></span>&nbsp;Back to Photo Galleries</small></a></div>
-    </div>
-  </div>
-</div>
+<div class="article-container"></div>
 
 <section id="media" class="reveal-fixed-bg media-container" style='background-image: url(/christinajohnstonweb.github.io/web/images/roses_parallax.png);'>
   <div class="reveal-container">
@@ -210,6 +171,26 @@
       </div>
     </div>
 </footer>
+
+<script mv-expressions="none" type="text/template" id="article_tmpl">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 off-white-bg" style="text-align: center;">
+        <div><img src="!!news_image!!" class="coll-detail-img" /></div>
+        <div style="display: flex; content-align: center; justify-content: center;"><small><a href="#" style="margin: 0 0.5rem; font-size: 1.5rem;"><span class="fa fa-pinterest-p"></span></a><a href="#" style="margin: 0 0.5rem; font-size: 1.5rem;"><span class="fa fa-twitter"></span></a><a href="#" style="margin: 0 0.5rem; font-size: 1.5rem;"><span class="fa fa-facebook"></span></a></small></div>
+        <h1 class="coll-detail-header">!!news_title!!</h1>
+        <div class="coll-detail-date">!!news_date!!</div>
+        
+        <div style="display: flex; content-align: center; justify-content: center; margin: 3.5rem 0 0.75rem 0;"><div style="width: 52%; font-size: 1.5rem;">!!article_details!!</div></div>
+        
+        <!--div style="display: flex; content-align: center; justify-content: center;">SHARE</div>
+        <div style="display: flex; content-align: center; justify-content: center;" id="sharing_icons"></div-->
+        
+        <div style="display: flex; content-align: center; justify-content: center; margin-bottom: 10.0rem;"><a href=/christinajohnstonweb.github.io/web/discography style="color: #EE2D9F;"><small><span class="fa fa-caret-left"></span>&nbsp;Previous News</small></a>  <a href=/christinajohnstonweb.github.io/web/discography style="color: #EE2D9F;"><small><span class="fa fa-caret-left"></span>&nbsp;Next News</small></a></div>
+      </div>
+    </div>
+  </div>
+</script>
         
             <section id="brand_tag" style="margin-top: 0.5rem;">
               ©2017 Christina Johnston / All Rights Reserved / designed by likelike

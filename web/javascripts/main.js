@@ -1,3 +1,11 @@
+/*********************************************
+// Global variables
+*********************************************/
+var current_page = current_page || "home";
+/*********************************************
+// Global variables
+*********************************************/
+
 // Parse querystrings.
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
@@ -48,13 +56,11 @@ $(function(){
   // Initialize social icons.
   *********************************************/
   setTimeout(function(){
-    console.log("Firing social...");
     $("#sharing_icons").jsSocials({
       showLabel: false,
       showCount: false,
       shares: ["pinterest", "twitter", "facebook"]
     });
-    console.log("End social...");
   }, 1500);
   /*********************************************
   // End Initializing social icons.
@@ -72,6 +78,76 @@ $(function(){
         // Transform data from text to JS object.
         data = JSON.parse(data);
 
+        //********************************************
+        // BUILD CAROUSEL SLIDERS
+        //********************************************
+        if( $("#carousel").length ) {
+          
+          // Create an array for the carousel images.
+          var car_arr = [];
+          var imgs = [];
+          var indicators = [];
+          
+          // Check to see what page we are on.
+          switch(current_page){
+              case("home"):
+                car_arr = data.homeCarousel;
+              break;
+              
+              case("about"):
+                car_arr = data.aboutCarousel;
+              break;
+              
+              case("solo"):
+                car_arr = data.discographyCarousel;
+              break;
+              
+              case("featured"):
+                car_arr = data.discographyCarousel;
+              break;
+              
+              case("concerts"):
+                car_arr = data.concertsCarousel;
+              break;
+              
+              case("photos"):
+                car_arr = data.photosCarousel;
+              break;
+              
+              case("videos"):
+                car_arr = data.videosCarousel;
+              break;
+              
+              case("news"):
+                car_arr = data.newsCarousel;
+              break;
+              
+              case("article"):
+                car_arr = data.articleCarousel;
+              break;
+              
+              case("contact"):
+                car_arr = data.contactCarousel;
+              break;
+          }
+          
+          $.each(car_arr, function(key, val){
+            // Populate the indicators array.
+            var active = '';
+            if(key === 0){ active = 'active' }
+            indicators.push('<li data-target="#carouselExampleIndicators" data-slide-to="' + key + '" class="' + active + '"></li>');
+            
+            // Populate the images array.
+            imgs.push('<div class="carousel-item ' + active + '"><div class="image-wrap"><img src="' + val.image + '" alt="' + val.image + '" class="d-block w-100" /></div></div>');
+          });
+
+          $(".carousel-indicators").html(indicators.join("\n"));
+          $(".carousel-inner").html(imgs.join("\n"));
+        }
+        //********************************************
+        // END BUILDING CAROUSEL SLIDERS
+        //********************************************
+        
         //********************************************
         // Album drilldown building.
         //********************************************
@@ -243,32 +319,26 @@ $(function(){
         //********************************************
         
         //********************************************
-        // PHOTO GALLERY MASONRY.
+        // News article building.
         //********************************************
-        if( $("#photo_gallery_masonry_tmpl").length > 0 ){
-          var masonry_arr = [];
+        if( $("#article_tmpl").length ){
+          var article_name = getParameterByName("name");
+//           debugger;
+          // Get the specific article.
+          var article = $.grep(data.news, function(arr){ return arr.newsTitle.toLowerCase().replace(/\s/gi, '-').replace(/[^\w-]/gi, '') === article_name });
+          article = article[0];
+          
+          var code = $("#article_tmpl").prop("innerHTML");
 
-          $.each(data.photoGallery, function(idx, obj){
-            var photo = $.grep(obj["photo"], function(arr){return arr["coverImage"] === true});
-           
-            console.log("Building gallery list...");
-            var code = $("#photo_gallery_masonry_tmpl").prop("innerHTML");
-
-            code = code.replace(RegExp("!!gallery_img_url!!", "g"), photo[0]["picture"]);
-            code = code.replace(RegExp("!!gallery_caption!!", "g"), photo[0]["caption"]);
-            code = code.replace(RegExp("!!gallery_title_link!!", "g"), obj.galleryTitle.replace(/\s/gi, '-').replace(/[^\w-]/gi, '') );
-            code = code.replace(RegExp("!!gallery_title!!", "g"), obj.galleryTitle);
-
-            masonry_arr.push(code);            
-          });
-
-//           $.when( $("#gallery_list").html(masonry_arr.join("\n")) ).done(function(){
-//             console.log("In done...");
-//             $(".grid").masonry();
-//           });
+          code = code.replace("!!news_image!!", article.newsImage);
+          code = code.replace("!!news_title!!", article.newsTitle);
+          code = code.replace("!!news_date!!", article.newsDate);
+          code = code.replace("!!article_details!!", article.newsDetails);
+          
+          $(".article-container").html(code);
         }
         //********************************************
-        // END PHOTO GALLERY MASONRY.
+        // End news article building.
         //********************************************
       },
       error: function(data){

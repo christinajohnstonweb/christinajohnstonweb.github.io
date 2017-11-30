@@ -65,8 +65,8 @@ function responsiveTest(){
   /* the viewport is at most 1200 pixels wide */
   // Handle video sizes.
     
-    $("section.video > iframe").css("width", "400px");
-    $("section.video > iframe").css("height", "225px");
+//     $("section.video > iframe").css("width", "400px");
+//     $("section.video > iframe").css("height", "225px");
   }
 
   // If the viewport < 1200px, make the article sections as tall as they are wide.
