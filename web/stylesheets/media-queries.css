@@ -96,6 +96,8 @@
   div[property="photoGallery"]:hover a.btn-centered { opacity: 1.0; }
   div[property="news"]:hover a.btn-centered { opacity: 1.0; }
   
+  /*  Remove the padding around text-section - at this size, it creates an odd effect.  */
+  .text-section { padding: 0; }
 /*   .image-wrap { height: 59.3rem; } */
 }
 
@@ -117,6 +119,9 @@
   div[property="album"]:hover a.btn-centered { opacity: 1.0; }
   div[property="photoGallery"]:hover a.btn-centered { opacity: 1.0; }
   div[property="news"]:hover a.btn-centered { opacity: 1.0; }
+  
+  /*  Remove the padding around text-section - at this size, it creates an odd effect.  */
+  .text-section { padding: 0; }
 }
 
 
@@ -133,7 +138,10 @@
   .image { width: 99.1rem; height: 26.5rem; }
   
   /*  About section  */
-  .about-content { overflow: auto; }
+  .about-content { overflow: auto; display: block; }
+  
+  /*  Remove the padding around text-section - at this size, it creates an odd effect.  */
+  .text-section { padding: 1.5rem 2.0rem; }
   
   /*  Concerts  */
   .td-concert-spacer { display: none; }

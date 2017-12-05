@@ -28,6 +28,21 @@ function setCarouselHeight() {
   console.log("W: " + $(".carousel-inner").width() + " x H: " + $(".carousel-inner").width() / ar);
 }
 
+// Set the home page text section height and width.
+function adjustTextSections() {
+  var rowWidth;
+  if( $(".about-content").hasClass("col-6") || $(".news-text").hasClass("col-6") ) {
+     rowWidth = parseInt( $("#about_row").width() || $("#news_row").width() )/2;
+   } else {
+     rowWidth = parseInt( $("#about_row").width() || $("#news_row").width() );
+   }
+  
+  $(".text-section").css("height", rowWidth);
+  $(".text-section").css("width", rowWidth);
+  $(".news-text").css("height", rowWidth);
+  $(".news-text").css("width", rowWidth);
+}
+
 $(function(){
   // JS media queries.
   $(window).on("resize", function(){
@@ -38,9 +53,14 @@ $(function(){
       setCarouselHeight();
     }
     
+    if( $(".text-section").length ){
+      adjustTextSections();
+    }
 //     setTimeout(function(){
-      $(".text-section").height( $('[property="aboutImage"]').height() );
-      $(".news-text").height( $('[property="aboutImage"]').height() );
+//       var rowWidth = parseInt( $("#test_row").width() )/2;
+    
+//       $(".text-section").height( $('[property="aboutImage"]').height() );
+//       $(".news-text").height( $('[property="aboutImage"]').height() );
 //       console.log("Resized. New height: " + $('[property="aboutImage"]').height());
 //     }, 500);
   });
@@ -57,9 +77,10 @@ $(function(){
       
       // Resize the text sections on the home page.
       if( $(".text-section").length ){
-        $(".text-section").height( $('[property="aboutImage"]').height() );
-        $(".news-text").height( $('[property="aboutImage"]').height() );
-        console.log("Resized. New height: " + $('[property="aboutImage"]').height());
+        adjustTextSections();
+//         $(".text-section").height( $('[property="aboutImage"]').height() );
+//         $(".news-text").height( $('[property="aboutImage"]').height() );
+//         console.log("Resized. New height: " + $('[property="aboutImage"]').height());
       }
     }, 1300);
 
