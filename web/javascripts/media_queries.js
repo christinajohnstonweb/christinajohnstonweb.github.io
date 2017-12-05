@@ -40,8 +40,13 @@ function responsiveTest(){
     // We're wrapping the cols, so get rid of the row height.
     $(".section-img").parent().parent().css( "height", "" );
     
-    // Make the 'Home' text sections match the window width.
-    $(".text-section", ".news-text").height( $(window).width() );
+//     // Make the 'Home' text sections match the window width.
+//     var new_width = $(window).width();
+//     if(new_width < 768){
+//       new_width = parseInt(new_width * 0.8);
+//     }
+    
+//     $(".text-section", ".news-text").height( new_width );
 
     if( $(".footer-break") ) {
       // Handle the footer, too.

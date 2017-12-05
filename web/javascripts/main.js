@@ -37,6 +37,12 @@ $(function(){
     if( $(".image-wrap").length ) {
       setCarouselHeight();
     }
+    
+//     setTimeout(function(){
+      $(".text-section").height( $('[property="aboutImage"]').height() );
+      $(".news-text").height( $('[property="aboutImage"]').height() );
+//       console.log("Resized. New height: " + $('[property="aboutImage"]').height());
+//     }, 500);
   });
   
   $( window ).on( "load", function() {
@@ -47,6 +53,13 @@ $(function(){
       // If there is a carousel, calculate the new height.
       if( $(".image-wrap").length ) {
         setCarouselHeight();
+      }
+      
+      // Resize the text sections on the home page.
+      if( $(".text-section").length ){
+        $(".text-section").height( $('[property="aboutImage"]').height() );
+        $(".news-text").height( $('[property="aboutImage"]').height() );
+        console.log("Resized. New height: " + $('[property="aboutImage"]').height());
       }
     }, 1300);
 
@@ -162,7 +175,10 @@ $(function(){
             imgs.push('<div class="carousel-item ' + active + '"><div class="image-wrap"><img src="' + val.image + '" alt="' + val.image + '" class="d-block w-100" /></div></div>');
           });
 
-          $(".carousel-indicators").html(indicators.join("\n"));
+          if(current_page === "home"){
+            $(".carousel-indicators").html(indicators.join("\n"));
+          }
+          
           $(".carousel-inner").html(imgs.join("\n"));
         }
         //********************************************
