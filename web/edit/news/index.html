@@ -80,6 +80,9 @@
       </div>
       
       <div class="col-8">
+        <span class="fa [if(featuredNews, 'fa-check', 'fa-times')]" style="font-size: 2.0rem; color: [if(featuredNews, 'green', 'red')];"></span>&nbsp;<label for="[property='featuredNews']">Featured in <strong>News</strong> sections?</label>
+        <input type="checkbox" property="featuredNews" class="mv-logged-in" /><p/>
+        
         <label for="[property='newsDate']">Date of news publication:</label>
         <div class="news-date" property="newsDate">Jun 23, 2017</div>
         
