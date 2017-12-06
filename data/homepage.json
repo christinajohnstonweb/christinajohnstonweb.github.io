@@ -260,7 +260,7 @@
 	],
 	"homeCarousel": [
 		{
-			"image": "http://www.christinajohnston.co.uk/data/images/home_slider_image_1%20-%20big.jpg"
+			"image": "http://www.christinajohnston.co.uk/data/images/1_sliderAndGraphic_photoNew.jpg"
 		},
 		{
 			"image": "http://www.christinajohnston.co.uk/data/images/home_slider_image_2%20-%20big.jpg"
@@ -294,7 +294,7 @@
 	],
 	"contactCarousel": [
 		{
-			"image": "http://www.christinajohnston.co.uk/data/images/contact_slider_image_1%20-%20big.jpg"
+			"image": "http://www.christinajohnston.co.uk/data/images/contactAndGraphic_photoNew.jpg"
 		}
 	],
 	"contactHeader": "Contact",
