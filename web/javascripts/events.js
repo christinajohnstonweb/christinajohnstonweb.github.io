@@ -96,7 +96,7 @@ $(function(){
   
   // Load more videos on the 'Video' page.
   $("#load_more_videos_btn").click(function(){
-    for(var x = 0; x < 9; x++) {
+    for(var x = 0; x < 3; x++) {
       // Get the current object.
       var item = $(".hiddenItem").first();
       

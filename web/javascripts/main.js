@@ -25,7 +25,7 @@ function setCarouselHeight() {
   // Calculate height based on width and aspect ratio.
   $(".image-wrap").height( $(".carousel-inner").width() / ar );
   
-  console.log("W: " + $(".carousel-inner").width() + " x H: " + $(".carousel-inner").width() / ar);
+  // console.log("W: " + $(".carousel-inner").width() + " x H: " + $(".carousel-inner").width() / ar);
 }
 
 // Set the home page text section height and width.
@@ -53,16 +53,9 @@ $(function(){
       setCarouselHeight();
     }
     
-    if( $(".text-section").length ){
+    if( $(".text-section").length || $(".news-text").length ){
       adjustTextSections();
     }
-//     setTimeout(function(){
-//       var rowWidth = parseInt( $("#test_row").width() )/2;
-    
-//       $(".text-section").height( $('[property="aboutImage"]').height() );
-//       $(".news-text").height( $('[property="aboutImage"]').height() );
-//       console.log("Resized. New height: " + $('[property="aboutImage"]').height());
-//     }, 500);
   });
   
   $( window ).on( "load", function() {
@@ -76,13 +69,15 @@ $(function(){
       }
       
       // Resize the text sections on the home page.
-      if( $(".text-section").length ){
+      if( $(".text-section").length || $(".news-text").length ){
         adjustTextSections();
-//         $(".text-section").height( $('[property="aboutImage"]').height() );
-//         $(".news-text").height( $('[property="aboutImage"]').height() );
-//         console.log("Resized. New height: " + $('[property="aboutImage"]').height());
       }
-    }, 1300);
+      
+      // Scale the image container for the header.
+      if( $(".image-wrap").length ) {
+       $(".image-wrap").css("height", Math.round($(".image-wrap>img").height()));
+      }
+    }, 1100);
 
     
     setTimeout(function(){
