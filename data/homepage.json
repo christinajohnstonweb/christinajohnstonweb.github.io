@@ -272,15 +272,6 @@
 	"aboutCarousel": [
 		{
 			"image": "http://www.christinajohnston.co.uk/data/images/about_slider_image_1.jpg"
-		},
-		{
-			"image": "http://www.christinajohnston.co.uk/data/images/concerts_slider_image_1.jpg"
-		},
-		{
-			"image": "http://www.christinajohnston.co.uk/data/images/home_slider_image_2%20-%20big.jpg"
-		},
-		{
-			"image": "http://www.christinajohnston.co.uk/data/images/media_video_slider_image_1.jpg"
 		}
 	],
 	"concertsCarousel": [
