@@ -424,7 +424,8 @@
 			"newsTitle": "THIS IS WHAT HAPPENS WHEN CHRISTINA SINGS A HIGH NOTE!",
 			"newsDetails": "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>",
 			"newsDetailsPreview": "<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi...</p>",
-			"newsMoreDetailsLink": "zdnet.com"
+			"newsMoreDetailsLink": "zdnet.com",
+			"featuredNews": true
 		},
 		{
 			"newsImage": "https://i.pinimg.com/736x/57/83/a2/5783a251c37992709a39944d0752cbc2--peugeot-vintage-coffee.jpg",
@@ -432,7 +433,8 @@
 			"newsTitle": "Cappuccino, robusta, variety qui breve milk redeye sugar",
 			"newsDetails": "<p>French press, aged foam latte organic breve crema foam flavour crema. Single origin filter whipped strong, pumpkin spice, french press carajillo breve mocha gal&atilde;o brewed. Macchiato pumpkin spice filter cup chicory dripper foam. And steamed, coffee blue mountain skinny in acerbic grounds frappuccino brewed espresso steamed.</p>\n<p>&nbsp;</p>\n<p>Pumpkin spice barista sit aroma siphon sugar kopi-luwak steamed affogato instant. Grounds gal&atilde;o redeye french press fair trade, whipped so viennese blue mountain est coffee grinder. Id percolator redeye id variety coffee wings. Caffeine lungo dark cappuccino est, dark at medium mazagran viennese.</p>",
 			"newsDetailsPreview": "<p>French press, aged foam latte organic breve crema foam flavour crema. Single origin filter whipped strong, pumpkin spice, french press carajillo breve mocha gal&atilde;o brewed...</p>",
-			"newsMoreDetailsLink": "https://i.pinimg.com/736x/57/83/a2/5783a251c37992709a39944d0752cbc2--peugeot-vintage-coffee.jpg"
+			"newsMoreDetailsLink": "https://i.pinimg.com/736x/57/83/a2/5783a251c37992709a39944d0752cbc2--peugeot-vintage-coffee.jpg",
+			"featuredNews": true
 		},
 		{
 			"newsImage": "http://whatmetaldetector.com/wp-content/uploads/2013/05/Beach-Metal-Detecting-Treasure.jpg",
@@ -440,7 +442,8 @@
 			"newsTitle": "Treasure hunting!",
 			"newsDetails": "<p>Pellentesque mollis diam pellentesque lacus malesuada maximus. Nunc a sem bibendum, interdum nibh ac, euismod nisl. Sed molestie nunc sit amet ligula venenatis feugiat. Praesent malesuada vel neque consectetur fermentum. Vivamus eleifend, risus dapibus mollis mollis, ipsum ex hendrerit mi, a congue tortor diam vel augue. Nunc orci sapien, interdum in nisl vitae, lacinia accumsan neque. Phasellus euismod leo mauris, ac hendrerit lacus fermentum vel. Nunc a sapien orci. Pellentesque aliquam, felis et ultrices mattis, nunc leo lacinia massa, dignissim ultrices quam purus vel leo. Fusce non accumsan dolor. Aenean suscipit porttitor arcu, id tincidunt diam pulvinar ac. Maecenas suscipit nulla vitae elit ultrices, commodo viverra tellus faucibus. Quisque rutrum nisi suscipit, euismod lacus vitae, tristique est. Quisque egestas nibh ut ultricies finibus. Suspendisse eget tincidunt orci.</p>",
 			"newsDetailsPreview": "<p>Pellentesque mollis diam pellentesque lacus malesuada maximus. Nunc a sem bibendum, interdum nibh ac, euismod nisl. Sed molestie nunc sit amet ligula venenatis feugiat...</p>",
-			"newsMoreDetailsLink": "mavo.io"
+			"newsMoreDetailsLink": "mavo.io",
+			"featuredNews": false
 		},
 		{
 			"newsImage": "https://c1.staticflickr.com/4/3774/9204263330_e2916df25e_b.jpg",
@@ -448,7 +451,8 @@
 			"newsTitle": "At, spoon arabica latte froth extra to go",
 			"newsDetails": "<p>At, spoon arabica latte froth extra to go. Brewed, breve chicory sugar lungo iced fair trade black frappuccino. Espresso, percolator, fair trade, americano robust so barista roast bar wings extraction black. Aroma chicory gal&atilde;o ristretto acerbic cinnamon extra.</p>\n<p>Variety to go, cappuccino, robusta, variety qui breve milk redeye sugar. Mug spoon fair trade, cup, crema medium filter latte turkish. Aged cup, sweet, caffeine cortado that siphon affogato. Spoon sweet grinder aftertaste grinder dripper wings blue mountain chicory.</p>",
 			"newsDetailsPreview": "<p>Variety to go, cappuccino, robusta, variety qui breve milk redeye sugar. Mug spoon fair trade, cup, crema medium filter latte turkish.</p>",
-			"newsMoreDetailsLink": "https://www.rubylane.com/collectibles?cat=Tobacciana%3APipes"
+			"newsMoreDetailsLink": "https://www.rubylane.com/collectibles?cat=Tobacciana%3APipes",
+			"featuredNews": true
 		}
 	],
 	"footerTag": "ALL OPERA AND CLASSICAL MUSIC LIVE BOOKING ENQUIRIES:",
