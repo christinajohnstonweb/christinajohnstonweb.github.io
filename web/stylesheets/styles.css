@@ -139,6 +139,7 @@ a.nav-link.active { font-weight: 700; }
   padding: 0.6rem 3.9rem;
   font-size: 1.2rem;
   margin-top: 3.8rem;
+  border-radius: 0;
   
   transition: all 0.3s;
 }
@@ -153,6 +154,7 @@ a.nav-link.active { font-weight: 700; }
 .btn-gray {
   background-color: #BBB;
   border: 1px solid #FFF;
+  border-radius: 0;
   color: #fff;
   padding: 0.6rem 3.9rem;
   font-size: 1.2rem;
