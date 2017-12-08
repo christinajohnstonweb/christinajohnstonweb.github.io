@@ -111,16 +111,16 @@ function responsiveTest(){
   }
 
     // >2050px.
-  if (window.matchMedia("(min-width: 2050px)").matches || window.matchMedia("(device-min-width: 2050px)").matches) {
+//   if (window.matchMedia("(min-width: 2050px)").matches || window.matchMedia("(device-min-width: 2050px)").matches) {
     // Handle video sizes.
-    $("section.video > iframe").css("width", "575px");
-    $("section.video > iframe").css("height", "324px");
-  }
+//     $("section.video > iframe").css("width", "575px");
+//     $("section.video > iframe").css("height", "324px");
+//   }
   
      // >2300px.
-  if (window.matchMedia("(min-width: 2300px)").matches || window.matchMedia("(device-min-width: 2300px)").matches) {
+//   if (window.matchMedia("(min-width: 2300px)").matches || window.matchMedia("(device-min-width: 2300px)").matches) {
     // Handle video sizes.
-    $("section.video > iframe").css("width", "650px");
-    $("section.video > iframe").css("height", "366px");
-  }
+//     $("section.video > iframe").css("width", "650px");
+//     $("section.video > iframe").css("height", "366px");
+//   }
 }
