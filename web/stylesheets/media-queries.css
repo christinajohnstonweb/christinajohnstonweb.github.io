@@ -74,7 +74,7 @@
 
 
 @media all and (min-width: 1400px) and (max-width: 1799px) {
-/*   html { font-size: 72.5%; } */
+  html { font-size: 72.5%; }
   footer { font-size: 119%; }
   
 /*   .image-wrap { height: 59.3rem; } */
@@ -133,7 +133,7 @@
   .main-content { padding: 0; overflow: hidden; }
   nav.topbar { margin-top: 0; position: fixed; top: 0; left: 0; right: 0; z-index: 1000; -webkit-backface-visibility: hidden; }
   
-/*   html { font-size: 66.5%; } */
+  html { font-size: 66.5%; }
   /*  Homepage slider size  */
   .image { width: 99.1rem; height: 26.5rem; }
   
@@ -162,7 +162,7 @@
   .main-content { padding: 0; overflow: hidden; }
   nav.topbar { margin-top: 0; position: fixed; top: 0; left: 0; right: 0; z-index: 1000; -webkit-backface-visibility: hidden; }
   
-/*   html { font-size: 71.5%; } */
+  html { font-size: 71.5%; }
   .footer-newsletter-container{ text-align: center; width: 50%; }
   footer { padding: 1.0rem 2.5rem; font-size: 149% }
   
