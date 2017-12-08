@@ -142,6 +142,8 @@
   
   /*  Remove the padding around text-section - at this size, it creates an odd effect.  */
   .text-section { padding: 0; }
+  
+  .dropdown-item { font-size: 1.35rem; }
 }
 
 
