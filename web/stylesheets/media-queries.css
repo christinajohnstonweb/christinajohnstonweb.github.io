@@ -27,7 +27,7 @@
   /*   .image-wrap { height: 69.4rem; } */
   
   /*  General section styles.  */
-  .section-header { font-size: 2.8rem; }
+  .section-header, .section-header-link { font-size: 2.8rem; }
   .content-section { margin-bottom: 5.8rem; }
   .btn-black { font-size: 1.8rem; }
   
