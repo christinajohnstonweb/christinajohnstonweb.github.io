@@ -82,7 +82,7 @@ $(function(){
     
     setTimeout(function(){
       $(".spinner").hide();
-      $("main").fadeIn("slow");
+      $(".app-page").css("visibility", "visibile");
     }, 1500);
     
     // Zoom logo on "About" page in.
@@ -206,7 +206,7 @@ $(function(){
         //********************************************
         if( $("#solo_album_tmpl").length ){
           var album_name = getParameterByName("name");
-          debugger;
+
           // Get the specific album.
           var album = $.grep(data.album, function(arr){ return arr.discName.toLowerCase().replace(/\s/gi, '-').replace(/[^\w-]/gi, '') === album_name });
           album = album[0];
@@ -331,6 +331,10 @@ $(function(){
               code = code.replace(RegExp("!!concert_location!!", "g"), val.concertLocation);
 
               $(".concert-container").html(code);
+  
+              if(!val.concertTicketsURL || val.concertTicketsURL.length < 1) {
+                 $('[data-id="featured_concert"]').hide();
+              }
             }
           });
         }
