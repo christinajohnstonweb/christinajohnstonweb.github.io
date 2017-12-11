@@ -181,7 +181,8 @@
 			"concertVenue": "Church of St Michael the Archangel",
 			"concertLocation": "Framlinghamshire",
 			"concertDetails": "<p>Detail</p>",
-			"featuredConcert": true
+			"featuredConcert": true,
+			"concertTicketsURL": "https://www.jonlaplante.com"
 		},
 		{
 			"concertDatetime": "July 28 / 2017",
