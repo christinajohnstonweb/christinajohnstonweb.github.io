@@ -143,7 +143,8 @@
   /*  Remove the padding around text-section - at this size, it creates an odd effect.  */
   .text-section { padding: 0; }
   
-  .dropdown-item { font-size: 1.35rem; }
+  /*  If we're on the 'Photos' page center align the gallery name.  */
+  section[property="photo"] > div.img-caption { text-align: center; }
 }
 
 
@@ -173,6 +174,8 @@
   .btn-centered { opacity: 1.0; position: static; top: auto; left: auto; transform: none; margin-top: 1.0rem; margin-bottom: 1.0rem; max-width: 12.0rem; }
   
   footer { font-size: 124% }
+  label[for='mce-EMAIL'], #mc_embed_signup { font-size: 1.5rem; }
+  #social_btns_container { margin: 0 auto; }
 } 
 
 
@@ -187,6 +190,8 @@
   html { font-size: 71.5%; }
   .footer-newsletter-container{ text-align: center; width: 50%; }
   footer { padding: 1.0rem 2.5rem; font-size: 149% }
+  label[for='mce-EMAIL'] #mc_embed_signup label { font-size: 1.5rem; }
+  #social_btns_container { margin: 0 auto; }
   
   /*  Homepage slider size  */
   .image { width: 76.8rem; height: 19.5rem; }
@@ -202,6 +207,10 @@
   .td-concert-spacer { display: none; }
   #concert_cards { display: inline; }
   #concerts_table { display: none; }
+  
+  /*  Removing Masonry and update the layout  */
+  .grid { display: flex; justify-content: center; flex-direction: column; }
+  .grid-item { margin: 0 auto; }
 } 
 
 
