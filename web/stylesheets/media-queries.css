@@ -142,9 +142,6 @@
   
   /*  Remove the padding around text-section - at this size, it creates an odd effect.  */
   .text-section { padding: 0; }
-  
-  /*  If we're on the 'Photos' page center align the gallery name.  */
-  section[property="photo"] > div.img-caption { text-align: center; }
 }
 
 
@@ -170,6 +167,9 @@
   .td-concert-spacer { display: none; }
   #concert_cards { display: inline; }
   #concerts_table { display: none; }
+  
+  /*  If we're on the 'Photos' page center align the gallery name.  */
+  section[property="photo"] > div.img-caption { text-align: center; }
   
   .btn-centered { opacity: 1.0; position: static; top: auto; left: auto; transform: none; margin-top: 1.0rem; margin-bottom: 1.0rem; max-width: 12.0rem; }
   
