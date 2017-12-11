@@ -176,7 +176,7 @@
 	"concerts": [
 		{
 			"concertLocImg": "/web/images/concert_thumbnail_1.jpg",
-			"concertDatetime": "June 10 / 2017",
+			"concertDatetime": "July 10 / 2017",
 			"concertName": "THE MIRACAL OF THE VOICE",
 			"concertVenue": "Church of St Michael the Archangel",
 			"concertLocation": "Framlingham",
@@ -197,7 +197,8 @@
 			"concertLocation": "To be determined.",
 			"concertDetails": "To be determined.",
 			"featuredConcert": true,
-			"concertName": "Concert"
+			"concertName": "Concert",
+			"concertVenue": "To be determined."
 		}
 	],
 	"galleryVideos": [
