@@ -208,9 +208,15 @@
   #concert_cards { display: inline; }
   #concerts_table { display: none; }
   
+  /*  Make sure our gallery button maintains the same style.  */
+  .btn-centered { opacity: 1.0; margin-top: 1.0rem; margin-bottom: 1.0rem; max-width: 12.0rem; }
+  
   /*  Removing Masonry and update the layout  */
   .grid { display: flex; justify-content: center; flex-direction: column; }
   .grid-item { margin: 0 auto; }
+  
+    /*  If we're on the 'Photos' page center align the gallery name.  */
+  .grid-item > div.img-caption { text-align: center; }
 } 
 
 
@@ -237,6 +243,16 @@
   .td-concert-spacer { display: none; }
   #concert_cards { display: inline; }
   #concerts_table { display: none; }
+    
+  /*  Make sure our gallery button maintains the same style.  */
+  .btn-centered { opacity: 1.0; margin-top: 1.0rem; margin-bottom: 1.0rem; max-width: 12.0rem; }
+  
+  /*  Removing Masonry and update the layout  */
+  .grid { display: flex; justify-content: center; flex-direction: column; }
+  .grid-item { margin: 0 auto; }
+  
+  /*  If we're on the 'Photos' page center align the gallery name.  */
+  .grid-item > div.img-caption { text-align: center; }
 }
 
 
@@ -257,6 +273,16 @@
   .td-concert-spacer { display: none; }
   #concert_cards { display: inline; }
   #concerts_table { display: none; }
+  
+  /*  Make sure our gallery button maintains the same style.  */
+  .btn-centered { opacity: 1.0; margin-top: 1.0rem; margin-bottom: 1.0rem; max-width: 12.0rem; }
+  
+  /*  Removing Masonry and update the layout  */
+  .grid { display: flex; justify-content: center; flex-direction: column; }
+  .grid-item { margin: 0 auto; }
+  
+  /*  If we're on the 'Photos' page center align the gallery name.  */
+  .grid-item > div.img-caption { text-align: center; }
   
   /*  Discography image size  */
 /*   .discography-image { width: 12.0rem; height: 12.0rem; } */

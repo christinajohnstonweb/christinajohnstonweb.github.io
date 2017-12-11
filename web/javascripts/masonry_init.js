@@ -1,5 +1,5 @@
 function refreshMasonry(){
-  $(".grid").masonry("destroy");
+  //$(".grid").masonry("destroy");
           
   $('.grid').masonry({
   // set itemSelector so .grid-sizer is not used in layout
@@ -45,6 +45,8 @@ $(function(){
 
       $(window).on("load", function(){
         setTimeout(function(){
+          $(".grid").masonry("destroy");
+          
           refreshMasonry();
         }, 1000);
       });

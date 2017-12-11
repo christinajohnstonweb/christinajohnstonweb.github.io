@@ -112,8 +112,7 @@
   <div style="display: flex; justify-content: center; flex-direction: row;">
     <div class="grid">
       <div class="mason-size"></div>
-<!--       <div class="grid-item" id="gallery_list"></div> -->
-      <div class="grid-item" id="gallery_list" mv-multiple property="photoGallery">
+      <div class="grid-item [if($index > 5, hiddenItem)]" id="gallery_list" mv-multiple property="photoGallery">
         <section property="photo" mv-if="coverImage=true" mv-multiple style="position: relative;">
           <img property="picture" class="masonry-img" alt="[caption]" />
         </section>
@@ -122,9 +121,9 @@
       </div>
 
       <!-- For some reason, Masonry.js needs a non-dynamic image when used with Mavo.io -->
-      <div class="grid-item" property="testTestTest" style="visibility: hidden;">
+<!--       <div class="grid-item" property="testTestTest" style="visibility: hidden;">
         <img src=/christinajohnstonweb.github.io/web/images/media_photo_1-r50.jpg class="masonry-img" alt="" style="max-width: 30px;" />
-      </div>
+      </div> -->
       <!-- End corrective (invisible) div. -->
     </div>
 </div>

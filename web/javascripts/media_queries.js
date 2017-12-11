@@ -48,6 +48,12 @@ function responsiveTest(){
     
 //     $(".text-section", ".news-text").height( new_width );
 
+    // Remove Masonry from smaller screens.
+    if ( $(".grid").length ) {
+      console.log("Destroying Masonry!");
+      $(".grid").masonry("destroy");  
+    }
+    
     if( $(".footer-break") ) {
       // Handle the footer, too.
       $(".footer-newsletter-container").before('<div class="w-100 footer-break"></div>');
@@ -61,11 +67,6 @@ function responsiveTest(){
       // Handle video sizes.
       $("section.video > iframe").css("width", "300px");
       $("section.video > iframe").css("height", "169px");
-      
-      // Remove Masonry from smaller screens.
-      if ( $(".grid").length ) {
-        $(".grid").masonry("destroy");  
-      }
     }
   }
   
