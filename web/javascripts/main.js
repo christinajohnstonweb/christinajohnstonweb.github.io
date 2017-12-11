@@ -206,7 +206,7 @@ $(function(){
         //********************************************
         if( $("#solo_album_tmpl").length ){
           var album_name = getParameterByName("name");
-          
+          debugger;
           // Get the specific album.
           var album = $.grep(data.album, function(arr){ return arr.discName.toLowerCase().replace(/\s/gi, '-').replace(/[^\w-]/gi, '') === album_name });
           album = album[0];
@@ -257,6 +257,8 @@ $(function(){
 
           var tbls = [];
           var cards = [];
+          
+          var tickets = [];
 
           $.each(data.concerts, function(key, val){
             if( val.featuredConcert ){
@@ -274,6 +276,7 @@ $(function(){
               concert_tbl = concert_tbl.replace(RegExp("!!concert_ticket_url!!", "g"), val.concertTicketsURL);
               concert_tbl = concert_tbl.replace(RegExp("!!concert_more_info!!", "g"), val.discDistributor);
               concert_tbl = concert_tbl.replace(RegExp("!!concert_event!!", "g"), event_name);
+              concert_tbl = concert_tbl.replace(RegExp("!!concert_key!!", "g"), key);
 
               concert_card = concert_card.replace(RegExp("!!concert_img!!", "g"), val.concertLocImg);
               concert_card = concert_card.replace(RegExp("!!concert_date!!", "g"), val.concertDatetime);
@@ -282,7 +285,13 @@ $(function(){
               concert_card = concert_card.replace(RegExp("!!concert_location!!", "g"), val.concertLocation);
               concert_card = concert_card.replace(RegExp("!!concert_ticket_url!!", "g"), val.concertTicketsURL);
               concert_card = concert_card.replace(RegExp("!!concert_more_info!!", "g"), val.discDistributor);
-
+              concert_card = concert_card.replace(RegExp("!!concert_key!!", "g"), key);
+              
+              // Check if there are tickets for sale.
+              if(!val.concertTicketsURL || val.concertTicketsURL.length < 1) {
+                tickets.push(key);
+              }
+              
               tbls.push(concert_tbl);
               cards.push(concert_card);
             }
@@ -290,6 +299,11 @@ $(function(){
 
           $("#concert_tables_content").html(tbls);
           $("#cards_concert_content").html(cards);
+          
+          // Iterate concerts and hide buy buttons without a URL.
+          $.each(tickets, function(k,v){
+            $('[data-id=' + v + ']').hide();
+          });
         }
         //********************************************
         // END CONCERT LIST BUILDING.
