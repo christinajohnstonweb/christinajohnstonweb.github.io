@@ -164,7 +164,7 @@
               <p class="concert-details" property="concertLocation">Framlingham</p>
             </td>
             <td class="td-concert-spacer"></td>
-            <td class="buy-tickets-td"><a href="#" class="btn-media buy-tickets-btn">BUY TICKETS</button></a><span class="mv-logged-in">&nbsp;Ticket purchase link:&nbsp;<input type="text" placeholder="https://www.example.com/store/url" property="concertTicketsURL" class="form-control" /></span></td>
+            <td class="buy-tickets-td" mv-if="count(concertTicketsURL) > 0"><a href="#" class="btn-media buy-tickets-btn">BUY TICKETS</button></a><span class="mv-logged-in">&nbsp;Ticket purchase link:&nbsp;<input type="text" placeholder="https://www.example.com/store/url" property="concertTicketsURL" class="form-control" /></span></td>
             <td class="concert-info-td"><a href="#" class="concert-info-a"><em style="white-space: nowrap;">Info ></em></a><span class="mv-logged-in">&nbsp;Concert Details:&nbsp;<textarea cols="6" rows="10" property="concertDetails" class="form-control tinymce"></textarea></span></td>
           </tr>
         </table>
@@ -187,7 +187,7 @@
           <h4 class="card-title" property="concertName">HTE MIRACLE OF THE VOICE</h4>
           <p class="card-text" property="concertVenue">Church of St Michael the Archangel</p>
 
-          <a href="#" class="btn-media buy-tickets-btn">BUY TICKETS</a><a href="#" class="btn btn-more-info">Info ></a>
+          <a mv-if="count(concertTicketsURL) > 0" href="#" class="btn-media buy-tickets-btn">BUY TICKETS</a><a href="#" class="btn btn-more-info">Info ></a>
         </div>
       </div>
       </div>
