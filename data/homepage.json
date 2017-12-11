@@ -196,7 +196,7 @@
 			"concertDatetime": "December 2018",
 			"concertLocation": "To be determined.",
 			"concertDetails": "To be determined.",
-			"featuredConcert": false,
+			"featuredConcert": true,
 			"concertName": "Concert"
 		}
 	],
