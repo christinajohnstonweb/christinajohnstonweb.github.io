@@ -91,9 +91,7 @@ $(function(){
   $("li.nav-item.dropdown").hover(function(){
     $(this).find(".dropdown-menu").show();
   }, function(){
-    if( $('.topbar').is(':hover') === false && $('.dropdown-menu').is(':hover') === false ) {
-      $(this).find(".dropdown-menu").hide();   
-    }
+    $(this).find(".dropdown-menu").hide();
   });
   
   // Load more videos on the 'Video' page.

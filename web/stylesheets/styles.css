@@ -382,6 +382,8 @@ footer {
   margin: 0;
 }
 
+.dropdown-menu { top: 92%; }
+
 .card { border-radius: 0; border: 0; }
 
 /* Social icons */
