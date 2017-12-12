@@ -1,4 +1,5 @@
 function responsiveTest(){
+  console.log("responsivetest");
   // Resize info blocks, based on width.
   $(".section-img").parent().parent().css( "height", parseInt( $(".content-section").width() )/2 );
   $(".section-img").parent().prev().css( "height", parseInt( $(".content-section").width() )/2 );

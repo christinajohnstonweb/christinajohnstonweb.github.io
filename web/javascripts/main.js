@@ -43,21 +43,7 @@ function adjustTextSections() {
   $(".news-text").css("width", rowWidth);
 }
 
-$(function(){
-  // JS media queries.
-  $(window).on("resize", function(){
-    responsiveTest();
-    
-    // If there is a carousel, calculate the new height.
-    if( $(".image-wrap").length ) {
-      setCarouselHeight();
-    }
-    
-    if( $(".text-section").length || $(".news-text").length ){
-      adjustTextSections();
-    }
-  });
-  
+
   $( window ).on( "load", function() {
     // Resize info blocks, based on width.
     setTimeout(function(){
@@ -77,13 +63,12 @@ $(function(){
       if( $(".image-wrap").length ) {
        $(".image-wrap").css("height", Math.round($(".image-wrap>img").height()));
       }
-    }, 1100);
-
-    
-    setTimeout(function(){
-      $(".spinner").hide();
-      $(".app-page").css("visibility", "visibile");
-    }, 1500);
+      
+      // Once everything is loaded, show the page content.
+//       $(".spinner").hide();
+//       $("#app_page").css("left", "0");
+//       $("#app_page").css("position", "static");
+    }, 1200);
     
     // Zoom logo on "About" page in.
     if( $(".about-logo") ) {
@@ -100,6 +85,22 @@ $(function(){
     
 //     $(".section-img").parent().parent().css( "height", $(".section-img").width() );
     $(".section-img").parent().prev().css( "height", $(".section-img").width() );
+  });
+
+
+$(function(){
+  // JS media queries.
+  $(window).on("resize", function(){
+    responsiveTest();
+    
+    // If there is a carousel, calculate the new height.
+    if( $(".image-wrap").length ) {
+      setCarouselHeight();
+    }
+    
+    if( $(".text-section").length || $(".news-text").length ){
+      adjustTextSections();
+    }
   });
   
   /*********************************************
