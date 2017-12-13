@@ -31,6 +31,18 @@
     <link rel="stylesheet" href=/christinajohnstonweb.github.io/web/stylesheets/media-queries.css />
     
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script>
+      var Helpers = Helpers || {};
+      
+      Helpers.discography = {
+        solo: {
+          count: 1
+        },
+        featured: {
+          count: 1
+        }
+      }
+    </script>
   </head>
   <body>
 <!--     <div class="spinner"></div> -->
@@ -131,7 +143,7 @@
     </div>
     
     <div class="d-flex flex-wrap flex-center-align"><!--  style="padding: 0 9.5rem;" -->
-      <div class="[if($index > 6, hiddenItem)]" style="margin: 2.0rem;" mv-multiple property="album" mv-if="discIsSolo=true">
+      <div class="[if(Helpers.discography.solo.count > 6, hiddenItem)]" style="margin: 2.0rem;" mv-multiple property="album" mv-if="discIsSolo=true">
         <img property="discCoverImg" alt="" class="d-flex discography-image"/>
         <a href=/christinajohnstonweb.github.io/web/discography/album data-album="[idify(discName)]" class="mx-auto d-flex btn-black btn-centered discography-more-btn">MORE</a>
         <section class="album-details">
@@ -139,6 +151,8 @@
           <h2 class="album-name">[discName]</h2>
 <!--           <small class="album-distributor">[discDistributor]</small> -->
         </section>
+        <p>[Helpers.discography.solo.count]</p>
+        <script>Helpers.discography.solo.count = Helpers.discography.solo.count + 1;</script>
       </div>
     </div>
     
