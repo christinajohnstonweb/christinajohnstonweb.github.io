@@ -199,7 +199,8 @@
 			"concertDetails": "To be determined.",
 			"featuredConcert": true,
 			"concertName": "Concert",
-			"concertVenue": "To be determined."
+			"concertVenue": "To be determined.",
+			"concertLocImg": "http://www.christinajohnston.co.uk/data/images/Kiddos%20sleeping%20in%20car.jpg"
 		}
 	],
 	"galleryVideos": [
