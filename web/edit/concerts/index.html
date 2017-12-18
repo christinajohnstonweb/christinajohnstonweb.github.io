@@ -108,10 +108,10 @@
 
   <div class="container-fluid" id="concerts_table">
     <div class="row justify-content-center" style="font-size: 2.0rem; font-weight: 900;" property="concertsTitle">Christina Johnston Concerts</div>
-    <div class="row justify-content-center" property="concertsSubtitle" style="font-size: 1.7rem; margin: -0.5rem 0 3.25rem 0;">Discover all information about Chrisitna’s concerts.</div>
+    <div class="row justify-content-center" property="concertsSubtitle" style="font-size: 1.7rem; margin: -0.5rem 0 3.25rem 0; ">Discover all information about Chrisitna’s concerts.</div>
     <div id="concert_tables_content">
-      <div class="row" style="margin: 0 0 1% 10%; padding: 20px;" property="concerts" mv-multiple>
-        <table class="off-white-bg" style="border-collapse: collapse; width: 90%;">
+      <div class="row off-white-bg" style="margin: 2% 0 2% 10%; border-bottom: 2px dotted #999;" property="concerts" mv-multiple>
+        <table style="border-collapse: collapse; width: 90%; border: 10px solid #fafafa;">
           <tr>
             <td colspan="4"><span class="fa [if(featuredConcert, 'fa-check', 'fa-times')]" style="font-size: 2.0rem; color: [if(featuredConcert, 'green', 'red')];"></span>&nbsp;<label for="[property='featuredConcert']" style="font-size: 1.5rem;">Feature concert on the home page?</label>&nbsp;<input type="checkbox" property="featuredConcert" /></td>
           </tr>
@@ -119,26 +119,26 @@
           <tr>
             <td style="width: 14.5rem;"><img property="concertLocImg" alt="" class="concert-thumbnail"></td>
             <td class="edit-concert-venue-date">
-              <p class="tbl-concert-date" style="height: 1.3rem;" property="concertDatetime"></p>
-              <p class="" style="height: 1.3rem;" property="concertName" mv-default="Concert"></p>
-              <p class="" style="height: 1.3rem;" property="concertVenue" mv-default="To be determined."></p>
-              <p class="" style="height: 1.3rem;" property="concertLocation" mv-default="To be determined."></p>
+              <p class="edit-concert-details tbl-concert-date" property="concertDatetime"></p>
+              <p class="edit-concert-details" property="concertName" mv-default="Concert"></p>
+              <p class="edit-concert-details" property="concertVenue" mv-default="To be determined."></p>
+              <p class="edit-concert-details" property="concertLocation" mv-default="To be determined."></p>
             </td>
             <td class="td-concert-spacer"></td>
             <td class="buy-tickets-td">&nbsp;</td>
           </tr>
-          <tr>
-            <td>
-              <div style="margin-top: 20px; text-align: left;">&nbsp;BUY TICKETS button link:&nbsp;<input type="text" placeholder="https://www.example.com/store/url" property="concertTicketsURL" class="form-control" /></div>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="4"><label for="[property='concertDetails']" style="font-size: 1.5rem;">Concert Details:</label>
-              <p><em><small>This is what your users will be shown when they click the link for more information.</small></em></p>
-              <div style="width: 100%; font-size: 1.5rem;" property="concertDetails" class="tinymce" mv-default="To be determined."></div>
-            </td>
-          </tr>
         </table>
+        
+        <div style="width: 100%; padding: 2.0rem 0.5rem 0 1.5rem;">
+        <label for="">BUY TICKETS button link:&nbsp;<a href="[concertTicketsURL]" mv-if="concertTicketsURL" title="Click here to test your 'BUY TICKETS' link'" target="_BLANK"><span class="fa fa-external-link"></span></a></label>
+        <input type="text" placeholder="https://www.example.com/store/url" property="concertTicketsURL" style="max-width: 90%;" class="form-control" />
+        </div>
+        
+        <div style="width: 100%; padding: 2.0rem 0.5rem 0 1.5rem;">
+          <label for="[property='concertDetails']">Concert Details:</label>
+          <p><em><small>This is what your users will be shown when they click the link for more information.</small></em></p>
+          <div style="width: 100%; font-size: 1.5rem;" property="concertDetails" class="tinymce" mv-default="To be determined."></div>
+        </div>
       </div>
     </div>
   </div>

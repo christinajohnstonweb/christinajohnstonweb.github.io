@@ -286,6 +286,7 @@ $(function(){
               concert_card = concert_card.replace(RegExp("!!concert_location!!", "g"), val.concertLocation);
               concert_card = concert_card.replace(RegExp("!!concert_ticket_url!!", "g"), val.concertTicketsURL);
               concert_card = concert_card.replace(RegExp("!!concert_more_info!!", "g"), val.discDistributor);
+              concert_card = concert_card.replace(RegExp("!!concert_event!!", "g"), event_name);
               concert_card = concert_card.replace(RegExp("!!concert_key!!", "g"), key);
               
               // Check if there are tickets for sale.

@@ -397,6 +397,7 @@ footer {
 .concert-venue-date { vertical-align: top; margin: 0; padding: 3.3rem 0 0 2.1rem; font-size: 1.8rem; line-height: 0; }
 .edit-concert-venue-date { vertical-align: top; margin: 0; padding: 3.3rem 0 0 2.1rem; font-size: 1.8rem; }
 .concert-details { font-size: 1.4rem; }
+.edit-concert-details { height: 1.3rem; }
 .concert-thumbnail { margin: 1.4rem; width: 10.5rem; }
 /* .concert-details { font-size: 1.2rem; line-height: 0.75rem; } */
 .buy-tickets-td { text-align: center; width: 20%; }
