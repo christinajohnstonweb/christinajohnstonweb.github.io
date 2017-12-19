@@ -370,12 +370,22 @@ $(function(){
               display_css = "display: none;";
             }
 
-            var tag = '<img src=' + photo["picture"] + ' alt="" data-idx="' + idx + '" style="max-width: 35.0rem; max-height: 35.0rem; ' + display_css + '" class="gallery-image w-100 img-fluid" />';
+            
+            var active_item;
+            if(idx === 0) {
+              active_item = " active";
+            } else {
+              active_item = "";  
+            }
+                        
+            var tag = '<div class="carousel-item' + active_item + '"><img src=' + photo["picture"] + ' style="object-fit: contain;" alt="" class="gallery-image img-fluid" /></div>';
+//             var tag = '<img src=' + photo["picture"] + ' alt="" data-idx="' + idx + '" style="-o-object-fit: scale-down; object-fit: scale-down; ' + display_css + '" class="gallery-image img-fluid" />';
             
             photo_tags.push(tag);
           });
           
-          $("#photos").html(photo_tags.join("\n"));
+          $(".photo-gallery-carousel").html(photo_tags.join("\n"));
+//           $("#photos").html(photo_tags.join("\n"));
           
           $("#photo_gallery_image_idx").text("1");
           

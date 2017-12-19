@@ -36,7 +36,7 @@
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <body>
 <!--     <div class="spinner"></div> -->
-    <main mv-app="homepage" mv-storage="https://github.com/christinajohnstonweb/christinajohnstonweb.github.io/data" mv-bar="none">
+    <main mv-app="homepage" mv-storage="https://github.com/christinajohnstonweb/christinajohnstonweb.github.io/data" mv-plugins="tinymce" mv-bar="none">
       <div class="container-fluid">
         <div class="row">
           <div class="pg-social-col">
@@ -111,15 +111,15 @@
 
 <div style="display: flex; justify-content: center; flex-direction: row;">
     <div class="grid">
-      <div class="mason-size"></div>
+      <div class="grid-sizer"></div>
       <div class="grid-item [if($index > 5, hiddenItem)]" mv-multiple property="news" style="margin-bottom: 50px;">
         <section>
           <img property="newsImage" class="masonry-img" alt="[caption]" style="margin-bottom: 1.95rem;" />
         </section>
         
         <em><small>[newsDate]</small></em>
-        <div style="width: 310px; line-height: 1.6rem;"><strong>[newsTitle]</strong></div>
-        <div class="tinymce" style="width: 310px; font-size: 1.25rem; margin-top: 0.55rem;">[newsDetailsPreview]</div>
+        <div class="d-flex" style="width: 310px; line-height: 1.6rem;"><strong class="mx-auto">[newsTitle]</strong></div>
+        <div class="tinymce" style="width: 310px; font-size: 1.25rem; margin-top: 0.55rem;" property="newsDetailsPreview"></div>
         
         <a href=/christinajohnstonweb.github.io/web/news/article data-article="[idify(newsTitle)]" class="news-more-btn news-more-details">More ></a>
       </div>

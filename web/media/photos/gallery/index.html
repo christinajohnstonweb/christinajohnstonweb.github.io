@@ -59,7 +59,10 @@
           </div>
           <div class="col main-content">
 
-            <nav class="navbar navbar-expand-md topbar" style="background-color: #000;">
+            <style>
+  .dropdown-item { font-size: 1.35rem; }
+</style>
+<nav class="navbar navbar-expand-lg topbar">
   <a class="navbar-brand" href=/christinajohnstonweb.github.io/web/ style="color: #fff;">CHRISTINA JOHNSTON</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="fa fa-bars"></span>
@@ -71,7 +74,7 @@
         <a class="nav-link" href=/christinajohnstonweb.github.io/web/about>ABOUT</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <a class="nav-link" href="javascript:void(0);" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           DISCOGRAPHY
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -83,8 +86,8 @@
         <a class="nav-link" href=/christinajohnstonweb.github.io/web/concerts>CONCERTS</a>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <strong style="font-weight: 900;">MEDIA</strong>
+        <a class="nav-link" href="javascript:void(0);" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          MEDIA
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href=/christinajohnstonweb.github.io/web/media/photos>PHOTOS</a>
@@ -95,41 +98,35 @@
         <a href=/christinajohnstonweb.github.io/web/news class="nav-link">NEWS</a>
       </li>
       <li class="nav-item">
-        <a href="#" class="nav-link">CONTACT</a>
+        <a href=/christinajohnstonweb.github.io/web/contact class="nav-link">CONTACT</a>
       </li>
       </li>
     </ul>
   </div>
 </nav>
 
-<section class="content-section" id="carousel">
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-pause="false">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <div class="imageWrapper"><div class="image"><img src=/christinajohnstonweb.github.io/web/images/home_slider_image_1.jpg alt="" class="d-block w-100 img-fluid" /></div></div>
-      </div>
-      <div class="carousel-item">
-        <div class="imageWrapper"><div class="image"><img src=/christinajohnstonweb.github.io/web/images/home_slider_image_2.jpg alt="" class="d-block w-100 img-fluid" /></div></div>
-      </div>
-      <div class="carousel-item">
-        <div class="imageWrapper"><div class="image"><img src=/christinajohnstonweb.github.io/web/images/home_slider_image_3.jpg alt="" class="d-block w-100 img-fluid" /></div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <div class="container-fluid">
   <div class="row off-white-bg">
     <div class="col-12 d-flex" style="padding: 25px 0 15px 0; justify-content: center;">
       <div class="gallery-images">
-        <span id="photo_gallery_left_chevron"><span class="fa fa-3x fa-chevron-left" style="color: #ddd;"></span></span>
-        <span id="photos"></span>
-        <span id="photo_gallery_right_chevron"><span class="fa fa-3x fa-chevron-right" style="color: #ddd;"></span></span>
+        
+        
+        <div id="photo_gallery_carousel" class="carousel" data-ride="carousel">
+          <div class="carousel-inner photo-gallery-carousel"></div>
+          <a class="carousel-control-prev" href="#photo_gallery_carousel" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#photo_gallery_carousel" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+        
+        
+<!--         <span id="photo_gallery_left_chevron"><span class="fa fa-3x fa-chevron-left" style="color: #ddd;"></span></span>
+        <div id="photos" style="width: 48.0rem; height: 48.0rem;"></div>
+        <span id="photo_gallery_right_chevron"><span class="fa fa-3x fa-chevron-right" style="color: #ddd;"></span></span> -->
       </div>
     </div>
     <div class="col-12 d-flex" style="justify-content: center; margin-top: 10px; padding-top: 0;">
@@ -143,6 +140,12 @@
     </div>
   </div>
 </div>
+<style>
+  .carousel .item img {
+    max-height: 48.0rem;
+    min-width: auto;
+  }
+</style>
 
 <section id="media" class="reveal-fixed-bg media-container" style='background-image: url(/christinajohnstonweb.github.io/web/images/roses_parallax.png);'>
   <div class="reveal-container">

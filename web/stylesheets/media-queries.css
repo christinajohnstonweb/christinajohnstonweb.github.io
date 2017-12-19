@@ -2,23 +2,23 @@
 /* Media queries */
 /******************************************/
 
-/* @media all and (min-width: 2500px) { */
+@media all and (min-width: 2500px) {
 /*   html { font-size: 100%; } */
 /*   footer { font-size: 134%; } */
   
 /*   .image-wrap { height: 1077px; } */
-/* } */
+}
 
 
 
-/* @media all and (min-width: 2000px) and (max-width: 2499px) { */
+@media all and (min-width: 2000px) and (max-width: 2499px) {
 /*   html { font-size: 80%; } */
 /*   footer { font-size: 120%; } */
   
 /*   .image-wrap { height: 84.7rem; } */
   
-/*   .discography-image { height: 38.5rem; width: 38.5rem; } */
-/* } */
+  .discography-image { height: 40.5rem; width: 40.5rem; }
+}
 
 
 
@@ -35,7 +35,7 @@
   .about-content { line-height: 2.96rem; font-size: 2.8rem; }
   
   /*  Discography section.  */
-  .discography-image { height: 38.5rem; width: 38.5rem; }
+  .discography-image { height: 40.5rem; width: 40.5rem; }
   .discography-text { font-size: 2.05rem; line-height: 2.7rem; margin: 4.75rem 0 3.35rem 0; }
   .album-details { margin-top: 3.5rem; }
   .album-release-date { font-size: 1.25rem; }
@@ -83,6 +83,7 @@
 }
 
 
+
 @media all and (min-width: 1400px) and (max-width: 1649px) {
 /*   html { font-size: 72.5%; } */
 /*   footer { font-size: 119%; } */
@@ -116,6 +117,9 @@
   /*  Remove the padding around text-section - at this size, it creates an odd effect.  */
   .text-section { padding: 0; }
 /*   .image-wrap { height: 59.3rem; } */
+  
+  /* Keep News & Photo images small enough to keep 3 cols. */
+  .masonry-img { width: 26.25rem; }
 }
 
 
@@ -139,6 +143,10 @@
   div[property="album"]:hover a.btn-centered { opacity: 1.0; }
   div[property="photoGallery"]:hover a.btn-centered { opacity: 1.0; }
   div[property="news"]:hover a.btn-centered { opacity: 1.0; }
+  
+  /* Keep News & Photo images small enough to keep 3 cols. */
+  .masonry-img { width: 23.5rem; }
+  div[property="newsDetailsPreview"] { width: 23.5rem; }
   
   /*  Remove the padding around text-section - at this size, it creates an odd effect.  */
   .text-section { padding: 0; }
@@ -167,7 +175,7 @@
   .td-concert-spacer { display: none; }
   #concert_cards { display: inline; }
   #concerts_table { display: none; }
-  
+    
   /*  If we're on the 'Photos' page center align the gallery name.  */
   .grid-item > div.img-caption { text-align: center; }
   

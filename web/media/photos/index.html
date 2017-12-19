@@ -36,7 +36,7 @@
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <body>
 <!--     <div class="spinner"></div> -->
-    <main mv-app="homepage" mv-storage="https://github.com/christinajohnstonweb/christinajohnstonweb.github.io/data" mv-bar="none">
+    <main mv-app="homepage" mv-storage="https://github.com/christinajohnstonweb/christinajohnstonweb.github.io/data" mv-plugins="tinymce" mv-bar="none">
       <div class="container-fluid">
         <div class="row">
           <div class="pg-social-col">
@@ -111,7 +111,7 @@
   
   <div style="display: flex; justify-content: center; flex-direction: row;">
     <div class="grid">
-      <div class="mason-size"></div>
+      <div class="grid-sizer"></div>
       <div class="grid-item [if($index > 5, hiddenItem)]" id="gallery_list" mv-multiple property="photoGallery">
         <section property="photo" mv-if="coverImage=true" mv-multiple style="position: relative;">
           <img property="picture" class="masonry-img" alt="[caption]" />

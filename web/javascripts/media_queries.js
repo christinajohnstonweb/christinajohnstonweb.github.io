@@ -50,7 +50,7 @@ function responsiveTest(){
 
     // Remove Masonry from smaller screens.
     if ( $(".grid").length ) {
-      console.log("Destroying Masonry!");
+      // console.log("Destroying Masonry!");
       $(".grid").masonry("destroy");  
     }
     

@@ -1,0 +1,442 @@
+/* Set up easy REM font sizing. */
+
+html {
+  font-size: 62.5%;
+}
+/* =10px */
+
+
+/* Set the site font(s). */
+body {
+  font-family: 'Roboto', sans-serif;
+  padding: 0 5.5rem;
+}
+
+/* main { display: none; } */
+.main-content { padding-left: 25px; }
+
+.flex-center-align { flex-direction: row; justify-content: center; }
+
+nav.topbar {
+  margin-top: 35px;
+  position: sticky;
+  top: 0px;
+  z-index: 9;
+  background-color: #000;
+}
+
+/* Custom navbar bold. */
+a.nav-link.active { font-weight: 700; }
+
+/* Background colors */
+.white-bg {
+  background-color: #ffffff;
+}
+
+.off-white-bg {
+  background-color: #fafafa;
+}
+
+.black-bg {
+  background-color: #000000;
+}
+
+.transparent-bg {
+  background-color: transparent;
+}
+
+/* Initial values */
+#concert_cards { display: none; }
+
+/* Sticky social sharing */
+.pg-social-col {
+  width: 0.90rem; z-index: 99;
+}
+
+.social-container {
+  position: fixed;
+  top: 282px;
+}
+
+.social-el {
+  width: 47px;
+  margin: 0 auto 0.8rem auto;
+}
+
+.social-el>a {
+  color: #000;
+  font-size: 1.5rem;
+  
+  transition: all 0.3s;
+}
+
+.social-el>a:hover, .social-share-icons:hover {
+  color: #EE2D9F;
+}
+
+.social-share-icons {
+  color: #BBB;
+  font-size: 1.3rem;
+  margin: 0 0.5rem;
+  
+  transition: all 0.3s;
+}
+
+/* jsSocial overrides */
+.jssocials-share-pinterest, .jssocials-share-twitter, .jssocials-share-facebook { color: #000; opacity: 0.25; transition: all 0.3s; }
+.jssocials-shares * { color: #000; transition: all 0.3s; }
+.jssocials-share-pinterest:hover, .jssocials-share-twitter:hover, .jssocials-share-facebook:hover { opacity: 1.0; }
+
+/* Section styles */
+.section-header {
+  text-decoration: none;
+  border-bottom: 2px solid #000;
+  font-size: 2.0rem;
+  font-weight: 700;
+  padding: 0 2px 0.6rem 4px;
+  margin-bottom: 1.8rem;
+  letter-spacing: 0.08rem;
+  font-stretch: ultra-expanded;
+  
+/*   text-shadow: 1px 0 #000; */
+  
+/*   letter-spacing:1px; */
+/*   font-weight:bold; */
+}
+
+.section-header-link {
+  text-decoration: none;
+/*   border-bottom: none; */
+/*   border-bottom: 2px solid #000; */
+  font-size: 2.0rem;
+  font-weight: 700;
+  padding: 0 2px 0.6rem 4px;
+  margin-bottom: 1.8rem;
+  letter-spacing: 0.08rem;
+  font-stretch: ultra-expanded;
+}
+
+.section-header-link:hover {
+  border-bottom: 2px solid #000;
+  
+  transition: all 0.3s;
+}
+
+.content-section {
+  margin-bottom: 3.91rem;
+  font-size: 1.5rem;
+}
+
+.text-section {
+  padding: 7.5% 0px 8% 6%;
+/*   padding: 7.5% 6% 8% 6%; */
+}
+
+.btn-black {
+  background-color: #000;
+  border: 1px solid #000;
+  color: #fff;
+  padding: 0.6rem 3.9rem;
+  font-size: 1.2rem;
+  margin-top: 3.8rem;
+  border-radius: 0;
+  
+  transition: all 0.3s;
+}
+
+.btn-black:hover, .btn-media:hover {
+  background-color: #EE2D9F;
+  text-decoration: none;
+  color: #fff;
+  border-color: #EE2D9F;
+}
+
+.btn-gray {
+  background-color: #BBB;
+  border: 1px solid #FFF;
+  border-radius: 0;
+  color: #fff;
+  padding: 0.6rem 3.9rem;
+  font-size: 1.2rem;
+  margin-top: 3.8rem;
+}
+
+/* Collection details styles */
+.coll-detail-header {
+  text-decoration: none;
+/*   border-bottom: 2px solid #000; */
+  font-size: 1.9rem;
+  font-weight: bolder;
+  padding: 0 2px 0 4px;
+  margin-top: 3.2rem;
+  letter-spacing: 0.08rem;
+  font-stretch: ultra-expanded;
+}
+
+/* Collection details date */
+.coll-detail-date {
+  color: #EB008B;
+  font-size: 1.6rem;
+  text-align: center;
+  width: 100%;
+  margin-bottom: -0.25rem;
+}
+
+/* Collection details distribution */
+.coll-detail-distribution {
+  font-size: 1.25rem;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 1.0rem;
+}
+
+/* Collection details image */
+.coll-detail-img {
+  width: 28.0rem;
+  margin: 0.8rem auto 2.2rem auto;
+}
+
+/* Collection details buy labels */
+.coll-detail-buy-label {
+  font-weight: bolder;
+}
+
+/* Collection details buy options */
+.coll-detail-buy-option {
+  display: flex; flex-direction: row; justify-content: center; align-items: center; align-content: center;
+}
+
+/* Collection details buy image */
+.coll-detail-buy-img {
+  height: 2.65rem;
+  margin: 0 1.0rem 1.0rem 1.0rem;
+  opacity: 0.25;
+  
+  transition: all 0.3s;
+}
+
+.coll-detail-buy-img:hover {
+  opacity: 1.0;
+}
+
+
+/* About section */
+.about-content { 
+  color: #000000;
+  text-align: center;
+  overflow-y: auto;
+  line-height: 1.96rem;
+/*   padding: 3.25% 6% 8% 6%; */
+  font-size: 1.8rem;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* About banner zoom */
+.about-logo {
+  margin: 1.8rem;
+}
+
+/* Media section */
+.media-container {
+  text-align: center;
+  padding: 3.0rem 0 2.0rem 0;
+  margin-bottom: 3.5rem;
+}
+
+.media-header {
+  color: #E9008D;
+  font-size: 5.0rem;
+  font-weight: 900;
+  vertical-align: middle;
+}
+
+.reveal-fixed-bg {
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.reveal-container {
+  background-color: transparent;
+}
+
+.btn-media {
+  background-color: #000;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 0.6rem 1.4rem;
+  font-size: 1.2rem;
+  
+  transition: all 0.3s;
+}
+
+.btn-more-info {
+  background-color: #555;
+  border: 1px solid #ddd;
+  color: #fff;
+  padding: 0.6rem 1.4rem;
+  font-size: 1.2rem;
+}
+
+.btn-centered { justify-content: center; }
+
+/* MEDIA - Videos section */
+.video-text {
+  margin: 0 0 3.35rem 0;
+  line-height: 1.75rem;
+  font-size: 1.45rem;
+}
+
+.video { margin-bottom: 6.5rem; }
+
+.hiddenItem { display: none; transition: all 0.3s; }
+
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.masonry-img {
+  width: 32.0rem;
+}
+
+.grid-item {
+  margin: 8px;
+}
+
+.img-caption { font-size: 1.5rem; width: 32.0rem; }
+
+.gallery-btn { position: absolute; top: 50%; left: 50%; width: 12.0rem; height: 3.0rem; transform: translate(-50%,-95%); }
+
+.photo-gallery-img { max-width: 300px; }
+
+/* Navbar overrides */
+.navbar { font-weight: 500; }
+
+.nav-link { color: #fff; font-size: 1.43rem; font-weight: 100; }
+.nav-link:hover { color: #777; }
+.navbar-toggler { color: #fff; }
+
+#navbarSupportedContent {
+  padding: 0 10% 0 10%;
+}
+
+a.navbar-brand {
+  padding: 0 0 0 10%;
+}
+
+
+/* Discography section */
+.discography-text {
+  margin: 3.3rem 0 3.35rem 0;
+  line-height: 1.75rem;
+  font-size: 1.45rem;
+}
+
+.album-details { line-height: 0.75rem; text-align: center; margin-top: 2.4rem; }
+.album-release-date { color: #EE2D9F; font-size: 1.0rem; }
+.album-name { font-weight: 900; font-size: 1.7rem; padding-top: 0.5rem; margin-bottom: 0.1rem; }
+.album-distributor { color: #5d5d5d; font-size: 1.0rem; }
+
+/* .discography-more-btn { position: relative; top: -18.5rem; left: 14.0rem; margin: 0; } */
+.discography-image { height: 28.0rem; width: 28.0rem; }
+.disco-btn { display: block; }
+
+/* Footer */
+footer {
+/*   height: 16rem; */
+  color: #fff;
+  padding: 2.5rem 0 0 4.8rem;
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+.footer-header-row {margin-bottom: 2.0rem;}
+.footer-col-title { margin: 2.0rem 0 1.0rem 0; }
+.footer-col-no-title { margin-top: 4.25rem; }
+.footer-sub-col-title { margin-bottom: 1.25rem; }
+
+.bottom-column {
+    float: none;
+    display: table-cell;
+    vertical-align: bottom;
+}
+
+/* Brand tag. */
+#brand_tag { height: 2.13rem; padding: 0 0 1.0rem 0; }
+
+/* Bootstrap style overrides */
+.bg-light {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.remove-padding {
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu { top: 92%; }
+
+.card { border-radius: 0; border: 0; }
+
+/* Social icons */
+.social-icons { font-size: 2.0rem; color: #fff; transition: all 0.3s; }
+.social-icons:hover { color: #EE2D9F; text-decoration: none; }
+#social_btns_container { margin-bottom: 5.5rem; }
+.social-link { text-decoration: none; padding-right: 2.5rem; }
+
+
+/* Concerts section */
+.concert-venue-date { vertical-align: top; margin: 0; padding: 3.3rem 0 0 2.1rem; font-size: 1.8rem; line-height: 0; }
+.edit-concert-venue-date { vertical-align: top; margin: 0; padding: 3.3rem 0 0 2.1rem; font-size: 1.8rem; }
+.concert-details { font-size: 1.4rem; }
+.edit-concert-details { height: 1.3rem; }
+.concert-thumbnail { margin: 1.4rem; width: 10.5rem; }
+/* .concert-details { font-size: 1.2rem; line-height: 0.75rem; } */
+.buy-tickets-td { text-align: center; width: 20%; }
+/* .buy-tickets-btn { margin: 0 0 0 8.0rem; } */
+.concert-info-td { width: 10%; }
+.concert-info-a { text-align: right; padding-right: 2.0rem; color: #212529; transition: all 0.3s; }
+.concert-info-a:hover { color: #EE2D9F; text-decoration: none; }
+.concert-more-btn-card:hover { background-color: #EE2D9F; color: #fff; }
+
+.tbl-concert-date { margin-bottom: 3.2rem; font-weight: 700; letter-spacing: 0.12rem; }
+.tbl-concert-name { font-weight: 700; margin: 1.5rem 0; letter-spacing: 0.10rem; }
+.tbl-concert-venue { margin: 1.5rem 0; }
+.tbl-concert-location {  }
+
+/* News section */
+.news-text { padding: 4.5rem 5.56rem 0 6.56rem; }
+.news-date { color: #5D5D5D; /* #212529; */ font-size: 1.1rem; font-style: italic; padding: 0 0 0.5rem 0; }
+.news-title { font-size: 1.45rem; font-weight: 700; line-height: 1.8rem; padding: 0 0 0.4rem 0; letter-spacing: 0.05rem; margin-bottom: 0.35rem; }
+.news-details { font-size: 1.3rem; padding: 0 0 1.75rem 0; line-height: 1.6rem; }
+.news-more-details { font-size: 1.3rem; color: #EE2D9F; font-style: italic; text-decoration: none; transition: all 0.3s; }
+.news-more-details:hover { font-weight: 900; color: #EE2D9F; text-decoration: none; }
+.news-item-section { margin-bottom: 3.7rem; }
+#more_news_btn { padding: 0.6rem 3.5rem; margin: 1.0rem 0 0 0; }
+
+
+/* Brand tagging */
+.section-extra-bottom-padding { padding-bottom: 5.5rem; }
+
+/* Instagram section */
+.instagram-images { max-height: 28.0rem; max-width: 28.0rem; }
+.instagram-follow-btn { padding: 0.6rem 1.9rem; font-size: 1.3rem; }
+
+/******************************************/
+/* Mavo editor styles */
+/******************************************/
+img[src=""] {
+  background: white;
+  content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100" fill="%23666"><circle cx="50" cy="40" r="22" /><circle cx="50" cy="110" r="50" /></svg>');
+}
+/******************************************/
+/* End Mavo editor styles */
+/******************************************/
