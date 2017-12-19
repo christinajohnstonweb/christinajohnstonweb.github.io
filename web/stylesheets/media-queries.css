@@ -120,6 +120,9 @@
   
   /* Keep News & Photo images small enough to keep 3 cols. */
   .masonry-img { width: 26.25rem; }
+  
+  /*  In the photo gallery adjust the text margin. */
+  #photo_gallery_description { padding: 1.0rem 10.0rem; }
 }
 
 
@@ -150,6 +153,9 @@
   
   /*  Remove the padding around text-section - at this size, it creates an odd effect.  */
   .text-section { padding: 0; }
+  
+  /*  In the photo gallery adjust the text margin. */
+  #photo_gallery_description { padding: 1.0rem 6.0rem; }
 }
 
 
@@ -184,6 +190,15 @@
   footer { font-size: 124% }
   label[for='mce-EMAIL'], #mc_embed_signup { font-size: 1.5rem; }
   #social_btns_container { margin: 0 auto; }
+  
+  /*  In the photo gallery adjust the text margin. */
+  #photo_gallery_description { padding: 1.0rem 6.0rem; }
+  
+  /*  Photo Gallery - remove top margin from carousel.  */
+  .photo-gallery-el-container { padding-top: 4px; }
+  
+  /*  Photo Gallery - make off white bg full width.  */
+/*   .photo-gallery-container-fluid { padding: 0; } */
 } 
 
 
@@ -225,6 +240,12 @@
   
     /*  If we're on the 'Photos' page center align the gallery name.  */
   .grid-item > div.img-caption { text-align: center; }
+  
+  /*  In the photo gallery adjust the text margin. */
+  #photo_gallery_description { padding: 1.0rem 6.0rem; }
+  
+   /*  Photo Gallery - remove top margin from carousel.  */
+  .photo-gallery-el-container { padding-top: 4px; }
 } 
 
 
@@ -261,6 +282,15 @@
   
   /*  If we're on the 'Photos' page center align the gallery name.  */
   .grid-item > div.img-caption { text-align: center; }
+  
+  /*  In the photo gallery adjust the text margin. */
+  #photo_gallery_description { padding: 1.0rem 6.0rem; }
+  
+   /*  Photo Gallery - remove top margin from carousel.  */
+  .photo-gallery-el-container { padding-top: 4px; margin-top: -28px; }
+  
+  /*  Photo Gallery - make off white bg stretch full width.  */
+  .photo-gallery-container-fluid { padding-left: 0; padding-right: 0; }
 }
 
 
@@ -294,6 +324,12 @@
   
   /*  Discography image size  */
 /*   .discography-image { width: 12.0rem; height: 12.0rem; } */
+  
+  /*  In the photo gallery adjust the text margin. */
+  #photo_gallery_description { padding: 1.0rem 6.0rem; }
+  
+   /*  Photo Gallery - remove top margin from carousel.  */
+  .photo-gallery-el-container { padding-top: 4px; }
 }
 
 /******************************************/

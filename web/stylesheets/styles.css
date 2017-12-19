@@ -228,10 +228,17 @@ a.nav-link.active { font-weight: 700; }
   line-height: 1.96rem;
 /*   padding: 3.25% 6% 8% 6%; */
   font-size: 1.8rem;
+  display: table;
   
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+/*   display: flex; */
+/*   flex-direction: column; */
+/*   justify-content: center; */
+}
+
+.about-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0% 6% 8% 6%;
 }
 
 /* About banner zoom */
@@ -314,9 +321,11 @@ a.nav-link.active { font-weight: 700; }
 
 .img-caption { font-size: 1.5rem; width: 32.0rem; }
 
+/* Photo gallery */
 .gallery-btn { position: absolute; top: 50%; left: 50%; width: 12.0rem; height: 3.0rem; transform: translate(-50%,-95%); }
-
 .photo-gallery-img { max-width: 300px; }
+#photo_gallery_description { text-align: center; padding: 1.0rem 20.0rem; font-size: 1.5rem; }
+.photo-gallery-el-container { padding: 25px 0 15px 0; justify-content: center; }
 
 /* Navbar overrides */
 .navbar { font-weight: 500; }

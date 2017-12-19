@@ -37,6 +37,9 @@ function adjustTextSections() {
      rowWidth = parseInt( $("#about_row").width() || $("#news_row").width() );
    }
   
+  $(".about-wrapper").css("height", rowWidth);
+  $(".about-content").css("height", rowWidth);
+  $(".about-content").css("width", rowWidth);
   $(".text-section").css("height", rowWidth);
   $(".text-section").css("width", rowWidth);
   $(".news-text").css("height", rowWidth);
@@ -55,7 +58,7 @@ function adjustTextSections() {
       }
       
       // Resize the text sections on the home page.
-      if( $(".text-section").length || $(".news-text").length ){
+      if( $(".text-section").length || $(".about-content").length || $(".news-text").length ){
         adjustTextSections();
       }
       
@@ -98,7 +101,7 @@ $(function(){
       setCarouselHeight();
     }
     
-    if( $(".text-section").length || $(".news-text").length ){
+    if( $(".text-section").length || $(".about-content").length || $(".news-text").length ){
       adjustTextSections();
     }
   });
@@ -370,32 +373,36 @@ $(function(){
               display_css = "display: none;";
             }
 
-            
+            // If this is the first photo, set it as active.
             var active_item;
             if(idx === 0) {
               active_item = " active";
             } else {
               active_item = "";  
             }
-                        
-            var tag = '<div class="carousel-item' + active_item + '"><img src=' + photo["picture"] + ' style="object-fit: contain;" alt="" class="gallery-image img-fluid" /></div>';
-//             var tag = '<img src=' + photo["picture"] + ' alt="" data-idx="' + idx + '" style="-o-object-fit: scale-down; object-fit: scale-down; ' + display_css + '" class="gallery-image img-fluid" />';
             
+            // Build the Bootstrap carousel div+img.
+            var tag = '<div class="carousel-item' + active_item + '"><img src=' + photo["picture"] + ' style="object-fit: contain;" alt="" class="gallery-image img-fluid" /></div>';
+            
+            // Adding to array of BS carousel items.
             photo_tags.push(tag);
           });
           
+          // Populate carousel on page.
           $(".photo-gallery-carousel").html(photo_tags.join("\n"));
-//           $("#photos").html(photo_tags.join("\n"));
           
+          // Populate X in X of Y counter.
           $("#photo_gallery_image_idx").text("1");
           
+          // Populate Y in X of Y counter.
           $("#photo_gallery_image_count").text( photos.length );
           
+          // Update the gallery description on the page.
           $("#photo_gallery_description").html(gallery[0]["galleryDescription"]);
           
-          if ( photos.length > 1 ) {
-            $("#photo_gallery_right_chevron").html('<a href="javascript:void(0);" id="photo_gallery_right_chevron_link"><span class="fa fa-3x fa-chevron-right"></span></a>');
-          }
+//           if ( photos.length > 1 ) {
+//             $("#photo_gallery_right_chevron").html('<a href="javascript:void(0);" id="photo_gallery_right_chevron_link"><span class="fa fa-3x fa-chevron-right"></span></a>');
+//           }
          }
         //********************************************
         // END PHOTO GALLERY BUILDING.

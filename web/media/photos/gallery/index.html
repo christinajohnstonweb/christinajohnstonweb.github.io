@@ -105,12 +105,10 @@
   </div>
 </nav>
 
-<div class="container-fluid">
-  <div class="row off-white-bg">
-    <div class="col-12 d-flex" style="padding: 25px 0 15px 0; justify-content: center;">
+<div class="container-fluid photo-gallery-container-fluid">
+  <div class="row off-white-bg photo-gallery-bg">
+    <div class="col-12 d-flex photo-gallery-el-container">
       <div class="gallery-images">
-        
-        
         <div id="photo_gallery_carousel" class="carousel" data-ride="carousel">
           <div class="carousel-inner photo-gallery-carousel"></div>
           <a class="carousel-control-prev" href="#photo_gallery_carousel" role="button" data-slide="prev">
@@ -122,30 +120,26 @@
             <span class="sr-only">Next</span>
           </a>
         </div>
-        
-        
-<!--         <span id="photo_gallery_left_chevron"><span class="fa fa-3x fa-chevron-left" style="color: #ddd;"></span></span>
-        <div id="photos" style="width: 48.0rem; height: 48.0rem;"></div>
-        <span id="photo_gallery_right_chevron"><span class="fa fa-3x fa-chevron-right" style="color: #ddd;"></span></span> -->
       </div>
     </div>
     <div class="col-12 d-flex" style="justify-content: center; margin-top: 10px; padding-top: 0;">
       <span id="photo_gallery_image_idx"></span>&nbsp;of&nbsp;<span id="photo_gallery_image_count"></span>
     </div>
-    <div class="col-12" style="text-align: center; padding: 1.0rem 20.0rem; font-size: 1.5rem;" id="photo_gallery_description"></div>
+    <div class="col-12" id="photo_gallery_description"></div>
     <div class="col-12" style="text-align: center;">
       <div style="display: flex; content-align: center; justify-content: center;"><small id="sharing_icons" style="font-size: 1.0rem;"></small></div>
-<!--       <div style="display: flex; content-align: center; justify-content: center;"><small><a href="#" style="margin: 0 1.0rem; font-size: 1.6rem;"><span class="fa fa-pinterest-p"></span></a><a href="#" style="margin: 0 1.0rem; font-size: 1.6rem;"><span class="fa fa-twitter"></span></a><a href="#" style="margin: 0 1.0rem; font-size: 1.6rem;"><span class="fa fa-facebook"></span></a></small></div> -->
       <div style="display: flex; content-align: center; justify-content: center; margin-bottom: 10.0rem;"><a href=/christinajohnstonweb.github.io/web/media/photos/ style="color: #EE2D9F;"><small><span class="fa fa-caret-left"></span>&nbsp;Back to Photo Galleries</small></a></div>
     </div>
   </div>
 </div>
+<!-- Force height to be honored on carousel. -->
 <style>
   .carousel .item img {
     max-height: 48.0rem;
     min-width: auto;
   }
 </style>
+<!-- End force height to be honored on carousel. -->
 
 <section id="media" class="reveal-fixed-bg media-container" style='background-image: url(/christinajohnstonweb.github.io/web/images/roses_parallax.png);'>
   <div class="reveal-container">
