@@ -92,6 +92,10 @@
           <small property="discDistributor" class="album-distributor" style="color: #5d5d5d;">Sony Music</small>
         </section>
         
+        <p>
+          <div class="fa [if(albumOnHomepage, 'fa-check', 'fa-times')]" style="font-size: 2.0rem; color: [if(albumOnHomepage, 'green', 'red')];">&nbsp;<label for="[property='albumOnHomepage']">Featured on homepage?</label><input type="checkbox" property="albumOnHomepage" class="mv-logged-in" /><p/></div>
+        </p>
+        
         <span class="mv-logged-in" style="font-size: 1.5rem;"><input type="checkbox" property="discIsSolo" />&nbsp;<strong>Solo</strong> album? (Instead of <em>featured</em>)</span>
         <div class="tinymce" property="discDescr" style="text-align: center; padding: 1.0rem 20.0rem; font-size: 1.5rem;"></div>
         <h2>Streaming Options</h2>
