@@ -109,7 +109,7 @@
     </div>
   </div>
   
-  <div class="container">
+<!--   <div class="container">
     <div class="row">
       <div class="col-4 [if($index > 5, hiddenItem)]" mv-multiple property="photoGallery">
         <section property="photo" mv-if="coverImage=true" mv-multiple style="position: relative;">
@@ -119,26 +119,26 @@
         <div class="img-caption" style="width: 100%; display: flex; justify-content: center;"><strong>[galleryTitle]</strong></div>
       </div>
     </div>
-  </div>
+  </div> -->
   
-<!--   <div style="display: flex; justify-content: center; flex-direction: row;"> -->
-<!--     <div class="grid"> -->
-<!--       <div class="grid-sizer"></div>
+  <div style="display: flex; justify-content: center; flex-direction: row;">
+    <div class="grid">
+      <div class="grid-sizer"></div>
       <div class="grid-item [if($index > 5, hiddenItem)]" id="gallery_list" mv-multiple property="photoGallery">
         <section property="photo" mv-if="coverImage=true" mv-multiple style="position: relative;">
           <img property="picture" class="masonry-img" alt="[caption]" />
         </section>
         <a href=/christinajohnstonweb.github.io/web/media/photos/gallery data-gallery="[idify(galleryTitle)]" class="mx-auto d-flex btn-black btn-centered photo-more-btn">MORE</a>
         <div class="img-caption"><strong>[galleryTitle]</strong></div>
-      </div> -->
+      </div>
 
       <!-- For some reason, Masonry.js needs a non-dynamic image when used with Mavo.io -->
 <!--       <div class="grid-item" property="testTestTest" style="visibility: hidden;">
         <img src=/christinajohnstonweb.github.io/web/images/media_photo_1-r50.jpg class="masonry-img" alt="" style="max-width: 30px;" />
       </div> -->
       <!-- End corrective (invisible) div. -->
-<!--     </div> -->
-<!-- </div> -->
+    </div>
+</div>
 </section>
 
 <section id="media" class="reveal-fixed-bg media-container" style='background-image: url(/christinajohnstonweb.github.io/web/images/roses_parallax.jpg); margin-top: -2.0rem;'>
