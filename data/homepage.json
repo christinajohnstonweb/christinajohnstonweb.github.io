@@ -71,6 +71,19 @@
 			]
 		},
 		{
+			"discCoverImg": "https://comps.canstockphoto.com/charles-bridge-in-prague-at-night-clip-art-vector_csp33548965.jpg",
+			"discReleaseDate": "11/11/2017",
+			"discName": "Holidays In Prague",
+			"discIsSolo": false,
+			"discDescr": "<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.</p>",
+			"albumStreaming": [
+				{}
+			],
+			"albumPurchase": [
+				{}
+			]
+		},
+		{
 			"discCoverImg": "https://i.pinimg.com/736x/ef/2a/f2/ef2af284e946d777a2085b179668441e--gothic-castle-european-tour.jpg",
 			"discReleaseDate": "12/12/2017",
 			"discName": "Karlstein",
@@ -82,19 +95,6 @@
 			],
 			"albumPurchase": [
 				{},
-				{}
-			]
-		},
-		{
-			"discCoverImg": "https://comps.canstockphoto.com/charles-bridge-in-prague-at-night-clip-art-vector_csp33548965.jpg",
-			"discReleaseDate": "11/11/2017",
-			"discName": "Holidays In Prague",
-			"discIsSolo": false,
-			"discDescr": "<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.</p>",
-			"albumStreaming": [
-				{}
-			],
-			"albumPurchase": [
 				{}
 			]
 		},
