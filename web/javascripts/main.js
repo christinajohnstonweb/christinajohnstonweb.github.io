@@ -205,6 +205,49 @@ $(function(){
         // END BUILDING CAROUSEL SLIDERS
         //********************************************
         
+        
+        
+        //********************************************
+        // Album featured collection building.
+        //********************************************
+//         if( $("#featured_album_tmpl").length ){
+//           var featured_arr = [];
+//           var counter = 0;
+          
+//           $.each(data.album, function(key, val){
+//             var code = $("#featured_album_tmpl").prop("innerHTML");
+
+//             // Check to see if disc is featured.
+//             if( val.discIsSolo === false ) {
+//               // If this is the 6th or higher album, hide it by default.
+//               if( counter > 5 ) {
+//                 code = code.replace("!!isHiddenItem!!", "hiddenItem");
+                
+//                 // Make the "Load More" button visible.
+//                 $(".featured-load-more-btn").show();
+//               } else {
+//                 code = code.replace("!!isHiddenItem!!", '');
+//               }
+              
+//               // Swap out placeholders with real values.
+//               code = code.replace("!!discCoverImg!!", val.discCoverImg);
+//               code = code.replace("!!discName!!", val.discName);
+//               code = code.replace("!!discNameStr!!", val.discName.toLowerCase().replace(/\s/gi, '-').replace(/[^\w-]/gi, ''));
+//               // Add to array.
+//               featured_arr.push(code);
+              
+//               counter = counter + 1;
+//             }
+//           });
+          
+//           $(".featured-albums").html(featured_arr.join("\n"));
+//         }
+        //********************************************
+        // End featured album collection building.
+        //********************************************
+        
+        
+        
         //********************************************
         // Album drilldown building.
         //********************************************
@@ -226,24 +269,48 @@ $(function(){
           code = code.replace("!!album_distributor!!", album.discDistributor);
           code = code.replace("!!album_descr!!", album.discDescr);
           
+          // Route back to solo or featured page, depending on album classification.
+          var solo_or_featured = "featured";
+          if ( album.discIsSolo ) {
+            solo_or_featured = "solo";  
+          }
+          
+          code = code.replace("!!is_solo_album!!", solo_or_featured);
+          
           var purchase_arr = [];
           var streaming_arr = [];
-          
-          $.each(album.albumPurchase, function(key, val){
-            var li = '<div class="purchase_links"><a href="' + val.serviceLink + '" target="_BLANK"><img src="' + val.serviceLogo + '" class="coll-detail-buy-img" /></a></div>';
-            
-            purchase_arr.push(li);
-          });
-          
-          code = code.replace("!!purchase_links!!", purchase_arr.join("\n"));
-          
-          $.each(album.albumStreaming, function(key, val){
-            var li = '<div><a href="' + val.serviceLink + '" target="_BLANK"><img src="' + val.serviceLogo + '" class="coll-detail-buy-img" /></a></div>';
-            
-            streaming_arr.push(li);
-          });
-          
-          code = code.replace("!!streaming_links!!", streaming_arr.join("\n"));
+
+          // If there are no album purchase links, hide that section.
+          if ( album.albumPurchase[0].serviceLogo ) {
+            // Iterate album purchase links, and build and array of elements (str).
+            $.each(album.albumPurchase, function(key, val){
+              var li = '<div class="purchase_links"><a href="' + val.serviceLink + '" target="_BLANK"><img src="' + val.serviceLogo + '" class="coll-detail-buy-img" /></a></div>';
+
+              purchase_arr.push(li);
+            });
+
+            code = code.replace("!!purchase_links!!", purchase_arr.join("\n"));
+            code = code.replace("!!album_display_buy!!", "block");
+          } else {
+            // Hide the option to buy albums.
+            code = code.replace("!!album_display_buy!!", "none");
+          }
+           
+          // If there are no album streaming links, hide that section.
+          if ( album.albumStreaming[0].serviceLogo ) {
+            // Iterate album streaming links, and build and array of elements (str).
+            $.each(album.albumStreaming, function(key, val){
+              var li = '<div><a href="' + val.serviceLink + '" target="_BLANK"><img src="' + val.serviceLogo + '" class="coll-detail-buy-img" /></a></div>';
+
+              streaming_arr.push(li);
+            });
+
+            code = code.replace("!!streaming_links!!", streaming_arr.join("\n")); 
+            code = code.replace("!!album_display_stream!!", "block");
+          } else {
+            // Hide the option to stream albums.
+            code = code.replace("!!album_display_stream!!", "none");
+          }
 
           $(".album-container").html(code);
         }
@@ -413,7 +480,7 @@ $(function(){
         //********************************************
         if( $("#article_tmpl").length ){
           var article_name = getParameterByName("name");
-//           debugger;
+
           // Get the specific article.
           var article = $.grep(data.news, function(arr){ return arr.newsTitle.toLowerCase().replace(/\s/gi, '-').replace(/[^\w-]/gi, '') === article_name });
           article = article[0];

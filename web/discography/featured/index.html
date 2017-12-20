@@ -132,8 +132,7 @@
       <h1 class="section-header-link" property="solo_header"><a href=/christinajohnstonweb.github.io/web/discography/solo style="color: black; text-decoration: none;">SOLO</a></h1>&nbsp;&nbsp;&nbsp;<h1 class="section-header">FEATURED</h1>
     </div>
     
-    <script>Helpers.discography.featured.count = 1; // Super hackey! Album count is 1 instead of 0, too.</script>
-    <div class="d-flex flex-wrap flex-center-align"><!--  style="padding: 0 9.5rem;" -->
+    <div class="d-flex flex-wrap flex-center-align featured-albums">
       <div class="[if(Helpers.discography.featured.count > 6, hiddenItem)]" style="margin: 2.0rem;" mv-multiple property="album" mv-if="discIsSolo=false">
         <img property="discCoverImg" alt="" class="d-flex discography-image"/>
         <a href=/christinajohnstonweb.github.io/web/discography/album data-album="[idify(discName)]" class="mx-auto d-flex btn-black btn-centered discography-more-btn">MORE</a>
@@ -142,20 +141,31 @@
           <h2 class="album-name">[discName]</h2>
 <!--           <small class="album-distributor">[discDistributor]</small> -->
         </section>
-        <script>Helpers.discography.featured.count = Helpers.discography.featured.count + 1;</script>
       </div>
     </div>
     
-    <div mv-if="count(album.discIsSolo=false) > 6" class="justify-content-center" style="width: 100%; display: flex; padding-bottom: 4.0rem; margin-top: -2.0rem;">
-      <button class="btn-black" type="button" id="load_more_albums_btn">LOAD MORE</button>
+    <div class="justify-content-center featured-load-more-btn" style="width: 100%; display: flex; padding-bottom: 4.0rem; margin-top: -2.0rem;">
+      <button class="btn-black" mv-if="count(album.discIsSolo=false) > 6" type="button" id="load_more_albums_btn">LOAD MORE</button>
     </div>
 
   </section>
 </section>
 
 
+<script type="text/template" id="featured_album_tmpl" mv-expression="none">
+  <div class="!!isHiddenItem!!" property="album" style="margin: 2.0rem;" typeof="Item">
+        <img src="!!discCoverImg!!" alt="" property="discCoverImg" class="d-flex discography-image" aria-label="Disc cover img" />
+        <a href=/christinajohnstonweb.github.io/web/discography/album data-album="!!discNameStr!!" class="mx-auto d-flex btn-black btn-centered discography-more-btn">MORE</a>
+        <section class="album-details">
+<!--           <small class="album-release-date">[discReleaseDate]</small> -->
+          <h2 class="album-name">!!discName!!</h2>
+<!--           <small class="album-distributor">[discDistributor]</small> -->
+        </section>
+      </div>
+</script>
 
-<section id="media" class="reveal-fixed-bg media-container" style='background-image: url(/christinajohnstonweb.github.io/web/images/roses_parallax.png);'>
+
+<section id="media" class="reveal-fixed-bg media-container" style='background-image: url(/christinajohnstonweb.github.io/web/images/roses_parallax.jpg);'>
   <div class="reveal-container">
     <h1 class="media-header">MEDIA</h1>
     <a href=/christinajohnstonweb.github.io/web/media/photos class="btn-media">MORE</a>

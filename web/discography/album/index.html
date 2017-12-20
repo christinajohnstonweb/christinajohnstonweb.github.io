@@ -196,14 +196,18 @@
         <!-- div class="coll-detail-date">!!album_release_date!!</div>
         <div class="coll-detail-distribution">!!album_distributor!!</div -->
         <div><img src="!!disc_cover_img!!" class="coll-detail-img" /></div>
-        <p class="coll-detail-buy-label">BUY ON:</p>
-        <div class="coll-detail-buy-option">
-          !!purchase_links!!
-        </div>
-        <p class="coll-detail-buy-label">STREAM ON:</p>
-        <div class="coll-detail-buy-option">
-          !!streaming_links!!
-        </div>
+        <span class="album-buy-options" style="display: !!album_display_buy!!;">
+          <p class="coll-detail-buy-label">BUY ON:</p>
+          <div class="coll-detail-buy-option">
+            !!purchase_links!!
+          </div>
+        </span>
+        <span class="album-stream-options" style="display: !!album_display_stream!!;">
+          <p class="coll-detail-buy-label">STREAM ON:</p>
+          <div class="coll-detail-buy-option">
+            !!streaming_links!!
+          </div>
+        </span>
         
         <div style="display: flex; content-align: center; justify-content: center; margin: 3.5rem 0 0.75rem 0;"><div style="width: 52%; font-size: 1.5rem;">!!album_descr!!</div></div>
         
@@ -211,7 +215,7 @@
         <div style="display: flex; content-align: center; justify-content: center;" id="sharing_icons"></div>
         <!-- div style="display: flex; content-align: center; justify-content: center;"><small><a href="#" style="margin: 0 0.5rem; font-size: 1.5rem;"><span class="fa fa-pinterest-p"></span></a><a href="#" style="margin: 0 0.5rem; font-size: 1.5rem;"><span class="fa fa-twitter"></span></a><a href="#" style="margin: 0 0.5rem; font-size: 1.5rem;"><span class="fa fa-facebook"></span></a></small></div -->
         
-        <div style="display: flex; content-align: center; justify-content: center; margin-bottom: 4.0rem;"><a href=/christinajohnstonweb.github.io/web/discography style="color: #EE2D9F;"><small><span class="fa fa-caret-left"></span>&nbsp;Back to discography</small></a></div>
+        <div style="display: flex; content-align: center; justify-content: center; margin-bottom: 4.0rem;"><a href=/christinajohnstonweb.github.io/web/discography/!!is_solo_album!! style="color: #EE2D9F;"><small style="font-size: 1.1rem;"><span class="fa fa-caret-left"></span>&nbsp;Back to discography</small></a></div>
       </div>
     </div>
   </div>

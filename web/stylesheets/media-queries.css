@@ -156,6 +156,9 @@
   
   /*  In the photo gallery adjust the text margin. */
   #photo_gallery_description { padding: 1.0rem 6.0rem; }
+  
+  /*  Mailchimp component  */
+  
 }
 
 
@@ -251,6 +254,9 @@
 
 
 @media all and (min-width: 415px) and (max-width: 575px) {
+  html { font-size: 71.5%; }
+  footer { padding: 1.0rem 2.5rem; font-size: 149% }
+  
   /* Responsive - make design edge-to-edge and remove social sidebar. */
   body { padding: 0; }
   .pg-social-col { display: none; }
@@ -291,11 +297,17 @@
   
   /*  Photo Gallery - make off white bg stretch full width.  */
   .photo-gallery-container-fluid { padding-left: 0; padding-right: 0; }
+  
+  /*  Footer - Social icon alignment  */
+  #social_btns_container { margin: 0 auto; }
 }
 
 
 
 @media all and (max-width: 414px) {
+  html { font-size: 71.5%; }
+  footer { padding: 1.0rem 2.5rem; font-size: 149% }
+  
    /* Responsive - make design edge-to-edge and remove social sidebar. */
   body { padding: 0; }
   .pg-social-col { display: none; }
@@ -330,6 +342,9 @@
   
    /*  Photo Gallery - remove top margin from carousel.  */
   .photo-gallery-el-container { padding-top: 4px; }
+  
+  /*  Footer - Social icon alignment  */
+  #social_btns_container { margin: 0 auto; }
 }
 
 /******************************************/
