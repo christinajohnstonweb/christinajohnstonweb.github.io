@@ -513,8 +513,10 @@ $(function(){
     //       UID = 293336116
     var feed = new Instafeed({
         get: 'user',
-        userId: '1593628250',
-        accessToken: '1593628250.1677ed0.02eb61b5a3104a83a39d83495e534ed9',
+        userId: '293336116',
+//         userId: '1593628250',
+//         accessToken: '1593628250.1677ed0.02eb61b5a3104a83a39d83495e534ed9',
+        accessToken: '293336116.1677ed0.74da451be9ff45ef8b2a491432b1c54b',
         resolution: "standard_resolution",
         useHttp: "true",
         limit: 3,
