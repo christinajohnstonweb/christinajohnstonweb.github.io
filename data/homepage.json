@@ -54,7 +54,8 @@
 					"serviceLogo": "http://www.christinajohnston.co.uk/data/images/spotify_logo_adjusted.png",
 					"serviceLink": "https://www.gitlab.com"
 				}
-			]
+			],
+			"albumOnHomepage": true
 		},
 		{
 			"discCoverImg": "http://www.christinajohnston.co.uk/data/images/news_embedded.jpg",
@@ -68,7 +69,8 @@
 			],
 			"albumPurchase": [
 				{}
-			]
+			],
+			"albumOnHomepage": true
 		},
 		{
 			"discCoverImg": "https://comps.canstockphoto.com/charles-bridge-in-prague-at-night-clip-art-vector_csp33548965.jpg",
@@ -81,7 +83,8 @@
 			],
 			"albumPurchase": [
 				{}
-			]
+			],
+			"albumOnHomepage": true
 		},
 		{
 			"discCoverImg": "https://i.pinimg.com/736x/ef/2a/f2/ef2af284e946d777a2085b179668441e--gothic-castle-european-tour.jpg",
@@ -96,7 +99,8 @@
 			"albumPurchase": [
 				{},
 				{}
-			]
+			],
+			"albumOnHomepage": false
 		},
 		{
 			"discCoverImg": "https://static.wixstatic.com/media/02f69d_67501e63a5cf458dbb92b667af94f552.jpg_srz_600_522_85_22_0.50_1.20_0.00_jpg_srz",
@@ -109,7 +113,8 @@
 			],
 			"albumPurchase": [
 				{}
-			]
+			],
+			"albumOnHomepage": false
 		},
 		{
 			"discCoverImg": "http://www.goldgold.com/wp-content/uploads/2012/01/golden-word11.jpg",
@@ -122,7 +127,8 @@
 			],
 			"albumPurchase": [
 				{}
-			]
+			],
+			"albumOnHomepage": false
 		},
 		{
 			"discCoverImg": "http://whatmetaldetector.com/wp-content/uploads/2013/05/Beach-Metal-Detecting-Treasure.jpg",
@@ -135,7 +141,8 @@
 			],
 			"albumPurchase": [
 				{}
-			]
+			],
+			"albumOnHomepage": false
 		},
 		{
 			"discCoverImg": "http://www.christinajohnston.co.uk/data/images/Screen%20Shot%202017-12-11%20at%2011.40.45.png",
@@ -148,7 +155,8 @@
 			],
 			"albumPurchase": [
 				{}
-			]
+			],
+			"albumOnHomepage": false
 		},
 		{
 			"discCoverImg": "http://www.christinajohnston.co.uk/data/images/Screen%20Shot%202017-12-11%20at%2011.40.29.png",
@@ -161,7 +169,8 @@
 			],
 			"albumPurchase": [
 				{}
-			]
+			],
+			"albumOnHomepage": false
 		}
 	],
 	"concertsHeader": "CONCERTS",
