@@ -84,7 +84,7 @@
 			"albumPurchase": [
 				{}
 			],
-			"albumOnHomepage": true
+			"albumOnHomepage": false
 		},
 		{
 			"discCoverImg": "https://i.pinimg.com/736x/ef/2a/f2/ef2af284e946d777a2085b179668441e--gothic-castle-european-tour.jpg",
@@ -156,7 +156,7 @@
 			"albumPurchase": [
 				{}
 			],
-			"albumOnHomepage": false
+			"albumOnHomepage": true
 		},
 		{
 			"discCoverImg": "http://www.christinajohnston.co.uk/data/images/Screen%20Shot%202017-12-11%20at%2011.40.29.png",
