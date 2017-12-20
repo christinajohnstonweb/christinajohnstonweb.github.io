@@ -430,7 +430,7 @@ footer {
 .news-title { font-size: 1.45rem; font-weight: 700; line-height: 1.8rem; padding: 0 0 0.4rem 0; letter-spacing: 0.05rem; margin-bottom: 0.35rem; }
 .news-details { font-size: 1.3rem; padding: 0 0 1.75rem 0; line-height: 1.6rem; }
 .news-more-details { font-size: 1.3rem; color: #EE2D9F; font-style: italic; text-decoration: none; transition: all 0.3s; }
-.news-more-details:hover { font-weight: 900; color: #EE2D9F; text-decoration: none; }
+.news-more-details:hover { text-decoration: underline; color: #EE2D9F; text-decoration: none; }
 .news-item-section { margin-bottom: 3.7rem; }
 #more_news_btn { padding: 0.6rem 3.5rem; margin: 1.0rem 0 0 0; }
 
