@@ -42,7 +42,8 @@
   .album-name { font-size: 2.4rem; margin-bottom: 0.8rem; }
   .album-distributor { font-size: 1.4rem; }
   /*  Discography buttons.  */
-  .btn-centered { opacity: 0; position: absolute; top: 40%; left: 50%; width: 14.0rem; height: 4.0rem; transform: translate(-50%,-95%); transition: all 0.4s; }
+  .btn-centered { opacity: 1.0; margin-top: 1.0rem; margin-bottom: 1.0rem; max-width: 12.0rem; }
+/*   .btn-centered { opacity: 0; position: absolute; top: 40%; left: 50%; width: 14.0rem; height: 4.0rem; transform: translate(-50%,-95%); transition: all 0.4s; } */
   div[property="album"]:hover a.btn-centered { opacity: 1.0; }
   div[property="photoGallery"]:hover a.btn-centered { opacity: 1.0; }
   div[property="news"]:hover a.btn-centered { opacity: 1.0; }
@@ -76,7 +77,8 @@
 @media all and (min-width: 1650px) and (max-width: 1799px) {
   .discography-image { height: 37.0rem; width: 37.0rem; }
   
-  .btn-centered { opacity: 0; position: absolute; top: 40%; left: 50%; width: 12.0rem; height: 3.0rem; transform: translate(-50%,-95%); transition: all 0.4s; }
+  .btn-centered { opacity: 1.0; margin-top: 1.0rem; margin-bottom: 1.0rem; max-width: 12.0rem; }
+/*   .btn-centered { opacity: 0; position: absolute; top: 40%; left: 50%; width: 12.0rem; height: 3.0rem; transform: translate(-50%,-95%); transition: all 0.4s; } */
   div[property="album"]:hover a.btn-centered { opacity: 1.0; }
   div[property="photoGallery"]:hover a.btn-centered { opacity: 1.0; }
   div[property="news"]:hover a.btn-centered { opacity: 1.0; }
@@ -90,7 +92,8 @@
   .discography-image { height: 33.5rem; width: 33.5rem; }
 /*   .image-wrap { height: 59.3rem; } */
   
-  .btn-centered { opacity: 0; position: absolute; top: 40%; left: 50%; width: 12.0rem; height: 3.0rem; transform: translate(-50%,-95%); transition: all 0.4s; }
+  .btn-centered { opacity: 1.0; margin-top: 1.0rem; margin-bottom: 1.0rem; max-width: 12.0rem; }
+/*   .btn-centered { opacity: 0; position: absolute; top: 40%; left: 50%; width: 12.0rem; height: 3.0rem; transform: translate(-50%,-95%); transition: all 0.4s; } */
   div[property="album"]:hover a.btn-centered { opacity: 1.0; }
   div[property="photoGallery"]:hover a.btn-centered { opacity: 1.0; }
   div[property="news"]:hover a.btn-centered { opacity: 1.0; }
@@ -106,7 +109,8 @@
 
 
 @media all and (min-width: 1200px) and (max-width: 1399px) {
-  .btn-centered { opacity: 0; position: absolute; top: 40%; left: 50%; width: 12.0rem; height: 3.0rem; transform: translate(-50%,-95%); transition: all 0.4s; }
+   .btn-centered { opacity: 1.0; margin-top: 1.0rem; margin-bottom: 1.0rem; max-width: 12.0rem; }
+/*   .btn-centered { opacity: 0; position: absolute; top: 40%; left: 50%; width: 12.0rem; height: 3.0rem; transform: translate(-50%,-95%); transition: all 0.4s; } */
   
   .news-more-btn { top: 30%; }
   
@@ -141,7 +145,8 @@
   .discography-image { height: 23.5rem; width: 23.5rem; }
   
 /*   html { font-size: 62.5%; } */
-  .btn-centered { opacity: 0; position: absolute; top: 35%; left: 50%; width: 12.0rem; height: 3.0rem; transform: translate(-50%,-95%); transition: all 0.4s; }
+  .btn-centered { opacity: 1.0; margin-top: 1.0rem; margin-bottom: 1.0rem; max-width: 12.0rem; }
+/*   .btn-centered { opacity: 0; position: absolute; top: 35%; left: 50%; width: 12.0rem; height: 3.0rem; transform: translate(-50%,-95%); transition: all 0.4s; } */
   
   div[property="album"]:hover a.btn-centered { opacity: 1.0; }
   div[property="photoGallery"]:hover a.btn-centered { opacity: 1.0; }
@@ -159,6 +164,8 @@
   
   /*  Mailchimp component  */
   
+  /*  Proposed fix for known iOS background-position bug.  */
+  .reveal-fixed-bg { background-attachement: scroll; background-size: cover; background-repeat: no-repeat; background-position: center center; border: 2px solid #777; }
 }
 
 
@@ -188,7 +195,8 @@
   /*  If we're on the 'Photos' page center align the gallery name.  */
   .grid-item > div.img-caption { text-align: center; }
   
-  .btn-centered { opacity: 1.0; position: static; top: auto; left: auto; transform: none; margin-top: 1.0rem; margin-bottom: 1.0rem; max-width: 12.0rem; }
+  .btn-centered { opacity: 1.0; margin-top: 1.0rem; margin-bottom: 1.0rem; max-width: 12.0rem; }
+/*   .btn-centered { opacity: 1.0; position: static; top: auto; left: auto; transform: none; margin-top: 1.0rem; margin-bottom: 1.0rem; max-width: 12.0rem; } */
   
   footer { font-size: 124% }
   label[for='mce-EMAIL'], #mc_embed_signup { font-size: 1.5rem; }
