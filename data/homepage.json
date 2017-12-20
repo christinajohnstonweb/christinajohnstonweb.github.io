@@ -55,7 +55,7 @@
 					"serviceLink": "https://www.gitlab.com"
 				}
 			],
-			"albumOnHomepage": true
+			"albumOnHomepage": false
 		},
 		{
 			"discCoverImg": "http://www.christinajohnston.co.uk/data/images/news_embedded.jpg",
