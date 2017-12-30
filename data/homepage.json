@@ -192,7 +192,7 @@
 			"concertDetails": "<p>Detail</p>",
 			"featuredConcert": true,
 			"concertTicketsURL": "https://www.jonlaplante.com",
-			"hiddenConcert": true
+			"hiddenConcert": false
 		},
 		{
 			"concertDatetime": "July 28 / 2017",
