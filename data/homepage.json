@@ -212,7 +212,7 @@
 			"concertName": "Concert",
 			"concertVenue": "To be determined.",
 			"concertLocImg": "http://www.christinajohnston.co.uk/data/images/about_image.jpg",
-			"hiddenConcert": true
+			"hiddenConcert": false
 		}
 	],
 	"galleryVideos": [
