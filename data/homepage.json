@@ -191,7 +191,8 @@
 			"concertLocation": "Framlingham",
 			"concertDetails": "<p>Detail</p>",
 			"featuredConcert": true,
-			"concertTicketsURL": "https://www.jonlaplante.com"
+			"concertTicketsURL": "https://www.jonlaplante.com",
+			"hiddenConcert": false
 		},
 		{
 			"concertDatetime": "July 28 / 2017",
@@ -200,7 +201,8 @@
 			"concertLocImg": "http://www.christinajohnston.co.uk/data/images/concert_thumbnail_2.jpg",
 			"concertVenue": "The Great Hall at Testingham Cathedral",
 			"concertLocation": "Testlingbourough",
-			"concertDetails": "<p>These are more concert details. More, more, more, more, more.</p>"
+			"concertDetails": "<p>These are more concert details. More, more, more, more, more.</p>",
+			"hiddenConcert": false
 		},
 		{
 			"concertDatetime": "December 2018",
@@ -209,7 +211,8 @@
 			"featuredConcert": true,
 			"concertName": "Concert",
 			"concertVenue": "To be determined.",
-			"concertLocImg": "http://www.christinajohnston.co.uk/data/images/about_image.jpg"
+			"concertLocImg": "http://www.christinajohnston.co.uk/data/images/about_image.jpg",
+			"hiddenConcert": true
 		}
 	],
 	"galleryVideos": [
