@@ -46,7 +46,6 @@ function adjustTextSections() {
   $(".news-text").css("width", rowWidth);
 }
 
-
   $( window ).on( "load", function() {
     // Resize info blocks, based on width.
     setTimeout(function(){
@@ -68,6 +67,7 @@ function adjustTextSections() {
       }
       
       // Once everything is loaded, show the page content.
+      $('#loading_overlay').fadeOut();
 //       $(".spinner").hide();
 //       $("#app_page").css("left", "0");
 //       $("#app_page").css("position", "static");
@@ -332,7 +332,8 @@ $(function(){
           var tickets = [];
 
           $.each(data.concerts, function(key, val){
-            if( val.featuredConcert ){
+            if( val.featuredConcert && !val.hiddenConcert ){
+            // if( val.featuredConcert && val.hiddenConcert != "true" ){
               var event_name = val.concertName.toLowerCase() + " " + val.concertLocation.toLowerCase();
               event_name = event_name.replace(/\s/gi, '-').replace(/[^\w-]/gi, '');
 
@@ -416,6 +417,79 @@ $(function(){
         
         
         //********************************************
+        // Photos list building.
+        //********************************************
+        if( $("#photos_items_tmpl").length ){
+          // Get the keys for the News associative array. 
+          var keys = Object.keys(data.photoGallery);
+          var three_col = {col_1: [], col_2: [], col_3: [], str_1: "", str_2: "", str_3: ""};
+          var two_col = {col_1: [], col_2: [], str_1: "", str_2: ""};
+          var single_col = {col: [], str: ""};
+          
+          // Init the iteration counter.
+          var counter = 1;
+          
+          // Iterate the news items and build the Bootstrap masonry.
+          for(x = 0; x <= data.photoGallery.length - 1; x++) {
+            // Get the base template for each col + item.
+            var code = $("#photos_items_tmpl").prop("innerHTML");
+            
+            // Build the masonry brick.
+            // Iterate the photos in the gallery.
+            $.each(data.photoGallery[x].photo, function(key, val){
+              if(val.coverImage){
+                code = code.replace("!!picture!!", val.picture);
+                code = code.replace("!!caption!!", val.caption);
+              }
+            });
+            
+            code = code.replace(/!!gallery_title!!/g, data.photoGallery[x].galleryTitle);
+            code = code.replace(/!!gallery_title_link!!/g, data.photoGallery[x].galleryTitle.toLowerCase().replace(/\s/gi, '-').replace(/[^\w-]/gi, ''));
+
+            // Build the three col masonry.
+            switch(counter){
+              case 1:
+                three_col["col_1"].push(code);
+                two_col["col_1"].push(code);
+                single_col["col"].push(code);
+                break;
+                
+              case 2:
+                three_col["col_2"].push(code);
+                two_col["col_2"].push(code);
+                break;
+                
+              case 3:
+                three_col["col_3"].push(code);
+                break;
+            }
+            
+            if(counter === 3){
+              counter = 1;
+            } else {
+              counter = counter + 1;
+            }
+          }
+          
+          // Build the col strings from the arrays.
+          three_col["str_1"] = '<div class="col-4" property="photoGallery" style="margin-bottom: 50px;">' + three_col["col_1"].join("\n") + '</div>';
+          three_col["str_2"] = '<div class="col-4" property="photoGallery" style="margin-bottom: 50px;">' + three_col["col_2"].join("\n") + '</div>';
+          three_col["str_3"] = '<div class="col-4" property="photoGallery" style="margin-bottom: 50px;">' + three_col["col_3"].join("\n") + '</div>';
+          $("#three_col_str").html('<div class="row">' + three_col["str_1"] + three_col["str_2"] + three_col["str_3"] + '</row>');
+
+          two_col["str_1"] = '<div class="col-6" property="photoGallery" style="margin-bottom: 50px;">' + two_col["col_1"].join("\n") + '</div>';
+          two_col["str_2"] = '<div class="col-6" property="photoGallery" style="margin-bottom: 50px;">' + two_col["col_2"].join("\n") + '</div>';
+          $("#two_col_str").html('<div class="row">' + two_col["str_1"] + two_col["str_2"] + '</row>');
+
+          single_col["str"] = '<div class="col-12" property="photoGallery" style="margin-bottom: 50px;">' + single_col["col"].join("\n") + '</div>';
+          $("#single_col_str").html('<div class="row">' + single_col["str"] + '</row>');
+        }
+        //********************************************
+        // End photos list building.
+        //********************************************
+        
+        
+        //********************************************
         // Photo gallery building.
         //********************************************
         if( $(".gallery-images").length ){
@@ -475,6 +549,76 @@ $(function(){
         // END PHOTO GALLERY BUILDING.
         //********************************************
         
+        
+        //********************************************
+        // News list building.
+        //********************************************
+        if( $("#news_items_tmpl").length ){
+          // Get the keys for the News associative array. 
+          var keys = Object.keys(data.news);
+          var three_col = {col_1: [], col_2: [], col_3: [], str_1: "", str_2: "", str_3: ""};
+          var two_col = {col_1: [], col_2: [], str_1: "", str_2: ""};
+          var single_col = {col: [], str: ""};
+          
+          // Init the iteration counter.
+          var counter = 1;
+          
+          // Iterate the news items and build the Bootstrap masonry.
+          for(x = 0; x <= data.news.length - 1; x++) {
+            // Get the base template for each col + item.
+            var code = $("#news_items_tmpl").prop("innerHTML");
+            
+            // Build the masonry brick.
+            code = code.replace("!!news_image!!", data.news[x].newsImage);
+            code = code.replace("!!news_caption!!", data.news[x].caption);
+            code = code.replace("!!news_date!!", data.news[x].newsDate);
+            code = code.replace(/!!news_title!!/g, data.news[x].newsTitle);
+            code = code.replace(/!!news_title_link!!/g, data.news[x].newsTitle.toLowerCase().replace(/\s/gi, '-').replace(/[^\w-]/gi, ''));
+            code = code.replace("!!news_details_preview!!", data.news[x].newsDetailsPreview);
+            
+            // Build the three col masonry.
+            switch(counter){
+              case 1:
+                three_col["col_1"].push(code);
+                two_col["col_1"].push(code);
+                single_col["col"].push(code);
+                break;
+                
+              case 2:
+                three_col["col_2"].push(code);
+                two_col["col_2"].push(code);
+                break;
+                
+              case 3:
+                three_col["col_3"].push(code);
+                break;
+            }
+            
+            if(counter === 3){
+              counter = 1;
+            } else {
+              counter = counter + 1;
+            }
+          }
+          
+          // Build the col strings from the arrays.
+          three_col["str_1"] = '<div class="col-4" style="margin-bottom: 50px;">' + three_col["col_1"].join("\n") + '</div>';
+          three_col["str_2"] = '<div class="col-4" style="margin-bottom: 50px;">' + three_col["col_2"].join("\n") + '</div>';
+          three_col["str_3"] = '<div class="col-4" style="margin-bottom: 50px;">' + three_col["col_3"].join("\n") + '</div>';
+          $("#three_col_str").html('<div class="row">' + three_col["str_1"] + three_col["str_2"] + three_col["str_3"] + '</row>');
+
+          two_col["str_1"] = '<div class="col-6" style="margin-bottom: 50px;">' + two_col["col_1"].join("\n") + '</div>';
+          two_col["str_2"] = '<div class="col-6" style="margin-bottom: 50px;">' + two_col["col_2"].join("\n") + '</div>';
+          $("#two_col_str").html('<div class="row">' + two_col["str_1"] + two_col["str_2"] + '</row>');
+
+          single_col["str"] = '<div class="col-12" style="margin-bottom: 50px;">' + single_col["col"].join("\n") + '</div>';
+          $("#single_col_str").html('<div class="row">' + single_col["str"] + '</row>');
+        }
+        //********************************************
+        // End news list building.
+        //********************************************
+        
+        
         //********************************************
         // News article building.
         //********************************************
@@ -485,13 +629,40 @@ $(function(){
           var article = $.grep(data.news, function(arr){ return arr.newsTitle.toLowerCase().replace(/\s/gi, '-').replace(/[^\w-]/gi, '') === article_name });
           article = article[0];
           
+          // Get the << PREV and NEXT >> links.
+          var prev_link;
+          var next_link;
+
+          for(x = 0; x <= data.news.length - 1; x++) {
+            if(data.news[x].newsTitle.toLowerCase().replace(/\s/gi, '-').replace(/[^\w-]/gi, '') === article_name) {
+              // Handle when we are on the first result.
+              if(x === 0) {
+                prev_link = data.news[data.news.length - 1].newsTitle.toLowerCase().replace(/\s/gi, '-').replace(/[^\w-]/gi, '');
+                next_link = data.news[x + 1].newsTitle.toLowerCase().replace(/\s/gi, '-').replace(/[^\w-]/gi, '');
+              } else {
+                // Handle when we are on the last result.
+                if(x === data.news.length - 1) {
+                  prev_link = data.news[x - 1].newsTitle.toLowerCase().replace(/\s/gi, '-').replace(/[^\w-]/gi, '');
+                  next_link = data.news[0].newsTitle.toLowerCase().replace(/\s/gi, '-').replace(/[^\w-]/gi, '');
+                }  else { // Neither first nor last result.
+                  prev_link = data.news[x - 1].newsTitle.toLowerCase().replace(/\s/gi, '-').replace(/[^\w-]/gi, '');
+                  next_link = data.news[x + 1].newsTitle.toLowerCase().replace(/\s/gi, '-').replace(/[^\w-]/gi, '');
+                }
+              }
+            }  
+          }
+          
+          // Swap out placeholders with values.
           var code = $("#article_tmpl").prop("innerHTML");
 
           code = code.replace("!!news_image!!", article.newsImage);
           code = code.replace("!!news_title!!", article.newsTitle);
           code = code.replace("!!news_date!!", article.newsDate);
           code = code.replace("!!article_details!!", article.newsDetails);
+          code = code.replace("!!previous_article!!", prev_link);
+          code = code.replace("!!next_article!!", next_link);
           
+          // Write the modified code to the DOM.
           $(".article-container").html(code);
         }
         //********************************************
@@ -519,8 +690,8 @@ $(function(){
         accessToken: '293336116.1677ed0.74da451be9ff45ef8b2a491432b1c54b',
         resolution: "standard_resolution",
         useHttp: "true",
-        limit: 3,
-        template: '<div class="mx-auto"><a href="{{image}}"><div class="img-featured-container d-flex flex-wrap"><div class="img-backdrop"></div><img src="{{image}}" class="img-responsive instagram-images"/></div></a></div>',
+        limit: 5,
+        template: '<div class="instagram-img-container" style=""><a href="{{link}}" target="_BLANK"><div class="img-featured-container d-flex flex-wrap"><div class="img-backdrop"></div><img src="{{image}}" class="img-responsive instagram-images"/></div></a></div>',
         target: "instafeed",
         after: function() {
           // disable button if no more results to load
@@ -529,7 +700,7 @@ $(function(){
           }
         },
       });
-
+    
     feed.run();
   }
   /*********************************************

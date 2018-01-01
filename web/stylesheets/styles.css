@@ -12,6 +12,18 @@ body {
   padding: 0 5.5rem;
 }
 
+/* Loading overlay */
+#loading_overlay {
+  position:fixed;
+  z-index:99999;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  background:rgba(256,256,256,1.0);
+  transition: 1s 0.4s;
+}
+
 /* main { display: none; } */
 .main-content { padding-left: 25px; }
 
@@ -246,6 +258,9 @@ a.nav-link.active { font-weight: 700; }
   margin: 1.8rem;
 }
 
+/* About page sharing icons. */
+.sharing_icons { font-size: 1.0rem; }
+
 /* Media section */
 .media-container {
   text-align: center;
@@ -439,7 +454,7 @@ footer {
 .section-extra-bottom-padding { padding-bottom: 5.5rem; }
 
 /* Instagram section */
-.instagram-images { max-height: 28.0rem; max-width: 28.0rem; }
+.instagram-images { max-height: 22.0rem; max-width: 22.0rem; }
 .instagram-follow-btn { padding: 0.6rem 1.9rem; font-size: 1.3rem; }
 
 /******************************************/

@@ -139,6 +139,11 @@
 } */
 
 
+@media all and (min-width: 1200px) and (max-width: 1260px) {
+  /*  Instagram image size.  */
+  .instagram-images { max-height: 20.0rem; max-width: 20.0rem; }
+}
+
 
 @media all and (min-width: 992px) and (max-width: 1199px) {
   /*  Discography section.  */
@@ -165,7 +170,10 @@
   /*  Mailchimp component  */
   
   /*  Proposed fix for known iOS background-position bug.  */
-  .reveal-fixed-bg { background-attachement: scroll; background-size: cover; background-repeat: no-repeat; background-position: center center; border: 2px solid #777; }
+  .reveal-fixed-bg { background-attachement: scroll; background-size: cover; background-repeat: no-repeat; background-position: center center; }
+  
+  /*  Instagram image size.  */
+  .instagram-images { max-height: 16.4rem; max-width: 16.4rem; }
 }
 
 
@@ -183,6 +191,9 @@
   
   /*  About section  */
   .about-content { overflow: auto; display: block; }
+  
+  /* About page sharing icons. */
+  .sharing_icons { font-size: 1.5rem; }
   
   /*  Remove the padding around text-section - at this size, it creates an odd effect.  */
   .text-section { padding: 1.5rem 2.0rem; }
@@ -207,6 +218,9 @@
   
   /*  Photo Gallery - remove top margin from carousel.  */
   .photo-gallery-el-container { padding-top: 4px; }
+  
+  /*  Instagram image size.  */
+  .instagram-images { max-height: 14.0rem; max-width: 14.0rem; }
   
   /*  Photo Gallery - make off white bg full width.  */
 /*   .photo-gallery-container-fluid { padding: 0; } */
@@ -257,6 +271,9 @@
   
    /*  Photo Gallery - remove top margin from carousel.  */
   .photo-gallery-el-container { padding-top: 4px; }
+  
+  /*  Instagram image size.  */
+  .instagram-images { max-height: 10.0rem; max-width: 10.0rem; }
 } 
 
 
@@ -308,6 +325,11 @@
   
   /*  Footer - Social icon alignment  */
   #social_btns_container { margin: 0 auto; }
+  
+  /*  Instagram - hide the 5th item and display as grid.  */
+  .instagram-img-container:last-child { display: none; }
+  
+  #instafeed { width: 88%; }
 }
 
 
@@ -353,6 +375,8 @@
   
   /*  Footer - Social icon alignment  */
   #social_btns_container { margin: 0 auto; }
+  
+  #instafeed { width: 45%; }
 }
 
 /******************************************/

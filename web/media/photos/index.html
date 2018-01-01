@@ -109,7 +109,8 @@
     </div>
   </div>
   
-<!--   <div class="container">
+<!--  Bootstrap cols  -->
+  <div class="container photos-container">
     <div class="row">
       <div class="col-4 [if($index > 5, hiddenItem)]" mv-multiple property="photoGallery">
         <section property="photo" mv-if="coverImage=true" mv-multiple style="position: relative;">
@@ -119,9 +120,10 @@
         <div class="img-caption" style="width: 100%; display: flex; justify-content: center;"><strong>[galleryTitle]</strong></div>
       </div>
     </div>
-  </div> -->
+  </div>
   
-  <div style="display: flex; justify-content: center; flex-direction: row;">
+  <!--  Masonry.js  -->
+<!--   <div style="display: flex; justify-content: center; flex-direction: row;">
     <div class="grid">
       <div class="grid-sizer"></div>
       <div class="grid-item [if($index > 5, hiddenItem)]" id="gallery_list" mv-multiple property="photoGallery">
@@ -130,7 +132,7 @@
         </section>
         <a href=/christinajohnstonweb.github.io/web/media/photos/gallery data-gallery="[idify(galleryTitle)]" class="mx-auto d-flex btn-black btn-centered photo-more-btn">MORE</a>
         <div class="img-caption"><strong>[galleryTitle]</strong></div>
-      </div>
+      </div> -->
 
       <!-- For some reason, Masonry.js needs a non-dynamic image when used with Mavo.io -->
 <!--       <div class="grid-item" property="testTestTest" style="visibility: hidden;">
@@ -174,8 +176,8 @@
   </div>
 
   <div class="row">
-    <div class="col" style="text-align: center;">
-      <div class="d-flex flex-wrap" id="instafeed" style="margin-bottom: 2.0rem;">
+    <div class="col d-flex flex-wrap" style="text-align: center;">
+      <div class="d-flex flex-wrap mx-auto" id="instafeed" style="margin-bottom: 2.0rem;">
       </div>
 <!--       <a href="javascript:void(0);" class="btn-black instagram-follow-btn">FOLLOW ME</a> -->
     </div>
@@ -242,6 +244,20 @@
       </div>
     </div>
 </footer>
+
+<script type="text/template" id="photos_items_tmpl">
+  <div style="margin-bottom: 50px;">
+    <section style="position: relative;">
+      <img src="!!picture!!" class="" style="width: 100%; height: 100%;" alt="!!caption!!" />
+    </section>
+    <a href=/christinajohnstonweb.github.io/web/media/photos/gallery data-gallery="!!gallery_title_link!!" class="mx-auto d-flex btn-black btn-centered photo-more-btn">MORE</a>
+    <div class="img-caption" style="width: 100%; display: flex; justify-content: center;"><strong>!!gallery_title!!</strong></div>
+  </div>
+</script>
+
+<script type="text/template" id="three_col_str"></script>
+<script type="text/template" id="two_col_str"></script>
+<script type="text/template" id="single_col_str"></script>
         
             <section id="brand_tag" style="margin-top: 0.5rem;">
               ©2017 Christina Johnston / All Rights Reserved / <a href="http://likelike.cz/en/" style="color: #000;" target="_BLANK">designed by likelike</a>

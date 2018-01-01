@@ -45,7 +45,10 @@
     </script>
   </head>
   <body>
-<!--     <div class="spinner"></div> -->
+    <div id="loading_overlay">
+      <div class="spinner"></div>
+      <div stlye="text-align: center; width: 100%; height: 100%;">CHRISTINAJOHNSTON.CO.UK</div>
+    </div>
     <main mv-app="homepage" mv-storage="https://github.com/christinajohnstonweb/christinajohnstonweb.github.io/data" mv-plugins="tinymce" mv-bar="none">
       <div class="container-fluid" id="app_page"><!--   style="position: absolute; left: -9999px;"  -->
         <div class="row">
@@ -123,7 +126,7 @@
       <div class="col off-white-bg" style="width: 100%; padding: 3% 0 8% 0; color: #000000; text-align: center; overflow-y: auto; line-height: 1.96rem; font-size: 1.8rem; display: table;">
         <p property="aboutContent" class="tinymce"></p>
         <div style="display: flex; content-align: center; justify-content: center; font-size: 1.0rem; margin-top: 3.0rem;"><small>SHARE:</small></div>
-        <div style="display: flex; content-align: center; justify-content: center;"><small id="sharing_icons" style="font-size: 1.0rem;"></small></div>
+        <div style="display: flex; content-align: center; justify-content: center;"><small id="sharing_icons"></small></div>
 <!--         <div style="display: flex; content-align: center; justify-content: center;"><small><a href="#" class="social-share-icons"><span class="fa fa-pinterest-p"></span></a><a href="#" class="social-share-icons"><span class="fa fa-twitter"></span></a><a href="#" class="social-share-icons"><span class="fa fa-facebook"></span></a></small></div> -->
       </div>
     </div>
@@ -163,8 +166,8 @@
   </div>
 
   <div class="row">
-    <div class="col" style="text-align: center;">
-      <div class="d-flex flex-wrap" id="instafeed" style="margin-bottom: 2.0rem;">
+    <div class="col d-flex flex-wrap" style="text-align: center;">
+      <div class="d-flex flex-wrap mx-auto" id="instafeed" style="margin-bottom: 2.0rem;">
       </div>
 <!--       <a href="javascript:void(0);" class="btn-black instagram-follow-btn">FOLLOW ME</a> -->
     </div>

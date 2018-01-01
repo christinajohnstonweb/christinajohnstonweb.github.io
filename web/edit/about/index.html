@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:url"           content="https://htmlsandbox-jonlaplante530707.codeanyapp.com/edit/albums/" />
+    <meta property="og:url"           content="https://htmlsandbox-jonlaplante530707.codeanyapp.com/edit/about/" />
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="Christina Johnston, Coloratura Soprano" />
     <meta property="og:description"   content="" />
@@ -74,52 +74,42 @@
         <div class="row">
           <div class="col main-content">
 
-            <h1>Edit Discography</h1>
-
-<section class="off-white-bg">
+            <h1>About Content Editor</h1>
+<section class="about-page-editor" style="margin-bottom: 5.0rem;">
+  <h3>About Page Content</h3>
+  <small><strong><em>NOTE:</em></strong> To insert line breaks, use the <strong>&lt;SHIFT&gt;</strong> + <strong>&lt;Enter&gt;</strong> keys.</small>
+  <div class="container-fluid">
     <div class="row">
-      <div class="col">
-        <section class="discography-text" property="discographyText" style="width: 100%; text-align: center;" class="">
-          <div><strong>Blessing NEW ALBUM</strong></div>
-          <div>The State Opera, Prague as The Queen of the Night</div>
-          <div>Mozart’s Die Zauberflöte and Adelein Strauss’s Die Fledermaus.</div>
-        </section>
+      <div class="col off-white-bg" style="width: 100%; padding: 3% 0 8% 0; color: #000000; text-align: center; overflow-y: auto; line-height: 1.96rem; font-size: 1.8rem; display: table;">
+        <p property="aboutContent" class="tinymce"></p>
+        <div style="display: flex; content-align: center; justify-content: center; font-size: 1.0rem; margin-top: 3.0rem;"><small>SHARE:</small></div>
+        <div style="display: flex; content-align: center; justify-content: center;"><small id="sharing_icons" style="font-size: 1.0rem;"></small></div>
       </div>
     </div>
-    <div class="d-flex flex-wrap"><!--  style="padding: 0 9.5rem;" -->
-      <div class="mx-auto" style="margin: 2.0rem; text-align: center;" mv-multiple property="album">
-        <img property="discCoverImg" src=/christinajohnstonweb.github.io/web/images/album_cover_image.jpg alt="" class="mx-auto d-flex discography-image"/>
-<!--         <a href=/christinajohnstonweb.github.io/web/discography/solo/album data-album="[idify(discName)]" class="mx-auto btn-black discography-more-btn">MORE</a> -->
-        <section class="album-details" style="line-height: 0.75rem; text-align: center;">
-          <small property="discReleaseDate" style="color: #EE2D9F;">12/13/2017</small>
-          <h2 property="discName" class="album-name" style="font-weight: bolder;">BLESSING</h2>
-          <small property="discDistributor" class="album-distributor" style="color: #5d5d5d;">Sony Music</small>
-        </section>
-        
-        <p>
-          <div class="fa [if(albumOnHomepage, 'fa-check', 'fa-times')]" style="font-size: 2.0rem; color: [if(albumOnHomepage, 'green', 'red')];">&nbsp;<label for="[property='albumOnHomepage']">Featured on homepage?</label><input type="checkbox" property="albumOnHomepage" class="mv-logged-in" /><p/></div>
-        </p>
-        
-        <span class="mv-logged-in" style="font-size: 1.5rem;"><input type="checkbox" property="discIsSolo" />&nbsp;<strong>Solo</strong> album? (Instead of <em>featured</em>)</span>
-        <div class="tinymce" property="discDescr" style="text-align: center; padding: 1.0rem 20.0rem; font-size: 1.5rem;"></div>
-        <h2>Streaming Options</h2>
-        <div property="albumStreaming" style="margin: 20px 0; padding: 10px; display: flex; flex-wrap: row; justify-content: center;" mv-multiple>
-          <div style="padding: 10px; width: 200px; height: 70px; position: relative; display: flex; flex-wrap: row; justify-content: center; align-items: center;"><small style="position: absolute; top: 3px; left: 3px;">Service logo image</small><img property="serviceLogo" style="max-width:150px; max-height: 100px;" src="http://www.christinajohnston.co.uk/data/images/itunes_logo_black.png" class="" aria-label="Service logo"></div>
-          <div style=" position: relative; height: 70px; padding: 10px; background-color: #ddd;; display: flex; flex-wrap: row; justify-content: center; align-items: center;"><small style="position: absolute; top: 3px; left: 3px;">Song link</small><input placeholder="i.e. https://www.songsale.com/christinajohnston/song" type="text" style="width: 200px;" class="form-control" property="serviceLink" mv-mode="edit" aria-label="Service link"></div>
-          <div style="padding: 10px; width: 180px; position: relative; display: flex; flex-wrap: row; justify-content: center; align-items: center;"><small style="position: absolute; top: 3px; left: 3px;">Test link</small><a target="_BLANK" href="[serviceLink]"><img src="[serviceLogo]" style="max-width: 100px; max-height: 70px;"></a></div>
-        </div>
-        
-        <h2>Purchase Options</h2>
-        <div property="albumPurchase" style="margin: 20px 0; padding: 10px; display: flex; flex-wrap: row; justify-content: center;" mv-multiple>
-          <div style="padding: 10px; width: 200px; height: 70px; position: relative; display: flex; flex-wrap: row; justify-content: center; align-items: center;"><small style="position: absolute; top: 3px; left: 3px;">Service logo image</small><img property="serviceLogo" style="max-width:150px; max-height: 100px;" aria-label="Service logo"></div>
-          <div style=" position: relative; height: 70px; padding: 10px; background-color: #ddd;; display: flex; flex-wrap: row; justify-content: center; align-items: center;"><small style="position: absolute; top: 3px; left: 3px;">Song link</small><input placeholder="i.e. https://www.songsale.com/christinajohnston/song" type="text" style="width: 200px;" class="form-control" property="serviceLink" mv-mode="edit" aria-label="Service link"></div>
-          <div style="padding: 10px; width: 180px; position: relative; display: flex; flex-wrap: row; justify-content: center; align-items: center;"><small style="position: absolute; top: 3px; left: 3px;">Test link</small><a target="_BLANK" href="[serviceLink]"><img src="[serviceLogo]" style="max-width: 100px; max-height: 70px;"></a></div>
-        </div>
-        
+  </div>
+</section>
 
+<section class="about-section-editor">
+  <h3>About Section Content</h3>
+  <small><strong><em>NOTE:</em></strong> To insert line breaks, use the <strong>&lt;SHIFT&gt;</strong> + <strong>&lt;Enter&gt;</strong> keys.</small>
+  <section class="content-section" id="about">
+  <div class="row justify-content-center">
+    <h1 class="section-header" property="aboutHeader">ABOUT</h1>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row" id="about_row">
+      <div class="col-6 off-white-bg about-content">
+        <div class="about-wrapper">
+          <p property="aboutTruncatedContent" class="tinymce" style="margin-bottom: 5.0rem;"></p>
+          <a href=/christinajohnstonweb.github.io/web/about style="margin: 5.0rem auto 0 auto; border-radius: 0;" class="btn-black">MORE</a>
+        </div>
       </div>
+      <div class="col-6 black-bg remove-padding"><img src=/christinajohnstonweb.github.io/web/images/about_image_1340.jpg alt="About Christina Johnston, Coloratura Soprano" class="img-fluid section-img" property="aboutImage" /></div>
     </div>
-  </section>
+  </div>
+</section>
+</section>
         
             <section id="brand_tag" style="margin-top: 0.5rem;">
               ©2017 Christina Johnston / All Rights Reserved / <a href="http://likelike.cz/en/" style="color: #000;" target="_BLANK">designed by likelike</a>
