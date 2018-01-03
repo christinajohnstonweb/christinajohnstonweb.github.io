@@ -72,7 +72,7 @@
 				{}
 			],
 			"albumOnHomepage": true,
-			"hiddenAlbum": true
+			"hiddenAlbum": false
 		},
 		{
 			"discCoverImg": "https://comps.canstockphoto.com/charles-bridge-in-prague-at-night-clip-art-vector_csp33548965.jpg",
@@ -103,7 +103,7 @@
 				{},
 				{}
 			],
-			"albumOnHomepage": false,
+			"albumOnHomepage": true,
 			"hiddenAlbum": false
 		},
 		{
@@ -164,7 +164,7 @@
 				{}
 			],
 			"albumOnHomepage": true,
-			"hiddenAlbum": false
+			"hiddenAlbum": true
 		},
 		{
 			"discCoverImg": "http://www.christinajohnston.co.uk/data/images/Screen%20Shot%202017-12-11%20at%2011.40.29.png",
