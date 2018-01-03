@@ -97,7 +97,11 @@
         </section>
         
         <p>
-          <div class="fa [if(albumOnHomepage, 'fa-check', 'fa-times')]" style="font-size: 2.0rem; color: [if(albumOnHomepage, 'green', 'red')];">&nbsp;<label for="[property='albumOnHomepage']">Featured on homepage?</label><input type="checkbox" property="albumOnHomepage" class="mv-logged-in" /><p/></div>
+          <span class="fa [if(hiddenAlbum, 'fa-check', 'fa-times')]" style="font-size: 2.0rem; color: [if(hiddenAlbum, 'green', 'red')];"></span>&nbsp;<label for="[property='hiddenAlbum']" style="font-size: 1.5rem;">HIDE this album from ALL pages?</label>&nbsp;<input type="checkbox" property="hiddenAlbum" />
+        </p>
+        
+        <p>
+          <span class="fa [if(albumOnHomepage, 'fa-check', 'fa-times')]" style="font-size: 2.0rem; color: [if(albumOnHomepage, 'green', 'red')];"></span>&nbsp;<label for="[property='albumOnHomepage']">Featured on homepage?</label><input type="checkbox" property="albumOnHomepage" class="mv-logged-in" />
         </p>
         
         <span class="mv-logged-in" style="font-size: 1.5rem;"><input type="checkbox" property="discIsSolo" />&nbsp;<strong>Solo</strong> album? (Instead of <em>featured</em>)</span>

@@ -439,6 +439,8 @@ footer {
 .tbl-concert-venue { margin: 1.5rem 0; }
 .tbl-concert-location {  }
 
+.justify-content-center { margin: -0.5rem 0 3.25rem 0; text-align: center; }
+
 /* News section */
 .news-text { padding: 4.5rem 5.56rem 0 6.56rem; }
 .news-date { color: #5D5D5D; /* #212529; */ font-size: 1.1rem; font-style: italic; padding: 0 0 0.5rem 0; }
