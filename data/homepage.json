@@ -200,7 +200,7 @@
 			"concertLocation": "Framlingham",
 			"concertDetails": "<p>Detail</p>",
 			"featuredConcert": true,
-			"concertTicketsURL": "https://www.jonlaplante.com",
+			"concertTicketsURL": "http://www.jonlaplante.com",
 			"hiddenConcert": false
 		},
 		{
