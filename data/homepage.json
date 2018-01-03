@@ -72,7 +72,7 @@
 				{}
 			],
 			"albumOnHomepage": true,
-			"hiddenAlbum": false
+			"hiddenAlbum": true
 		},
 		{
 			"discCoverImg": "https://comps.canstockphoto.com/charles-bridge-in-prague-at-night-clip-art-vector_csp33548965.jpg",
