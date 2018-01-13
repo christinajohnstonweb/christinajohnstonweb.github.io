@@ -541,5 +541,10 @@
 			"image": "http://www.christinajohnston.co.uk/data/images/media_video_slider_image_1%20-%20big.jpg"
 		}
 	],
-	"aboutTruncatedContent": "<strong>FAR far Away<br /><br /></strong>Far far away, behind the word mountains, far from the countries Vokalia&nbsp;and Consonantia, there live the blind texts.<br /><br />Separated they live in <strong>Bookmarksgrove&nbsp;</strong>right at the coast of the Semantics, a large language ocean.<br /><br />A small river named Duden flows by their place and supplies it with the necessary regelialia.<br /><br />It is a paradisematic country, in which roasted parts of sentences fly into your mouth.<br /><br /><em>I need a chance just to get away...</em>"
+	"aboutTruncatedContent": "<strong>FAR far Away<br /><br /></strong>Far far away, behind the word mountains, far from the countries Vokalia&nbsp;and Consonantia, there live the blind texts.<br /><br />Separated they live in <strong>Bookmarksgrove&nbsp;</strong>right at the coast of the Semantics, a large language ocean.<br /><br />A small river named Duden flows by their place and supplies it with the necessary regelialia.<br /><br />It is a paradisematic country, in which roasted parts of sentences fly into your mouth.<br /><br /><em>I need a chance just to get away...</em>",
+	"concertEventCarousel": [
+		{
+			"image": "http://www.christinajohnston.co.uk/data/images/concerts_slider_image_2.jpg"
+		}
+	]
 }
