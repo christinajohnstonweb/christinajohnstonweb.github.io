@@ -106,6 +106,9 @@ $(function(){
     }
   });
   
+  // Set up the parallax "Media" section for mobile devices.
+  // $("#media").stellar({ verticalScrolling: true, responsive: true, parallaxElements: true });
+  
   /*********************************************
   // Initialize social icons.
   *********************************************/
@@ -691,7 +694,8 @@ $(function(){
         resolution: "standard_resolution",
         useHttp: "true",
         limit: 5,
-        template: '<div class="instagram-img-container" style=""><a href="{{link}}" target="_BLANK"><div class="img-featured-container d-flex flex-wrap"><div class="img-backdrop"></div><img src="{{image}}" class="img-responsive instagram-images"/></div></a></div>',
+        template: '<div class="instagram-img-container" style=""><a href="{{link}}" target="_BLANK"><div class="img-backdrop"></div><img src="{{image}}" class="img-responsive instagram-images"/></a></div>',
+//         template: '<div class="instagram-img-container" style=""><a href="{{link}}" target="_BLANK"><div class="img-featured-container d-flex flex-wrap"><div class="img-backdrop"></div><img src="{{image}}" class="img-responsive instagram-images"/></div></a></div>',
         target: "instafeed",
         after: function() {
           // disable button if no more results to load

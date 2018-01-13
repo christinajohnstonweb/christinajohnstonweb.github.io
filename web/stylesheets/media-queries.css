@@ -7,6 +7,7 @@
 /*   footer { font-size: 134%; } */
   
 /*   .image-wrap { height: 1077px; } */
+  #instafeed { display: flex; flex-direction: row; justify-content: center; align-items: center; }
 }
 
 
@@ -18,6 +19,8 @@
 /*   .image-wrap { height: 84.7rem; } */
   
   .discography-image { height: 40.5rem; width: 40.5rem; }
+  
+  #instafeed { display: flex; flex-direction: row; justify-content: center; align-items: center; }
 }
 
 
@@ -71,6 +74,8 @@
   .news-title { font-size: 2.0rem; line-height: 2.15rem; }
   .news-details { font-size: 1.8rem; line-height: 1.9rem; }
   .news-more-details { font-size: 1.9rem; }
+  
+  #instafeed { display: flex; flex-direction: row; justify-content: center; align-items: center; }
 }
 
 
@@ -82,6 +87,8 @@
   div[property="album"]:hover a.btn-centered { opacity: 1.0; }
   div[property="photoGallery"]:hover a.btn-centered { opacity: 1.0; }
   div[property="news"]:hover a.btn-centered { opacity: 1.0; }
+  
+  #instafeed { display: flex; flex-direction: row; justify-content: center; align-items: center; }
 }
 
 
@@ -97,6 +104,8 @@
   div[property="album"]:hover a.btn-centered { opacity: 1.0; }
   div[property="photoGallery"]:hover a.btn-centered { opacity: 1.0; }
   div[property="news"]:hover a.btn-centered { opacity: 1.0; }
+  
+  #instafeed { display: flex; flex-direction: row; justify-content: center; align-items: center; }
 }
 
 
@@ -104,6 +113,8 @@
 @media all and (min-width: 1350px) and (max-width: 1399px) {
   /*  Discography section.  */
   .discography-image { height: 29.5rem; width: 29.5rem; }
+  
+  #instafeed { display: flex; flex-direction: row; justify-content: center; align-items: center; }
 }
 
 
@@ -127,6 +138,8 @@
   
   /*  In the photo gallery adjust the text margin. */
   #photo_gallery_description { padding: 1.0rem 10.0rem; }
+  
+  #instafeed { display: flex; flex-direction: row; justify-content: center; align-items: center; }
 }
 
 
@@ -142,6 +155,7 @@
 @media all and (min-width: 1200px) and (max-width: 1260px) {
   /*  Instagram image size.  */
   .instagram-images { max-height: 20.0rem; max-width: 20.0rem; }
+  #instafeed { display: flex; flex-direction: row; justify-content: center; align-items: center; }
 }
 
 
@@ -173,7 +187,8 @@
   .reveal-fixed-bg { background-attachement: scroll; background-size: cover; background-repeat: no-repeat; background-position: center center; }
   
   /*  Instagram image size.  */
-  .instagram-images { max-height: 16.4rem; max-width: 16.4rem; }
+  .instagram-images { max-height: 16.0rem; max-width: 16.0rem; }
+  #instafeed { display: flex; flex-direction: row; justify-content: center; align-items: center; }
 }
 
 
@@ -221,6 +236,7 @@
   
   /*  Instagram image size.  */
   .instagram-images { max-height: 14.0rem; max-width: 14.0rem; }
+  #instafeed { display: flex; flex-direction: row; justify-content: center; align-items: center; }
   
   /*  Photo Gallery - make off white bg full width.  */
 /*   .photo-gallery-container-fluid { padding: 0; } */
@@ -250,7 +266,7 @@
   
   /*  Instagram image size  */
   .instagram-images { max-height: 15.0rem; max-width: 15.0rem; }
-  
+    
   /*  Concerts  */
   .td-concert-spacer { display: none; }
   #concert_cards { display: inline; }
@@ -274,6 +290,7 @@
   
   /*  Instagram image size.  */
   .instagram-images { max-height: 10.0rem; max-width: 10.0rem; }
+  #instafeed { display: flex; flex-direction: row; justify-content: center; align-items: center; }
 } 
 
 
@@ -329,7 +346,8 @@
   /*  Instagram - hide the 5th item and display as grid.  */
   .instagram-img-container:last-child { display: none; }
   
-  #instafeed { width: 88%; }
+  #instafeed { margin-bottom: 2.0rem; display: flex; justify-content: center; flex-direction: column; align-items: center; }
+/*   #instafeed { width: 88%; } */
 }
 
 
@@ -376,7 +394,8 @@
   /*  Footer - Social icon alignment  */
   #social_btns_container { margin: 0 auto; }
   
-  #instafeed { width: 45%; }
+  #instafeed { margin-bottom: 2.0rem; display: flex; justify-content: center; flex-direction: column; align-items: center; }
+/*   #instafeed { width: 45%; } */
 }
 
 /******************************************/
