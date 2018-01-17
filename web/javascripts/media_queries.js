@@ -5,7 +5,20 @@ function responsiveTest(){
   
 //   $(".section-img").parent().parent().css( "height", $(".section-img").width() );
 //   $(".section-img").parent().prev().css( "height", $(".section-img").width() );
-
+  if (window.matchMedia("(max-width: 575px)").matches || window.matchMedia("(device-max-width: 575px)").matches) {
+    // Handle news cols.
+    console.log("Should be single col.");
+    $(".news-container").html( $("#single_col_str").prop("innerHTML") );
+    $(".photos-container").html( $("#single_col_str").prop("innerHTML") );
+  }
+  
+  // footer-newsletter-container
+  if( window.matchMedia("(max-width: 768px)").matches || window.matchMedia("(device-max-width: 768px)").matches ) {
+    // Centered footer.
+    $(".footer-newsletter-container.col-11").removeClass("col-11");
+    $(".footer-newsletter-container").addClass("col-12");
+  }
+  
   if (window.matchMedia("(min-width: 769px)").matches || window.matchMedia("(device-min-width: 769px)").matches) {
   /* the viewport is at least 768 pixels wide */
     $(".section-img").parent().removeClass("col-12");
@@ -27,14 +40,18 @@ function responsiveTest(){
     $("section.video > iframe").css("width", "375px");
     $("section.video > iframe").css("height", "211px");
     
+    // Centered footer.
+    $(".footer-newsletter-container.col-12").removeClass("col-12");
+    $(".footer-newsletter-container").addClass("col-11");
+    
     // Handle news cols.
-    console.log("Going for 2 col.");
-    $(".news-container").html( $("#two_col_str").prop("innerHTML") );
-    $(".photos-container").html( $("#two_col_str").prop("innerHTML") );
+//     console.log("Should be single col(769px).");
+//     $(".news-container").html( $("#single_col_str").prop("innerHTML") );
+//     $(".photos-container").html( $("#single_col_str").prop("innerHTML") );
    }
   
   /* the viewport is 768 pixels or less wide */
-  if (window.matchMedia("(max-width: 768px)").matches || window.matchMedia("(device-max-width: 768px)").matches) {
+  if ((window.matchMedia("(max-width: 768px)").matches || window.matchMedia("(device-max-width: 768px)").matches) && window.matchMedia("(min-width: 576px)").matches || window.matchMedia("(device-min-width: 576px)").matches) {
   /* the viewport is at least 768 pixels wide */
     $(".section-img").parent().addClass("col-12");
     $(".section-img").parent().prev().addClass("col-12");
@@ -72,26 +89,23 @@ function responsiveTest(){
       // Handle video sizes.
       $("section.video > iframe").css("width", "300px");
       $("section.video > iframe").css("height", "169px");
-      
-      // Handle news cols.
-      console.log("Going to single col.");
-      $(".news-container").html( $("#single_col_str").prop("innerHTML") );
-      $(".photos-container").html( $("#single_col_str").prop("innerHTML") );
     }
+    
+    // Handle news cols.
+    console.log("Two col.");
+    $(".news-container").html( $("#two_col_str").prop("innerHTML") );
+    $(".photos-container").html( $("#two_col_str").prop("innerHTML") );
   }
   
   // If the viewport < 850px, make the footer contact info stacked instead of horizontal.
   if( window.matchMedia("(max-width: 850px)".matches) ){
-  //     console.log("Smaller than 850px.");
-    
     // Handle news cols.
     $(".news-container").html( $("#two_col_str").prop("innerHTML") );
     $(".photos-container").html( $("#two_col_str").prop("innerHTML") );
   }
   
-  if( window.matchMedia("(min-width: 851px)".matches) || window.matchMedia("(device-min-width: 851px)").matches ) {
+  if( window.matchMedia("(min-width: 851px)").matches || window.matchMedia("(device-min-width: 851px)").matches ) {
     // Handle news cols.
-    console.log("3 cols");
     $(".news-container").html( $("#three_col_str").prop("innerHTML") );
     $(".photos-container").html( $("#three_col_str").prop("innerHTML") );
   }

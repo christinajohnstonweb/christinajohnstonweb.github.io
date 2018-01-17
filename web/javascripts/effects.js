@@ -38,6 +38,11 @@ $(function(){
         current_page = "concerts";
       break;
       
+      case("event"):
+        $('.nav-link:contains("CONCERTS")').addClass("active");
+        current_page = "event";
+      break;
+      
       case("photos"):
         $('.nav-link:contains("MEDIA")').addClass("active");
         current_page = "photos";

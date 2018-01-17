@@ -443,6 +443,7 @@ footer {
 .concert-info-a { text-align: right; padding-right: 2.0rem; color: #212529; transition: all 0.3s; }
 .concert-info-a:hover { color: #EE2D9F; text-decoration: none; }
 .concert-more-btn-card:hover { background-color: #EE2D9F; color: #fff; }
+.concert-event-header { padding-top: 3.5rem; }
 
 .tbl-concert-date { margin-bottom: 3.2rem; font-weight: 700; letter-spacing: 0.12rem; }
 .tbl-concert-name { font-weight: 700; margin: 1.5rem 0; letter-spacing: 0.10rem; }
@@ -460,6 +461,7 @@ footer {
 .news-more-details:hover { text-decoration: underline; color: #EE2D9F; }
 .news-item-section { margin-bottom: 3.7rem; }
 #more_news_btn { padding: 0.6rem 3.5rem; margin: 1.0rem 0 0 0; }
+.news-container { padding: 4.0rem; }
 
 
 /* Brand tagging */

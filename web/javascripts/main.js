@@ -167,6 +167,10 @@ $(function(){
                 car_arr = data.concertsCarousel;
               break;
               
+              case("event"):
+                car_arr = data.concertEventCarousel;
+              break;
+              
               case("photos"):
                 car_arr = data.photosCarousel;
               break;
@@ -431,6 +435,7 @@ $(function(){
           
           // Init the iteration counter.
           var counter = 1;
+          var col_counter_2 = "col_1";
           
           // Iterate the news items and build the Bootstrap masonry.
           for(x = 0; x <= data.photoGallery.length - 1; x++) {
@@ -453,17 +458,20 @@ $(function(){
             switch(counter){
               case 1:
                 three_col["col_1"].push(code);
-                two_col["col_1"].push(code);
+                two_col[col_counter_2].push(code);
                 single_col["col"].push(code);
                 break;
                 
               case 2:
                 three_col["col_2"].push(code);
-                two_col["col_2"].push(code);
+                two_col[col_counter_2].push(code);
+                single_col["col"].push(code);
                 break;
                 
               case 3:
                 three_col["col_3"].push(code);
+                two_col[col_counter_2].push(code);
+                single_col["col"].push(code);
                 break;
             }
             
@@ -472,6 +480,9 @@ $(function(){
             } else {
               counter = counter + 1;
             }
+            
+            // Toggle col on 2 col layout.
+            if(col_counter_2 === "col_1") { col_counter_2 = "col_2" } else { col_counter_2 = "col_1" }
           }
           
           // Build the col strings from the arrays.
@@ -484,8 +495,10 @@ $(function(){
           two_col["str_2"] = '<div class="col-6" property="photoGallery" style="margin-bottom: 50px;">' + two_col["col_2"].join("\n") + '</div>';
           $("#two_col_str").html('<div class="row">' + two_col["str_1"] + two_col["str_2"] + '</row>');
 
+//           single_col["str"] = '<div class="col-12" property="photoGallery" style="margin-bottom: 50px;">' + three_col["col_1"].join("\n") + three_col["col_2"].join("\n") + three_col["col_3"].join("\n") + '</div>';
           single_col["str"] = '<div class="col-12" property="photoGallery" style="margin-bottom: 50px;">' + single_col["col"].join("\n") + '</div>';
           $("#single_col_str").html('<div class="row">' + single_col["str"] + '</row>');
+
         }
         //********************************************
         // End photos list building.
@@ -565,6 +578,7 @@ $(function(){
           
           // Init the iteration counter.
           var counter = 1;
+          var col_counter_2 = "col_1";
           
           // Iterate the news items and build the Bootstrap masonry.
           for(x = 0; x <= data.news.length - 1; x++) {
@@ -583,17 +597,20 @@ $(function(){
             switch(counter){
               case 1:
                 three_col["col_1"].push(code);
-                two_col["col_1"].push(code);
+                two_col[col_counter_2].push(code);
                 single_col["col"].push(code);
                 break;
                 
               case 2:
                 three_col["col_2"].push(code);
-                two_col["col_2"].push(code);
+                two_col[col_counter_2].push(code);
+                single_col["col"].push(code);
                 break;
                 
               case 3:
                 three_col["col_3"].push(code);
+                two_col[col_counter_2].push(code);
+                single_col["col"].push(code);
                 break;
             }
             
@@ -602,7 +619,11 @@ $(function(){
             } else {
               counter = counter + 1;
             }
+            
+            // Toggle col on 2 col layout.
+            if(col_counter_2 === "col_1") { col_counter_2 = "col_2" } else { col_counter_2 = "col_1" }  
           }
+          
           
           // Build the col strings from the arrays.
           three_col["str_1"] = '<div class="col-4" style="margin-bottom: 50px;">' + three_col["col_1"].join("\n") + '</div>';

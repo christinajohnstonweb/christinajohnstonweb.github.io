@@ -238,6 +238,8 @@
   .instagram-images { max-height: 14.0rem; max-width: 14.0rem; }
   #instafeed { display: flex; flex-direction: row; justify-content: center; align-items: center; }
   
+  
+  #mc_embed_signup input.email { 12.45rem; }
   /*  Photo Gallery - make off white bg full width.  */
 /*   .photo-gallery-container-fluid { padding: 0; } */
 } 
