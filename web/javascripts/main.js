@@ -88,6 +88,9 @@ function adjustTextSections() {
     
 //     $(".section-img").parent().parent().css( "height", $(".section-img").width() );
     $(".section-img").parent().prev().css( "height", $(".section-img").width() );
+    
+    // If videos, resize the caption
+    $(".video-caption").width( $(".video").width() );
   });
 
 
@@ -104,6 +107,10 @@ $(function(){
     if( $(".text-section").length || $(".about-content").length || $(".news-text").length ){
       adjustTextSections();
     }
+    
+    // If videos, resize the caption
+    $(".video-caption").width( $(".video").width() );
+    console.log("we resized caption!");
   });
   
   // Set up the parallax "Media" section for mobile devices.

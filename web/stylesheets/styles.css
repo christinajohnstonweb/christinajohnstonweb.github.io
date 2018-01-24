@@ -323,7 +323,7 @@ a.nav-link.active { font-weight: 700; }
   font-size: 1.45rem;
 }
 
-.video { margin-bottom: 6.5rem; }
+.video { margin-bottom: 6.5rem; display: flex; flex-direction: column; }
 
 .hiddenItem { display: none; transition: all 0.3s; }
 
