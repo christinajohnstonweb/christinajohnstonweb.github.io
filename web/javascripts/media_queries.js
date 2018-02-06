@@ -131,6 +131,15 @@ function responsiveTest(){
   // If the viewport < 1200px, make the article sections as tall as they are wide.
   if (window.matchMedia("(max-width: 1200px)").matches) {
   /* the viewport is at least 1200 pixels wide */
+    
+    /* News width on big screens */
+    var carousel_width = $("#carousel").width();
+    var small_width = Math.round(carousel_width * .30);
+    var ar = $("section.video > iframe").css("width") / $("section.video > iframe").css("height");
+
+    $(".main-news").width( carousel_width );
+    $("section.video > iframe").css("width", small_width);
+    $("section.video > iframe").css("height", small_width / ar);
   }
 
   if (window.matchMedia("(min-width: 1381px)").matches || window.matchMedia("(device-min-width: 1381px)").matches) {
