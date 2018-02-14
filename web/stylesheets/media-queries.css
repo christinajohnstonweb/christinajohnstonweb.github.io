@@ -244,6 +244,7 @@
   
   /*  Instagram image size.  */
 /*   .instagram-images { max-height: 14.0rem; max-width: 14.0rem; } */
+  .instagram-img-container:last-child { display: none; }
   #instafeed { display: flex; flex-direction: row; justify-content: center; align-items: center; }
   
   
@@ -275,7 +276,7 @@
   .discography-more-btn { top: -11.0rem; left: 5.5rem; }
   
   /*  Instagram image size  */
-  .instagram-images { max-height: 15.0rem; max-width: 15.0rem; }
+/*   .instagram-images { max-height: 15.0rem; max-width: 15.0rem; } */
     
   /*  Concerts  */
   .td-concert-spacer { display: none; }
@@ -299,7 +300,8 @@
   .photo-gallery-el-container { padding-top: 4px; }
   
   /*  Instagram image size.  */
-  .instagram-images { max-height: 10.0rem; max-width: 10.0rem; }
+/*   .instagram-images { max-height: 10.0rem; max-width: 10.0rem; } */
+  .instagram-img-container:last-child { display: none; }
   #instafeed { display: flex; flex-direction: row; justify-content: center; align-items: center; }
 } 
 

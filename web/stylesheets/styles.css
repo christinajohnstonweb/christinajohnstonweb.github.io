@@ -347,6 +347,7 @@ a.nav-link.active { font-weight: 700; }
 .img-caption { font-size: 1.5rem; width: 32.0rem; }
 
 /* Photo gallery */
+#photos { padding-top: 3.5rem; }
 .gallery-btn { position: absolute; top: 50%; left: 50%; width: 12.0rem; height: 3.0rem; transform: translate(-50%,-95%); }
 .photo-gallery-img { max-width: 300px; }
 #photo_gallery_description { text-align: center; padding: 1.0rem 20.0rem; font-size: 1.5rem; }

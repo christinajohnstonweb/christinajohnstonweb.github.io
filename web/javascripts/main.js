@@ -92,9 +92,7 @@ $(window).on("load", function() {
   // If videos, resize the caption
   $(".video-caption").width($(".video > iframe").width());
 
-  // If Instagram block, resize it, too.
-  $(".instagram-images").width(Math.round($(".navbar").width() / 5));
-  $(".instagram-images").height(Math.round($(".navbar").width() / 5));
+  resizeInstagram();
 
   // If we're on the news page, expand the gray section.
   if ($(".masonry-img").length > 0) {
@@ -121,8 +119,7 @@ $(function() {
     $(".video-caption").width($(".video > iframe").width());
 
     // If Instagram block, resize it, too.
-    $(".instagram-images").width(Math.round($(".navbar").width() / 5));
-    $(".instagram-images").height(Math.round($(".navbar").width() / 5));
+    resizeInstagram();
     
     // If we're on the news page, expand the gray section.
     if ($(".masonry-img").length > 0) {
