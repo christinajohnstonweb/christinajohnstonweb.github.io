@@ -9,12 +9,28 @@ function responsiveTest(){
      // Handle video sizes.
 //     $("section.video > iframe").css("width", "300px");
 //     $("section.video > iframe").css("height", "169px");
+    console.log("414");
   }
   
   if (window.matchMedia("(max-width: 575px)").matches || window.matchMedia("(device-max-width: 575px)").matches) {
     // Handle news cols.
-    $(".news-container").html( $("#single_col_str").prop("innerHTML") );
-    $(".photos-container").html( $("#single_col_str").prop("innerHTML") );
+    var test_single_col = setInterval(function(){
+      if( $("#single_col_str").length > 0 ) {
+        $(".news-container").html( $("#single_col_str").prop("innerHTML") );
+        $(".photos-container").html( $("#single_col_str").prop("innerHTML") );
+        
+        // Set the width of the container for small device screens.
+        $(".main-news").width( Math.round($(".navbar").width() * 0.8) );
+        $(".photos-container").width( Math.round($(".navbar").width() * 0.8) );
+//         $(".main-news").width( Math.round($("#carousel").width() * 0.85) );
+//         $(".news-article").width("95%");
+        
+        clearInterval(test_single_col);
+      }
+    }, 1000);
+    
+    // console.log("575");
+    // console.log( $("#single_col_str").prop("innerHTML") );
   }
   
   // footer-newsletter-container
@@ -26,6 +42,7 @@ function responsiveTest(){
     // Handle video sizes.
     $("section.video > iframe").css("width", "280px");
     $("section.video > iframe").css("height", "149px");
+    console.log("768");
   }
   
   if (window.matchMedia("(min-width: 769px)").matches || window.matchMedia("(device-min-width: 769px)").matches) {
@@ -52,6 +69,7 @@ function responsiveTest(){
     // Centered footer.
     $(".footer-newsletter-container.col-12").removeClass("col-12");
     $(".footer-newsletter-container").addClass("col-11");
+    console.log("769");
     
     // Handle news cols.
 //     console.log("Should be single col(769px).");

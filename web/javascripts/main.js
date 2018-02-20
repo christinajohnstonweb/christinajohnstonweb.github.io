@@ -98,10 +98,10 @@ $(window).on("load", function() {
   if ($(".masonry-img").length > 0) {
     $(".news-container").width( $(".navbar").width() );
   }
-});
+// });
 
 
-$(function() {
+// $(function() {
   // JS media queries.
   $(window).on("resize", function() {
     responsiveTest();
