@@ -9,7 +9,6 @@ function responsiveTest(){
      // Handle video sizes.
 //     $("section.video > iframe").css("width", "300px");
 //     $("section.video > iframe").css("height", "169px");
-    console.log("414");
   }
   
   if (window.matchMedia("(max-width: 575px)").matches || window.matchMedia("(device-max-width: 575px)").matches) {
@@ -42,7 +41,6 @@ function responsiveTest(){
     // Handle video sizes.
     $("section.video > iframe").css("width", "280px");
     $("section.video > iframe").css("height", "149px");
-    console.log("768");
   }
   
   if (window.matchMedia("(min-width: 769px)").matches || window.matchMedia("(device-min-width: 769px)").matches) {
@@ -69,7 +67,6 @@ function responsiveTest(){
     // Centered footer.
     $(".footer-newsletter-container.col-12").removeClass("col-12");
     $(".footer-newsletter-container").addClass("col-11");
-    console.log("769");
     
     // Handle news cols.
 //     console.log("Should be single col(769px).");
@@ -120,7 +117,6 @@ function responsiveTest(){
     $(".video-caption").width( $(".video").width() );
     
     // Handle news cols.
-    console.log("Two col.");
     $(".news-container").html( $("#two_col_str").prop("innerHTML") );
     $(".photos-container").html( $("#two_col_str").prop("innerHTML") );
   }

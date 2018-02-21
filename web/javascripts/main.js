@@ -97,6 +97,7 @@ $(window).on("load", function() {
   // If we're on the news page, expand the gray section.
   if ($(".masonry-img").length > 0) {
     $(".news-container").width( $(".navbar").width() );
+    $(".photos-container").width( $(".navbar").width() );
   }
 // });
 
@@ -124,6 +125,7 @@ $(window).on("load", function() {
     // If we're on the news page, expand the gray section.
     if ($(".masonry-img").length > 0) {
       $(".news-container").width( $(".navbar").width() );
+      $(".photos-container").width( $(".navbar").width() );
     }
   });
 
