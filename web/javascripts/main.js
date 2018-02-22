@@ -60,6 +60,9 @@ $(window).on("load", function() {
     if ($(".text-section").length || $(".about-content").length || $(".news-text").length) {
       adjustTextSections();
     }
+    
+    // Make offwhite news background the same width as the nav.
+    $(".news-container").width( Math.round($(".navbar").width() - 60) );
 
     // Scale the image container for the header.
     if ($(".image-wrap").length) {
@@ -116,6 +119,9 @@ $(window).on("load", function() {
       adjustTextSections();
     }
 
+    // If news, make the offwhite bg the same width as the navbar.
+    $(".news-container").width( Math.round($(".navbar").width - 60) );
+    
     // If videos, resize the caption
     $(".video-caption").width($(".video > iframe").width());
 
