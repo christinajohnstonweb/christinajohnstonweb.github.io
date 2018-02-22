@@ -118,9 +118,6 @@ $(window).on("load", function() {
     if ($(".text-section").length || $(".about-content").length || $(".news-text").length) {
       adjustTextSections();
     }
-
-    // If news, make the offwhite bg the same width as the navbar.
-    $(".news-container").width( Math.round($(".navbar").width - 60) );
     
     // If videos, resize the caption
     $(".video-caption").width($(".video > iframe").width());
@@ -130,7 +127,9 @@ $(window).on("load", function() {
     
     // If we're on the news page, expand the gray section.
     if ($(".masonry-img").length > 0) {
-      $(".news-container").width( $(".navbar").width() );
+      // If news, make the offwhite bg the same width as the navbar.
+      $(".news-container").width( Math.round($(".navbar").width() - 60) );
+//       $(".news-container").width( $(".navbar").width() );
       $(".photos-container").width( $(".navbar").width() );
     }
   });
