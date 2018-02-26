@@ -19,8 +19,8 @@ function responsiveTest(){
         $(".photos-container").html( $("#single_col_str").prop("innerHTML") );
         
         // Set the width of the container for small device screens.
-        $(".main-news").width( Math.round($(".navbar").width() * 0.8) );
-        $(".photos-container").width( Math.round($(".navbar").width() * 0.8) );
+//         $(".main-news").width( Math.round($(".navbar").width() * 0.8) );
+//         $(".photos-container").width( Math.round($(".navbar").width() * 0.8) );
 //         $(".main-news").width( Math.round($("#carousel").width() * 0.85) );
 //         $(".news-article").width("95%");
         
@@ -28,8 +28,14 @@ function responsiveTest(){
       }
     }, 1000);
     
-    // console.log("575");
-    // console.log( $("#single_col_str").prop("innerHTML") );
+    $(".section-img").parent().addClass("col-12");
+    $(".section-img").parent().prev().addClass("col-12");
+
+    $(".section-img").parent().removeClass("col-6");
+    $(".section-img").parent().prev().removeClass("col-6");
+
+    // We're wrapping the cols, so get rid of the row height.
+    $(".section-img").parent().parent().css( "height", "" );
   }
   
   // footer-newsletter-container
@@ -69,7 +75,6 @@ function responsiveTest(){
     $(".footer-newsletter-container").addClass("col-11");
     
     // Handle news cols.
-//     console.log("Should be single col(769px).");
 //     $(".news-container").html( $("#single_col_str").prop("innerHTML") );
 //     $(".photos-container").html( $("#single_col_str").prop("innerHTML") );
    }
@@ -95,10 +100,10 @@ function responsiveTest(){
 //     $(".text-section", ".news-text").height( new_width );
 
     // Remove Masonry from smaller screens.
-    if ( $(".grid").length ) {
-      // console.log("Destroying Masonry!");
-      $(".grid").masonry("destroy");  
-    }
+//      if ( $(".grid").length ) {
+//       // console.log("Destroying Masonry!");
+//       $(".grid").masonry("destroy");  
+//     }
     
     if( $(".footer-break") ) {
       // Handle the footer, too.
@@ -192,18 +197,4 @@ function responsiveTest(){
     // Handle news cols.
     // $(".news-container").html( $("#three_col_str").prop("innerHTML") );
   }
-
-    // >2050px.
-//   if (window.matchMedia("(min-width: 2050px)").matches || window.matchMedia("(device-min-width: 2050px)").matches) {
-    // Handle video sizes.
-//     $("section.video > iframe").css("width", "575px");
-//     $("section.video > iframe").css("height", "324px");
-//   }
-  
-     // >2300px.
-//   if (window.matchMedia("(min-width: 2300px)").matches || window.matchMedia("(device-min-width: 2300px)").matches) {
-    // Handle video sizes.
-//     $("section.video > iframe").css("width", "650px");
-//     $("section.video > iframe").css("height", "366px");
-//   }
 }

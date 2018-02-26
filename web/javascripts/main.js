@@ -62,7 +62,14 @@ $(window).on("load", function() {
     }
     
     // Make offwhite news background the same width as the nav.
-    $(".news-container").width( Math.round($(".navbar").width() - 60) );
+    if( window.matchMedia("(min-width: 768px)").matches || window.matchMedia("(device-min-width: 768px)").matches ) {
+      $(".news-container").width( Math.round($(".navbar").width() - 60) );
+      $("#photos").width( Math.round($(".navbar").width()) );
+    } else {
+      $(".news-container").width( Math.round($(".navbar").width() - 80) );
+      $("#photos").width( Math.round($(".navbar").width() - 8) );
+    }
+//     $(".off-white-bg").width( Math.round($(".navbar").width() - 60) );
 
     // Scale the image container for the header.
     if ($(".image-wrap").length) {
@@ -98,10 +105,10 @@ $(window).on("load", function() {
   resizeInstagram();
 
   // If we're on the news page, expand the gray section.
-  if ($(".masonry-img").length > 0) {
-    $(".news-container").width( $(".navbar").width() );
-    $(".photos-container").width( $(".navbar").width() );
-  }
+//   if ($(".masonry-img").length > 0) {
+//     $(".news-container").width( $(".navbar").width() );
+//     $(".photos-container").width( $(".navbar").width() );
+//   }
 // });
 
 
@@ -128,9 +135,17 @@ $(window).on("load", function() {
     // If we're on the news page, expand the gray section.
     if ($(".masonry-img").length > 0) {
       // If news, make the offwhite bg the same width as the navbar.
-      $(".news-container").width( Math.round($(".navbar").width() - 60) );
-//       $(".news-container").width( $(".navbar").width() );
-      $(".photos-container").width( $(".navbar").width() );
+      if( window.matchMedia("(min-width: 768px)").matches || window.matchMedia("(device-min-width: 768px)").matches ) {
+        $(".news-container").width( Math.round($(".navbar").width() - 60) );
+        $("#photos").width( Math.round($(".navbar").width() - 60) );
+      } else {
+        $(".news-container").width( Math.round($(".navbar").width() - 80) );
+        $("#photos").width( Math.round($(".navbar").width() - 80) );
+      }
+//       $(".off-white-bg").width( Math.round($(".navbar").width() - 60) );
+      // Testing...
+//       $(".off-white-bg").addClass("mx-auto");
+//       $(".photos-container").width( $(".navbar").width() );
     }
   });
 
@@ -765,6 +780,102 @@ $(window).on("load", function() {
       }
       //********************************************
       // End news article building.
+      //********************************************
+      
+debugger;
+      //********************************************
+      // Videos with set column widths building.
+      //********************************************
+      if ($("#video_items_tmpl").length) {
+        // Get the keys for the News associative array. 
+        var keys = Object.keys(data.galleryVideos);
+        var three_col = {
+          col_1: [],
+          col_2: [],
+          col_3: [],
+          str_1: "",
+          str_2: "",
+          str_3: ""
+        };
+        var two_col = {
+          col_1: [],
+          col_2: [],
+          str_1: "",
+          str_2: ""
+        };
+        var single_col = {
+          col: [],
+          str: ""
+        };
+
+        // Init the iteration counter.
+        var counter = 1;
+        var col_counter_2 = "col_1";
+
+        // Iterate the news items and build the Bootstrap masonry.
+        for (x = 0; x <= data.galleryVideos.length - 1; x++) {
+          // Get the base template for each col + item.
+          var code = $("#video_items_tmpl").prop("innerHTML");
+
+          // Build the masonry brick.
+          code = code.replace("!!video_id!!", data.galleryVideos[x].newsImage);
+          code = code.replace("!!caption!!", data.galleryVideos[x].caption);
+          code = code.replace("!!news_date!!", data.galleryVideos[x].newsDate);
+          code = code.replace(/!!news_title!!/g, data.galleryVideos[x].newsTitle);
+          code = code.replace(/!!news_title_link!!/g, data.galleryVideos[x].newsTitle.toLowerCase().replace(/\s/gi, '-').replace(/[^\w-]/gi, ''));
+          code = code.replace("!!news_details_preview!!", data.galleryVideos[x].newsDetailsPreview);
+
+          // Build the three col masonry.
+          switch (counter) {
+            case 1:
+              three_col["col_1"].push(code);
+              two_col[col_counter_2].push(code);
+              single_col["col"].push(code);
+              break;
+
+            case 2:
+              three_col["col_2"].push(code);
+              two_col[col_counter_2].push(code);
+              single_col["col"].push(code);
+              break;
+
+            case 3:
+              three_col["col_3"].push(code);
+              two_col[col_counter_2].push(code);
+              single_col["col"].push(code);
+              break;
+          }
+
+          if (counter === 3) {
+            counter = 1;
+          } else {
+            counter = counter + 1;
+          }
+
+          // Toggle col on 2 col layout.
+          if (col_counter_2 === "col_1") {
+            col_counter_2 = "col_2"
+          } else {
+            col_counter_2 = "col_1"
+          }
+        }
+
+
+        // Build the col strings from the arrays.
+        three_col["str_1"] = '<div class="col-4" style="margin-bottom: 50px;">' + three_col["col_1"].join("\n") + '</div>';
+        three_col["str_2"] = '<div class="col-4" style="margin-bottom: 50px;">' + three_col["col_2"].join("\n") + '</div>';
+        three_col["str_3"] = '<div class="col-4" style="margin-bottom: 50px;">' + three_col["col_3"].join("\n") + '</div>';
+        $("#three_col_str").html('<div class="row">' + three_col["str_1"] + three_col["str_2"] + three_col["str_3"] + '</row>');
+
+        two_col["str_1"] = '<div class="col-6" style="margin-bottom: 50px;">' + two_col["col_1"].join("\n") + '</div>';
+        two_col["str_2"] = '<div class="col-6" style="margin-bottom: 50px;">' + two_col["col_2"].join("\n") + '</div>';
+        $("#two_col_str").html('<div class="row">' + two_col["str_1"] + two_col["str_2"] + '</row>');
+
+        single_col["str"] = '<div class="col-12" style="margin-bottom: 50px;">' + single_col["col"].join("\n") + '</div>';
+        $("#single_col_str").html('<div class="row">' + single_col["str"] + '</row>');
+      }
+      //********************************************
+      // Videos with set column widths building.
       //********************************************
     },
     error: function(data) {

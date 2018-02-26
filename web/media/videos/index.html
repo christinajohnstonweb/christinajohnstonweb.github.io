@@ -120,7 +120,7 @@
   <h1 class="section-header" property="mediaVideoHeader">MEDIA</h1>
 </div>
 
-<section class="off-white-bg" style="padding-bottom: 5.5rem; margin-bottom: 4.0rem;">
+<section class="off-white-bg mx-auto" id="videos" style="padding-bottom: 5.5rem; margin-bottom: 4.0rem;">
   <div class="row">
       <div class="col">
         <section class="discography-text" property="videosText" style="width: 100%; text-align: center;">
@@ -240,6 +240,19 @@
       </div>
     </div>
 </footer>
+
+<script type="text/template" id="video_items_tmpl">
+  <section class="video">
+    <iframe style="padding: 10px;" width="375" height="211" src="https://www.youtube.com/embed/!!video_id!!" frameborder="0" allowfullscreen></iframe>
+    <div class="video-caption" style="font-size: 1.4rem; font-weight: 700; line-height: 1.4rem; letter-spacing: 0.05rem; display: flex; justify-content: center; align-items: center; text-align: center;">!!caption!!</div>
+  </section>
+    
+  <div class="" style="width: 100%; text-align: center; position: relative; bottom: -1.0rem; margin-bottom: 2.0rem;"><button id="load_more_videos_btn" type="button" class="btn-black">LOAD MORE</button></div>
+</script>
+
+<script type="text/template" id="three_col_str"></script>
+<script type="text/template" id="two_col_str"></script>
+<script type="text/template" id="single_col_str"></script>
         
             <section id="brand_tag" style="margin-top: 0.5rem;">
               ©2017 Christina Johnston / All Rights Reserved / <a href="http://likelike.cz/en/" style="color: #000;" target="_BLANK">designed by likelike</a>

@@ -310,6 +310,7 @@
 @media all and (min-width: 415px) and (max-width: 575px) {
   html { font-size: 71.5%; }
   footer { padding: 1.0rem 2.5rem; font-size: 149% }
+  .footer-newsletter-container{ text-align: center; width: 50%; }
   
   /* Responsive - make design edge-to-edge and remove social sidebar. */
   body { padding: 0; }
@@ -367,6 +368,7 @@
 @media all and (max-width: 414px) {
   html { font-size: 71.5%; }
   footer { padding: 1.0rem 2.5rem; font-size: 149% }
+  .footer-newsletter-container{ text-align: center; width: 50%; }
   
    /* Responsive - make design edge-to-edge and remove social sidebar. */
   body { padding: 0; }
