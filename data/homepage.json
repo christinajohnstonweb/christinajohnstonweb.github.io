@@ -56,7 +56,15 @@
 				}
 			],
 			"albumOnHomepage": false,
-			"hiddenAlbum": false
+			"hiddenAlbum": false,
+			"albumTracks": [
+				{
+					"trackTitle": "This is the first song",
+					"playFrom": "0:30",
+					"playTo": "1:00",
+					"trackLyrics": "<p style=\"text-align: left;\"><span id=\"selectable\">Data-point we need to leverage our synergies level the playing field. Come up with something buzzworthy <span class=\"tooltiplink\" title=\"By:  \">new economy</span> bleeding edge, yet Q1. Drop-dead date bells and whistles. Re-inventing the wheel <span class=\"tooltiplink\" title=\"By:  \">when does this sunset? </span> for <span class=\"tooltiplink\" title=\"By:  \">bottleneck mice</span> or <span class=\"tooltiplink\" title=\"By:  \">low-hanging fruit</span> <span class=\"tooltiplink\" title=\"By:  \">value prop</span>, or can we take this offline, <span class=\"tooltiplink\" title=\"By:  \">innovation is hot right now</span>. I have zero cycles for this not enough bandwidth, so <span class=\"tooltiplink\" title=\"By:  \">peel the onion</span>. Get six alpha pups in here for a focus group <span class=\"tooltiplink\" title=\"By:  \">strategic high-level 30,000 ft view</span>. We need to dialog around your choice of work attire you better eat a reality sandwich before you walk back in that boardroom action item thought shower, for strategic staircase no scraps hit the floor. Loop back pulling teeth if you want to motivate these clowns, try less carrot and more stick, or no scraps hit the floor face time, so deploy. <span class=\"tooltiplink\" title=\"By:  \">In this space</span> <span class=\"tooltiplink\" title=\"By:  \">cross functional teams enable out of the box brainstorming</span>, or game-plan, for <span class=\"tooltiplink\" title=\"By:  \">ladder up / ladder back to the strategy</span> into the weeds, or market-facing, or <span class=\"tooltiplink\" title=\"By:  \">this is meaningless</span>. Sacred cow going forward.</span></p>"
+				}
+			]
 		},
 		{
 			"discCoverImg": "http://www.christinajohnston.co.uk/data/images/news_embedded.jpg",
@@ -66,13 +74,20 @@
 			"discIsSolo": true,
 			"discDescr": "<p>Just let this happen. We just let this flow right out of our minds. Get away from those little Christmas tree things we used to make in school. It's a good way of getting rid of all your anxieties and hostilities. Don't be bashful drop me a line. Work that paint. I really recommend you use odorless thinner or your spouse is gonna run you right out into the yard and you'll be working by yourself.</p>",
 			"albumStreaming": [
-				{}
+				{
+					"serviceLink": "https://www.apple.com"
+				}
 			],
 			"albumPurchase": [
-				{}
+				{
+					"serviceLink": "https://www.kindletrend.com"
+				}
 			],
 			"albumOnHomepage": true,
-			"hiddenAlbum": false
+			"hiddenAlbum": false,
+			"albumTracks": [
+				{}
+			]
 		},
 		{
 			"discCoverImg": "https://comps.canstockphoto.com/charles-bridge-in-prague-at-night-clip-art-vector_csp33548965.jpg",
@@ -81,13 +96,20 @@
 			"discIsSolo": false,
 			"discDescr": "<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.</p>",
 			"albumStreaming": [
-				{}
+				{
+					"serviceLink": "https://www.apple.com"
+				}
 			],
 			"albumPurchase": [
-				{}
+				{
+					"serviceLink": "https://www.kindletrend.com"
+				}
 			],
 			"albumOnHomepage": false,
-			"hiddenAlbum": false
+			"hiddenAlbum": false,
+			"albumTracks": [
+				{}
+			]
 		},
 		{
 			"discCoverImg": "https://i.pinimg.com/736x/ef/2a/f2/ef2af284e946d777a2085b179668441e--gothic-castle-european-tour.jpg",
@@ -97,14 +119,23 @@
 			"discIsSolo": true,
 			"discDescr": "<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>",
 			"albumStreaming": [
-				{}
+				{
+					"serviceLink": "https://www.apple.com"
+				}
 			],
 			"albumPurchase": [
-				{},
-				{}
+				{
+					"serviceLink": "https://www.kindletrend.com"
+				},
+				{
+					"serviceLink": "https://www.kindletrend.com"
+				}
 			],
 			"albumOnHomepage": true,
-			"hiddenAlbum": false
+			"hiddenAlbum": false,
+			"albumTracks": [
+				{}
+			]
 		},
 		{
 			"discCoverImg": "https://static.wixstatic.com/media/02f69d_67501e63a5cf458dbb92b667af94f552.jpg_srz_600_522_85_22_0.50_1.20_0.00_jpg_srz",
@@ -113,13 +144,20 @@
 			"discDistributor": "CZ Music, s.r.o.",
 			"discIsSolo": true,
 			"albumStreaming": [
-				{}
+				{
+					"serviceLink": "https://www.apple.com"
+				}
 			],
 			"albumPurchase": [
-				{}
+				{
+					"serviceLink": "https://www.kindletrend.com"
+				}
 			],
 			"albumOnHomepage": false,
-			"hiddenAlbum": false
+			"hiddenAlbum": false,
+			"albumTracks": [
+				{}
+			]
 		},
 		{
 			"discCoverImg": "http://www.goldgold.com/wp-content/uploads/2012/01/golden-word11.jpg",
@@ -128,13 +166,20 @@
 			"discDistributor": "Mikey Likey, LLC.",
 			"discIsSolo": true,
 			"albumStreaming": [
-				{}
+				{
+					"serviceLink": "https://www.apple.com"
+				}
 			],
 			"albumPurchase": [
-				{}
+				{
+					"serviceLink": "https://www.kindletrend.com"
+				}
 			],
 			"albumOnHomepage": false,
-			"hiddenAlbum": false
+			"hiddenAlbum": false,
+			"albumTracks": [
+				{}
+			]
 		},
 		{
 			"discCoverImg": "http://whatmetaldetector.com/wp-content/uploads/2013/05/Beach-Metal-Detecting-Treasure.jpg",
@@ -143,13 +188,20 @@
 			"discDistributor": "Super Duper Distro, Inc.",
 			"discIsSolo": true,
 			"albumStreaming": [
-				{}
+				{
+					"serviceLink": "https://www.apple.com"
+				}
 			],
 			"albumPurchase": [
-				{}
+				{
+					"serviceLink": "https://www.kindletrend.com"
+				}
 			],
 			"albumOnHomepage": false,
-			"hiddenAlbum": false
+			"hiddenAlbum": false,
+			"albumTracks": [
+				{}
+			]
 		},
 		{
 			"discCoverImg": "http://www.christinajohnston.co.uk/data/images/Screen%20Shot%202017-12-11%20at%2011.40.45.png",
@@ -158,13 +210,20 @@
 			"discDistributor": "Test Dist.",
 			"discIsSolo": false,
 			"albumStreaming": [
-				{}
+				{
+					"serviceLink": "https://www.apple.com"
+				}
 			],
 			"albumPurchase": [
-				{}
+				{
+					"serviceLink": "https://www.kindletrend.com"
+				}
 			],
 			"albumOnHomepage": true,
-			"hiddenAlbum": false
+			"hiddenAlbum": false,
+			"albumTracks": [
+				{}
+			]
 		},
 		{
 			"discCoverImg": "http://www.christinajohnston.co.uk/data/images/Screen%20Shot%202017-12-11%20at%2011.40.29.png",
@@ -173,13 +232,20 @@
 			"discDistributor": "Detectoring Fellas, a.s.",
 			"discIsSolo": true,
 			"albumStreaming": [
-				{}
+				{
+					"serviceLink": "https://www.apple.com"
+				}
 			],
 			"albumPurchase": [
-				{}
+				{
+					"serviceLink": "https://www.kindletrend.com"
+				}
 			],
 			"albumOnHomepage": false,
-			"hiddenAlbum": false
+			"hiddenAlbum": false,
+			"albumTracks": [
+				{}
+			]
 		}
 	],
 	"concertsHeader": "CONCERTS",
