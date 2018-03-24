@@ -9,6 +9,21 @@
 	"aboutContent": "<strong>FAR far Away</strong><br /><br />Far far away, behind the word mountains, far from the countries Vokalia <br />and Consonantia, there live the blind texts.<br /><br /><img src=\"http://www.christinajohnston.co.uk/data/images/news_embedded.jpg\" alt=\"This is an image I added.\" width=\"278\" height=\"287\" /><br /><br />Separated they live in <strong>Bookmarksgrove</strong> <br />right at the coast of the Semantics, a large language ocean. <br />A small river named Duden flows by their place and supplies it with the necessary regelialia. <br />It is a paradisematic country, in which roasted parts of sentences fly into your mouth. <br /><br />Separated they live in&nbsp;<span style=\"font-weight: bolder;\">Bookmarksgrove</span>&nbsp;<br />right at the coast of the Semantics, a large language ocean.&nbsp;<br />A small river named Duden flows by their place and supplies it with the necessary regelialia.&nbsp;<br />It is a paradisematic country, in which roasted parts of sentences fly into your mouth.&nbsp;<br /><br />Separated they live in&nbsp;<span style=\"font-weight: bolder;\">Bookmarksgrove</span>&nbsp;<br />right at the coast of the Semantics, a large language ocean.&nbsp;<br />A small river named Duden flows by their place and supplies it with the necessary regelialia.&nbsp;<br />It is a paradisematic country, in which roasted parts of sentences fly into your mouth.&nbsp;<br /><br /><em>I need a chance just to get away...</em>",
 	"album": [
 		{
+			"discCoverImg": "http://www.christinajohnston.co.uk/data/images/news_embedded.jpg",
+			"discReleaseDate": "10/10/2017",
+			"discName": "House",
+			"discDistributor": "Sony Music, Ltd.",
+			"discIsSolo": true,
+			"discDescr": "<p>Just let this happen. We just let this flow right out of our minds. Get away from those little Christmas tree things we used to make in school. It's a good way of getting rid of all your anxieties and hostilities. Don't be bashful drop me a line. Work that paint. I really recommend you use odorless thinner or your spouse is gonna run you right out into the yard and you'll be working by yourself.</p>",
+			"albumStreaming": [],
+			"albumPurchase": [],
+			"albumOnHomepage": true,
+			"hiddenAlbum": false,
+			"albumTracks": [
+				{}
+			]
+		},
+		{
 			"discCoverImg": "http://www.christinajohnston.co.uk/data/images/album_cover_image.jpg",
 			"discReleaseDate": "09/09/2017",
 			"discName": "BLESSING",
@@ -53,21 +68,6 @@
 					"trackLyrics": "<p style=\"text-align: left;\"><span id=\"selectable\">Data-point we need to leverage our synergies level the playing field. Come up with something buzzworthy <span class=\"tooltiplink\" title=\"By:  \">new economy</span> bleeding edge, yet Q1. Drop-dead date bells and whistles. Re-inventing the wheel <span class=\"tooltiplink\" title=\"By:  \">when does this sunset? </span> for <span class=\"tooltiplink\" title=\"By:  \">bottleneck mice</span> or <span class=\"tooltiplink\" title=\"By:  \">low-hanging fruit</span> <span class=\"tooltiplink\" title=\"By:  \">value prop</span>, or can we take this offline, <span class=\"tooltiplink\" title=\"By:  \">innovation is hot right now</span>. I have zero cycles for this not enough bandwidth, so <span class=\"tooltiplink\" title=\"By:  \">peel the onion</span>. Get six alpha pups in here for a focus group <span class=\"tooltiplink\" title=\"By:  \">strategic high-level 30,000 ft view</span>. We need to dialog around your choice of work attire you better eat a reality sandwich before you walk back in that boardroom action item thought shower, for strategic staircase no scraps hit the floor. Loop back pulling teeth if you want to motivate these clowns, try less carrot and more stick, or no scraps hit the floor face time, so deploy. <span class=\"tooltiplink\" title=\"By:  \">In this space</span> <span class=\"tooltiplink\" title=\"By:  \">cross functional teams enable out of the box brainstorming</span>, or game-plan, for <span class=\"tooltiplink\" title=\"By:  \">ladder up / ladder back to the strategy</span> into the weeds, or market-facing, or <span class=\"tooltiplink\" title=\"By:  \">this is meaningless</span>. Sacred cow going forward.</span></p>",
 					"trackYouTubeURL": "g30Rhk82rmg"
 				}
-			]
-		},
-		{
-			"discCoverImg": "http://www.christinajohnston.co.uk/data/images/news_embedded.jpg",
-			"discReleaseDate": "10/10/2017",
-			"discName": "House",
-			"discDistributor": "Sony Music, Ltd.",
-			"discIsSolo": true,
-			"discDescr": "<p>Just let this happen. We just let this flow right out of our minds. Get away from those little Christmas tree things we used to make in school. It's a good way of getting rid of all your anxieties and hostilities. Don't be bashful drop me a line. Work that paint. I really recommend you use odorless thinner or your spouse is gonna run you right out into the yard and you'll be working by yourself.</p>",
-			"albumStreaming": [],
-			"albumPurchase": [],
-			"albumOnHomepage": true,
-			"hiddenAlbum": false,
-			"albumTracks": [
-				{}
 			]
 		},
 		{
