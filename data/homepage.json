@@ -2,18 +2,6 @@
 	"aboutHeader": "ABOUT",
 	"aboutImage": "http://www.christinajohnston.co.uk/web/images/about_image_1340.jpg",
 	"discographyHeader": "DISCOGRAPHY",
-	"collection": [
-		{
-			"discCoverImg": "/christinajohnstonweb/_site/images/album_cover_image.jpg",
-			"discReleaseDate": "10/10/2017",
-			"discName": "BLESSINGS",
-			"discDistributor": "Sony Music, Ltd.",
-			"discIsSolo": true,
-			"news-date": "10/10/2017",
-			"news-title": "This is a News Item",
-			"news-details": "Kosmix squidoo woopra jaiku boxbe, bitly octopart zinch. Wakoopa oooj yammer zimbra, vimeo. Imvu zanga ning dogster diigo wikia, kazaa trulia reddit zoho."
-		}
-	],
 	"concerts_header": "CONCERTS",
 	"concerts_subtitle": "Discover all information about Chrisitna’s concerts.",
 	"news_image": "http://www.christinajohnston.co.uk/web/images/news_image_1340.jpg",
