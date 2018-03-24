@@ -74,18 +74,8 @@
 			"discDistributor": "Sony Music, Ltd.",
 			"discIsSolo": true,
 			"discDescr": "<p>Just let this happen. We just let this flow right out of our minds. Get away from those little Christmas tree things we used to make in school. It's a good way of getting rid of all your anxieties and hostilities. Don't be bashful drop me a line. Work that paint. I really recommend you use odorless thinner or your spouse is gonna run you right out into the yard and you'll be working by yourself.</p>",
-			"albumStreaming": [
-				{
-					"serviceLogo": "http://www.christinajohnston.co.uk/data/images/itunes_logo_adjusted.png",
-					"serviceLink": "https://www.apple.com"
-				}
-			],
-			"albumPurchase": [
-				{
-					"serviceLogo": "http://www.christinajohnston.co.uk/data/images/itunes_logo_adjusted.png",
-					"serviceLink": "https://www.kindletrend.com"
-				}
-			],
+			"albumStreaming": [],
+			"albumPurchase": [],
 			"albumOnHomepage": true,
 			"hiddenAlbum": false,
 			"albumTracks": [
@@ -98,16 +88,8 @@
 			"discName": "Holidays In Prague",
 			"discIsSolo": false,
 			"discDescr": "<p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.</p>",
-			"albumStreaming": [
-				{
-					"serviceLink": "https://www.apple.com"
-				}
-			],
-			"albumPurchase": [
-				{
-					"serviceLink": "https://www.kindletrend.com"
-				}
-			],
+			"albumStreaming": [],
+			"albumPurchase": [],
 			"albumOnHomepage": false,
 			"hiddenAlbum": false,
 			"albumTracks": [
@@ -121,19 +103,8 @@
 			"discDistributor": "Epstein Records, Inc.",
 			"discIsSolo": true,
 			"discDescr": "<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>",
-			"albumStreaming": [
-				{
-					"serviceLink": "https://www.apple.com"
-				}
-			],
-			"albumPurchase": [
-				{
-					"serviceLink": "https://www.kindletrend.com"
-				},
-				{
-					"serviceLink": "https://www.kindletrend.com"
-				}
-			],
+			"albumStreaming": [],
+			"albumPurchase": [],
 			"albumOnHomepage": true,
 			"hiddenAlbum": false,
 			"albumTracks": [
@@ -146,16 +117,8 @@
 			"discName": "Bitov",
 			"discDistributor": "CZ Music, s.r.o.",
 			"discIsSolo": true,
-			"albumStreaming": [
-				{
-					"serviceLink": "https://www.apple.com"
-				}
-			],
-			"albumPurchase": [
-				{
-					"serviceLink": "https://www.kindletrend.com"
-				}
-			],
+			"albumStreaming": [],
+			"albumPurchase": [],
 			"albumOnHomepage": false,
 			"hiddenAlbum": false,
 			"albumTracks": [
@@ -168,16 +131,8 @@
 			"discName": "Detectorist",
 			"discDistributor": "Mikey Likey, LLC.",
 			"discIsSolo": true,
-			"albumStreaming": [
-				{
-					"serviceLink": "https://www.apple.com"
-				}
-			],
-			"albumPurchase": [
-				{
-					"serviceLink": "https://www.kindletrend.com"
-				}
-			],
+			"albumStreaming": [],
+			"albumPurchase": [],
 			"albumOnHomepage": false,
 			"hiddenAlbum": false,
 			"albumTracks": [
@@ -190,16 +145,8 @@
 			"discName": "Treasure",
 			"discDistributor": "Super Duper Distro, Inc.",
 			"discIsSolo": true,
-			"albumStreaming": [
-				{
-					"serviceLink": "https://www.apple.com"
-				}
-			],
-			"albumPurchase": [
-				{
-					"serviceLink": "https://www.kindletrend.com"
-				}
-			],
+			"albumStreaming": [],
+			"albumPurchase": [],
 			"albumOnHomepage": false,
 			"hiddenAlbum": false,
 			"albumTracks": [
@@ -212,16 +159,8 @@
 			"discName": "High",
 			"discDistributor": "Test Dist.",
 			"discIsSolo": false,
-			"albumStreaming": [
-				{
-					"serviceLink": "https://www.apple.com"
-				}
-			],
-			"albumPurchase": [
-				{
-					"serviceLink": "https://www.kindletrend.com"
-				}
-			],
+			"albumStreaming": [],
+			"albumPurchase": [],
 			"albumOnHomepage": true,
 			"hiddenAlbum": false,
 			"albumTracks": [
@@ -234,16 +173,8 @@
 			"discName": "Coins",
 			"discDistributor": "Detectoring Fellas, a.s.",
 			"discIsSolo": true,
-			"albumStreaming": [
-				{
-					"serviceLink": "https://www.apple.com"
-				}
-			],
-			"albumPurchase": [
-				{
-					"serviceLink": "https://www.kindletrend.com"
-				}
-			],
+			"albumStreaming": [],
+			"albumPurchase": [],
 			"albumOnHomepage": false,
 			"hiddenAlbum": false,
 			"albumTracks": [
