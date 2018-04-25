@@ -22,8 +22,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,700,700i,900,900i" rel="stylesheet">
     <link rel="stylesheet" href=/christinajohnstonweb.github.io/web/stylesheets/mavo.css />
 <!--     <link rel="stylesheet" href="https://get.mavo.io/mavo.css"> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsSocials/1.5.0/jssocials.min.css" integrity="sha256-1tuEbDCHX3d1WHIyyRhG9D9zsoaQpu1tpd5lPqdqC8s=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsSocials/1.5.0/jssocials-theme-minima.min.css" integrity="sha256-gdf8VUxJSQWUDIxhmCgSIVi8uBCaImRGWzMfKYlrUVE=" crossorigin="anonymous" />
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.css" />
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials-theme-minima.css" />
     <link rel="stylesheet" href=/christinajohnstonweb.github.io/web/stylesheets/styles.css />
     <link rel="stylesheet" href=/christinajohnstonweb.github.io/web/stylesheets/effects.css />
     <link rel="stylesheet" href=/christinajohnstonweb.github.io/web/stylesheets/ken-burns.css />
@@ -32,6 +32,7 @@
     <link rel="stylesheet" href=/christinajohnstonweb.github.io/web/stylesheets/media-queries.css />
     
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.min.js"></script>
     <script>
       var Helpers = Helpers || {};
       
@@ -125,7 +126,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col off-white-bg" style="width: 100%; padding: 3% 0 8% 0; color: #000000; text-align: center; overflow-y: auto; line-height: 1.96rem; font-size: 1.8rem; display: table;">
-        <p property="aboutContent" class="tinymce"></p>
+        <p property="aboutContent" class="tinymce about-text"></p>
         <div style="display: flex; content-align: center; justify-content: center; font-size: 1.0rem; margin-top: 3.0rem;"><small>SHARE:</small></div>
         <div style="display: flex; content-align: center; justify-content: center;"><small id="sharing_icons"></small></div>
 <!--         <div style="display: flex; content-align: center; justify-content: center;"><small><a href="#" class="social-share-icons"><span class="fa fa-pinterest-p"></span></a><a href="#" class="social-share-icons"><span class="fa fa-twitter"></span></a><a href="#" class="social-share-icons"><span class="fa fa-facebook"></span></a></small></div> -->
@@ -148,11 +149,14 @@
 
     <div class="row off-white-bg" id="news_row">
       <div class="col-6 news-text" style="color: #000000; overflow-y: auto;">
-        <section class="news-item-section" property="news" mv-multiple mv-if="featuredNews=true">
-          <div class="news-date" property="newsDate">Jun 23, 2017</div>
-          <div class="news-title" property="newsTitle">CHRISTINA JOHNSTON, POPULAR BRITISH COLORATURA SOPRANO WITH A VOICE THAT SOARS ABOVE THE CLOUDS.</div>
-          <div class="news-details tinymce" property="newsDetailsPreview">Her new album "Blessing" is released on 22nd September 17</div>
-          <a href=/christinajohnstonweb.github.io/web/news/article data-article="[idify(newsTitle)]" class="news-more-btn news-more-details">More ></a>
+        <section class="news-item-section" property="news" mv-multiple>
+          <input type="hidden" class="featuredNewsInput" property="featuredNews" />
+          <span style="display: [if(featuredNews=true, block, none)];">
+            <div class="news-date" property="newsDate">Jun 23, 2017</div>
+            <div class="news-title" property="newsTitle">CHRISTINA JOHNSTON, POPULAR BRITISH COLORATURA SOPRANO WITH A VOICE THAT SOARS ABOVE THE CLOUDS.</div>
+            <div class="news-details tinymce" property="newsDetailsPreview">Her new album "Blessing" is released on 22nd September 17</div>
+            <a href=/christinajohnstonweb.github.io/web/news/article data-article="[idify(newsTitle)]" class="news-more-btn news-more-details">More ></a>
+          </span>
         </section>
 
         <a href=/christinajohnstonweb.github.io/web/news class="btn-black" id="more_news_btn">MORE NEWS</a>
@@ -182,16 +186,16 @@
 
         <div class="row">
           <div class="col align-self-end">
-            <div class="footer-col-title">[footerFirstColTitle]</div>
-            [footerFirstColumn]
+            <div class="footer-col-title" property="footerFirstColTitle"></div>
+            <span property="footerFirstColumn"></span>
           </div>
           <div class="col footer-col-no-title align-self-end">
-            <div class="footer-sub-col-title">[footerSecondColTitle]</div>
-            [footerSecondColumn]
+            <div class="footer-sub-col-title" property="footerSecondColTitle"></div>
+            <span property="footerSecondColumn"></span>
           </div>
           <div class="col footer-col-no-title align-self-end">
-            <div class="footer-sub-col-title">[footerThirdColTitle]</div>
-            [footerThirdColumn]
+            <div class="footer-sub-col-title" property="footerThirdColTitle"></div>
+            <span property="footerThirdColumn"></span>
           </div>
         </div>
 
@@ -246,7 +250,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js"></script>
     <script src=/christinajohnstonweb.github.io/web/javascripts/mavo.es5.js></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsSocials/1.5.0/jssocials.min.js" integrity="sha256-QhF/xll4pV2gDRtAJ1lvi9YINqySpAP+0NIzIX5voZw=" crossorigin="anonymous"></script>
     <script src=/christinajohnstonweb.github.io/web/javascripts/media_queries.js></script>
     <script src=/christinajohnstonweb.github.io/web/javascripts/instagram.js mv-expressions="none"></script>
     <script mv-expressions="none" src=/christinajohnstonweb.github.io/web/javascripts/main.js></script>

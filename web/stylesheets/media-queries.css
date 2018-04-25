@@ -47,7 +47,7 @@
   /*  Discography buttons.  */
 /*   .btn-centered { opacity: 1.0; margin-top: 1.0rem; margin-bottom: 1.0rem; max-width: 12.0rem; } */
   .btn-centered { opacity: 0; position: absolute; top: 40%; left: 50%; width: 14.0rem; height: 4.0rem; transform: translate(-50%,-95%); transition: all 0.4s; }
-  div[property="album"]:hover a.btn-centered { opacity: 1.0; }
+  div.album:hover a.btn-centered { opacity: 1.0; }
   div[property="photoGallery"]:hover a.btn-centered { opacity: 1.0; }
   div[property="news"]:hover a.btn-centered { opacity: 1.0; }
   
@@ -84,7 +84,7 @@
   
 /*   .btn-centered { opacity: 1.0; margin-top: 1.0rem; margin-bottom: 1.0rem; max-width: 12.0rem; } */
   .btn-centered { opacity: 0; position: absolute; top: 40%; left: 50%; width: 12.0rem; height: 3.0rem; transform: translate(-50%,-95%); transition: all 0.4s; }
-  div[property="album"]:hover a.btn-centered { opacity: 1.0; }
+  div.album:hover a.btn-centered { opacity: 1.0; }
   div[property="photoGallery"]:hover a.btn-centered { opacity: 1.0; }
   div[property="news"]:hover a.btn-centered { opacity: 1.0; }
   
@@ -101,7 +101,7 @@
   
 /*   .btn-centered { opacity: 1.0; margin-top: 1.0rem; margin-bottom: 1.0rem; max-width: 12.0rem; } */
   .btn-centered { opacity: 0; position: absolute; top: 40%; left: 50%; width: 12.0rem; height: 3.0rem; transform: translate(-50%,-95%); transition: all 0.4s; }
-  div[property="album"]:hover a.btn-centered { opacity: 1.0; }
+  div.album:hover a.btn-centered { opacity: 1.0; }
   div[property="photoGallery"]:hover a.btn-centered { opacity: 1.0; }
   div[property="news"]:hover a.btn-centered { opacity: 1.0; }
   
@@ -133,7 +133,7 @@
   
   .news-more-btn { top: 30%; }
   
-  div[property="album"]:hover a.btn-centered { opacity: 1.0; }
+  div.album:hover a.btn-centered { opacity: 1.0; }
   div[property="photoGallery"]:hover a.btn-centered { opacity: 1.0; }
   div[property="news"]:hover a.btn-centered { opacity: 1.0; }
   
@@ -175,7 +175,7 @@
 /*   .btn-centered { opacity: 1.0; margin-top: 1.0rem; margin-bottom: 1.0rem; max-width: 12.0rem; } */
   .btn-centered { opacity: 0; position: absolute; top: 35%; left: 50%; width: 12.0rem; height: 3.0rem; transform: translate(-50%,-95%); transition: all 0.4s; }
   
-  div[property="album"]:hover a.btn-centered { opacity: 1.0; }
+  div.album:hover a.btn-centered { opacity: 1.0; }
   div[property="photoGallery"]:hover a.btn-centered { opacity: 1.0; }
   div[property="news"]:hover a.btn-centered { opacity: 1.0; }
   
@@ -223,8 +223,11 @@
   
   /*  Concerts  */
   .td-concert-spacer { display: none; }
-  #concert_cards { display: inline; }
-  #concerts_table { display: none; }
+  .cards-concert-content { display: inline; }
+  /*   #concert_cards { display: inline; } */
+  .concert-tables-content { display: none; }
+/*   #concerts_table { display: none; } */
+
     
   /*  If we're on the 'Photos' page center align the gallery name.  */
   .grid-item > div.img-caption { text-align: center; }
@@ -277,11 +280,16 @@
   
   /*  Instagram image size  */
 /*   .instagram-images { max-height: 15.0rem; max-width: 15.0rem; } */
-    
+  
+    /*  About section  */
+  .about-text { overflow: auto; display: block; padding: 1.5rem; }
+  
   /*  Concerts  */
   .td-concert-spacer { display: none; }
-  #concert_cards { display: inline; }
-  #concerts_table { display: none; }
+  .cards-concert-content { display: inline; }
+/*   #concert_cards { display: inline; } */
+  .concert-tables-content { display: none; }
+/*   #concerts_table { display: none; } */
   
   /*  Make sure our gallery button maintains the same style.  */
   .btn-centered { opacity: 1.0; margin-top: 1.0rem; margin-bottom: 1.0rem; max-width: 12.0rem; }
@@ -329,10 +337,15 @@
   /*  News section  */
   .news-text { padding: 2.0rem 3.0rem; }
   
+    /*  About section  */
+  .about-text { overflow: auto; display: block; }
+  
   /*  Concerts  */
   .td-concert-spacer { display: none; }
-  #concert_cards { display: inline; }
-  #concerts_table { display: none; }
+  .cards-concert-content { display: inline; }
+/*   #concert_cards { display: inline; } */
+  .concert-tables-content { display: none; }
+/*   #concerts_table { display: none; } */
     
   /*  Make sure our gallery button maintains the same style.  */
   .btn-centered { opacity: 1.0; margin-top: 1.0rem; margin-bottom: 1.0rem; max-width: 12.0rem; }
@@ -383,8 +396,10 @@
   
   /*  Concerts  */
   .td-concert-spacer { display: none; }
-  #concert_cards { display: inline; }
-  #concerts_table { display: none; }
+  .cards-concert-content { display: inline; }
+/*   #concert_cards { display: inline; } */
+  .concert-tables-content { display: none; }
+/*   #concerts_table { display: none; } */
   
   /*  Make sure our gallery button maintains the same style.  */
   .btn-centered { opacity: 1.0; margin-top: 1.0rem; margin-bottom: 1.0rem; max-width: 12.0rem; }

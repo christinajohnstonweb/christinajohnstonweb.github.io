@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-miterlimit:10;">
+    <g transform="matrix(1,0,0,1,-2085.11,-1083.56)">
+        <g id="Pause-button" serif:id="Pause button" transform="matrix(0.474684,0,0,0.46875,1090.82,622.076)">
+            <rect x="2094.64" y="984.489" width="70.222" height="71.111" style="fill:none;"/>
+            <clipPath id="_clip1">
+                <rect x="2094.64" y="984.489" width="70.222" height="71.111"/>
+            </clipPath>
+            <g clip-path="url(#_clip1)">
+                <g transform="matrix(2.80889,0,0,2.84444,947.623,-4855.56)">
+                    <path d="M432.19,2065.64C432.19,2071.9 427.114,2076.98 420.852,2076.98C414.59,2076.98 409.514,2071.9 409.514,2065.64C409.514,2059.38 414.59,2054.3 420.852,2054.3C427.114,2054.3 432.19,2059.38 432.19,2065.64Z" style="fill:none;stroke:rgb(235,0,139);stroke-width:0.75px;"/>
+                </g>
+                <g transform="matrix(2.80889,0,0,2.84444,947.623,-4855.56)">
+                    <rect x="418.149" y="2060.16" width="1.409" height="10.971" style="fill:rgb(235,0,139);fill-rule:nonzero;"/>
+                </g>
+                <g transform="matrix(2.80889,0,0,2.84444,947.623,-4855.56)">
+                    <rect x="422.149" y="2060.16" width="1.409" height="10.971" style="fill:rgb(235,0,139);fill-rule:nonzero;"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

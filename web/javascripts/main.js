@@ -29,7 +29,11 @@ function setCarouselHeight() {
 }
 
 // Set the home page text section height and width.
-function adjustTextSections() {
+function adjustTextSections(widthMod) {
+  if(widthMod === null){
+    widthMod = 0;   
+  }
+  
   var rowWidth;
   if ($(".about-content").hasClass("col-6") || $(".news-text").hasClass("col-6")) {
     rowWidth = parseInt($("#about_row").width() || $("#news_row").width()) / 2;
@@ -40,10 +44,10 @@ function adjustTextSections() {
   $(".about-wrapper").css("height", rowWidth);
   $(".about-content").css("height", rowWidth);
   $(".about-content").css("width", rowWidth);
-  $(".text-section").css("height", rowWidth);
-  $(".text-section").css("width", rowWidth);
-  $(".news-text").css("height", rowWidth);
-  $(".news-text").css("width", rowWidth);
+  $(".text-section").css("height", rowWidth - widthMod + "px");
+  $(".text-section").css("width", rowWidth - widthMod + "px");
+  $(".news-text").css("height", rowWidth - widthMod + "px");
+  $(".news-text").css("width", rowWidth - widthMod + "px");
 }
 
 $(window).on("load", function() {
@@ -58,7 +62,7 @@ $(window).on("load", function() {
 
     // Resize the text sections on the home page.
     if ($(".text-section").length || $(".about-content").length || $(".news-text").length) {
-      adjustTextSections();
+      adjustTextSections();  
     }
     
     // Make offwhite news background the same width as the nav.
@@ -127,7 +131,10 @@ $(window).on("load", function() {
     }
     
     // If videos, resize the caption
-    $(".video-caption").width($(".video > iframe").width());
+    // Video caption width.
+    if ( $(".video-caption").length ) {
+      $(".video-caption").width( $("section.video > iframe").width() );
+    }
 
     // If Instagram block, resize it, too.
     resizeInstagram();
@@ -161,7 +168,7 @@ $(window).on("load", function() {
       showCount: false,
       shares: ["pinterest", "twitter", "facebook"]
     });
-  }, 1500);
+  }, 2000);
   /*********************************************
   // End Initializing social icons.
   *********************************************/
@@ -258,121 +265,6 @@ $(window).on("load", function() {
       //********************************************
 
 
-
-      //********************************************
-      // Album featured collection building.
-      //********************************************
-      //         if( $("#featured_album_tmpl").length ){
-      //           var featured_arr = [];
-      //           var counter = 0;
-
-      //           $.each(data.album, function(key, val){
-      //             var code = $("#featured_album_tmpl").prop("innerHTML");
-
-      //             // Check to see if disc is featured.
-      //             if( val.discIsSolo === false ) {
-      //               // If this is the 6th or higher album, hide it by default.
-      //               if( counter > 5 ) {
-      //                 code = code.replace("!!isHiddenItem!!", "hiddenItem");
-
-      //                 // Make the "Load More" button visible.
-      //                 $(".featured-load-more-btn").show();
-      //               } else {
-      //                 code = code.replace("!!isHiddenItem!!", '');
-      //               }
-
-      //               // Swap out placeholders with real values.
-      //               code = code.replace("!!discCoverImg!!", val.discCoverImg);
-      //               code = code.replace("!!discName!!", val.discName);
-      //               code = code.replace("!!discNameStr!!", val.discName.toLowerCase().replace(/\s/gi, '-').replace(/[^\w-]/gi, ''));
-      //               // Add to array.
-      //               featured_arr.push(code);
-
-      //               counter = counter + 1;
-      //             }
-      //           });
-
-      //           $(".featured-albums").html(featured_arr.join("\n"));
-      //         }
-      //********************************************
-      // End featured album collection building.
-      //********************************************
-
-
-
-      //********************************************
-      // Album drilldown building.
-      //********************************************
-      if ($("#solo_album_tmpl").length) {
-        var album_name = getParameterByName("name");
-
-        // Get the specific album.
-        var album = $.grep(data.album, function(arr) {
-          return arr.discName.toLowerCase().replace(/\s/gi, '-').replace(/[^\w-]/gi, '') === album_name
-        });
-        album = album[0];
-
-        var purchase_options = album["albumPurchase"];
-        var streaming_options = album["albumStreaming"];
-
-        var code = $("#solo_album_tmpl").prop("innerHTML");
-
-        code = code.replace("!!album_name!!", album.discName);
-        code = code.replace("!!album_release_date!!", album.discReleaseDate);
-        code = code.replace("!!disc_cover_img!!", album.discCoverImg);
-        code = code.replace("!!album_distributor!!", album.discDistributor);
-        code = code.replace("!!album_descr!!", album.discDescr);
-
-        // Route back to solo or featured page, depending on album classification.
-        var solo_or_featured = "featured";
-        if (album.discIsSolo) {
-          solo_or_featured = "solo";
-        }
-
-        code = code.replace("!!is_solo_album!!", solo_or_featured);
-
-        var purchase_arr = [];
-        var streaming_arr = [];
-
-        // If there are no album purchase links, hide that section.
-        if (album.albumPurchase[0].serviceLogo) {
-          // Iterate album purchase links, and build and array of elements (str).
-          $.each(album.albumPurchase, function(key, val) {
-            var li = '<div class="purchase_links"><a href="' + val.serviceLink + '" target="_BLANK"><img src="' + val.serviceLogo + '" class="coll-detail-buy-img" /></a></div>';
-
-            purchase_arr.push(li);
-          });
-
-          code = code.replace("!!purchase_links!!", purchase_arr.join("\n"));
-          code = code.replace("!!album_display_buy!!", "block");
-        } else {
-          // Hide the option to buy albums.
-          code = code.replace("!!album_display_buy!!", "none");
-        }
-
-        // If there are no album streaming links, hide that section.
-        if (album.albumStreaming[0].serviceLogo) {
-          // Iterate album streaming links, and build and array of elements (str).
-          $.each(album.albumStreaming, function(key, val) {
-            var li = '<div><a href="' + val.serviceLink + '" target="_BLANK"><img src="' + val.serviceLogo + '" class="coll-detail-buy-img" /></a></div>';
-
-            streaming_arr.push(li);
-          });
-
-          code = code.replace("!!streaming_links!!", streaming_arr.join("\n"));
-          code = code.replace("!!album_display_stream!!", "block");
-        } else {
-          // Hide the option to stream albums.
-          code = code.replace("!!album_display_stream!!", "none");
-        }
-
-        $(".album-container").html(code);
-      }
-      //********************************************
-      // End album drilldown building.
-      //********************************************
-
-
       //********************************************
       // CONCERT LIST BUILDING.
       //********************************************
@@ -440,31 +332,31 @@ $(window).on("load", function() {
       //********************************************
       // BUILD CONCERT DETAILS
       //********************************************
-      if ($("#concert_tmpl").length) {
-        var concert_name = getParameterByName("name");
+//       if ($("#concert_tmpl").length) {
+//         var concert_name = getParameterByName("name");
 
-        $.each(data.concerts, function(key, val) {
-          /* Solo/featured albums. */
-          var name = val.concertName.toLowerCase() + " " + val.concertLocation.toLowerCase();
-          name = name.replace(/\s/gi, '-').replace(/[^\w-]/gi, '');
+//         $.each(data.concerts, function(key, val) {
+//           /* Solo/featured albums. */
+//           var name = val.concertName.toLowerCase() + " " + val.concertLocation.toLowerCase();
+//           name = name.replace(/\s/gi, '-').replace(/[^\w-]/gi, '');
 
-          if (name === concert_name) {
-            var code = $("#concert_tmpl").prop("innerHTML");
+//           if (name === concert_name) {
+//             var code = $("#concert_tmpl").prop("innerHTML");
 
-            code = code.replace(RegExp("!!concert_name!!", "g"), val.concertName);
-            code = code.replace(RegExp("!!concert_date_time!!", "g"), val.concertDatetime);
-            code = code.replace(RegExp("!!concert_venue!!", "g"), val.concertVenue);
-            code = code.replace(RegExp("!!concert_descr!!", "g"), val.concertDetails);
-            code = code.replace(RegExp("!!concert_location!!", "g"), val.concertLocation);
+//             code = code.replace(RegExp("!!concert_name!!", "g"), val.concertName);
+//             code = code.replace(RegExp("!!concert_date_time!!", "g"), val.concertDatetime);
+//             code = code.replace(RegExp("!!concert_venue!!", "g"), val.concertVenue);
+//             code = code.replace(RegExp("!!concert_descr!!", "g"), val.concertDetails);
+//             code = code.replace(RegExp("!!concert_location!!", "g"), val.concertLocation);
 
-            $(".concert-container").html(code);
+//             $(".concert-container").html(code);
 
-            if (!val.concertTicketsURL || val.concertTicketsURL.length < 1) {
-              $('[data-id="featured_concert"]').hide();
-            }
-          }
-        });
-      }
+//             if (!val.concertTicketsURL || val.concertTicketsURL.length < 1) {
+//               $('[data-id="featured_concert"]').hide();
+//             }
+//           }
+//         });
+//       }
       //********************************************
       // END BUILDING CONCERT DETAILS
       //********************************************
@@ -782,7 +674,6 @@ $(window).on("load", function() {
       // End news article building.
       //********************************************
       
-debugger;
       //********************************************
       // Videos with set column widths building.
       //********************************************

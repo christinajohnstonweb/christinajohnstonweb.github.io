@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-miterlimit:10;">
+    <g transform="matrix(1,0,0,1,-2144.79,-1014.24)">
+        <g id="Black-Play-button" serif:id="Black Play button" transform="matrix(0.474684,0,0,0.46875,1150.5,552.758)">
+            <rect x="2094.64" y="984.489" width="70.222" height="71.111" style="fill:none;"/>
+            <clipPath id="_clip1">
+                <rect x="2094.64" y="984.489" width="70.222" height="71.111"/>
+            </clipPath>
+            <g clip-path="url(#_clip1)">
+                <g transform="matrix(2.80889,0,0,2.84444,947.209,-4992.15)">
+                    <path d="M417.922,2109.52L417.891,2117.8L426.11,2113.73L417.922,2109.52Z" style="fill-rule:nonzero;"/>
+                </g>
+                <g transform="matrix(2.80889,0,0,2.84444,947.209,-4992.15)">
+                    <path d="M432.338,2113.66C432.338,2119.93 427.262,2125 421,2125C414.738,2125 409.662,2119.93 409.662,2113.66C409.662,2107.4 414.738,2102.33 421,2102.33C427.262,2102.33 432.338,2107.4 432.338,2113.66Z" style="fill:none;stroke:black;stroke-width:1px;"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

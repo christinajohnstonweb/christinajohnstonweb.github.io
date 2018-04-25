@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" />
 
-    <meta property="og:url"           content="https://htmlsandbox-jonlaplante530707.codeanyapp.com/discography/featured/" />
+    <meta property="og:url"           content="https://htmlsandbox-jonlaplante530707.codeanyapp.com/concerts_old/" />
     <meta property="og:type"          content="website" />
-    <meta property="og:title"         content="Christina Johnston, Coloratura Soprano - Discography" />
+    <meta property="og:title"         content="Christina Johnston, Coloratura Soprano - Concerts" />
     <meta property="og:description"   content="" />
     <meta property="og:image"         content="http://www.christinajohnston.co.uk/web/images/about_image_1340.jpg" />
     <meta name="twitter:card" content="">
     <meta name="twitter:site" content="@jonlaplante">
-    <meta name="twitter:title" content="Christina Johnston, Coloratura Soprano - Discography">
+    <meta name="twitter:title" content="Christina Johnston, Coloratura Soprano - Concerts">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="http://www.christinajohnston.co.uk/web/images/about_image_1340.jpg">
     <title>Christina Johnston - Coloratura Soprano</title>
@@ -117,48 +117,60 @@
   </div>
 </section>
 
-<div class="row justify-content-center">
-  <h1 class="section-header" property="discographyHeader">DISCOGRAPHY</h1>
-</div>
+<section class="content-section" id="concerts">
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <h1 class="section-header" property="concertsHeader">CONCERTS</h1>
+    </div>
+  </div>
 
-<section class="content-section" id="discography">
-  <section class="off-white-bg">
-    <div class="row">
-      <div class="col">
-        <section class="discography-text" property="discography_text" style="width: 100%; text-align: center; margin-top: 2.3rem;">
-          <div><strong>Blessing NEW ALBUM</strong></div>
-          <div>The State Opera, Prague as The Queen of the Night</div>
-          <div>Mozart’s Die Zauberflöte and Adelein Strauss’s Die Fledermaus.</div>
-        </section>
+  <section id="concerts_tables_section">
+  <div class="container-fluid" id="concerts_table">
+    <div class="row justify-content-center" style="font-weight: 900;" property="concertsTitle">Christina Johnston Concerts</div>
+    <div class="row justify-content-center" property="concertsSubtitle" style="">Discover all information about Chrisitna’s concerts.</div>
+    <div id="concert_tables_content">
+      <div class="row" style="margin: 0 0 1% 10%;" property="concerts" mv-multiple>
+        <table class="off-white-bg" style="border-collapse: collapse; width: 90%;">
+          <tr>
+            <td style="width: 14.5rem;"><img src=/christinajohnstonweb.github.io/web/images/concert_thumbnail_1.jpg alt="" property="concertLocImg" style="margin: 1.4rem; width: 10.5rem;"></td>
+            <td class="concert-venue-date">
+              <p style=""><strong style="font-weight: bolder; margin-bottom: 3.3rem;" property="concertDatetime">June 10 / 2017</strong></p>
+              <p class="concert-details" style="font-weight: bold;" property="concertName">THE MIRACAL OF THE VOICE</p>
+              <p class="concert-details" property="concertVenue">Church of St Michael the Archangel</p>
+              <p class="concert-details" property="concertLocation">Framlingham</p>
+            </td>
+            <td class="td-concert-spacer"></td>
+            <td class="buy-tickets-td"><a href="#" class="btn-media buy-tickets-btn">BUY TICKETS</button></a><span class="mv-logged-in">&nbsp;Ticket purchase link:&nbsp;<input type="text" placeholder="https://www.example.com/store/url" property="concertTicketsURL" class="form-control" /></span></td>
+            <td class="concert-info-td"><a href="#" class="concert-info-a"><em style="white-space: nowrap;">Info ></em></a><span class="mv-logged-in">&nbsp;Concert Details:&nbsp;<textarea cols="6" rows="10" property="concertDetails" class="form-control tinymce"></textarea></span></td>
+          </tr>
+        </table>
       </div>
     </div>
-    
-    <div class="row justify-content-center">
-      <h1 class="section-header-link" property="solo_header"><a href=/christinajohnstonweb.github.io/web/discography/solo style="color: black; text-decoration: none;">SOLO</a></h1>&nbsp;&nbsp;&nbsp;<h1 class="section-header">FEATURED</h1>
-    </div>
-    
-    <div class="d-flex flex-wrap flex-center-align featured-albums" style="padding: 0 5.5rem 5.5rem 5.5rem;">
-      <section property="album" mv-multiple>
-        <input type="hidden" property="discIsSolo" />
-        <input type="hidden" property="hiddenAlbum" />
-        <div class="hiddenItem album" style="margin: 2.0rem; display:[if(discIsSolo=false and hiddenAlbum=false, block, none)]">
-          <img property="discCoverImg" alt="" class="d-flex discography-image"/>
-          <a href=/christinajohnstonweb.github.io/web/discography/album data-album="[idify(discName)]" class="mx-auto d-flex btn-black btn-centered discography-more-btn">MORE</a>
-          <section class="album-details">
-  <!--           <small class="album-release-date">[discReleaseDate]</small> -->
-          <h2 class="album-name" property="discName"></h2>
-  <!--           <small class="album-distributor">[discDistributor]</small> -->
-          </section>
-        </div>
-      </section>
-    </div>
-    
-    <div class="justify-content-center featured-load-more-btn" style="width: 100%; display: flex; padding-bottom: 4.0rem; margin-top: -2.0rem;">
-      <button class="btn-black" mv-if="count(album.discIsSolo=false) > 6" type="button" id="load_more_albums_btn">LOAD MORE</button>
-    </div>
-
+  </div>
   </section>
+
+  <section id="concerts_cards_section">
+  <div id="concert_cards">
+    <div class="row justify-content-center"><strong property="concertsTitle">Christina Johnston Concerts</strong></div>
+    <div class="row justify-content-center" style="" property="concertsSubtitle">Discover all information about Chrisitna’s concerts.</div>
+
+    <div id="cards_concert_content" class="d-flex flex-wrap">
+      <div class="card mx-auto off-white-bg" style="width: 20rem; margin: 1.0rem;" property="concerts" mv-multiple>
+        <img class="card-img-top mx-auto d-block rounded-circle" style="margin: 10px; width: 120px; border: 3px solid #ccc;" src=/christinajohnstonweb.github.io/web/images/concert_thumbnail_1.jpg alt="Card image cap" property="concertLocImg" />
+
+        <div class="card-body">
+          <h3 style="font-weight: bolder;" property="concertDatetime">July 28 / 2017</h3>
+          <h4 class="card-title" property="concertName">HTE MIRACLE OF THE VOICE</h4>
+          <p class="card-text" property="concertVenue">Church of St Michael the Archangel</p>
+
+          <a href="#" class="btn-media buy-tickets-btn">BUY TICKETS</a><a href="#" class="btn btn-more-info">Info ></a>
+        </div>
+      </div>
+      </div>
+    </div>
+    </section>
 </section>
+
 
 <section id="media" class="reveal-fixed-bg media-container" style='background-image: url(/christinajohnstonweb.github.io/web/images/roses_parallax.jpg); margin-top: -2.0rem;'>
   <div class="reveal-container">
@@ -263,7 +275,40 @@
       </div>
     </div>
 </footer>
-<script src=/christinajohnstonweb.github.io/web/javascripts/discography.js></script>
+
+<script id="concerts_table_tmpl" type="text/template">
+  <div class="row" style="margin: 0 0 1% 10%;">
+      <table class="off-white-bg" style="border-collapse: collapse; width: 90%;">
+        <tr>
+          <td style="width: 14.5rem;"><img src="!!concert_img!!" alt="" style="margin: 1.4rem; width: 10.5rem;"></td>
+          <td class="concert-venue-date">
+            <p style="margin-bottom: 3.2rem; font-weight: 900; letter-spacing: 0.12rem;">!!concert_date!!</p>
+            <p class="concert-details" style="font-weight: 900; margin: 1.5rem 0; letter-spacing: 0.10rem;">!!concert_name!!</p>
+            <p class="concert-details" style="margin: 1.5rem 0;">!!concert_venue!!</p>
+            <p class="concert-details">!!concert_location!!</p>
+          </td>
+          <td class="td-concert-spacer"></td>
+          <td class="buy-tickets-td" data-id="!!concert_key!!"><a href="!!concert_ticket_url!!" target="_BLANK" class="btn-media buy-tickets-btn">BUY TICKETS</button></a></td>
+          <td class="concert-info-td"><a href=/christinajohnstonweb.github.io/web/concerts/event/ data-event="!!concert_event!!" class="concert-info-a concert-more-btn"><em style="white-space: nowrap;">Info ></em></a></td>
+        </tr>
+      </table>
+    </div>
+</script>
+
+<script id="concerts_card_tmpl" type="text/template">
+   <div class="card mx-auto off-white-bg" style="width: 20rem; margin: 1.0rem;">
+      <img class="card-img-top mx-auto d-block" style="margin: 10px; width: 120px;" src="!!concert_img!!" alt="Card image cap" />
+
+      <div class="card-body">
+        <h3 style="font-weight: bolder;" property="concertDatetime">!!concert_date!!</h3>
+        <h4 class="card-title" property="concertName">!!concert_name!!</h4>
+        <p class="card-text" property="concertVenue">!!concert_venue!!</p>
+        <p class="card-text" property="concertLocation">!!concert_location!!</p>
+
+        <a href="!!concert_ticket_url!!" target="_BLANK" data-id="!!concert_key!!" class="btn-media buy-tickets-btn">BUY TICKETS</a><a href=/christinajohnstonweb.github.io/web/concerts/event/ data-event="!!concert_event!!" class="btn btn-more-info concert-more-btn">Info ></a>
+      </div>
+    </div>
+</script>
         
             <section id="brand_tag" style="margin-top: 0.5rem;">
               ©2017 Christina Johnston / All Rights Reserved / <a href="http://likelike.cz/en/" style="color: #000;" target="_BLANK">designed by likelike</a>

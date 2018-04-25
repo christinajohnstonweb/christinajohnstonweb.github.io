@@ -97,7 +97,7 @@
         </section>
         
         <p>
-          <span class="fa [if(hiddenAlbum, 'fa-check', 'fa-times')]" style="font-size: 2.0rem; color: [if(hiddenAlbum, 'green', 'red')];"></span>&nbsp;<label for="[property='hiddenAlbum']" style="font-size: 1.5rem;">HIDE this album from ALL pages?</label>&nbsp;<input type="checkbox" property="hiddenAlbum" />
+          <span class="fa [if(hiddenAlbum, 'fa-check', 'fa-times')]" style="font-size: 2.0rem; color: [if(hiddenAlbum, 'green', 'red')];"></span>&nbsp;<label for="[property='hiddenAlbum']" style="font-size: 1.5rem;">HIDE this album from ALL pages?</label>&nbsp;<input type="checkbox" property="hiddenAlbum" class="mv-logged-in" />
         </p>
         
         <p>
@@ -106,6 +106,34 @@
         
         <span class="mv-logged-in" style="font-size: 1.5rem;"><input type="checkbox" property="discIsSolo" />&nbsp;<strong>Solo</strong> album? (Instead of <em>featured</em>)</span>
         <div class="tinymce" property="discDescr" style="text-align: center; padding: 1.0rem 20.0rem; font-size: 1.5rem;"></div>
+        
+        <h2 style="margin-top: 2.0rem;">Track List</h2>
+        <div property="albumTracks" style="margin: 20px 0; padding: 10px; display: flex; flex-wrap: column; justify-content: center;" mv-multiple>
+          <table style="width: 80%;">
+<!--             <tr>
+              <td style="width: 40%;" align="left"><strong><small>Track Title</small></strong></td>
+              <td style="width: 40%;" align="left"><strong><small>SoundCloud Embed</small></strong></td>
+              <td style="width: 20%;" align="center">
+              
+              </td>
+            </tr> -->
+            <tr>
+              <td style="width: 50%;" align="left" valign="top">
+                <div style=" position: relative; height: 70px; padding: 10px; background-color: #ddd;; display: flex; flex-wrap: row; justify-content: center; align-items: center;"><small style="position: absolute; top: 3px; left: 3px;">Track Title</small><input placeholder='i.e. A Beautiful Song Title' type="text" style="width: 95%;" class="form-control" property="trackTitle" aria-label="Track Title"></div>
+              </td>
+              <td style="width: 50%;" align="left" valign="top">
+                   <div style=" position: relative; height: 70px; padding: 10px; background-color: #ddd;; display: flex; flex-wrap: row; justify-content: center; align-items: center;"><small style="position: absolute; top: 3px; left: 3px;">SoundCloud Embed Link</small><input placeholder='i.e. <iframe class="audio-src" style="width: 34px; height: 34px;" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/357064727&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>' type="text" style="width: 95%;" class="form-control soundcloud-embed-link" property="soundcloudEmbedLink" aria-label="SoundCloud Embed Link"></div>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="3" style="background-color: #ddd;"><strong><small>Lyrics</small></strong></td>
+            </tr>
+            <tr>
+              <td colspan="3" style="background-color: #ddd; padding: 1.5rem;"><div style="background-color: #fff; padding: 1.0rem;" property="trackLyrics" class="tinymce"></div></td>
+            </tr>
+          </table>
+        </div>
+        
         <h2>Streaming Options</h2>
         <div property="albumStreaming" style="margin: 20px 0; padding: 10px; display: flex; flex-wrap: row; justify-content: center;" mv-multiple>
           <div style="padding: 10px; width: 200px; height: 70px; position: relative; display: flex; flex-wrap: row; justify-content: center; align-items: center;"><small style="position: absolute; top: 3px; left: 3px;">Service logo image</small><img property="serviceLogo" style="max-width:150px; max-height: 100px;" src="http://www.christinajohnston.co.uk/data/images/itunes_logo_black.png" class="" aria-label="Service logo"></div>
@@ -124,6 +152,21 @@
       </div>
     </div>
   </section>
+
+  <script>
+    // Clean up SoundCloud iFrame.
+    $(function(){
+      // Extract the src from the iFrame and put it in the <input/>.
+      $(document).on("change", '[property="soundcloudEmbedLink"]', function(){
+        var that = this;
+        var str = $(that).val();
+        var src = $(str).attr("src");
+
+        $(that).val(src);
+        $(that).attr("value", src);
+      });
+    });
+  </script>
         
             <section id="brand_tag" style="margin-top: 0.5rem;">
               ©2017 Christina Johnston / All Rights Reserved / <a href="http://likelike.cz/en/" style="color: #000;" target="_BLANK">designed by likelike</a>

@@ -5,24 +5,18 @@ function responsiveTest(){
   
 //   $(".section-img").parent().parent().css( "height", $(".section-img").width() );
 //   $(".section-img").parent().prev().css( "height", $(".section-img").width() );
-  if( window.matchMedia("(max-width: 414px)").matches || window.matchMedia("(device-max-width: 414px)").matches ){
-     // Handle video sizes.
-//     $("section.video > iframe").css("width", "300px");
-//     $("section.video > iframe").css("height", "169px");
+  if( window.matchMedia("(max-width: 422px)").matches || window.matchMedia("(device-max-width: 422px)").matches ){
+    $("#discography").width( Math.round($(".navbar").width() - 12) + "px" );
   }
   
   if (window.matchMedia("(max-width: 575px)").matches || window.matchMedia("(device-max-width: 575px)").matches) {
+    $("#discography").width( Math.round($(".navbar").width() - 8) + "px" );
+    
     // Handle news cols.
     var test_single_col = setInterval(function(){
       if( $("#single_col_str").length > 0 ) {
         $(".news-container").html( $("#single_col_str").prop("innerHTML") );
         $(".photos-container").html( $("#single_col_str").prop("innerHTML") );
-        
-        // Set the width of the container for small device screens.
-//         $(".main-news").width( Math.round($(".navbar").width() * 0.8) );
-//         $(".photos-container").width( Math.round($(".navbar").width() * 0.8) );
-//         $(".main-news").width( Math.round($("#carousel").width() * 0.85) );
-//         $(".news-article").width("95%");
         
         clearInterval(test_single_col);
       }
@@ -36,6 +30,8 @@ function responsiveTest(){
 
     // We're wrapping the cols, so get rid of the row height.
     $(".section-img").parent().parent().css( "height", "" );
+    
+    adjustTextSections(40);
   }
   
   // footer-newsletter-container
@@ -73,10 +69,6 @@ function responsiveTest(){
     // Centered footer.
     $(".footer-newsletter-container.col-12").removeClass("col-12");
     $(".footer-newsletter-container").addClass("col-11");
-    
-    // Handle news cols.
-//     $(".news-container").html( $("#single_col_str").prop("innerHTML") );
-//     $(".photos-container").html( $("#single_col_str").prop("innerHTML") );
    }
   
   /* the viewport is 768 pixels or less wide */
@@ -90,20 +82,6 @@ function responsiveTest(){
 
     // We're wrapping the cols, so get rid of the row height.
     $(".section-img").parent().parent().css( "height", "" );
-    
-//     // Make the 'Home' text sections match the window width.
-//     var new_width = $(window).width();
-//     if(new_width < 768){
-//       new_width = parseInt(new_width * 0.8);
-//     }
-    
-//     $(".text-section", ".news-text").height( new_width );
-
-    // Remove Masonry from smaller screens.
-//      if ( $(".grid").length ) {
-//       // console.log("Destroying Masonry!");
-//       $(".grid").masonry("destroy");  
-//     }
     
     if( $(".footer-break") ) {
       // Handle the footer, too.
@@ -119,7 +97,7 @@ function responsiveTest(){
     // Handle video sizes.
     $("section.video > iframe").css("width", "300px");
     $("section.video > iframe").css("height", "169px");
-    $(".video-caption").width( $(".video").width() );
+//     $(".video-caption").width( $(".video").width() );
     
     // Handle news cols.
     $(".news-container").html( $("#two_col_str").prop("innerHTML") );
@@ -141,10 +119,6 @@ function responsiveTest(){
   
   if (window.matchMedia("(min-width: 1201px)").matches || window.matchMedia("(device-min-width: 1201px)").matches) {
   /* the viewport is at most 1200 pixels wide */
-  // Handle video sizes.
-    
-//     $("section.video > iframe").css("width", "400px");
-//     $("section.video > iframe").css("height", "225px");
   }
 
   // If the viewport < 1200px, make the article sections as tall as they are wide.
@@ -173,9 +147,6 @@ function responsiveTest(){
   // Handle video sizes.
     $("section.video > iframe").css("width", "450px");
     $("section.video > iframe").css("height", "253px");
-    
-    // Handle news cols.
-    // $(".news-container").html( $("#three_col_str").prop("innerHTML") );
   }
   
   // >1600px.
@@ -183,9 +154,6 @@ function responsiveTest(){
     // Handle video sizes.
     $("section.video > iframe").css("width", "475px");
     $("section.video > iframe").css("height", "267px");
-    
-    // Handle news cols.
-    // $(".news-container").html( $("#three_col_str").prop("innerHTML") );
   }
   
   // >1750px.
@@ -193,8 +161,5 @@ function responsiveTest(){
     // Handle video sizes.
     $("section.video > iframe").css("width", "500px");
     $("section.video > iframe").css("height", "281px");
-    
-    // Handle news cols.
-    // $(".news-container").html( $("#three_col_str").prop("innerHTML") );
   }
 }

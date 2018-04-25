@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" />
 
-    <meta property="og:url"           content="https://htmlsandbox-jonlaplante530707.codeanyapp.com/discography/featured/" />
+    <meta property="og:url"           content="https://htmlsandbox-jonlaplante530707.codeanyapp.com/discography/album/" />
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="Christina Johnston, Coloratura Soprano - Discography" />
     <meta property="og:description"   content="" />
@@ -64,7 +64,10 @@
           </div>
           <div class="col main-content">
 
-            <style>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.8/mediaelement-and-player.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.8/renderers/soundcloud.min.js" integrity="sha256-fIbT3c1g1flI9CXMY1QoPhfF6V1QRE2xvnti/eNAbkw=" crossorigin="anonymous"></script>
+
+<style>
   .dropdown-item { font-size: 1.35rem; }
 </style>
 <nav class="navbar navbar-expand-lg topbar">
@@ -110,86 +113,8 @@
   </div>
 </nav>
 
-<section class="content-section" id="carousel">
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-pause="false">
-    <ol class="carousel-indicators"></ol>
-    <div class="carousel-inner"></div>
-  </div>
-</section>
+<div class="album-container off-white-bg"></div>
 
-<div class="row justify-content-center">
-  <h1 class="section-header" property="discographyHeader">DISCOGRAPHY</h1>
-</div>
-
-<section class="content-section" id="discography">
-  <section class="off-white-bg">
-    <div class="row">
-      <div class="col">
-        <section class="discography-text" property="discography_text" style="width: 100%; text-align: center; margin-top: 2.3rem;">
-          <div><strong>Blessing NEW ALBUM</strong></div>
-          <div>The State Opera, Prague as The Queen of the Night</div>
-          <div>Mozart’s Die Zauberflöte and Adelein Strauss’s Die Fledermaus.</div>
-        </section>
-      </div>
-    </div>
-    
-    <div class="row justify-content-center">
-      <h1 class="section-header-link" property="solo_header"><a href=/christinajohnstonweb.github.io/web/discography/solo style="color: black; text-decoration: none;">SOLO</a></h1>&nbsp;&nbsp;&nbsp;<h1 class="section-header">FEATURED</h1>
-    </div>
-    
-    <div class="d-flex flex-wrap flex-center-align featured-albums" style="padding: 0 5.5rem 5.5rem 5.5rem;">
-      <section property="album" mv-multiple>
-        <input type="hidden" property="discIsSolo" />
-        <input type="hidden" property="hiddenAlbum" />
-        <div class="hiddenItem album" style="margin: 2.0rem; display:[if(discIsSolo=false and hiddenAlbum=false, block, none)]">
-          <img property="discCoverImg" alt="" class="d-flex discography-image"/>
-          <a href=/christinajohnstonweb.github.io/web/discography/album data-album="[idify(discName)]" class="mx-auto d-flex btn-black btn-centered discography-more-btn">MORE</a>
-          <section class="album-details">
-  <!--           <small class="album-release-date">[discReleaseDate]</small> -->
-          <h2 class="album-name" property="discName"></h2>
-  <!--           <small class="album-distributor">[discDistributor]</small> -->
-          </section>
-        </div>
-      </section>
-    </div>
-    
-    <div class="justify-content-center featured-load-more-btn" style="width: 100%; display: flex; padding-bottom: 4.0rem; margin-top: -2.0rem;">
-      <button class="btn-black" mv-if="count(album.discIsSolo=false) > 6" type="button" id="load_more_albums_btn">LOAD MORE</button>
-    </div>
-
-  </section>
-</section>
-
-<section id="media" class="reveal-fixed-bg media-container" style='background-image: url(/christinajohnstonweb.github.io/web/images/roses_parallax.jpg); margin-top: -2.0rem;'>
-  <div class="reveal-container">
-    <h1 class="media-header">MEDIA</h1>
-    <a href=/christinajohnstonweb.github.io/web/media/photos class="btn-media">MORE</a>
-  </div>
-</section>
-<section class="content-section" id="news">
-  <div class="container-fluid">
-    <div class="row justify-content-center">
-      <h1 class="section-header">NEWS</h1>
-    </div>
-
-    <div class="row off-white-bg" id="news_row">
-      <div class="col-6 news-text" style="color: #000000; overflow-y: auto;">
-        <section class="news-item-section" property="news" mv-multiple>
-          <input type="hidden" class="featuredNewsInput" property="featuredNews" />
-          <span style="display: [if(featuredNews=true, block, none)];">
-            <div class="news-date" property="newsDate">Jun 23, 2017</div>
-            <div class="news-title" property="newsTitle">CHRISTINA JOHNSTON, POPULAR BRITISH COLORATURA SOPRANO WITH A VOICE THAT SOARS ABOVE THE CLOUDS.</div>
-            <div class="news-details tinymce" property="newsDetailsPreview">Her new album "Blessing" is released on 22nd September 17</div>
-            <a href=/christinajohnstonweb.github.io/web/news/article data-article="[idify(newsTitle)]" class="news-more-btn news-more-details">More ></a>
-          </span>
-        </section>
-
-        <a href=/christinajohnstonweb.github.io/web/news class="btn-black" id="more_news_btn">MORE NEWS</a>
-      </div>
-      <div class="remove-padding col-6"><img src=/christinajohnstonweb.github.io/web/images/news_image_1340.jpg class="img-fluid section-img" alt="News about Christina Johnston - Coloratura Soprano" property="news_image" /></div>
-    </div>
-  </div>
-</section>
 <section class="content-section" id="instagram">
   <div class="row justify-content-center">
     <h1 class="section-header" property="instagram_header">INSTAGRAM</h1>
@@ -263,7 +188,89 @@
       </div>
     </div>
 </footer>
-<script src=/christinajohnstonweb.github.io/web/javascripts/discography.js></script>
+
+<script mv-expressions="none">
+  $(function(){
+    $("main").fadeIn("slow");
+  });
+</script>
+
+<script type="text/template" id="album_tracks_tmpl">
+  <div>
+    <div style="border-bottom: 1px solid black; width: 100%;">
+      <div style="display: flex; flex-direction: row;">
+        <div data-video="SKd4xML-fV4" data-autoplay="0" data-loop="1" class="youtube-audio" style="width: 10%;"></div>
+        <div style="width: 80%; position: relative;"><span style="position: relative; height: 100%; top: 30%;">1. This is the title</span></div>
+        <div style="" class=""><button class="btn-black" data-toggle="collapse" data-target="#song_1" style="margin: 3% 0;">Lyrics</button></div>
+      </div>
+      <div class="collapse" id="song_1" style="background-color: black; color: white; padding: 5%;">
+        Bacon ipsum dolor amet biltong pancetta turducken flank cow sausage meatloaf chuck capicola tail drumstick spare ribs cupim short ribs pastrami. Porchetta shoulder ground round meatball beef ribs fatback. Buffalo kevin biltong pork belly fatback. Sausage kevin t-bone, pork loin picanha pork belly ground round salami porchetta kielbasa fatback short ribs. Pork belly andouille ball tip swine. Short loin pork chop pastrami ribeye salami kevin. Ball tip drumstick salami, boudin andouille short ribs corned beef turducken chuck shoulder short loin ham hock filet mignon pork loin cow.
+      </div>
+    </div>
+
+    <div style="border-bottom: 1px solid black; width: 100%;">
+      <div style="display: flex; flex-direction: row;">
+        <div data-video="gFFxPVfJNXQ" data-autoplay="0" data-loop="1" class="youtube-audio" style="width: 10%;"></div>
+        <div style="position: relative; width: 80%;"><span style="position: relative; height: 100%; top: 30%;">2. This is the 2nd title</span></div>
+        <div style="" class=""><button class="btn-black" data-toggle="collapse" data-target="#song_2" style="margin: 3% 0;">Lyrics</button></div>
+      </div>
+      <div class="collapse" id="song_2" style="background-color: black; color: white; padding: 5%;">
+        Ribeye shoulder pig beef ribs swine tongue pork shank andouille turducken venison bacon pork belly meatball picanha. Ham hamburger corned beef, chuck cow capicola drumstick frankfurter rump pork chop doner meatloaf kielbasa. Jerky kevin flank shankle buffalo. Landjaeger cupim leberkas, strip steak shank t-bone turkey beef biltong turducken.
+      </div>
+    </div>
+
+    <div style="border-bottom: 1px solid black; width: 100%;">
+      <div style="display: flex; flex-direction: row;">
+        <div data-video="RYhhAjOh_Ks" data-autoplay="0" data-loop="1" class="youtube-audio" style="width: 10%;"></div>
+        <div style="position: relative; width: 80%;"><span style="position: relative; height: 100%; top: 30%;">3. This is the 3rd title</span></div>
+        <div style="" class=""><button class="btn-black" data-toggle="collapse" data-target="#song_3" style="margin: 3% 0;">Lyrics</button></div>
+      </div>
+      <div class="collapse" id="song_3" style="background-color: black; color: white; padding: 5%;">
+        Ball tip ribeye pork chop meatloaf strip steak jerky meatball fatback short ribs capicola. Tri-tip alcatra meatloaf shankle beef kevin jowl burgdoggen. Leberkas tongue brisket picanha, kevin hamburger burgdoggen sausage beef ribs doner ribeye landjaeger chuck pork. Meatloaf frankfurter pork chop chicken cupim short loin prosciutto. Ground round shoulder prosciutto pork chuck doner jowl picanha ham hock buffalo.
+      </div>
+    </div>
+  </div>
+</script>
+
+<script mv-expressions="none" type="text/template" id="solo_album_tmpl">
+  <div class="container">
+    <div class="row" style="margin-bottom: 3.8rem;">
+      <div class="col-12" style="text-align: center;">
+        <h1 class="coll-detail-header">!!album_name!!</h1>
+        <!-- div class="coll-detail-date">!!album_release_date!!</div>
+        <div class="coll-detail-distribution">!!album_distributor!!</div -->
+        <div><img src="!!disc_cover_img!!" class="coll-detail-img" /></div>
+        <span class="album-buy-options" style="display: !!album_display_buy!!;">
+          <p class="coll-detail-buy-label">BUY ON:</p>
+          <div class="coll-detail-buy-option">
+            !!purchase_links!!
+          </div>
+        </span>
+        <span class="album-stream-options" style="display: !!album_display_stream!!;">
+          <p class="coll-detail-buy-label">STREAM ON:</p>
+          <div class="coll-detail-buy-option">
+            !!streaming_links!!
+          </div>
+        </span>
+        
+        <div style="display: flex; content-align: center; justify-content: center; margin: 3.5rem 0 0.75rem 0;"><div style="width: 52%; font-size: 1.5rem;">!!album_descr!!</div></div>
+        
+        <div style="display: flex; content-align: center; justify-content: center;">SHARE</div>
+        <div style="display: flex; content-align: center; justify-content: center;" id="sharing_icons"></div>
+        !!album_tracks!!
+        
+        <div style="display: flex; content-align: center; justify-content: center; margin-bottom: 4.0rem;"><a href=/christinajohnstonweb.github.io/web/discography/!!is_solo_album!! style="color: #EE2D9F;"><small style="font-size: 1.1rem;"><span class="fa fa-caret-left"></span>&nbsp;Back to discography</small></a></div>
+      </div>
+    </div>
+  </div>
+</script>
+  
+<!-- <div data-video="NQKC24th90U" data-autoplay="0" data-loop="1" class="youtube-audio">&nbsp;</div>
+<div data-video="KK2smasHg6w" data-autoplay="0" data-loop="1" class="youtube-audio">&nbsp;</div> -->
+  </div>
+<script src="/javascripts/mediaplayer.js"></script>
+<!--   <script src="https://www.youtube.com/iframe_api"></script> -->
+<!--   <script src=/christinajohnstonweb.github.io/web/javascripts/youtube_audio.js></script> -->
         
             <section id="brand_tag" style="margin-top: 0.5rem;">
               ©2017 Christina Johnston / All Rights Reserved / <a href="http://likelike.cz/en/" style="color: #000;" target="_BLANK">designed by likelike</a>

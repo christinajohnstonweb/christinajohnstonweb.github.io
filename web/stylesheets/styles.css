@@ -68,7 +68,8 @@ a.nav-link.active { font-weight: 700; }
 }
 
 /* Initial values */
-#concert_cards { display: none; }
+.cards-concert-content { display: none; }
+/* #concert_cards { display: none; } */
 
 /* Sticky social sharing */
 .pg-social-col {
@@ -381,8 +382,12 @@ a.navbar-brand {
 .album-name { font-weight: 700; font-size: 1.7rem; padding-top: 0.5rem; margin-bottom: 0.1rem; }
 .album-distributor { color: #5d5d5d; font-size: 1.0rem; }
 
+.youtube-audio { transition: all 0.3s; }
+.youtube-audio:hover { opacity: 0.5; }
+
 /* .discography-more-btn { position: relative; top: -18.5rem; left: 14.0rem; margin: 0; } */
 .discography-image { height: 28.0rem; width: 28.0rem; }
+.discography-image:hover ~ .discography-more-btn { display: block; }
 .disco-btn { display: block; }
 
 /* Footer */
@@ -451,7 +456,11 @@ footer {
 .tbl-concert-venue { margin: 1.5rem 0; }
 .tbl-concert-location {  }
 
-.justify-content-center { margin: -0.5rem 0 3.25rem 0; text-align: center; }
+.concert-card-links { display: flex; justify-content: center; }
+.cards-concert-content { display: flex; justify-content: center; flex-direction: row; }
+
+.justify-content-center { margin: -0.5rem 0 0 0; text-align: center; }
+/* .justify-content-center { margin: -0.5rem 0 3.25rem 0; text-align: center; } */
 
 /* News section */
 .news-text { padding: 4.5rem 5.56rem 0 6.56rem; }

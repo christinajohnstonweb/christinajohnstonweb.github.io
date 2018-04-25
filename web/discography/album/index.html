@@ -22,8 +22,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,700,700i,900,900i" rel="stylesheet">
     <link rel="stylesheet" href=/christinajohnstonweb.github.io/web/stylesheets/mavo.css />
 <!--     <link rel="stylesheet" href="https://get.mavo.io/mavo.css"> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsSocials/1.5.0/jssocials.min.css" integrity="sha256-1tuEbDCHX3d1WHIyyRhG9D9zsoaQpu1tpd5lPqdqC8s=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsSocials/1.5.0/jssocials-theme-minima.min.css" integrity="sha256-gdf8VUxJSQWUDIxhmCgSIVi8uBCaImRGWzMfKYlrUVE=" crossorigin="anonymous" />
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.css" />
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials-theme-minima.css" />
     <link rel="stylesheet" href=/christinajohnstonweb.github.io/web/stylesheets/styles.css />
     <link rel="stylesheet" href=/christinajohnstonweb.github.io/web/stylesheets/effects.css />
     <link rel="stylesheet" href=/christinajohnstonweb.github.io/web/stylesheets/ken-burns.css />
@@ -32,6 +32,7 @@
     <link rel="stylesheet" href=/christinajohnstonweb.github.io/web/stylesheets/media-queries.css />
     
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.min.js"></script>
     <script>
       var Helpers = Helpers || {};
       
@@ -63,7 +64,24 @@
           </div>
           <div class="col main-content">
 
-            <style>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement-plugins/2.5.0/jump-forward/jump-forward.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.8/mediaelementplayer.min.css" />
+
+<style>
+  .mejs__controls { display: none; }
+  .mejs__overlay { background-color: white; }
+  .mejs__overlay-button { background: url( /christinajohnstonweb.github.io/web/images/black_play_button.svg ) no-repeat; background-position: 0; width: 32px; height: 32px; transition: all 1s; }
+  .mejs__overlay:hover > .mejs__overlay-button { background-position: 0; opacity: 0.75; }
+  .mejs__iframe-overlay { background: url(/christinajohnstonweb.github.io/web/images/pink_pause_button.svg) no-repeat; background-position: 1px 1px; width: 32px; height: 32px; transition: all 1s; background-color: white; border: none; }
+  .mejs__overlay:hover > .mejs__iframe-overlay { background-position: 0; opacity: 0.75; }
+  .mejs__container { background-color: white; border: 0; }
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.8/mediaelement-and-player.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.8/renderers/soundcloud.min.js" integrity="sha256-fIbT3c1g1flI9CXMY1QoPhfF6V1QRE2xvnti/eNAbkw=" crossorigin="anonymous"></script>
+
+<style>
   .dropdown-item { font-size: 1.35rem; }
 </style>
 <nav class="navbar navbar-expand-lg topbar">
@@ -109,7 +127,47 @@
   </div>
 </nav>
 
-<div class="album-container off-white-bg"></div>
+<div class="off-white-bg">
+  <div class="container" property="album" mv-multiple style="display:[if(idify(discName) = url('name'), block, none)];">
+      <input type="hidden" property="discIsSolo" />
+      <div class="row" style="margin-bottom: 3.8rem; display">
+        <div class="col-12" style="text-align: center;">
+          <h1 class="coll-detail-header" property="discName"></h1>
+
+          <div><img property="discCoverImg" class="coll-detail-img" /></div>
+          <span class="album-buy-options" style="display: [if(count(albumPurchase) > 0, block, none)];">
+            <p class="coll-detail-buy-label">BUY ON:</p>
+            <div class="coll-detail-buy-option">
+              <div class="purchase_links" property="albumPurchase" mv-multiple><a property="serviceLink" target="_BLANK"><img property="serviceLogo" class="coll-detail-buy-img" /></a></div>
+            </div>
+          </span>
+          <span class="album-stream-options" style="display: [if(count(albumStreaming) > 0, block, none)];">
+            <p class="coll-detail-buy-label">STREAM ON:</p>
+            <div class="coll-detail-buy-option">
+              <div property="albumStreaming" mv-multiple><a property="serviceLink" target="_BLANK"><img property="serviceLogo" class="coll-detail-buy-img" /></a></div>
+            </div>
+          </span>
+
+          <div style="display: flex; content-align: center; justify-content: center; margin: 3.5rem 0 0.75rem 0;"><div style="width: 52%; font-size: 1.5rem;" class="tinymce" property="discDescr"></div></div>
+
+          <div style="display: flex; content-align: center; justify-content: center;">SHARE</div>
+          <div style="display: flex; content-align: center; justify-content: center;" id="sharing_icons"></div>
+          
+            <div style="border-bottom: 1px solid black; width: 50%; display:[if(count(trackTitle) > 0, block, none)]; margin: 0 auto;" property="albumTracks" mv-multiple>
+              <div style="display: flex; flex-direction: row;">
+
+                <iframe class="audio-src" style="width: 34px; height: 34px;" scrolling="no" frameborder="no" allow="autoplay" property="soundcloudEmbedLink" src="[soundcloudEmbedLink]"></iframe>
+                <div style="width: 80%; position: relative;"><span style="position: relative; height: 100%; top: 30%;" property="trackTitle"></span></div>
+                <div style="" class=""><button class="btn-black" data-toggle="collapse" data-target="#[idify(trackTitle)]" style="margin: 3% 0;">Lyrics</button></div>
+              </div>
+              <div class="collapse tinymce" id="[idify(trackTitle)]" style="background-color: black; color: white; padding: 5%;" property="trackLyrics"></div>
+            </div>
+
+          <div style="display: flex; content-align: center; justify-content: center; margin-bottom: 4.0rem;"><a href='/christinajohnstonweb.github.io/web/discography/[if(discIsSolo=false, featured, solo)]' style="color: #EE2D9F;"><small style="font-size: 1.1rem;"><span class="fa fa-caret-left"></span>&nbsp;Back to discography</small></a></div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <section class="content-section" id="instagram">
   <div class="row justify-content-center">
@@ -132,16 +190,16 @@
 
         <div class="row">
           <div class="col align-self-end">
-            <div class="footer-col-title">[footerFirstColTitle]</div>
-            [footerFirstColumn]
+            <div class="footer-col-title" property="footerFirstColTitle"></div>
+            <span property="footerFirstColumn"></span>
           </div>
           <div class="col footer-col-no-title align-self-end">
-            <div class="footer-sub-col-title">[footerSecondColTitle]</div>
-            [footerSecondColumn]
+            <div class="footer-sub-col-title" property="footerSecondColTitle"></div>
+            <span property="footerSecondColumn"></span>
           </div>
           <div class="col footer-col-no-title align-self-end">
-            <div class="footer-sub-col-title">[footerThirdColTitle]</div>
-            [footerThirdColumn]
+            <div class="footer-sub-col-title" property="footerThirdColTitle"></div>
+            <span property="footerThirdColumn"></span>
           </div>
         </div>
 
@@ -188,49 +246,34 @@
 <script mv-expressions="none">
   $(function(){
     $("main").fadeIn("slow");
+    
+    
+    setTimeout(function(){
+      $(".audio-src").mediaelementplayer({
+        alwaysShowControls: false,
+        features: ['playpause'],
+        clickToPlayPause: true,
+        audioVolume: 'horizontal',
+        audioWidth: 34,
+        audioHeight: 34,
+        pauseOtherPlayers: true,
+
+      // When using jQuery's `mediaelementplayer`, an `instance` argument
+      // is available in the `success` callback
+          success: function(mediaElement, originalNode, instance) {
+              // do things
+          }
+      });
+    }, 5000);
+  });
+  
+  $("#sharing_icons").jsSocials({
+    showLabel: false,
+    showCount: false,
+    shares: ["pinterest", "twitter", "facebook"]
   });
 </script>
-
-<script mv-expressions="none" type="text/template" id="solo_album_tmpl">
-  <div class="container">
-    <div class="row" style="margin-bottom: 3.8rem;">
-      <div class="col-12" style="text-align: center;">
-        <h1 class="coll-detail-header">!!album_name!!</h1>
-        <!-- div class="coll-detail-date">!!album_release_date!!</div>
-        <div class="coll-detail-distribution">!!album_distributor!!</div -->
-        <div><img src="!!disc_cover_img!!" class="coll-detail-img" /></div>
-        <span class="album-buy-options" style="display: !!album_display_buy!!;">
-          <p class="coll-detail-buy-label">BUY ON:</p>
-          <div class="coll-detail-buy-option">
-            !!purchase_links!!
-          </div>
-        </span>
-        <span class="album-stream-options" style="display: !!album_display_stream!!;">
-          <p class="coll-detail-buy-label">STREAM ON:</p>
-          <div class="coll-detail-buy-option">
-            !!streaming_links!!
-          </div>
-        </span>
-        
-        <div style="display: flex; content-align: center; justify-content: center; margin: 3.5rem 0 0.75rem 0;"><div style="width: 52%; font-size: 1.5rem;">!!album_descr!!</div></div>
-        
-        <div style="display: flex; content-align: center; justify-content: center;">SHARE</div>
-        <div style="display: flex; content-align: center; justify-content: center;" id="sharing_icons"></div>
-        <!-- div style="display: flex; content-align: center; justify-content: center;"><small><a href="#" style="margin: 0 0.5rem; font-size: 1.5rem;"><span class="fa fa-pinterest-p"></span></a><a href="#" style="margin: 0 0.5rem; font-size: 1.5rem;"><span class="fa fa-twitter"></span></a><a href="#" style="margin: 0 0.5rem; font-size: 1.5rem;"><span class="fa fa-facebook"></span></a></small></div -->
-        
-        <div style="display: flex; content-align: center; justify-content: center; margin-bottom: 4.0rem;"><a href=/christinajohnstonweb.github.io/web/discography/!!is_solo_album!! style="color: #EE2D9F;"><small style="font-size: 1.1rem;"><span class="fa fa-caret-left"></span>&nbsp;Back to discography</small></a></div>
-      </div>
-    </div>
-  </div>
-</script>
-
-<div data-video="SKd4xML-fV4"  
-         data-autoplay="0"         
-         data-loop="1"             
-         id="youtube-audio">
-  </div>
-  <script src="https://www.youtube.com/iframe_api"></script>
-  <script src=/christinajohnstonweb.github.io/web/javascripts/youtube_audio.js></script>
+</div>
         
             <section id="brand_tag" style="margin-top: 0.5rem;">
               ©2017 Christina Johnston / All Rights Reserved / <a href="http://likelike.cz/en/" style="color: #000;" target="_BLANK">designed by likelike</a>
@@ -243,7 +286,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js"></script>
     <script src=/christinajohnstonweb.github.io/web/javascripts/mavo.es5.js></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsSocials/1.5.0/jssocials.min.js" integrity="sha256-QhF/xll4pV2gDRtAJ1lvi9YINqySpAP+0NIzIX5voZw=" crossorigin="anonymous"></script>
     <script src=/christinajohnstonweb.github.io/web/javascripts/media_queries.js></script>
     <script src=/christinajohnstonweb.github.io/web/javascripts/instagram.js mv-expressions="none"></script>
     <script mv-expressions="none" src=/christinajohnstonweb.github.io/web/javascripts/main.js></script>

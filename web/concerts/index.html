@@ -22,8 +22,8 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,700,700i,900,900i" rel="stylesheet">
     <link rel="stylesheet" href=/christinajohnstonweb.github.io/web/stylesheets/mavo.css />
 <!--     <link rel="stylesheet" href="https://get.mavo.io/mavo.css"> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsSocials/1.5.0/jssocials.min.css" integrity="sha256-1tuEbDCHX3d1WHIyyRhG9D9zsoaQpu1tpd5lPqdqC8s=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsSocials/1.5.0/jssocials-theme-minima.min.css" integrity="sha256-gdf8VUxJSQWUDIxhmCgSIVi8uBCaImRGWzMfKYlrUVE=" crossorigin="anonymous" />
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.css" />
+    <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials-theme-minima.css" />
     <link rel="stylesheet" href=/christinajohnstonweb.github.io/web/stylesheets/styles.css />
     <link rel="stylesheet" href=/christinajohnstonweb.github.io/web/stylesheets/effects.css />
     <link rel="stylesheet" href=/christinajohnstonweb.github.io/web/stylesheets/ken-burns.css />
@@ -32,6 +32,7 @@
     <link rel="stylesheet" href=/christinajohnstonweb.github.io/web/stylesheets/media-queries.css />
     
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.min.js"></script>
     <script>
       var Helpers = Helpers || {};
       
@@ -124,53 +125,52 @@
   </div>
 
   <section id="concerts_tables_section">
-  <div class="container-fluid" id="concerts_table">
+  <div class="container-fluid" id="concerts_table" property="concerts" mv-multiple>
     <div class="row justify-content-center" style="font-weight: 900;" property="concertsTitle">Christina Johnston Concerts</div>
     <div class="row justify-content-center" property="concertsSubtitle" style="">Discover all information about Chrisitna’s concerts.</div>
-    <div id="concert_tables_content">
-      <div class="row" style="margin: 0 0 1% 10%;" property="concerts" mv-multiple>
+    <div class="concert-tables-content">
+      <div class="row" style="margin: 0 0 1% 10%;">
         <table class="off-white-bg" style="border-collapse: collapse; width: 90%;">
           <tr>
-            <td style="width: 14.5rem;"><img src=/christinajohnstonweb.github.io/web/images/concert_thumbnail_1.jpg alt="" property="concertLocImg" style="margin: 1.4rem; width: 10.5rem;"></td>
+            <td style="width: 14.5rem;"><img property="concertLocImg" alt="" style="margin: 1.4rem; width: 10.5rem;"></td>
             <td class="concert-venue-date">
-              <p style=""><strong style="font-weight: bolder; margin-bottom: 3.3rem;" property="concertDatetime">June 10 / 2017</strong></p>
-              <p class="concert-details" style="font-weight: bold;" property="concertName">THE MIRACAL OF THE VOICE</p>
-              <p class="concert-details" property="concertVenue">Church of St Michael the Archangel</p>
-              <p class="concert-details" property="concertLocation">Framlingham</p>
+              <p style="margin-bottom: 3.2rem; font-weight: 900; letter-spacing: 0.12rem;" property="concertDatetime"></p>
+              <p class="concert-details" style="font-weight: 900; margin: 1.5rem 0; letter-spacing: 0.10rem;" property="concertName"></p>
+              <p class="concert-details" style="margin: 1.5rem 0;" property="concertVenue"></p>
+              <p class="concert-details" property="concertLocation"></p>
             </td>
             <td class="td-concert-spacer"></td>
-            <td class="buy-tickets-td"><a href="#" class="btn-media buy-tickets-btn">BUY TICKETS</button></a><span class="mv-logged-in">&nbsp;Ticket purchase link:&nbsp;<input type="text" placeholder="https://www.example.com/store/url" property="concertTicketsURL" class="form-control" /></span></td>
-            <td class="concert-info-td"><a href="#" class="concert-info-a"><em style="white-space: nowrap;">Info ></em></a><span class="mv-logged-in">&nbsp;Concert Details:&nbsp;<textarea cols="6" rows="10" property="concertDetails" class="form-control tinymce"></textarea></span></td>
+            <td class="buy-tickets-td" data-id="[$index]"><a property="concertTicketsURL" target="_BLANK" style="display: [if(concertTicketsURL="" , flex, none)];" class="btn-media buy-tickets-btn">BUY TICKETS</button></a></td>
+            <td class="concert-info-td"><a href=/christinajohnstonweb.github.io/web/concerts/event/ data-event="[idify(concertName) & '-' & idify(concertLocation)]" class="concert-info-a concert-more-btn"><em style="white-space: nowrap;">Info ></em></a></td>
           </tr>
         </table>
       </div>
     </div>
-  </div>
-  </section>
-
-  <section id="concerts_cards_section">
-  <div id="concert_cards">
-    <div class="row justify-content-center"><strong property="concertsTitle">Christina Johnston Concerts</strong></div>
-    <div class="row justify-content-center" style="" property="concertsSubtitle">Discover all information about Chrisitna’s concerts.</div>
-
-    <div id="cards_concert_content" class="d-flex flex-wrap">
-      <div class="card mx-auto off-white-bg" style="width: 20rem; margin: 1.0rem;" property="concerts" mv-multiple>
-        <img class="card-img-top mx-auto d-block rounded-circle" style="margin: 10px; width: 120px; border: 3px solid #ccc;" src=/christinajohnstonweb.github.io/web/images/concert_thumbnail_1.jpg alt="Card image cap" property="concertLocImg" />
+  
+  
+    <!--  Begin cards for small viewports  -->
+    <div class="cards-concert-content" class="d-flex flex-wrap">
+      <div class="card mx-auto off-white-bg" style="width: 20rem; margin: 1.0rem;">
+        <img class="card-img-top mx-auto d-block" style="margin: 10px; width: 120px;" src="[concertLocImg]" alt="Card image cap" />
 
         <div class="card-body">
-          <h3 style="font-weight: bolder;" property="concertDatetime">July 28 / 2017</h3>
-          <h4 class="card-title" property="concertName">HTE MIRACLE OF THE VOICE</h4>
-          <p class="card-text" property="concertVenue">Church of St Michael the Archangel</p>
-
-          <a href="#" class="btn-media buy-tickets-btn">BUY TICKETS</a><a href="#" class="btn btn-more-info">Info ></a>
+          <h3 style="font-weight: bolder;">[concertDatetime]</h3>
+          <h4 class="card-title">[concertName]</h4>
+          <p class="card-text">[concertVenue]</p>
+          <p class="card-text">[concertLocation]</p>
+          <p class="concert-card-links">
+            <a href="[concertTicketsURL]" target="_BLANK" data-id="[$index]" class="btn-media buy-tickets-btn" style="display: [if(len(concertTicketsURL) > 3, flex, none)];">BUY TICKETS</a>
+            <a href=/christinajohnstonweb.github.io/web/concerts/event/  data-event="[idify(concertName) & '-' & idify(concertLocation)]" class="btn btn-more-info concert-more-btn">Info ></a>
+         </p>
+          
         </div>
       </div>
-      </div>
     </div>
-    </section>
+    <!--  End cards for small viewports  -->
+  
+  </div>
+  </section>
 </section>
-
-
 <section id="media" class="reveal-fixed-bg media-container" style='background-image: url(/christinajohnstonweb.github.io/web/images/roses_parallax.jpg); margin-top: -2.0rem;'>
   <div class="reveal-container">
     <h1 class="media-header">MEDIA</h1>
@@ -185,11 +185,14 @@
 
     <div class="row off-white-bg" id="news_row">
       <div class="col-6 news-text" style="color: #000000; overflow-y: auto;">
-        <section class="news-item-section" property="news" mv-multiple mv-if="featuredNews=true">
-          <div class="news-date" property="newsDate">Jun 23, 2017</div>
-          <div class="news-title" property="newsTitle">CHRISTINA JOHNSTON, POPULAR BRITISH COLORATURA SOPRANO WITH A VOICE THAT SOARS ABOVE THE CLOUDS.</div>
-          <div class="news-details tinymce" property="newsDetailsPreview">Her new album "Blessing" is released on 22nd September 17</div>
-          <a href=/christinajohnstonweb.github.io/web/news/article data-article="[idify(newsTitle)]" class="news-more-btn news-more-details">More ></a>
+        <section class="news-item-section" property="news" mv-multiple>
+          <input type="hidden" class="featuredNewsInput" property="featuredNews" />
+          <span style="display: [if(featuredNews=true, block, none)];">
+            <div class="news-date" property="newsDate">Jun 23, 2017</div>
+            <div class="news-title" property="newsTitle">CHRISTINA JOHNSTON, POPULAR BRITISH COLORATURA SOPRANO WITH A VOICE THAT SOARS ABOVE THE CLOUDS.</div>
+            <div class="news-details tinymce" property="newsDetailsPreview">Her new album "Blessing" is released on 22nd September 17</div>
+            <a href=/christinajohnstonweb.github.io/web/news/article data-article="[idify(newsTitle)]" class="news-more-btn news-more-details">More ></a>
+          </span>
         </section>
 
         <a href=/christinajohnstonweb.github.io/web/news class="btn-black" id="more_news_btn">MORE NEWS</a>
@@ -219,16 +222,16 @@
 
         <div class="row">
           <div class="col align-self-end">
-            <div class="footer-col-title">[footerFirstColTitle]</div>
-            [footerFirstColumn]
+            <div class="footer-col-title" property="footerFirstColTitle"></div>
+            <span property="footerFirstColumn"></span>
           </div>
           <div class="col footer-col-no-title align-self-end">
-            <div class="footer-sub-col-title">[footerSecondColTitle]</div>
-            [footerSecondColumn]
+            <div class="footer-sub-col-title" property="footerSecondColTitle"></div>
+            <span property="footerSecondColumn"></span>
           </div>
           <div class="col footer-col-no-title align-self-end">
-            <div class="footer-sub-col-title">[footerThirdColTitle]</div>
-            [footerThirdColumn]
+            <div class="footer-sub-col-title" property="footerThirdColTitle"></div>
+            <span property="footerThirdColumn"></span>
           </div>
         </div>
 
@@ -271,40 +274,6 @@
       </div>
     </div>
 </footer>
-
-<script id="concerts_table_tmpl" type="text/template">
-  <div class="row" style="margin: 0 0 1% 10%;">
-      <table class="off-white-bg" style="border-collapse: collapse; width: 90%;">
-        <tr>
-          <td style="width: 14.5rem;"><img src="!!concert_img!!" alt="" style="margin: 1.4rem; width: 10.5rem;"></td>
-          <td class="concert-venue-date">
-            <p style="margin-bottom: 3.2rem; font-weight: 900; letter-spacing: 0.12rem;">!!concert_date!!</p>
-            <p class="concert-details" style="font-weight: 900; margin: 1.5rem 0; letter-spacing: 0.10rem;">!!concert_name!!</p>
-            <p class="concert-details" style="margin: 1.5rem 0;">!!concert_venue!!</p>
-            <p class="concert-details">!!concert_location!!</p>
-          </td>
-          <td class="td-concert-spacer"></td>
-          <td class="buy-tickets-td" data-id="!!concert_key!!"><a href="!!concert_ticket_url!!" target="_BLANK" class="btn-media buy-tickets-btn">BUY TICKETS</button></a></td>
-          <td class="concert-info-td"><a href=/christinajohnstonweb.github.io/web/concerts/event/ data-event="!!concert_event!!" class="concert-info-a concert-more-btn"><em style="white-space: nowrap;">Info ></em></a></td>
-        </tr>
-      </table>
-    </div>
-</script>
-
-<script id="concerts_card_tmpl" type="text/template">
-   <div class="card mx-auto off-white-bg" style="width: 20rem; margin: 1.0rem;">
-      <img class="card-img-top mx-auto d-block" style="margin: 10px; width: 120px;" src="!!concert_img!!" alt="Card image cap" />
-
-      <div class="card-body">
-        <h3 style="font-weight: bolder;" property="concertDatetime">!!concert_date!!</h3>
-        <h4 class="card-title" property="concertName">!!concert_name!!</h4>
-        <p class="card-text" property="concertVenue">!!concert_venue!!</p>
-        <p class="card-text" property="concertLocation">!!concert_location!!</p>
-
-        <a href="!!concert_ticket_url!!" target="_BLANK" data-id="!!concert_key!!" class="btn-media buy-tickets-btn">BUY TICKETS</a><a href=/christinajohnstonweb.github.io/web/concerts/event/ data-event="!!concert_event!!" class="btn btn-more-info concert-more-btn">Info ></a>
-      </div>
-    </div>
-</script>
         
             <section id="brand_tag" style="margin-top: 0.5rem;">
               ©2017 Christina Johnston / All Rights Reserved / <a href="http://likelike.cz/en/" style="color: #000;" target="_BLANK">designed by likelike</a>
@@ -317,7 +286,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js"></script>
     <script src=/christinajohnstonweb.github.io/web/javascripts/mavo.es5.js></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsSocials/1.5.0/jssocials.min.js" integrity="sha256-QhF/xll4pV2gDRtAJ1lvi9YINqySpAP+0NIzIX5voZw=" crossorigin="anonymous"></script>
     <script src=/christinajohnstonweb.github.io/web/javascripts/media_queries.js></script>
     <script src=/christinajohnstonweb.github.io/web/javascripts/instagram.js mv-expressions="none"></script>
     <script mv-expressions="none" src=/christinajohnstonweb.github.io/web/javascripts/main.js></script>
