@@ -378,6 +378,7 @@ a.navbar-brand {
 }
 
 .album-details { line-height: 0.75rem; text-align: center; margin-top: 2.4rem; }
+.album-details.edit { text-align: left; }
 .album-release-date { color: #EE2D9F; font-size: 1.0rem; }
 .album-name { font-weight: 700; font-size: 1.7rem; padding-top: 0.5rem; margin-bottom: 0.1rem; }
 .album-distributor { color: #5d5d5d; font-size: 1.0rem; }
@@ -388,6 +389,7 @@ a.navbar-brand {
 /* .discography-more-btn { position: relative; top: -18.5rem; left: 14.0rem; margin: 0; } */
 .discography-image { height: 28.0rem; width: 28.0rem; }
 .discography-image:hover ~ .discography-more-btn { display: block; }
+.discography-image.edit { box-shadow: 3px 3px 5px #aaa; }
 .disco-btn { display: block; }
 
 /* Footer */

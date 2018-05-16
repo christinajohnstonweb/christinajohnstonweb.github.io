@@ -86,70 +86,67 @@
         </section>
       </div>
     </div>
-    <div class="d-flex flex-wrap"><!--  style="padding: 0 9.5rem;" -->
-      <div class="mx-auto" style="margin: 2.0rem; text-align: center;" mv-multiple property="album">
-        <img property="discCoverImg" src=/christinajohnstonweb.github.io/web/images/album_cover_image.jpg alt="" class="mx-auto d-flex discography-image"/>
-<!--         <a href=/christinajohnstonweb.github.io/web/discography/solo/album data-album="[idify(discName)]" class="mx-auto btn-black discography-more-btn">MORE</a> -->
-        <section class="album-details" style="line-height: 0.75rem; text-align: center;">
-          <small property="discReleaseDate" style="color: #EE2D9F;">12/13/2017</small>
-          <h2 property="discName" class="album-name" style="font-weight: bolder;">BLESSING</h2>
-          <small property="discDistributor" class="album-distributor" style="color: #5d5d5d;">Sony Music</small>
-        </section>
-        
-        <p>
-          <span class="fa [if(hiddenAlbum, 'fa-check', 'fa-times')]" style="font-size: 2.0rem; color: [if(hiddenAlbum, 'green', 'red')];"></span>&nbsp;<label for="[property='hiddenAlbum']" style="font-size: 1.5rem;">HIDE this album from ALL pages?</label>&nbsp;<input type="checkbox" property="hiddenAlbum" class="mv-logged-in" />
-        </p>
-        
-        <p>
-          <span class="fa [if(albumOnHomepage, 'fa-check', 'fa-times')]" style="font-size: 2.0rem; color: [if(albumOnHomepage, 'green', 'red')];"></span>&nbsp;<label for="[property='albumOnHomepage']">Featured on homepage?</label><input type="checkbox" property="albumOnHomepage" class="mv-logged-in" />
-        </p>
-        
-        <span class="mv-logged-in" style="font-size: 1.5rem;"><input type="checkbox" property="discIsSolo" />&nbsp;<strong>Solo</strong> album? (Instead of <em>featured</em>)</span>
-        <div class="tinymce" property="discDescr" style="text-align: center; padding: 1.0rem 20.0rem; font-size: 1.5rem;"></div>
-        
-        <h2 style="margin-top: 2.0rem;">Track List</h2>
-        <div property="albumTracks" style="margin: 20px 0; padding: 10px; display: flex; flex-wrap: column; justify-content: center;" mv-multiple>
-          <table style="width: 80%;">
-<!--             <tr>
-              <td style="width: 40%;" align="left"><strong><small>Track Title</small></strong></td>
-              <td style="width: 40%;" align="left"><strong><small>SoundCloud Embed</small></strong></td>
-              <td style="width: 20%;" align="center">
-              
-              </td>
-            </tr> -->
-            <tr>
-              <td style="width: 50%;" align="left" valign="top">
-                <div style=" position: relative; height: 70px; padding: 10px; background-color: #ddd;; display: flex; flex-wrap: row; justify-content: center; align-items: center;"><small style="position: absolute; top: 3px; left: 3px;">Track Title</small><input placeholder='i.e. A Beautiful Song Title' type="text" style="width: 95%;" class="form-control" property="trackTitle" aria-label="Track Title"></div>
-              </td>
-              <td style="width: 50%;" align="left" valign="top">
-                   <div style=" position: relative; height: 70px; padding: 10px; background-color: #ddd;; display: flex; flex-wrap: row; justify-content: center; align-items: center;"><small style="position: absolute; top: 3px; left: 3px;">SoundCloud Embed Link</small><input placeholder='i.e. <iframe class="audio-src" style="width: 34px; height: 34px;" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/357064727&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>' type="text" style="width: 95%;" class="form-control soundcloud-embed-link" property="soundcloudEmbedLink" aria-label="SoundCloud Embed Link"></div>
-              </td>
-            </tr>
-            <tr>
-              <td colspan="3" style="background-color: #ddd;"><strong><small>Lyrics</small></strong></td>
-            </tr>
-            <tr>
-              <td colspan="3" style="background-color: #ddd; padding: 1.5rem;"><div style="background-color: #fff; padding: 1.0rem;" property="trackLyrics" class="tinymce"></div></td>
-            </tr>
-          </table>
-        </div>
-        
-        <h2>Streaming Options</h2>
-        <div property="albumStreaming" style="margin: 20px 0; padding: 10px; display: flex; flex-wrap: row; justify-content: center;" mv-multiple>
-          <div style="padding: 10px; width: 200px; height: 70px; position: relative; display: flex; flex-wrap: row; justify-content: center; align-items: center;"><small style="position: absolute; top: 3px; left: 3px;">Service logo image</small><img property="serviceLogo" style="max-width:150px; max-height: 100px;" src="http://www.christinajohnston.co.uk/data/images/itunes_logo_black.png" class="" aria-label="Service logo"></div>
-          <div style=" position: relative; height: 70px; padding: 10px; background-color: #ddd;; display: flex; flex-wrap: row; justify-content: center; align-items: center;"><small style="position: absolute; top: 3px; left: 3px;">Song link</small><input placeholder="i.e. https://www.songsale.com/christinajohnston/song" type="text" style="width: 200px;" class="form-control" property="serviceLink" mv-mode="edit" aria-label="Service link"></div>
-          <div style="padding: 10px; width: 180px; position: relative; display: flex; flex-wrap: row; justify-content: center; align-items: center;"><small style="position: absolute; top: 3px; left: 3px;">Test link</small><a target="_BLANK" href="[serviceLink]"><img src="[serviceLogo]" style="max-width: 100px; max-height: 70px;"></a></div>
-        </div>
-        
-        <h2>Purchase Options</h2>
-        <div property="albumPurchase" style="margin: 20px 0; padding: 10px; display: flex; flex-wrap: row; justify-content: center;" mv-multiple>
-          <div style="padding: 10px; width: 200px; height: 70px; position: relative; display: flex; flex-wrap: row; justify-content: center; align-items: center;"><small style="position: absolute; top: 3px; left: 3px;">Service logo image</small><img property="serviceLogo" style="max-width:150px; max-height: 100px;" aria-label="Service logo"></div>
-          <div style=" position: relative; height: 70px; padding: 10px; background-color: #ddd;; display: flex; flex-wrap: row; justify-content: center; align-items: center;"><small style="position: absolute; top: 3px; left: 3px;">Song link</small><input placeholder="i.e. https://www.songsale.com/christinajohnston/song" type="text" style="width: 200px;" class="form-control" property="serviceLink" mv-mode="edit" aria-label="Service link"></div>
-          <div style="padding: 10px; width: 180px; position: relative; display: flex; flex-wrap: row; justify-content: center; align-items: center;"><small style="position: absolute; top: 3px; left: 3px;">Test link</small><a target="_BLANK" href="[serviceLink]"><img src="[serviceLogo]" style="max-width: 100px; max-height: 70px;"></a></div>
-        </div>
-        
+    <div class="d-flex flex-wrap">
+      <div class="mx-auto" mv-multiple property="album">
+        <div class="row">
+          <div class="col-4">
+            <img property="discCoverImg" src=/christinajohnstonweb.github.io/web/images/album_cover_image.jpg alt="" class="mx-auto d-flex discography-image edit"/>
+          </div>
+          <div class="col-8">
+            <section class="album-details edit" style="line-height: 0.75rem;">
+              <small property="discReleaseDate" style="color: #EE2D9F;">12/13/2017</small>
+              <h2 property="discName" class="album-name" style="font-weight: bolder;">BLESSING</h2>
+              <small property="discDistributor" class="album-distributor" style="color: #5d5d5d;">Sony Music</small>
+            </section>
 
-      </div>
+            <p>
+              <span class="fa [if(hiddenAlbum, 'fa-check', 'fa-times')]" style="font-size: 2.0rem; color: [if(hiddenAlbum, 'green', 'red')];"></span>&nbsp;<label for="[property='hiddenAlbum']" style="font-size: 1.5rem;">HIDE this album from ALL pages?</label>&nbsp;<input type="checkbox" property="hiddenAlbum" class="mv-logged-in" />
+            </p>
+
+            <p>
+              <span class="fa [if(albumOnHomepage, 'fa-check', 'fa-times')]" style="font-size: 2.0rem; color: [if(albumOnHomepage, 'green', 'red')];"></span>&nbsp;<label for="[property='albumOnHomepage']">Featured on homepage?</label><input type="checkbox" property="albumOnHomepage" class="mv-logged-in" />
+            </p>
+
+            <span class="mv-logged-in" style="font-size: 1.5rem;"><input type="checkbox" property="discIsSolo" />&nbsp;<strong>Solo</strong> album? (Instead of <em>featured</em>)</span>
+            <h2 style="margin-top: 2.0rem;">Description</h2>
+            <div class="tinymce" property="discDescr" style="font-size: 1.5rem;"></div>
+
+            <h2 style="margin-top: 2.0rem;">Track List</h2>
+            <div property="albumTracks" style="margin: 20px 0; padding: 10px;" mv-multiple>
+              <table style="width: 80%;">
+                <tr>
+                  <td style="width: 50%;" align="left" valign="top">
+                    <div style=" position: relative; height: 70px; padding: 10px; background-color: #ddd;; display: flex; flex-wrap: row; justify-content: center; align-items: center;"><small style="position: absolute; top: 3px; left: 3px;">Track Title</small><input placeholder='i.e. A Beautiful Song Title' type="text" style="width: 95%;" class="form-control" property="trackTitle" aria-label="Track Title"></div>
+                  </td>
+                  <td style="width: 50%;" align="left" valign="top">
+                       <div style=" position: relative; height: 70px; padding: 10px; background-color: #ddd;; display: flex; flex-wrap: row; justify-content: center; align-items: center;"><small style="position: absolute; top: 3px; left: 3px;">SoundCloud Embed Link</small><input placeholder='i.e. <iframe class="audio-src" style="width: 34px; height: 34px;" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/357064727&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>' type="text" style="width: 95%;" class="form-control soundcloud-embed-link" property="soundcloudEmbedLink" aria-label="SoundCloud Embed Link"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="3" style="background-color: #ddd;"><strong><small>Lyrics</small></strong></td>
+                </tr>
+                <tr>
+                  <td colspan="3" style="background-color: #ddd; padding: 1.5rem;"><div style="background-color: #fff; padding: 1.0rem;" property="trackLyrics" class="tinymce"></div></td>
+                </tr>
+              </table>
+            </div>
+
+            <h2>Streaming Options</h2>
+            <div property="albumStreaming" style="margin: 20px 0; padding: 10px; display: flex; flex-wrap: row;" mv-multiple>
+              <div style="padding: 10px; width: 200px; height: 70px; position: relative; display: flex; flex-wrap: row; justify-content: center; align-items: center;"><small style="position: absolute; top: 3px; left: 3px;">Service logo image</small><img property="serviceLogo" style="max-width:150px; max-height: 100px;" src="http://www.christinajohnston.co.uk/data/images/itunes_logo_black.png" class="" aria-label="Service logo"></div>
+              <div style=" position: relative; height: 70px; padding: 10px; background-color: #ddd;; display: flex; flex-wrap: row; justify-content: center; align-items: center;"><small style="position: absolute; top: 3px; left: 3px;">Song link</small><input placeholder="i.e. https://www.songsale.com/christinajohnston/song" type="text" style="width: 200px;" class="form-control" property="serviceLink" mv-mode="edit" aria-label="Service link"></div>
+              <div style="padding: 10px; width: 180px; position: relative; display: flex; flex-wrap: row; justify-content: center; align-items: center;"><small style="position: absolute; top: 3px; left: 3px;">Test link</small><a target="_BLANK" href="[serviceLink]"><img src="[serviceLogo]" style="max-width: 100px; max-height: 70px;"></a></div>
+            </div>
+
+            <h2>Purchase Options</h2>
+            <div property="albumPurchase" style="margin: 20px 0; padding: 10px; display: flex; flex-wrap: row;" mv-multiple>
+              <div style="padding: 10px; width: 200px; height: 70px; position: relative; display: flex; flex-wrap: row; justify-content: center; align-items: center;"><small style="position: absolute; top: 3px; left: 3px;">Service logo image</small><img property="serviceLogo" style="max-width:150px; max-height: 100px;" aria-label="Service logo"></div>
+              <div style=" position: relative; height: 70px; padding: 10px; background-color: #ddd;; display: flex; flex-wrap: row; justify-content: center; align-items: center;"><small style="position: absolute; top: 3px; left: 3px;">Song link</small><input placeholder="i.e. https://www.songsale.com/christinajohnston/song" type="text" style="width: 200px;" class="form-control" property="serviceLink" mv-mode="edit" aria-label="Service link"></div>
+              <div style="padding: 10px; width: 180px; position: relative; display: flex; flex-wrap: row; justify-content: center; align-items: center;"><small style="position: absolute; top: 3px; left: 3px;">Test link</small><a target="_BLANK" href="[serviceLink]"><img src="[serviceLogo]" style="max-width: 100px; max-height: 70px;"></a></div>
+            </div>
+          </div>
+          </div>
+        </div>
     </div>
   </section>
 
