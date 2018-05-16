@@ -24,8 +24,6 @@ function setCarouselHeight() {
 
   // Calculate height based on width and aspect ratio.
   $(".image-wrap").height($(".carousel-inner").width() / ar);
-
-  // console.log("W: " + $(".carousel-inner").width() + " x H: " + $(".carousel-inner").width() / ar);
 }
 
 // Set the home page text section height and width.
@@ -82,9 +80,6 @@ $(window).on("load", function() {
 
     // Once everything is loaded, show the page content.
     $('#loading_overlay').fadeOut();
-    //       $(".spinner").hide();
-    //       $("#app_page").css("left", "0");
-    //       $("#app_page").css("position", "static");
   }, 1200);
 
   // Zoom logo on "About" page in.
@@ -97,23 +92,13 @@ $(window).on("load", function() {
     }, 2000);
   }
 
-  //     $(".spinner").hide();
-  //     $("main").fadeIn("slow");
-
-  //     $(".section-img").parent().parent().css( "height", $(".section-img").width() );
-  $(".section-img").parent().prev().css("height", $(".section-img").width());
+$(".section-img").parent().prev().css("height", $(".section-img").width());
 
   // If videos, resize the caption
-  $(".video-caption").width($(".video > iframe").width());
+  $(".video-caption").width($(".video").width());
 
   resizeInstagram();
-
-  // If we're on the news page, expand the gray section.
-//   if ($(".masonry-img").length > 0) {
-//     $(".news-container").width( $(".navbar").width() );
-//     $(".photos-container").width( $(".navbar").width() );
-//   }
-// });
+});
 
 
 // $(function() {
@@ -133,7 +118,7 @@ $(window).on("load", function() {
     // If videos, resize the caption
     // Video caption width.
     if ( $(".video-caption").length ) {
-      $(".video-caption").width( $("section.video > iframe").width() );
+      $(".video-caption").width( $("section.video").width() );
     }
 
     // If Instagram block, resize it, too.
@@ -268,7 +253,7 @@ $(window).on("load", function() {
       //********************************************
       // CONCERT LIST BUILDING.
       //********************************************
-      if ($("#concerts_table_tmpl").length) {
+      /* if ($("#concerts_table_tmpl").length) {
         // Concerts layout, since Mavo.io won't support 2 references to the same collection on a page.
         // NOTE: Referenced templates are embedded in includes/concerts.html 
 
@@ -323,42 +308,9 @@ $(window).on("load", function() {
         $.each(tickets, function(k, v) {
           $('[data-id=' + v + ']').hide();
         });
-      }
+      } */
       //********************************************
       // END CONCERT LIST BUILDING.
-      //********************************************
-
-
-      //********************************************
-      // BUILD CONCERT DETAILS
-      //********************************************
-//       if ($("#concert_tmpl").length) {
-//         var concert_name = getParameterByName("name");
-
-//         $.each(data.concerts, function(key, val) {
-//           /* Solo/featured albums. */
-//           var name = val.concertName.toLowerCase() + " " + val.concertLocation.toLowerCase();
-//           name = name.replace(/\s/gi, '-').replace(/[^\w-]/gi, '');
-
-//           if (name === concert_name) {
-//             var code = $("#concert_tmpl").prop("innerHTML");
-
-//             code = code.replace(RegExp("!!concert_name!!", "g"), val.concertName);
-//             code = code.replace(RegExp("!!concert_date_time!!", "g"), val.concertDatetime);
-//             code = code.replace(RegExp("!!concert_venue!!", "g"), val.concertVenue);
-//             code = code.replace(RegExp("!!concert_descr!!", "g"), val.concertDetails);
-//             code = code.replace(RegExp("!!concert_location!!", "g"), val.concertLocation);
-
-//             $(".concert-container").html(code);
-
-//             if (!val.concertTicketsURL || val.concertTicketsURL.length < 1) {
-//               $('[data-id="featured_concert"]').hide();
-//             }
-//           }
-//         });
-//       }
-      //********************************************
-      // END BUILDING CONCERT DETAILS
       //********************************************
 
 
@@ -516,10 +468,6 @@ $(window).on("load", function() {
 
         // Update the gallery description on the page.
         $("#photo_gallery_description").html(gallery[0]["galleryDescription"]);
-
-        //           if ( photos.length > 1 ) {
-        //             $("#photo_gallery_right_chevron").html('<a href="javascript:void(0);" id="photo_gallery_right_chevron_link"><span class="fa fa-3x fa-chevron-right"></span></a>');
-        //           }
       }
       //********************************************
       // END PHOTO GALLERY BUILDING.
@@ -785,14 +733,11 @@ $(window).on("load", function() {
     var feed = new Instafeed({
       get: 'user',
       userId: '293336116',
-      //         userId: '1593628250',
-      //         accessToken: '1593628250.1677ed0.02eb61b5a3104a83a39d83495e534ed9',
       accessToken: '293336116.1677ed0.74da451be9ff45ef8b2a491432b1c54b',
       resolution: "standard_resolution",
       useHttp: "true",
       limit: 5,
       template: '<div class="instagram-img-container" style=""><a href="{{link}}" target="_BLANK"><div class="img-backdrop"></div><img src="{{image}}" class="img-responsive instagram-images"/></a></div>',
-      //         template: '<div class="instagram-img-container" style=""><a href="{{link}}" target="_BLANK"><div class="img-featured-container d-flex flex-wrap"><div class="img-backdrop"></div><img src="{{image}}" class="img-responsive instagram-images"/></div></a></div>',
       target: "instafeed",
       after: function() {
         // disable button if no more results to load
@@ -807,4 +752,4 @@ $(window).on("load", function() {
   /*********************************************
   // End Instagram handling.
   *********************************************/
-});
+// });

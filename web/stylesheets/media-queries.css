@@ -67,6 +67,10 @@
   .tbl-concert-location { font-size: 1.88rem; padding-top: 0.7rem; }
   .concert-info-a { font-size: 2.15rem; }
   
+  /*  Concerts page.  */
+  .concert-tables-content { display: inline; }
+  .cards-concert-content { display: none; }
+  
   /*  News section.  */
   .news-text { padding: 6.8rem 5.56rem 0 8.25rem }
   .news-item-section { margin-bottom: 4.9rem; }
@@ -106,6 +110,10 @@
   div[property="news"]:hover a.btn-centered { opacity: 1.0; }
   
   #instafeed { display: flex; flex-direction: row; justify-content: center; align-items: center; }
+  
+    /*  Concerts page.  */
+  .concert-tables-content { display: inline; }
+  .cards-concert-content { display: none; }
 }
 
 
@@ -147,7 +155,9 @@
   /*  In the photo gallery adjust the text margin. */
   #photo_gallery_description { padding: 1.0rem 10.0rem; }
   
-  #instafeed { display: flex; flex-direction: row; justify-content: center; align-items: center; }
+    /*  Concerts page.  */
+  .concert-tables-content { display: inline; }
+  .cards-concert-content { display: none; }
 }
 
 
@@ -164,6 +174,10 @@
   /*  Instagram image size.  */
 /*   .instagram-images { max-height: 20.0rem; max-width: 20.0rem; } */
   #instafeed { display: flex; flex-direction: row; justify-content: center; align-items: center; }
+  
+    /*  Concerts page.  */
+  .concert-tables-content { display: inline; }
+  .cards-concert-content { display: none; }
 }
 
 
@@ -185,6 +199,10 @@
   
   /*  Remove the padding around text-section - at this size, it creates an odd effect.  */
   .text-section { padding: 0; }
+  
+    /*  Concerts page.  */
+  .concert-tables-content { display: inline; }
+  .cards-concert-content { display: none; }
   
   /*  In the photo gallery adjust the text margin. */
   #photo_gallery_description { padding: 1.0rem 6.0rem; }
@@ -223,10 +241,8 @@
   
   /*  Concerts  */
   .td-concert-spacer { display: none; }
-  .cards-concert-content { display: inline; }
-  /*   #concert_cards { display: inline; } */
-  .concert-tables-content { display: none; }
-/*   #concerts_table { display: none; } */
+  .concert-tables-content { display: inline; }
+  .cards-concert-content { display: none; }
 
     
   /*  If we're on the 'Photos' page center align the gallery name.  */
