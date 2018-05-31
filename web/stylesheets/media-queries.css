@@ -93,6 +93,10 @@
   div[property="news"]:hover a.btn-centered { opacity: 1.0; }
   
   #instafeed { display: flex; flex-direction: row; justify-content: center; align-items: center; }
+  
+  /*  Concerts page.  */
+  .concert-tables-content { display: inline; }
+  .cards-concert-content { display: none; }
 }
 
 

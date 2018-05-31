@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="https://get.mavo.io/mavo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsSocials/1.5.0/jssocials.min.css" integrity="sha256-1tuEbDCHX3d1WHIyyRhG9D9zsoaQpu1tpd5lPqdqC8s=" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsSocials/1.5.0/jssocials-theme-minima.min.css" integrity="sha256-gdf8VUxJSQWUDIxhmCgSIVi8uBCaImRGWzMfKYlrUVE=" crossorigin="anonymous" />
+    <link href=/christinajohnstonweb.github.io/web/stylesheets/bootstrap4_switches.css rel="stylesheet">
     <link rel="stylesheet" href=/christinajohnstonweb.github.io/web/stylesheets/styles.css />
     <link rel="stylesheet" href=/christinajohnstonweb.github.io/web/stylesheets/ken-burns.css />
     <style>
@@ -28,7 +29,8 @@
     </style>
     
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script src="//widget.cloudinary.com/global/all.js" type="text/javascript"></script>
+<!--   In case image editing/rendering needs to be added, uncomment the below script tag.   -->
+<!--     <script src="//widget.cloudinary.com/global/all.js" type="text/javascript"></script> -->
   </head>
   <body>
     <nav class="navbar navbar-expand-md topbar" style="background-color: #000;">
@@ -83,10 +85,14 @@
         <img property="newsImage" style="max-width: 220px;">
       </div>
       
-      <div class="col-8">
-        <span class="fa [if(featuredNews, 'fa-check', 'fa-times')]" style="font-size: 2.0rem; color: [if(featuredNews, 'green', 'red')];"></span>&nbsp;<label for="[property='featuredNews']">Featured in <strong>News</strong> sections?</label>
-        <input type="checkbox" property="featuredNews" class="mv-logged-in" /><p/>
+      <div class="col-8 featured-news">
+        <h2>Display options</h2>
+        <p>You can choose whether news is featured on pages with a <strong>News</strong> section. News is not included in the <strong>News</strong> sections by default. To display a news item on the homepage, turn on the <strong>featured</strong> toggle here.</p>
+        <span class="featured-news-toggle fa [if(featuredNews, 'fa-toggle-on', 'fa-toggle-off')] fa-3x" style="font-size: 2.0rem; color: [if(featuredConcert, '#111', '#444')];"></span>&nbsp;<label for="[property='featuredNews']">Featured in <strong>News</strong> sections?</label>
+        <input type="checkbox" property="featuredNews" class="mv-logged-in" style="display: none;" /><p/>
         
+        
+        <h2 style="padding-top: 25px;">News details</h2>
         <label for="[property='newsDate']">Date of news publication:</label>
         <div class="news-date" property="newsDate">Jun 23, 2017</div>
         
@@ -104,6 +110,15 @@
     </div>
   </div>
 </div>
+
+<script>
+  $(function(){
+    // Toggle checkbox and unpublish concert.
+    $(document).on("click", ".featured-news > .featured-news-toggle", function(){
+      toggleCheckboxes( $(this).parent(), "featuredNews" );
+    });
+  });
+</script>
         
             <section id="brand_tag" style="margin-top: 0.5rem;">
               ©2017 Christina Johnston / All Rights Reserved / <a href="http://likelike.cz/en/" style="color: #000;" target="_BLANK">designed by likelike</a>
@@ -119,6 +134,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jsSocials/1.5.0/jssocials.min.js" integrity="sha256-QhF/xll4pV2gDRtAJ1lvi9YINqySpAP+0NIzIX5voZw=" crossorigin="anonymous"></script>
     <script src=/christinajohnstonweb.github.io/web/javascripts/instagram.js mv-expressions="none"></script>
     <script src=/christinajohnstonweb.github.io/web/javascripts/main.js></script>
+    <script src=/christinajohnstonweb.github.io/web/javascripts/editor_helpers.js></script>
     <script type="text/javascript">
 //       UID = 293336116
         var feed = new Instafeed({

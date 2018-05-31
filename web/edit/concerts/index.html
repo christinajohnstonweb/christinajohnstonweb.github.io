@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="https://get.mavo.io/mavo.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsSocials/1.5.0/jssocials.min.css" integrity="sha256-1tuEbDCHX3d1WHIyyRhG9D9zsoaQpu1tpd5lPqdqC8s=" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsSocials/1.5.0/jssocials-theme-minima.min.css" integrity="sha256-gdf8VUxJSQWUDIxhmCgSIVi8uBCaImRGWzMfKYlrUVE=" crossorigin="anonymous" />
+    <link href=/christinajohnstonweb.github.io/web/stylesheets/bootstrap4_switches.css rel="stylesheet">
     <link rel="stylesheet" href=/christinajohnstonweb.github.io/web/stylesheets/styles.css />
     <link rel="stylesheet" href=/christinajohnstonweb.github.io/web/stylesheets/ken-burns.css />
     <style>
@@ -28,7 +29,8 @@
     </style>
     
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script src="//widget.cloudinary.com/global/all.js" type="text/javascript"></script>
+<!--   In case image editing/rendering needs to be added, uncomment the below script tag.   -->
+<!--     <script src="//widget.cloudinary.com/global/all.js" type="text/javascript"></script> -->
   </head>
   <body>
     <nav class="navbar navbar-expand-md topbar" style="background-color: #000;">
@@ -79,17 +81,22 @@
 <section id="concerts_tables_section">
   <div class="container-fluid" id="concerts_table">
     <div class="row justify-content-center" style="font-size: 2.0rem; font-weight: 900;" property="concertsTitle">Christina Johnston Concerts</div>
-    <div class="row justify-content-center" property="concertsSubtitle" style="font-size: 1.7rem; margin: -0.5rem 0 3.25rem 0; ">Discover all information about Chrisitna’s concerts.</div>
+    <div class="row justify-content-center" property="concertsSubtitle" style="font-size: 1.7rem; margin: -0.5rem 0 3.25rem 0; ">Discover all information about Christina’s concerts.</div>
     <div id="concert_tables_content">
       <div class="row off-white-bg" style="margin: 2% 0 2% 10%; border-bottom: 2px dotted #999;" property="concerts" mv-multiple>
         <table style="border-collapse: collapse; width: 90%; border: 10px solid #fafafa;">
+          <tr><td colspan="4">
+            <h2>Display options</h2>
+            <p>You can choose whether a concert is visible on the website, and whether it is featured on the homepage. Concerts are published by default when created, and visible in the <strong>Concerts</strong> tab. To change whether a concert is displayed on the site, you can turn publishing on and off with the toggle here. By default, concerts are not displayed on the homepage. To display them on the homepage, make sure they are published, and turn on the homepage toggle here.</p>
+          </td></tr>
           <tr>
-            <td colspan="4"><span class="fa [if(hiddenConcert, 'fa-check', 'fa-times')]" style="font-size: 2.0rem; color: [if(hiddenConcert, 'green', 'red')];"></span>&nbsp;<label for="[property='hiddenConcert']" style="font-size: 1.5rem;">HIDE this concert from ALL pages?</label>&nbsp;<input type="checkbox" property="hiddenConcert" /></td>
+            <td colspan="4" class="hide-concert"><span class="hide-concert-toggle fa [if(hiddenConcert, 'fa-toggle-off', 'fa-toggle-on')] fa-3x" style="font-size: 2.0rem; color: [if(hiddenConcert, '#444', '#111')];"></span>&nbsp;<label for="[property='hiddenConcert']" style="font-size: 1.5rem;">Published</label>&nbsp;<input type="checkbox" property="hiddenConcert" style="display: none;" /></td>
           </tr>
           <tr>
-            <td colspan="4"><span class="fa [if(featuredConcert, 'fa-check', 'fa-times')]" style="font-size: 2.0rem; color: [if(featuredConcert, 'green', 'red')];"></span>&nbsp;<label for="[property='featuredConcert']" style="font-size: 1.5rem;">Feature concert on the home page?</label>&nbsp;<input type="checkbox" property="featuredConcert" /></td>
+            <td colspan="4" class="homepage-concert"><span class="homepage-concert-toggle fa [if(featuredConcert, 'fa-toggle-on', 'fa-toggle-off')] fa-3x" style="font-size: 2.0rem; color: [if(featuredConcert, '#111', '#444')];"></span>&nbsp;<label for="[property='featuredConcert']" style="font-size: 1.5rem;">Homepage</label>&nbsp;<input type="checkbox" property="featuredConcert" style="display: none;" /></td>
           </tr>
           
+          <tr><td colspan="4" style="padding-top: 25px;"><h2>Concert details</h2></td></tr>
           <tr>
             <td style="width: 14.5rem;"><img property="concertLocImg" alt="" class="concert-thumbnail"></td>
             <td class="edit-concert-venue-date">
@@ -117,6 +124,20 @@
     </div>
   </div>
 </section>
+
+<script>
+  $(function(){
+    // Toggle checkbox and unpublish concert.
+    $(document).on("click", ".hide-concert > .hide-concert-toggle", function(){
+      toggleCheckboxes( $(this).parent(), "hiddenConcert" );
+    });
+    
+    // Toggle checkbox and display concert on homepage.
+    $(document).on("click", ".homepage-concert > .homepage-concert-toggle", function(){
+      toggleCheckboxes( $(this).parent(), "featuredConcert" );
+    });
+  });
+</script>
         
             <section id="brand_tag" style="margin-top: 0.5rem;">
               ©2017 Christina Johnston / All Rights Reserved / <a href="http://likelike.cz/en/" style="color: #000;" target="_BLANK">designed by likelike</a>
@@ -132,6 +153,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jsSocials/1.5.0/jssocials.min.js" integrity="sha256-QhF/xll4pV2gDRtAJ1lvi9YINqySpAP+0NIzIX5voZw=" crossorigin="anonymous"></script>
     <script src=/christinajohnstonweb.github.io/web/javascripts/instagram.js mv-expressions="none"></script>
     <script src=/christinajohnstonweb.github.io/web/javascripts/main.js></script>
+    <script src=/christinajohnstonweb.github.io/web/javascripts/editor_helpers.js></script>
     <script type="text/javascript">
 //       UID = 293336116
         var feed = new Instafeed({
